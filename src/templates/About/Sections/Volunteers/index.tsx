@@ -1,9 +1,8 @@
-
-import imageTeste from "@/assets/images/persons-profile/Leonardo-Ferraz.jpg"
 import TitleSection from "@/components/TitleSection"
-import Carousel from "@/patterns/CarouselVolunteers"
+import Carousel from "@/patterns/carousels/CarouselVolunteers"
 
 import * as S from "./styles"
+import volunteers from "./volunteers"
 
 
 const Volunteers = (): JSX.Element => {
@@ -15,78 +14,7 @@ const Volunteers = (): JSX.Element => {
           title="Nossa Legião"
         />
         <div className="carousel-volunteers">
-          <Carousel volunteers={[
-            {
-              name: "Leonardo Ferraz",
-              image: imageTeste.src,
-              office: "Desenvolvedor Full-Stack",
-              links: [
-                {
-                  icon: <i className='bx bxl-github'></i>,
-                  href: "/"
-                },
-                {
-                  icon: <i className='bx bxl-github'></i>,
-                  href: "/"
-                },
-              ]
-            },
-            {
-              name: "Leonardo Ferraz",
-              image: imageTeste.src,
-              office: "Desenvolvedor Full-Stack",
-              links: [
-                {
-                  icon: <i className='bx bxl-github'></i>,
-                  href: "/"
-                }
-              ]
-            },
-            {
-              name: "Leonardo Ferraz",
-              image: imageTeste.src,
-              office: "Desenvolvedor Full-Stack",
-              links: [
-                {
-                  icon: <i className='bx bxl-github'></i>,
-                  href: "/"
-                }
-              ]
-            },
-            {
-              name: "Leonardo Ferraz",
-              image: imageTeste.src,
-              office: "Desenvolvedor Full-Stack",
-              links: [
-                {
-                  icon: <i className='bx bxl-github'></i>,
-                  href: "/"
-                }
-              ]
-            },
-            {
-              name: "Leonardo Ferraz",
-              image: imageTeste.src,
-              office: "Desenvolvedor Full-Stack",
-              links: [
-                {
-                  icon: <i className='bx bxl-github'></i>,
-                  href: "/"
-                }
-              ]
-            },
-            {
-              name: "Leonardo Ferraz",
-              image: imageTeste.src,
-              office: "Desenvolvedor Full-Stack",
-              links: [
-                {
-                  icon: <i className='bx bxl-github'></i>,
-                  href: "/"
-                }
-              ]
-            },
-          ]} />
+          <Carousel volunteers={volunteers} />
         </div>
       </div>
     </S.Volunteers>

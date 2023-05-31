@@ -1,9 +1,11 @@
 
-import Image from "next/image"
-import * as S from "./styles"
 import imagePersonsTract from "@/assets/images/home/sorrindo-retrato-de-um-homem-jovem-apertar-mao-scaled.jpg"
 
-const Principles = () => {
+import Image from "next/image"
+
+import * as S from "./styles"
+
+const Principles = (): JSX.Element => {
   return (
     <S.Principles>
       <div className="content">

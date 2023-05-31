@@ -27,5 +27,9 @@ export const color = {
 
 export const layout = {
   contentWidth: "900px",
-  containerPaddingX: "1rem"
+  containerPaddingX: "1rem",
+  header: {
+    sup: "30px",
+    sub: "80px"
+  }
 }

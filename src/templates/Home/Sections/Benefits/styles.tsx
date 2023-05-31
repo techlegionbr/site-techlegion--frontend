@@ -15,10 +15,21 @@ export const Benefits = styled.div`
   }
 `
 
+
+
+export const AccordionsBenefitService = styled.div`
+      margin-top: 4rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+`
+
+
+
 interface PropsCardBenefitService {
   showDescription: "true" | "false"
 }
-
 export const CardBenefitService = styled.div<PropsCardBenefitService>`
         display: flex;
         align-items: flex-start;
@@ -52,18 +63,18 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
             .watch-more{
               position: absolute;
               display: inline-flex;
-              width: 20px;
-              height: 20px;
+              width: 10px;
+              height: 10px;
               border-radius: 50%;
-              background-color: ${color.third};
+              background-color: ${({ showDescription }) => showDescription === "true" ? color.third : "#18183a"};
+              border: 1px solid #ffffff2c;
               color: ${color.primary};
               justify-content: center;
               align-items: center;
-              right: -.5rem;
+              right: .5rem;
               font-size: 1rem;
               transform: rotate(${({ showDescription }) => showDescription === "true" ? "180deg" : "0deg"});
               transition: .2s;
-              opacity: ${({ showDescription }) => showDescription === "true" ? "1" : ".8"}
             }
             h4{
               color: ${({ showDescription }) => showDescription === "false" ? "#ffffffb1" : "#fff"};
@@ -85,12 +96,4 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
             }
           }
         }
-`
-
-export const AccordionsBenefitService = styled.div`
-      margin-top: 4rem;
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
 `

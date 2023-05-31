@@ -1,11 +1,12 @@
 
 
-import Image from "next/image"
-
+import image1 from "@/assets/images/home/cards/desenvolvedor-de-software-pensando-enquanto-toca.jpg"
 import Button from "@/components/Button"
 import TitleSection from "@/components/TitleSection"
 
-import image1 from "@/assets/images/home/cards/desenvolvedor-de-software-pensando-enquanto-toca.jpg"
+import Image from "next/image"
+
+
 import * as S from "./styles"
 
 const Services = (): JSX.Element => {

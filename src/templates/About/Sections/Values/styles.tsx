@@ -33,7 +33,7 @@ export const Values = styled.div`
           font-size: 2rem;
           color: ${color.third}
         }
-        h3{
+        h4{
           text-transform: uppercase;
         }
       }

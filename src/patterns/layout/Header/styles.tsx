@@ -1,5 +1,5 @@
-import styled from "styled-components"
 import { breackScreens, color, layout } from "@/styles/root"
+import styled from "styled-components"
 
 interface PropsHeader {
   istransparent: "true" | "false"

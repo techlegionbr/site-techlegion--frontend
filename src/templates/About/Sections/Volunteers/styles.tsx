@@ -1,6 +1,6 @@
+
 import { color, layout } from "@/styles/root";
 import styled from "styled-components";
-
 
 
 export const Volunteers = styled.div`

@@ -34,7 +34,7 @@ const routes: TypeRoute[] = [
     label: "Sobre"
   },
   {
-    path: "/serviços",
+    path: "/servicos",
     name: "services",
     label: "Serviços"
   },

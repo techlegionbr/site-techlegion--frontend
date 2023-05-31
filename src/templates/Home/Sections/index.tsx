@@ -1,10 +1,10 @@
-import MainSection from "./Main"
-import ServicesSection from "./Services"
-import BenefitsSection from "./Benefits"
 import AboutSection from "./About"
-import StrikingPhraseSection from "./StrinkingPhrase"
-import PrinciplesSection from "./Principles"
+import BenefitsSection from "./Benefits"
 import ContactFormSection from "./ContactForm"
+import MainSection from "./Main"
+import PrinciplesSection from "./Principles"
+import ServicesSection from "./Services"
+import StrikingPhraseSection from "./StrinkingPhrase"
 
 export {
   MainSection,

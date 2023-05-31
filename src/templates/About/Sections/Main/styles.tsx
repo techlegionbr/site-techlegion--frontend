@@ -1,4 +1,4 @@
-import backgroundMain from "@/assets/images/backgrounds/fundo-mãos-trato-robo.png"
+
 import { breackScreens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
@@ -9,12 +9,8 @@ export const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url(${backgroundMain.src});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
   @media (max-width: ${breackScreens.tv}) {
-    min-height: calc(100vh - 80px - 30px);
+    min-height: calc(100vh - (${layout.header.sub} + ${layout.header.sup}));
     padding: 0 ${layout.containerPaddingX};
   }
   @media (max-width: ${breackScreens.smart}) {
@@ -35,13 +31,6 @@ export const Main = styled.div`
       @media (max-width: ${breackScreens.tablet}) {
         width: 100%;
       }
-      @media (max-width: ${breackScreens.smart}) {
-        padding: 0;
-      }
-      /* backdrop-filter: blur(5px);
-      padding: .6rem 1rem;
-      border-radius: .4rem;
-      border: 1.2px solid #a496ff42; */
       h3{
         margin-bottom: .5rem;
         @media (max-width: ${breackScreens.smart}) {
@@ -70,7 +59,7 @@ export const Main = styled.div`
         gap: 1rem;
         border: 1.4px solid #4b9ff841;
         border-radius: .4rem;
-        padding: .5rem 1rem;
+        padding: .5rem 1.5rem;
         background-color: #171748;
         @media (max-width: ${breackScreens.smart}) {
           width: 100%;
@@ -79,14 +68,22 @@ export const Main = styled.div`
           width: 60px;
           height: 60px;
           overflow: hidden;
+          @media (max-width: ${breackScreens.smart}) {
+            width: 50px;
+            height: 50px;
+          }
           img{
             width: 100%;
             height: 100%;
             border-radius: 50%;
           }
         }
-        article small{
-          color: ${color.third};
+        article{
+          line-height: .5rem;
+          small{
+            color: ${color.third};
+          }
+
         }
         
       }

@@ -13,7 +13,7 @@ import {
   StrikingPhraseSection,
   PrinciplesSection,
   ContactFormSection
-} from "./Sections"
+} from "./sections"
 
 
 

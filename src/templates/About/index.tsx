@@ -4,7 +4,7 @@ import Header from "@/patterns/layout/Header"
 
 import Head from "next/head"
 
-import { MainSection, ServiceFlexSection, ValuesSection, VolunteersSection, YourMomentSection } from "../About/Sections"
+import { MainSection, ServiceFlexSection, ValuesSection, VolunteersSection, YourMomentSection } from "../About/sections"
 
 const About = (): JSX.Element => {
   return (

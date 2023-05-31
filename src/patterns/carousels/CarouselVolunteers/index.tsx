@@ -4,18 +4,8 @@ import { useRef } from "react"
 import Image from "next/image"
 
 import * as S from "./styles"
+import { type TypeVolunteer } from "./types"
 
-interface TypeLink {
-  icon: React.ReactNode,
-  href: string
-}
-
-interface TypeVolunteer {
-  image: string,
-  name: string,
-  office: string,
-  links: TypeLink[]
-}
 
 interface PropsCarousel {
   volunteers: TypeVolunteer[]
@@ -26,17 +16,18 @@ interface PropsCardVolunteers {
 }
 
 const CardVolunteer = ({ volunteers }: PropsCardVolunteers): JSX.Element => {
+  const { image, links, name, office } = volunteers
   return (
     <S.CardVolunteer>
       <div className="profile-image">
-        <Image src={volunteers.image} alt={volunteers.name} width={60} height={60} />
+        <Image src={image} alt={name} width={60} height={60} />
       </div>
-      <h4>{volunteers.name}</h4>
-      <h5>{volunteers.office}</h5>
+      <h4>{name}</h4>
+      <h5>{office}</h5>
       <nav>
         {
-          volunteers.links.map((volunt, index) => (
-            <a key={index} title={volunteers.name} href={volunt.href}>{volunt.icon}</a>
+          links.map((volunt, index) => (
+            <a key={index} title={name} href={volunt.href}>{volunt.icon}</a>
           ))
         }
       </nav>
@@ -50,11 +41,11 @@ const CarouselVolunteers = ({ volunteers }: PropsCarousel): JSX.Element => {
   const scrollerCarousel = (direction: "left" | "right"): void => {
     const { current: carousel } = carouselRef
     const gapItems = (16 * 2) // 1rem === 16px
-    if (carousel && direction === "left") {
-      carousel.scrollLeft -= carousel.offsetWidth + gapItems
-    }
-    if (carousel && direction === "right") {
-      carousel.scrollLeft += carousel.offsetWidth + gapItems
+    if (carousel) {
+      const { offsetWidth, scrollLeft } = carousel
+      carousel.scrollLeft = direction === "left" ?
+        (scrollLeft - offsetWidth) - gapItems :
+        (scrollLeft + offsetWidth) + gapItems
     }
   }
 

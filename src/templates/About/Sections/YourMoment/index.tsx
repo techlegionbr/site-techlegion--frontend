@@ -12,11 +12,11 @@ const YourMoment = (): JSX.Element => {
           title="Seu Momento"
         />
         <div className="description-contact">
-          <h3>Chegou a hora de profissionalizar seu negócio!</h3>
+          <h4>Chegou a hora de profissionalizar seu negócio!</h4>
           <p>
             Mande uma mensagem para conseguirmos entender o seu momento digital e avaliarmos como podemos te ajudar!
           </p>
-          <Button className="button-contact">Entrar em Contato</Button>
+          <Button size="medium" className="button-contact">Entrar em Contato</Button>
         </div>
       </div>
     </S.YourMoment>

@@ -26,7 +26,7 @@ const Main = (): JSX.Element => {
               <small>CEO Tech Legion</small>
             </article>
           </div>
-          <Button className="button-contact">Entre em Contato</Button>
+          <Button size="medium" className="button-contact">Entre em Contato</Button>
         </div>
         <div className="image-apresentation">
           <Image src={imageApresentation} alt="grupo de jovens alegres" width={300} />

@@ -1,7 +1,7 @@
 import { type MouseEventHandler } from "react"
 
+import { breackScreens, color } from "@/styles/root"
 import styled from "styled-components"
-import { color } from "@/styles/root"
 
 import { useRouter } from "next/router"
 
@@ -29,6 +29,13 @@ const ButtonStyled = styled.button<PropsButtonStyled>`
   opacity: ${({ hover }) => hover === "opacity" || hover === "scale" ? ".8" : "1"} ;
   transition: .2s;
   border: 1.4px solid ${({ colorTheme }) => color[colorTheme]};
+  @media (max-width: ${breackScreens.smart}) {
+    font-size: ${({ size }) => (
+    size === "small" ? ".7rem" :
+      size === "medium" ? ".8rem" :
+        size === "big" ? ".9rem" : ""
+  )};
+  }
   &:hover{
     ${({ hover, colorTheme }) => (
     hover === "opacity" ? "opacity: 1" :

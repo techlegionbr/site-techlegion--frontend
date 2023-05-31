@@ -1,7 +1,8 @@
 import TitleSection from "@/components/TitleSection"
+
 import * as S from "./styles"
 
-const ContactForm = () => {
+const ContactForm = (): JSX.Element => {
   return (
     <S.ContactForm>
       <div className="content">

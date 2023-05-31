@@ -38,17 +38,25 @@ button {
   all: unset;
   cursor: pointer;
 }
-h3 {
+small {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+h4 {
   font-size: 1rem;
-  line-height: 1.1rem;
+  line-height: 1.2rem;
+}
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 h2 {
   font-size: 1.4rem;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
 }
 h1 {
   font-size: 2.8rem;
-  line-height: 2.9rem;
+  line-height: 3rem;
 }
 p {
   font-size: 0.9rem;
@@ -57,9 +65,17 @@ p {
   color: #ffffffe8;
 }
 @media (max-width: 420px) {
+  small {
+    font-size: 0.7rem;
+    line-height: 0.9rem;
+  }
+  h4 {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
   h3 {
-    font-size: 0.8rem;
-    line-height: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
   }
   h2 {
     font-size: 1.3rem;

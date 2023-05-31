@@ -1,10 +1,13 @@
-import Image from "next/image"
-import * as S from "./styles"
-import logoTechLegion from "@/assets/images/logos/Logo_Tech_Legion_H_02_Blue.png"
 import logoLionWhite from "@/assets/images/logos/lion_white.png"
+import logoTechLegion from "@/assets/images/logos/Logo_Tech_Legion_H_02_Blue.png"
+
+import Image from "next/image"
 import Link from "next/link"
 
-const Footer = () => {
+import * as S from "./styles"
+
+
+const Footer = (): JSX.Element => {
   return (
     <S.Footer>
       <div className="content">

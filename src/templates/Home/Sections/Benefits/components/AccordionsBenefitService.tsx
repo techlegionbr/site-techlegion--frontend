@@ -1,23 +1,23 @@
 import { useMemo, useState } from "react"
 
 import * as S from "../styles"
+import { type TypeBenefit } from "../types"
 
 type TypeBenefitParam = [
   service: string,
   show: boolean
 ]
 
+
 interface PropsCardBenefitService {
-  benefit: {
-    service: string,
-    description: string,
-    icon: React.ReactNode,
-  }
+  benefit: TypeBenefit
   showDescription: boolean,
   onClick: (benefit: TypeBenefitParam) => void
 }
 
 const CardBenefitService = ({ benefit, showDescription, onClick }: PropsCardBenefitService): JSX.Element => {
+  const { description, icon, service } = benefit
+
   const handleShowDescription = (): void => {
     onClick([benefit.service, showDescription])
   }
@@ -28,19 +28,17 @@ const CardBenefitService = ({ benefit, showDescription, onClick }: PropsCardBene
     >
       <div className="column-icon">
         <div className="square-icon">
-          {benefit.icon}
+          {icon}
         </div>
       </div>
       <div className="benefit-content">
         <div className="title-benefit">
-          <h4>{benefit.service}</h4>
-          <span className="watch-more">
-            <i className='bx bx-chevrons-up'></i>
-          </span>
+          <h4>{service}</h4>
+          <span className="watch-more"></span>
         </div>
         <div className="description-benefit">
           <p>
-            {benefit.description}
+            {description}
           </p>
         </div>
       </div>
@@ -48,14 +46,8 @@ const CardBenefitService = ({ benefit, showDescription, onClick }: PropsCardBene
   )
 }
 
-interface TypeBenefits {
-  icon: React.ReactNode,
-  service: string,
-  description: string
-}
-
 interface PropsAccordionsBenefitService {
-  benefits: TypeBenefits[]
+  benefits: TypeBenefit[]
 }
 
 const AccordionsBenefitService = ({ benefits }: PropsAccordionsBenefitService): JSX.Element => {

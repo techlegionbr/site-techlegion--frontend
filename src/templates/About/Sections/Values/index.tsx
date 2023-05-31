@@ -18,23 +18,23 @@ const Values = (): JSX.Element => {
         <ul className="list-values-card">
           <li>
             <i className='bx bxs-user-check'></i>
-            <h3>Pessoas em<br />Primeiro lugar</h3>
+            <h4>Pessoas em<br />Primeiro lugar</h4>
           </li>
           <li>
             <i className='bx bxs-star'></i>
-            <h3>Sonhar<br />grande</h3>
+            <h4>Sonhar<br />grande</h4>
           </li>
           <li>
             <i className='bx bxs-group'></i>
-            <h3>Prosperar<br />Juntos</h3>
+            <h4>Prosperar<br />Juntos</h4>
           </li>
           <li>
             <i className='bx bx-male-female'></i>
-            <h3>Atendimento<br />Humanizado</h3>
+            <h4>Atendimento<br />Humanizado</h4>
           </li>
           <li>
             <i className='bx bxs-trophy'></i>
-            <h3>Ter ambição e<br />humildade</h3>
+            <h4>Ter ambição e<br />humildade</h4>
           </li>
         </ul>
         <div className="social-articles">

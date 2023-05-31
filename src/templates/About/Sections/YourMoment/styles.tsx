@@ -12,13 +12,13 @@ export const YourMoment = styled.div`
   .content{
     width: ${layout.contentWidth};
     .description-contact{
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      h3{
+      h4{
         background-color: #1c1a54;
         padding: .6rem 1rem;
         border-radius: .4rem;
@@ -32,7 +32,7 @@ export const YourMoment = styled.div`
       }
     }
     .button-contact{
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
   }
 `

@@ -22,7 +22,7 @@ export const Main = styled.section`
   background-position: center;
 
   @media (max-width: ${breackScreens.tv}) {
-    min-height: calc(100vh - 80px - 30px);
+    min-height: calc(100vh - (${layout.header.sub} + ${layout.header.sup}));
   }
   .content{
     width: ${layout.contentWidth};
