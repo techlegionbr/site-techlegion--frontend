@@ -1,4 +1,5 @@
 
+import ButtonToTop from "@/components/ButtonToTop"
 import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
 
@@ -22,6 +23,7 @@ const Home = (): JSX.Element => {
       <Head>
         <title>Tech Legion</title>
       </Head>
+      <ButtonToTop />
       <Header />
       <MainSection />
       <ServicesSection />

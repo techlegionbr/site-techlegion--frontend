@@ -63,6 +63,7 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
               font-size: 1rem;
               transform: rotate(${({ showDescription }) => showDescription === "true" ? "180deg" : "0deg"});
               transition: .2s;
+              opacity: ${({ showDescription }) => showDescription === "true" ? "1" : ".8"}
             }
             h4{
               color: ${({ showDescription }) => showDescription === "false" ? "#ffffffb1" : "#fff"};

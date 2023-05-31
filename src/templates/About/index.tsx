@@ -1,3 +1,4 @@
+import ButtonToTop from "@/components/ButtonToTop"
 import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
 
@@ -7,6 +8,7 @@ const About = (): JSX.Element => {
   return (
     <>
       <Header />
+      <ButtonToTop />
       <MainSection />
       <ServiceFlexSection />
       <ValuesSection />
