@@ -14,7 +14,7 @@ const Volunteers = (): JSX.Element => {
           subTitle="Voluntários"
           title="Nossa Legião"
         />
-        <div className="carouse-volunteers">
+        <div className="carousel-volunteers">
           <Carousel volunteers={[
             {
               name: "Leonardo Ferraz",

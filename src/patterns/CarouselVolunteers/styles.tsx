@@ -8,7 +8,6 @@ export const CarouselVolunteers = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 4rem;
   .controller{
     position: absolute;
     top: 0;

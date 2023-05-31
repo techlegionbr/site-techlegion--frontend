@@ -28,7 +28,6 @@ export const ServiceFlex = styled.div`
     z-index: 1;
   } */
   .content{
-    z-index: 2;
     width: ${layout.contentWidth};
     display: flex;
     flex-direction: column;

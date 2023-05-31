@@ -14,5 +14,8 @@ export const Volunteers = styled.div`
   border-bottom: 2px solid #ffffff17;
   .content{
     width: ${layout.contentWidth};
+    .carousel-volunteers{
+      margin-top: 4rem;
+    }
   }
 `

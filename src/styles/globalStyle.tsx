@@ -1,3 +1,5 @@
+// NÃO ESTÁ FUNCIONANDO NO NEXT.JS DESATIVAR NÃO PRODUÇÃO
+
 import { createGlobalStyle } from "styled-components"
 
 import { breackScreens, color, font } from "./root"
