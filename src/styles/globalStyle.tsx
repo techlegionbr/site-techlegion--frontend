@@ -4,7 +4,7 @@ import { createGlobalStyle } from "styled-components"
 
 import { breackScreens, color, font } from "./root"
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`  
   *{
     margin: 0;
     padding: 0;

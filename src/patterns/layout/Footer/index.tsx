@@ -1,7 +1,7 @@
 import logoLionWhite from "@/assets/images/logos/lion_white.png"
 import logoTechLegion from "@/assets/images/logos/Logo_Tech_Legion_H_02_Blue.png"
-import { socialMediaLinks } from "@/settings/links"
-import { type TypeSocialMedia } from "@/settings/links/types"
+import { hostLinks, socialMediaLinks } from "@/settings/links"
+import { type TypeHostLinkMain, type TypeHostLinkService, type TypeSocialMedia } from "@/settings/links/types"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -36,6 +36,83 @@ const socialMedia: TypeSocialMediaIcons[] = [
   }
 ]
 
+interface TypeHostLinksServicesVisual {
+  name: TypeHostLinkService,
+  label: string
+}
+
+const hostLinksServicesVisual: TypeHostLinksServicesVisual[] = [
+  {
+    name: "desenvolvimento-de-site",
+    label: "Desenvolvimento de Site"
+  },
+  {
+    name: "desenvolvimento-de-pagina-de-vendas",
+    label: "Desenvolvimento de Página de Vendas"
+  },
+  {
+    name: "desenvolvimento-de-ecommerce",
+    label: "desenvolvimento de Ecommerce"
+  },
+  {
+    name: "desenvolvimento-de-aplicativo-mobile",
+    label: "Desenvolvimento de Aplicativo Mobile"
+  },
+  {
+    name: "desenvolvimento-de-chatbot-e-assistente",
+    label: "Desenvolvimento de Chatbot e Assitente"
+  },
+  {
+    name: "design-grafico",
+    label: "Design Gráfico"
+  },
+  {
+    name: "ux-ui-design",
+    label: "UX/UI Design"
+  },
+  {
+    name: "social-media",
+    label: "Social Media"
+  },
+  {
+    name: "marketing-digital",
+    label: "Marketing Digital"
+  },
+  {
+    name: "criacao-de-filtros-de-realidade-virtual",
+    label: "Criação de Filtros"
+  },
+  {
+    name: "analise-e-ciencia-de-dados",
+    label: "Análise e Ciência de Dados"
+  }
+]
+
+
+interface TypeHostLinksMainVisualVisual {
+  name: TypeHostLinkMain,
+  label: string
+}
+
+const hostLinksMainVisual: TypeHostLinksMainVisualVisual[] = [
+  {
+    name: "sobre",
+    label: "Sobre"
+  },
+  {
+    name: "servicos",
+    label: "Serviços"
+  },
+  {
+    name: "blog",
+    label: "Blog"
+  },
+  {
+    name: "contato",
+    label: "Contato"
+  }
+]
+
 const Footer = (): JSX.Element => {
   return (
     <S.Footer>
@@ -45,27 +122,25 @@ const Footer = (): JSX.Element => {
             <li>Institucional</li>
             <li className="image-logo"><Image src={logoTechLegion} alt="logo techlegion" width={200} /></li>
             <li className="speack"><i>Nosso negócio é vender o seu.</i></li>
-            <li><Link href="/">Sobre</Link></li>
             <li><Link href="/">Impacto Social</Link></li>
             <li><Link href="/">Diversidade e Inclusão</Link></li>
-            <li><Link href="/">Serviços</Link></li>
-            <li><Link href="/">Blog</Link></li>
-            <li><Link href="/">Contato</Link></li>
+            {
+              hostLinksMainVisual.map(hostlink => (
+                <li key={hostlink.name}>
+                  <Link href={hostLinks.main[hostlink.name]}>{hostlink.label}</Link>
+                </li>
+              ))
+            }
           </ul>
           <ul>
             <li>Nossos Serviços</li>
-            <li><Link href="/">Desenvolvimento de site</Link></li>
-            <li><Link href="/">Desenvolvimento de página de vendas</Link></li>
-            <li><Link href="/">Desenvolvimento de ecommerce</Link></li>
-            <li><Link href="/">Desenvolvimento de aplicativo mobile</Link></li>
-            <li><Link href="/">Desenvolvimento de chatbot e assistente</Link></li>
-            <li><Link href="/">Design Gráfico</Link></li>
-            <li><Link href="/">UX/UI Design</Link></li>
-            <li><Link href="/">Social Media</Link></li>
-            <li><Link href="/">Marketing Digital</Link></li>
-            <li><Link href="/">Gestão de Tráfego</Link></li>
-            <li><Link href="/">Criação de Filtros</Link></li>
-            <li><Link href="/">Análise e ciência de dados</Link></li>
+            {
+              hostLinksServicesVisual.map(hostLink => (
+                <li key={hostLink.name}>
+                  <Link href={hostLinks.services[hostLink.name]}>{hostLink.label}</Link>
+                </li>
+              ))
+            }
           </ul>
           <ul>
             <li>Contato</li>

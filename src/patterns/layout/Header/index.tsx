@@ -55,7 +55,11 @@ const Header = ({ headerContact = true }: PropsHeader): JSX.Element => {
   const [isTransparent, setIsTransparent] = useState(true)
 
   const { pathname } = useRouter()
-  const currentRoute = routes.find(route => route.path === pathname)?.name ?? "home"
+  const currentRoute = (): string => {
+    const basePath = `/${pathname.split("/").filter(Boolean)[0]}`
+
+    return routes.find(route => route.path === basePath)?.name ?? ""
+  }
 
 
   const listenScroll = (): void => {
@@ -101,7 +105,7 @@ const Header = ({ headerContact = true }: PropsHeader): JSX.Element => {
           <nav>
             {
               routes.map(route => (
-                <Link key={route.name} className={currentRoute === route.name ? "marked" : ""} href={route.path}>{route.label}</Link>
+                <Link key={route.name} className={currentRoute() === route.name ? "marked" : ""} href={route.path}>{route.label}</Link>
               ))
             }
           </nav>
