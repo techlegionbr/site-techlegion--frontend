@@ -11,7 +11,7 @@ const Main = (): JSX.Element => {
     <S.Main>
       <div className="content">
         <div className="description-apresentation">
-          <h3>Prezer, somos a</h3>
+          <h4>Prezer, somos a</h4>
           <h1>Tech <span>Legion</span></h1>
           <p>
             Uma <strong>legião apaixonada por tecnologia</strong>, designers, gestores de marketing, analistas e cientistas de dados,

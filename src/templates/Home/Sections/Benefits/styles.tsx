@@ -56,7 +56,7 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
             border: 1.2px solid #8594f547;
           .title-benefit{
             padding: .6rem 1rem .6rem .8rem;
-            height: 49px;
+            height: 53px;
             display: flex;
             align-items: center;
             position: relative;

@@ -3,17 +3,19 @@ import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
 
 import { MainSection } from "./sections"
+import Faq from "./sections/Faq"
 
 
-const Services = (): JSX.Element => {
+const Contact = (): JSX.Element => {
   return (
     <>
       <ButtonToTop />
       <Header />
       <MainSection />
+      <Faq />
       <Footer />
     </>
   )
 }
 
-export default Services
+export default Contact

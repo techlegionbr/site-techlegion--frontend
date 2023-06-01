@@ -46,7 +46,7 @@ export const Main = styled.section`
         width: 100%;
         padding: 2rem 1rem;
       }
-      h3{
+      h4{
         margin-bottom: .5rem;
         @media (max-width: ${breackScreens.smart}) {
           line-height: .6rem;

@@ -8,7 +8,7 @@ const Main = (): JSX.Element => {
     <S.Main>
       <div className="content">
         <div className="description-apresentation">
-          <h3>Seja bem-vindo ao site da</h3>
+          <h4>Seja bem-vindo ao site da</h4>
           <h1>Tech <span>Legion</span></h1>
           <ul className="slogan-tags">
             <li><i className='bx bxs-checkbox-checked'></i>Responsabilidade</li>

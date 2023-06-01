@@ -31,7 +31,7 @@ export const Main = styled.div`
       @media (max-width: ${breackScreens.tablet}) {
         width: 100%;
       }
-      h3{
+      h4{
         margin-bottom: .5rem;
         @media (max-width: ${breackScreens.smart}) {
           line-height: .6rem;

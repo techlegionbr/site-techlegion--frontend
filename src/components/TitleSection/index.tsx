@@ -23,7 +23,7 @@ const TitleSectionStyled = styled.div`
     border-radius: .3rem;
     display: none;
   }
-  h3{
+  h4{
     text-transform: uppercase;
     margin-bottom: .4rem;
     color: ${color.third}
@@ -47,7 +47,7 @@ interface PropsTitleSection {
 const TitleSection = ({ title, subTitle, description }: PropsTitleSection): JSX.Element => {
   return (
     <TitleSectionStyled>
-      <h3>{subTitle}</h3>
+      <h4>{subTitle}</h4>
       <h1>{title}</h1>
       {description && (<p>{description}</p>)}
     </TitleSectionStyled>

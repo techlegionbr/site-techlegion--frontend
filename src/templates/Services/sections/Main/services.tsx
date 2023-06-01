@@ -21,55 +21,55 @@ const services: TypeService[] = [
   },
   {
     title: "Desenvolvimento de Aplicativo Mobile",
-    icon: <i></i>,
+    icon: <i className='bx bxs-mobile'></i>,
     description: "Transforme sua ideia em um aplicativo móvel de sucesso! Desenvolvimento profissional, interface intuitiva, recursos avançados e compatibilidade multiplataforma. Conquiste seu público-alvo no mundo mobile com nosso serviço em desenvolvimento de aplicativos mobile!",
     link: "teste"
   },
   {
     title: "Desenvolvimento de Chatbot e Assistente",
-    icon: <i></i>,
+    icon: <i className='bx bxs-analyse'></i>,
     description: "Automatize e encante com chatbots inteligentes! Desenvolvimento de chatbots e assistentes virtuais personalizados, respostas instantâneas, interações humanizadas e integração perfeita. Otimize seu atendimento e impulsione a satisfação do seus cliente!",
     link: "teste"
   },
   {
     title: "Design Gráfico e Identidade Visual",
-    icon: <i></i>,
+    icon: <i className='bx bxs-palette' ></i>,
     description: "Impressione com design gráfico de qualidade! Logotipos, banners, materiais promocionais, materiais impressos e muito mais. Destaque-se visualmente e conquiste seu público-alvo. Transforme sua marca com nossos serviços de design gráfico profissional!",
     link: "teste"
   },
   {
     title: "UX/UI Design",
-    icon: <i></i>,
+    icon: <i className='bx bxs-layer'></i>,
     description: "Crie experiências memoráveis! UX/UI design para websites e aplicativos. Interfaces intuitivas, estéticas encantadoras e navegação fluida. Cative seu público, promova engajamento e impulsione o sucesso do seu produto com nosso serviço de UX/UI design!",
     link: "teste"
   },
   {
     title: "Social Media",
-    icon: <i></i>,
+    icon: <i className='bx bxs-bar-chart-square'></i>,
     description: "Conquiste as redes sociais! Tenha uma boa gestão estratégica, conteúdo cativante e interações engajadoras. Aumente sua visibilidade, fortaleça sua marca e atinja resultados incríveis. Maximize seu potencial nas mídias sociais com nosso serviço de social media!",
     link: "teste"
   },
   {
     title: "Marketing Digital",
-    icon: <i></i>,
+    icon: <i className='bx bxs-megaphone'></i>,
     description: "Acelere seu negócio com estratégias de marketing digital! Aumente sua visibilidade, conquiste mais leads e potencialize suas vendas. Campanhas eficientes, SEO, mídias sociais, e-mail marketing e muito mais. Alcance o sucesso online com nosso serviço especializado em marketing digital!",
     link: "teste"
   },
   {
     title: "Gestão De Tráfego e Anúncios",
-    icon: <i></i>,
+    icon: <i className='bx bxs-traffic'></i>,
     description: "Maximize seu potencial com uma gestão de tráfego eficiente! Atraia visitantes qualificados, aumente suas conversões e impulsione seus resultados. Anúncios segmentados, otimização contínua e análise de dados estratégica. Alcance o sucesso com nossa expertise em gestão de tráfego!",
     link: "teste"
   },
   {
     title: "Criação De Filtros de realidade Virtual",
-    icon: <i></i>,
+    icon: <i className='bx bxl-meta'></i>,
     description: "Maximize seu potencial com uma gestão de tráfego eficiente! Atraia visitantes qualificados, aumente suas conversões e impulsione seus resultados. Anúncios segmentados, otimização contínua e análise de dados estratégica. Alcance o sucesso com nossa expertise em gestão de tráfego!",
     link: "teste"
   },
   {
     title: "Análise e Ciência De dados",
-    icon: <i></i>,
+    icon: <i className='bx bxs-data'></i>,
     description: "Transforme dados em insights poderosos! Análise e ciência de dados avançada para tomadas de decisão inteligentes. Descubra padrões, identifique oportunidades e otimize seus resultados. Potencialize seu negócio com nosso serviço especializado em análise e ciência de dados!",
     link: "teste"
   },

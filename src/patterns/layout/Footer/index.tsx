@@ -1,11 +1,40 @@
 import logoLionWhite from "@/assets/images/logos/lion_white.png"
 import logoTechLegion from "@/assets/images/logos/Logo_Tech_Legion_H_02_Blue.png"
+import { socialMediaLinks } from "@/settings/links"
+import { type TypeSocialMedia } from "@/settings/links/types"
 
 import Image from "next/image"
 import Link from "next/link"
 
 import * as S from "./styles"
 
+interface TypeSocialMediaIcons {
+  name: TypeSocialMedia,
+  icon: React.ReactNode
+}
+
+const socialMedia: TypeSocialMediaIcons[] = [
+  {
+    name: "linkedin",
+    icon: <i className='bx bxl-linkedin'></i>
+  },
+  {
+    name: "twitter",
+    icon: <i className='bx bxl-twitter'></i>
+  },
+  {
+    name: "instagram",
+    icon: <i className='bx bxl-instagram-alt' ></i>
+  },
+  {
+    name: "facebook",
+    icon: <i className='bx bxl-facebook' ></i>
+  },
+  {
+    name: "tiktok",
+    icon: <i className='bx bxl-tiktok' ></i>
+  }
+]
 
 const Footer = (): JSX.Element => {
   return (
@@ -57,21 +86,13 @@ const Footer = (): JSX.Element => {
             <Link href="/">Termos de Uso</Link>
           </nav>
           <nav className="social-media-nav">
-            <Link href="/">
-              <i className='bx bxl-linkedin'></i>
-            </Link>
-            <Link href="/">
-              <i className='bx bxl-twitter'></i>
-            </Link>
-            <Link href="/">
-              <i className='bx bxl-instagram-alt' ></i>
-            </Link>
-            <Link href="/">
-              <i className='bx bxl-facebook' ></i>
-            </Link>
-            <Link href="/">
-              <i className='bx bxl-tiktok' ></i>
-            </Link>
+            {
+              socialMedia.map(sm => (
+                <a key={sm.name} href={socialMediaLinks[sm.name]} target="_blank" rel="noreferrer">
+                  {sm.icon}
+                </a>
+              ))
+            }
           </nav>
         </div>
       </div>
