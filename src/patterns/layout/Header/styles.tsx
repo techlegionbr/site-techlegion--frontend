@@ -5,27 +5,31 @@ interface PropsHeader {
   istransparent: "true" | "false"
 }
 
-export const Header = styled.header<PropsHeader>`
+export const Header = styled.div`
   width: 100%;
-  height: 80px;
-  padding: 0 ${layout.containerPaddingX};
+  height: 110px;
+  z-index: 11;
+  position: sticky;
+  top: 0;
+  left: 0;
+`
+
+export const SubHeader = styled.header<PropsHeader>`
+  width: 100%;
+  height: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: ${({ istransparent }) => istransparent === "true" ? color.primary : "#181d47c8"};
   backdrop-filter: blur(4px);
-  position: sticky;
-  top: 30px;
-  left: 0;
-  z-index: 10;
-  border-bottom: ${({ istransparent }) => istransparent === "true" ? "0px" : "1px"} solid #ffffff17;
+  border-bottom: 1px solid ${({ istransparent }) => istransparent === "true" ? "transparent" : "#ffffff17"};
   transition: .2s;
+  padding: 0 ${layout.containerPaddingX};
   .content{
     width: ${layout.contentWidth};
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     .menu-hamburger{
       display: none;
       @media (max-width: ${breackScreens.tablet}) {
@@ -39,22 +43,43 @@ export const Header = styled.header<PropsHeader>`
         width: 180px;
       }
     }
-    nav{
+    .menu-nav{
       display: flex;
-      gap: 1rem;
-      font-weight: bold;
+      align-items: center;
+      gap: 1.4rem;
       @media (max-width: 720px) {
-        display: none;
+          display: none;
       }
-      a{
-        color: ${color.light};
-        text-decoration: none;
-        padding: .4rem 0;
+      .button-search{
         font-size: .9rem;
+        color: ${color.light};
+        width: 32px;
+        height: 32px;
+        background-color:${color.secondary};
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         opacity: .8;
         transition: .2s;
         &:hover{
           opacity: 1;
+        }
+      }
+      nav{
+        display: flex;
+        gap: 1rem;
+        font-weight: bold;
+        a{
+          color: ${color.light};
+          text-decoration: none;
+          padding: .4rem 0;
+          font-size: .9rem;
+          opacity: .8;
+          transition: .2s;
+          &:hover{
+            opacity: 1;
+          }
         }
       }
       .marked{
@@ -68,16 +93,11 @@ export const Header = styled.header<PropsHeader>`
   }
 `
 
-export const Contacts = styled.div`
+export const SupHeader = styled.div`
   width: 100%;
-  height: 30px;
-  background-color: ${color.secondary};
-  position: sticky;
-  z-index: 11;
-  top: 0;
-  left: 0;
+  height: 30%;
   padding: 0 ${layout.containerPaddingX};
-
+  background-color: ${color.secondary};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,4 +133,15 @@ export const Contacts = styled.div`
       }
     }
   }
+`
+
+
+export const PopUpSearch = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #0703487d;
+  z-index: 15;
 `

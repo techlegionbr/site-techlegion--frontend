@@ -29,7 +29,7 @@ export const layout = {
   contentWidth: "900px",
   containerPaddingX: "1rem",
   header: {
-    sup: "30px",
-    sub: "80px"
+    sup: `${(110 * 30) / 100}px`,
+    sub: `${(110 * 70) / 100}px`
   }
 }

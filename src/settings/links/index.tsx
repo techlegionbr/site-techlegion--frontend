@@ -12,7 +12,6 @@ export const socialMediaLinks: TypeLinks = {
 };
 
 
-
 export const hostLinks: TypeHostLinks = {
   main: {
     "início": "/",
@@ -39,5 +38,4 @@ export const hostLinks: TypeHostLinks = {
       "ux-ui-design"
     ], "/servicos") as Record<TypeHostLinkService, string>
   }
-
 }

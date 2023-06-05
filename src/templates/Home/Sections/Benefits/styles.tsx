@@ -25,8 +25,6 @@ export const AccordionsBenefitService = styled.div`
       gap: 2rem;
 `
 
-
-
 interface PropsCardBenefitService {
   showDescription: "true" | "false"
 }

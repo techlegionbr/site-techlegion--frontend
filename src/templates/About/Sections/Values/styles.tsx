@@ -18,6 +18,9 @@ export const Values = styled.div`
       margin-top: 4rem;
       flex-wrap: wrap;
       justify-content: center;
+      @media (max-width: ${breackScreens.smart}) {
+        flex-direction: column;
+      }
       li{
         flex: none;
         display: flex;
@@ -29,6 +32,7 @@ export const Values = styled.div`
         border-radius: .6rem;
         gap: .5rem;
         border: 1.3px solid #609aff6c;
+        
         i{
           font-size: 2rem;
           color: ${color.third}

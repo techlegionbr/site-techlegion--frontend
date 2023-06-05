@@ -4,7 +4,7 @@ const generateRoutes = (
 ): Record<string, string> => {
   const routesEntries = routes.map((route) => [
     route,
-    `${base ? `/${base}` : ''}/${route}`
+    `${base ? `${base}` : ''}/${route}`
   ]);
   return Object.fromEntries(routesEntries);
 };

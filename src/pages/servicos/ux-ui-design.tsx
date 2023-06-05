@@ -1,7 +1,7 @@
-import ServicesTemplate from "@/templates/Services"
+import ServiceTemplate from "@/templates/Service"
 
 const UXUIDesign = (): JSX.Element => {
-  return <ServicesTemplate />
+  return <ServiceTemplate />
 }
 
 export default UXUIDesign

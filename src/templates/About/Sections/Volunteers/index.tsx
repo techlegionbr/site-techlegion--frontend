@@ -1,5 +1,5 @@
 import TitleSection from "@/components/TitleSection"
-import Carousel from "@/patterns/carousels/CarouselVolunteers"
+import Carousel from "@/patterns/CarouselVolunteers"
 
 import * as S from "./styles"
 import volunteers from "./volunteers"

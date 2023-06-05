@@ -21,6 +21,9 @@
   box-sizing: border-box;
   font-family: var(--font-Poppins);
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 body {
   color: var(--color-light);
   background-color: var(--color-primary);

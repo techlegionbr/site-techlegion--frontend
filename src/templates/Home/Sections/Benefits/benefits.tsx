@@ -16,8 +16,6 @@ const benefits: TypeBenefit[] = [
     description: "As principais vantagens do desenvolvimento de um ecommerce são: vendas online, gerenciamento fácil de produtos, crescimento de negócio com ecommerce.",
     service: "Desenvolvimento de Ecommerce"
   },
-
-
   {
     icon: <i className='bx bxs-mobile'></i>,
     description: "As principais vantagens de desenvolver um aplicativo mobile são: mobilidade, alcance global, interação direta e oportunidades de negócio com aplicativos.",
