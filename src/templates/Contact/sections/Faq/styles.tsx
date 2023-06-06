@@ -9,7 +9,6 @@ export const Faq = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${color.bluishGray};
-  border-top: 2px solid #ffffff17;
   .content{
     width: ${layout.contentWidth};
     .comon-questions{

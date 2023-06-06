@@ -1,4 +1,5 @@
 import ButtonToTop from "@/components/ButtonToTop"
+import HorizontalLine from "@/components/HorizontalLine"
 import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
 
@@ -15,10 +16,15 @@ const About = (): JSX.Element => {
       <Header />
       <ButtonToTop />
       <MainSection />
+      <HorizontalLine />
       <ServiceFlexSection />
+      <HorizontalLine />
       <ValuesSection />
+      <HorizontalLine />
       <VolunteersSection />
+      <HorizontalLine />
       <YourMomentSection />
+      <HorizontalLine />
       <Footer />
     </>
   )

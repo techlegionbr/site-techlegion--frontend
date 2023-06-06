@@ -1,18 +1,21 @@
 
 
+
 import ButtonToTop from "@/components/ButtonToTop"
+import HorizontalLine from "@/components/HorizontalLine"
 import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
 
-import { InfosSection, MainSection, PlansSection } from "./sections"
+import { AnyQuestionsSection, InfosSection, MainSection } from "./sections"
 import { type TypeService } from "./types"
 
 
 interface PropsService {
-  service: TypeService
+  service: TypeService,
+  SectionPlans?: () => JSX.Element
 }
 
-const Service = ({ service }: PropsService): JSX.Element => {
+const Service = ({ service, SectionPlans }: PropsService): JSX.Element => {
   return (
     <>
       <Header />
@@ -22,13 +25,22 @@ const Service = ({ service }: PropsService): JSX.Element => {
         name: service.name,
         icon: service.icon
       }} />
+      <HorizontalLine />
       <InfosSection service={{
         benefits: service.benefits,
         commonQuestions: service.commonQuestions,
         introduction: service.introduction,
         value: service.value
       }} />
-      <PlansSection />
+      <HorizontalLine />
+      {SectionPlans && (
+        <>
+          <SectionPlans />
+          <HorizontalLine />
+        </>
+      )}
+      <AnyQuestionsSection />
+      <HorizontalLine />
       <Footer />
     </>
   )

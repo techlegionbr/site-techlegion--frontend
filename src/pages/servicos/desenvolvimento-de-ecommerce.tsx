@@ -4,7 +4,7 @@ import ServiceTemplate from "@/templates/Service"
 const EcommerceDevelopment = (): JSX.Element => {
   return <ServiceTemplate service={{
     icon: <i className='bx bx-desktop'></i>,
-    name: "Desenvolvimento de Site",
+    name: "Desenvolvimento de Ecommerce",
     value: 497.97,
     image: imageService.src,
     introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
@@ -51,7 +51,7 @@ const EcommerceDevelopment = (): JSX.Element => {
         response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
       },
       {
-        name: "pergunta-5",
+        name: "pergunta-6",
         question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
         response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
       },

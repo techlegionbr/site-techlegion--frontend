@@ -38,7 +38,7 @@ const Values = (): JSX.Element => {
           </li>
         </ul>
         <div className="social-articles">
-          <article>
+          <article id="diversidade-e-inclusao">
             <div className="image-article">
               <Image src={imageMuitEthinics} alt="Jovens de diversas etinias" />
             </div>
@@ -53,7 +53,7 @@ const Values = (): JSX.Element => {
               <Button className="button-know-more">SAIBA MAIS</Button>
             </div>
           </article>
-          <article>
+          <article id="impacto-social">
             <div className="descriptio-article">
               <h2>Impacto Social</h2>
               <p>

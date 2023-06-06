@@ -13,22 +13,19 @@ export const Values = styled.div`
     width: ${layout.contentWidth};
     .list-values-card{
       width: 100%;
-      display: flex;
-      gap: 1rem;
+      gap: .8rem;
       margin-top: 4rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      @media (max-width: ${breackScreens.smart}) {
-        flex-direction: column;
-      }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       li{
-        flex: none;
+        height: 120px;
+        padding: 0 .6rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
         background-color: #191967;
-        padding: 1.2rem 1.3rem;
         border-radius: .6rem;
         gap: .5rem;
         border: 1.3px solid #609aff6c;
@@ -39,6 +36,7 @@ export const Values = styled.div`
         }
         h4{
           text-transform: uppercase;
+          line-height: 1rem;
         }
       }
     }

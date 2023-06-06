@@ -4,7 +4,7 @@ import TitleSection from "@/components/TitleSection"
 import * as S from "./styles"
 
 
-const Plans = (): JSX.Element => {
+const PlansCloudez = (): JSX.Element => {
   return (
     <S.Plans>
       <div className="content">
@@ -101,4 +101,4 @@ const Plans = (): JSX.Element => {
   )
 }
 
-export default Plans
+export default PlansCloudez

@@ -5,8 +5,6 @@ import styled from "styled-components";
 export const Footer = styled.footer`
   width: 100%;
   padding: 100px ${layout.containerPaddingX};
-  border-top: 2px solid #ffffff17;
-  border-bottom: 2px solid #ffffff17;
   background-color: ${color.bluishGray};
   display: flex;
   align-items: center;

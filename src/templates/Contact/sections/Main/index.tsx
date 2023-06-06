@@ -35,10 +35,6 @@ const socialMedia: TypeSocialMediaIcons[] = [
   {
     name: "whatsapp",
     icon: <i className='bx bxl-whatsapp' ></i>
-  },
-  {
-    name: "email",
-    icon: <i className='bx bxs-envelope' ></i>
   }
 ]
 

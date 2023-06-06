@@ -1,3 +1,4 @@
+
 import { breackScreens, color, layout } from "@/styles/root"
 import styled from "styled-components"
 
@@ -62,6 +63,7 @@ export const SubHeader = styled.header<PropsHeader>`
         justify-content: center;
         opacity: .8;
         transition: .2s;
+        i{  pointer-events: none; }
         &:hover{
           opacity: 1;
         }
@@ -136,12 +138,3 @@ export const SupHeader = styled.div`
 `
 
 
-export const PopUpSearch = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: #0703487d;
-  z-index: 15;
-`

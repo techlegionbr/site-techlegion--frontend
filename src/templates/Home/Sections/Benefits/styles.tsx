@@ -53,7 +53,7 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
           background-color: #171757;
             border: 1.2px solid #8594f547;
           .title-benefit{
-            padding: .6rem 1rem .6rem .8rem;
+            padding: .6rem 1rem .6rem 1rem;
             height: 53px;
             display: flex;
             align-items: center;
@@ -73,6 +73,7 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
               font-size: 1rem;
               transform: rotate(${({ showDescription }) => showDescription === "true" ? "180deg" : "0deg"});
               transition: .2s;
+              display: none;
             }
             h4{
               color: ${({ showDescription }) => showDescription === "false" ? "#ffffffb1" : "#fff"};
@@ -84,13 +85,13 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
           }
           .description-benefit{
             overflow: hidden;
-            padding: 0 .5rem;
-            height: ${({ showDescription }) => showDescription === "false" ? "0px" : "130px"};
+            padding: 0 1rem;
+            height: ${({ showDescription }) => showDescription === "false" ? "0px" : "180px"};
             transition: .2s;
             p{
               margin-top: .5rem;
-              font-size: .8rem;
-              line-height: .9rem;
+              font-size: .9rem;
+              line-height: 1.1rem;
             }
           }
         }

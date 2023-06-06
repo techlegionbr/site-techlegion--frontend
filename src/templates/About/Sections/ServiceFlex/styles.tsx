@@ -1,4 +1,4 @@
-import backgroundteste from "@/assets/images/backgrounds/bolas-no-fundo.png"
+
 import { breackScreens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
@@ -10,23 +10,6 @@ export const ServiceFlex = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${color.bluishGray};
-  border-top: 2px solid #ffffff17;
-  border-bottom: 2px solid #ffffff17;
-  /* background-image: url(${backgroundteste.src});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  &::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0a1929b5;
-    z-index: 1;
-  } */
   .content{
     width: ${layout.contentWidth};
     display: flex;

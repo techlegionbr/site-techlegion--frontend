@@ -58,19 +58,19 @@ const services: TypeService[] = [
     link: hostLinks.services["marketing-digital"]
   },
   {
-    title: "Gestão De Tráfego e Anúncios",
+    title: "Gestão de Tráfego e Anúncios",
     icon: <i className='bx bxs-traffic'></i>,
     description: "Maximize seu potencial com uma gestão de tráfego eficiente! Atraia visitantes qualificados, aumente suas conversões e impulsione seus resultados. Anúncios segmentados, otimização contínua e análise de dados estratégica. Alcance o sucesso com nossa expertise em gestão de tráfego!",
     link: hostLinks.services["gestao-de-trafego"]
   },
   {
-    title: "Criação De Filtros de realidade Virtual",
+    title: "Criação de Filtros de Realidade Virtual",
     icon: <i className='bx bxl-meta'></i>,
     description: "Maximize seu potencial com uma gestão de tráfego eficiente! Atraia visitantes qualificados, aumente suas conversões e impulsione seus resultados. Anúncios segmentados, otimização contínua e análise de dados estratégica. Alcance o sucesso com nossa expertise em gestão de tráfego!",
     link: hostLinks.services["criacao-de-filtros-de-realidade-virtual"]
   },
   {
-    title: "Análise e Ciência De dados",
+    title: "Análise e Ciência de dados",
     icon: <i className='bx bxs-data'></i>,
     description: "Transforme dados em insights poderosos! Análise e ciência de dados avançada para tomadas de decisão inteligentes. Descubra padrões, identifique oportunidades e otimize seus resultados. Potencialize seu negócio com nosso serviço especializado em análise e ciência de dados!",
     link: hostLinks.services["analise-e-ciencia-de-dados"]

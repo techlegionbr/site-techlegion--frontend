@@ -1,5 +1,6 @@
 
 import ButtonToTop from "@/components/ButtonToTop"
+import HorizontalLine from "@/components/HorizontalLine"
 import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
 
@@ -26,12 +27,19 @@ const Home = (): JSX.Element => {
       <ButtonToTop />
       <Header />
       <MainSection />
+      <HorizontalLine />
       <ServicesSection />
+      <HorizontalLine />
       <BenefitsSection />
+      <HorizontalLine />
       <AboutSection />
+      <HorizontalLine />
       <StrikingPhraseSection />
+      <HorizontalLine />
       <PrinciplesSection />
+      <HorizontalLine />
       <ContactFormSection />
+      <HorizontalLine />
       <Footer />
     </>
   )

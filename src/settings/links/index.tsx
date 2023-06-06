@@ -1,4 +1,4 @@
-import { type TypeHostLinkMain, type TypeHostLinkService, type TypeHostLinks, type TypeLinks } from "./types";
+import { type TypeHostOurValues, type TypeHostLinkMain, type TypeHostLinkService, type TypeHostLinks, type TypeLinks } from "./types";
 import generateRoutes from "./utils/generateRoutes";
 
 export const socialMediaLinks: TypeLinks = {
@@ -37,5 +37,11 @@ export const hostLinks: TypeHostLinks = {
       "social-media",
       "ux-ui-design"
     ], "/servicos") as Record<TypeHostLinkService, string>
+  },
+  ourValues: {
+    ...generateRoutes([
+      "#diversidade-e-inclusao",
+      "#impacto-social"
+    ], "/sobre") as Record<TypeHostOurValues, string>
   }
 }

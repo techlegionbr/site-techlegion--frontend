@@ -10,6 +10,7 @@ import { useRouter } from "next/router"
 
 import Hamburger from "./components/Hamburger"
 import PopUpSearch from "./components/PopUpSearch"
+import { hostLinksMainHeader } from "./settings/links"
 import * as S from "./styles"
 
 
@@ -17,34 +18,6 @@ import * as S from "./styles"
 interface PropsHeader {
   headerContact?: boolean
 }
-
-interface TypeRouteInternal {
-  name: TypeHostLinkMain,
-  label: string
-}
-
-const routesInternal: TypeRouteInternal[] = [
-  {
-    name: "início",
-    label: "Início"
-  },
-  {
-    name: "sobre",
-    label: "Sobre"
-  },
-  {
-    name: "servicos",
-    label: "Serviços"
-  },
-  {
-    name: "blog",
-    label: "Blog"
-  },
-  {
-    name: "contato",
-    label: "Contato"
-  }
-]
 
 const SupHeader = (): JSX.Element => {
   return (
@@ -79,8 +52,8 @@ const Header = ({ headerContact = true }: PropsHeader): JSX.Element => {
 
   const currentRoute = (): TypeHostLinkMain => {
     const basePath = `/${pathname.split("/").filter(Boolean)[0]}`
-    return routesInternal.find(route => (
-      hostLinks.main[route.name] === basePath
+    return hostLinksMainHeader.find(route => (
+      route.href === basePath
     ))?.name ?? "início"
   }
 
@@ -97,14 +70,23 @@ const Header = ({ headerContact = true }: PropsHeader): JSX.Element => {
         {headerContact && <SupHeader />}
         <S.SubHeader istransparent={isTransparent ? "true" : "false"}>
           <div className="content">
+
             <Link href="/" className="home_link-img">
-              <Image src={logoTechLegion} alt="Logo da Tech Legion" width={210} priority />
+              <Image
+                src={logoTechLegion}
+                alt="Logo da Tech Legion"
+                width={210} priority
+              />
             </Link>
+
             <div className="menu-nav">
               <nav>
                 {
-                  routesInternal.map(route => (
-                    <Link key={route.name} className={currentRoute() === route.name ? "marked" : ""} href={hostLinks.main[route.name]}>{route.label}</Link>
+                  hostLinksMainHeader.map(route => (
+                    <Link
+                      key={route.name} className={currentRoute() === route.name ? "marked" : ""}
+                      href={hostLinks.main[route.name]}
+                    >{route.label}</Link>
                   ))
                 }
               </nav>
@@ -117,7 +99,10 @@ const Header = ({ headerContact = true }: PropsHeader): JSX.Element => {
           </div>
         </S.SubHeader>
       </S.Header>
-      <PopUpSearch show={showPopUpSearch} />
+      <PopUpSearch
+        show={showPopUpSearch}
+        onClose={() => { setShowPopUpSearch(false); }}
+      />
     </>
   )
 }

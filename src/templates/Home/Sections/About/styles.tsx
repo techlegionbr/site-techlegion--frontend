@@ -6,8 +6,6 @@ export const About = styled.div`
   width: 100%;
   padding: 100px ${layout.containerPaddingX};
   background-color: ${color.bluishGray};
-  border-top: 2px solid #ffffff17;
-  border-bottom: 2px solid #ffffff17;
   display: flex;
   align-items: center;
   justify-content: center;

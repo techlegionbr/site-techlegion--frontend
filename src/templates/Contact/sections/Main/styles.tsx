@@ -22,14 +22,14 @@ export const Main = styled.div`
       .social-medias{
           width: 90%;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
           gap: 1rem;
           margin-bottom: .4rem;
           @media (max-width: ${breackScreens.smart}) {
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: .5rem;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
           }
           li{
-
             height: 100px;
             background-color: #1f1f53;
             border-radius: .6rem;
@@ -37,6 +37,9 @@ export const Main = styled.div`
             overflow: hidden;
             border: 1.2px solid #7e9aff4f;
             transition: .2s;
+            @media (max-width: ${breackScreens.smart}) {
+              height: 90px;
+            }
             &:hover{
               transform: scale(1.1);
             }
@@ -63,9 +66,6 @@ export const Main = styled.div`
       .form-contact{
         width: 90%;
         min-width: 300px;
-        background-color: #1f1f53;
-        padding: 2rem;
-        border: 1.3px solid #54a1f951;
         border-radius: .5rem;
         position: relative;
         h3{
@@ -89,7 +89,7 @@ export const Main = styled.div`
             
           }
           textarea{
-            height: 100px;
+            height: 140px;
           }
           .button-form{
             width: 60px;

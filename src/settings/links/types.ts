@@ -7,7 +7,9 @@ export type TypeSocialMedia =
   | 'whatsapp'
   | 'email';
 
-export type TypeLinks = Partial<Record<TypeSocialMedia, string>>;
+export type TypeLinks = Record<TypeSocialMedia, string>;
+
+export type TypeHostOurValues = '#diversidade-e-inclusao' | '#impacto-social';
 
 export type TypeHostLinkMain =
   | 'início'
@@ -32,4 +34,5 @@ export type TypeHostLinkService =
 export interface TypeHostLinks {
   main: Record<TypeHostLinkMain, string>;
   services: Record<TypeHostLinkService, string>;
+  ourValues: Record<TypeHostOurValues, string>;
 }

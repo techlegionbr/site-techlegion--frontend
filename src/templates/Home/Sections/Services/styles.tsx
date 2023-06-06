@@ -12,8 +12,6 @@ export const Services = styled.section`
   align-items: center;
   justify-content: center;
 
-  border-top: 2px solid #ffffff17;
-  border-bottom: 2px solid #ffffff17;
   .content{
     width: ${layout.contentWidth};
     display: flex;
