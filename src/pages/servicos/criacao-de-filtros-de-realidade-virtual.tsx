@@ -1,60 +1,54 @@
-import imageService from "@/assets/images/services/programador-profissional-trabalhando-ate-tarde-no-escritorio-escuro-scaled.jpg"
+import imageService from "@/assets/images/services/desenvolvimento-de-filtros-de-realidade-virtual.jpg"
 import ServiceTemplate from "@/templates/Service"
 
 const CreationOfVirtualRealityFilters = (): JSX.Element => {
   return <ServiceTemplate service={{
-    icon: <i className='bx bx-desktop'></i>,
+    icon: <i className='bx bxl-meta'></i>,
     name: "Criação de Filtros de Realidade Virtual",
     value: 497.97,
     image: imageService.src,
-    introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
+    introduction: "Descubra um mundo de possibilidades além da realidade! Com o serviço de criação de filtros de realidade virtual, mergulhe em experiências imersivas e interativas como nunca antes. Liberte sua imaginação, explore ambientes virtuais incríveis e compartilhe momentos mágicos com amigos e seguidores. Seja parte de uma revolução tecnológica, onde a realidade se funde com o virtual. Prepare-se para uma jornada única e transformadora através dos filtros de realidade virtual. Sua imaginação é o limite!",
     benefits: [
-      "Presença online: Um site permite que sua empresa esteja presente na internet, alcançando um público global.",
-      "Acessibilidade: Os clientes podem acessar informações sobre sua empresa, produtos e serviços a qualquer momento, de qualquer lugar.",
-      "Credibilidade: Ter um site profissional transmite confiança aos clientes e fortalece a credibilidade da sua marca.",
-      "Presença global: Um site expande sua marca além das fronteiras físicas, conectando com audiências internacionais e gerando visibilidade global.",
-      "Expansão dos negócios: Um site pode ajudar sua empresa a expandir seus negócios, atingindo um público maior e abrindo novas oportunidades de mercado.",
-      "Interação com os clientes: Um site permite que você se envolva com seus clientes por meio de formulários de contato, bate-papo online, comentários e redes sociais.",
-      "Exibição de portfólio: Se você é um freelancer ou uma empresa de serviços, um site é uma plataforma para exibir seu portfólio de trabalhos e atrair novos clientes.",
-      "Análise e métricas: Um site fornece dados sobre o comportamento dos visitantes, permitindo decisões informadas para melhorar a estratégia de negócios online."
+      "Experiências imersivas: Crie filtros que transportem o usuário para novos mundos e realidades, proporcionando experiências imersivas e envolventes.",
+      "Exploração de lugares inacessíveis: Permita que os usuários explorem lugares inacessíveis no mundo real, como o fundo do mar ou o espaço sideral, por meio dos filtros de realidade virtual.",
+      "Interatividade e engajamento: Aumente a interatividade e o engajamento do usuário ao criar filtros que ofereçam uma experiência participativa e envolvente.",
+      "Estímulo à criatividade e inovação: Desenvolva filtros e efeitos que estimulem a criatividade dos usuários e ofereçam oportunidades de inovação, criando experiências únicas e personalizadas.",
+      "Comunicação visual impactante: Utilize a realidade aumentada nos filtros para melhorar a comunicação visual, tornando as mensagens mais impactantes e memoráveis.",
+      "Marketing de alto impacto: Aplique os filtros em campanhas de marketing para gerar maior interesse e envolvimento do público-alvo, impactando positivamente a percepção da marca.",
+      "Treinamentos e simulações realistas: Utilize os filtros de realidade virtual em treinamentos e simulações para oferecer uma forma eficiente e segura de aprender novas habilidades.",
+      "Entretenimento único: Proporcione diversão e surpresas por meio de filtros interativos e divertidos, ampliando as possibilidades de entretenimento para os usuários."
     ],
     commonQuestions: [
       {
         name: "pergunta-1",
-        question: "Quanto tempo leva para desenvolver uma página de venda?",
-        response: "O tempo necessário para desenvolver uma página de venda pode variar dependendo da complexidade do projeto. Uma página de venda simples pode levar de algumas semanas a um mês, enquanto uma página mais complexa pode levar de dois a seis meses ou mais.",
+        question: "Quais dispositivos são compatíveis com os filtros de realidade virtual?",
+        response: "Os filtros de realidade virtual podem ser desenvolvidos para diversos dispositivos, como óculos de realidade virtual (VR), smartphones compatíveis com VR e até mesmo para redes sociais que suportam filtros de realidade aumentada (AR)."
       },
       {
         name: "pergunta-2",
-        question: "Quais são os custos envolvidos no desenvolvimento de uma página de venda?",
-        response: "Os custos envolvidos no desenvolvimento de uma página de venda podem variar de acordo com o escopo do projeto, os recursos necessários e os requisitos específicos da sua empresa. É importante discutir suas necessidades e objetivos com a equipe da Tech Legion para obter um orçamento personalizado."
+        question: "É necessário ter conhecimento técnico para criar filtros de realidade virtual?",
+        response: "Embora o conhecimento técnico seja útil, existem plataformas e ferramentas que facilitam a criação de filtros de realidade virtual sem a necessidade de habilidades de programação avançadas. Profissionais especializados podem ajudar a criar filtros personalizados e de alta qualidade."
       },
       {
         name: "pergunta-3",
-        question: "Qual é a diferença entre uma página de venda estática e uma página de venda dinâmica?",
-        response: "Uma página de venda estática apresenta conteúdo fixo que não muda com frequência, enquanto uma página de venda dinâmica permite a atualização e personalização do conteúdo de forma mais fácil e interativa. Uma página de venda dinâmica oferece maior flexibilidade e interatividade para envolver seus visitantes."
+        question: "Quais são as aplicações práticas dos filtros de realidade virtual?",
+        response: "Os filtros de realidade virtual têm diversas aplicações práticas, como entretenimento, publicidade, treinamentos, simulações, turismo virtual, experiências educacionais, eventos especiais, entre outros. As possibilidades são amplas e podem se adaptar às necessidades de diferentes setores."
       },
       {
         name: "pergunta-4",
-        question: "Quais são as etapas do processo de desenvolvimento de uma página de venda?",
-        response: `O processo de desenvolvimento de uma página de venda geralmente envolve as seguintes etapas:
-
-        Planejamento e definição de objetivos
-        Design e criação do layout da página
-        Desenvolvimento e implementação dos recursos e funcionalidades
-        Testes e ajustes para garantir o bom funcionamento da página
-        Lançamento e monitoramento contínuo do desempenho da página`
+        question: "É possível personalizar os filtros de realidade virtual de acordo com a marca ou evento?",
+        response: "Sim, os filtros de realidade virtual podem ser totalmente personalizados para se alinhar à identidade visual da marca ou ao tema de um evento específico. É possível incorporar elementos de design, logotipos, cores e até mesmo interações específicas para criar uma experiência única."
       },
       {
         name: "pergunta-5",
-        question: "Posso atualizar a página de venda após o desenvolvimento?",
-        response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
+        question: "Quais são os benefícios de usar filtros de realidade virtual em campanhas de marketing?",
+        response: "Os filtros de realidade virtual oferecem uma forma inovadora de envolver o público-alvo, criando experiências imersivas e interativas. Eles podem aumentar o engajamento, gerar maior interesse pela marca, criar impacto emocional e promover o compartilhamento nas redes sociais, ampliando o alcance da campanha."
       },
       {
         name: "pergunta-6",
-        question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
-        response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
-      },
+        question: "Quais são as principais tendências na criação de filtros de realidade virtual?",
+        response: "Algumas tendências na criação de filtros de realidade virtual incluem a utilização de reconhecimento facial para interações personalizadas, integração com recursos de inteligência artificial para experiências mais avançadas, e o uso de tecnologias de captura de movimento para uma maior imersão e realismo."
+      }
     ]
   }} />
 }

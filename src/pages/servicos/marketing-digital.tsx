@@ -1,60 +1,54 @@
-import imageService from "@/assets/images/services/programador-profissional-trabalhando-ate-tarde-no-escritorio-escuro-scaled.jpg"
+import imageService from "@/assets/images/services/marketing-digital.jpg"
 import ServiceTemplate from "@/templates/Service"
 const DigitalMarketing = (): JSX.Element => {
   return <ServiceTemplate
     service={{
-      icon: <i className='bx bx-desktop'></i>,
-      name: "Desenvolvimento de Site",
+      icon: <i className='bx bxs-megaphone' ></i>,
+      name: "Marketing Digital",
       value: 497.97,
       image: imageService.src,
-      introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
+      introduction: "Transforme o seu negócio e conquiste resultados extraordinários com o poder do Marketing Digital. Através de estratégias inovadoras, alcance o seu público-alvo de forma precisa, impulsione a sua marca, aumente as vendas e construa relacionamentos duradouros. Seja encontrado, seja lembrado e deixe a concorrência para trás. O sucesso do seu negócio começa aqui, com o serviço de Marketing Digital. Prepare-se para uma jornada de crescimento e destaque no mundo digital.",
       benefits: [
-        "Presença online: Um site permite que sua empresa esteja presente na internet, alcançando um público global.",
-        "Acessibilidade: Os clientes podem acessar informações sobre sua empresa, produtos e serviços a qualquer momento, de qualquer lugar.",
-        "Credibilidade: Ter um site profissional transmite confiança aos clientes e fortalece a credibilidade da sua marca.",
-        "Presença global: Um site expande sua marca além das fronteiras físicas, conectando com audiências internacionais e gerando visibilidade global.",
-        "Expansão dos negócios: Um site pode ajudar sua empresa a expandir seus negócios, atingindo um público maior e abrindo novas oportunidades de mercado.",
-        "Interação com os clientes: Um site permite que você se envolva com seus clientes por meio de formulários de contato, bate-papo online, comentários e redes sociais.",
-        "Exibição de portfólio: Se você é um freelancer ou uma empresa de serviços, um site é uma plataforma para exibir seu portfólio de trabalhos e atrair novos clientes.",
-        "Análise e métricas: Um site fornece dados sobre o comportamento dos visitantes, permitindo decisões informadas para melhorar a estratégia de negócios online."
+        "Alcance global: O Marketing Digital permite que você alcance um público vasto e diversificado em todo o mundo, expandindo o alcance da sua marca além das fronteiras físicas.",
+        "Segmentação precisa: Com estratégias de segmentação avançadas, você pode direcionar suas campanhas de marketing para públicos específicos, aumentando a relevância e a eficácia das suas mensagens.",
+        "Mensuração de resultados: Ao contrário do marketing tradicional, o Marketing Digital oferece a possibilidade de medir e analisar o desempenho das suas campanhas em tempo real.",
+        "Maior retorno sobre o investimento (ROI): Com estratégias eficientes e mensuração precisa, o Marketing Digital tem um potencial significativo para gerar um alto ROI, maximizando o retorno sobre o investimento.",
+        "Interatividade e engajamento: Através das redes sociais, e-mail marketing, blogs e outras plataformas digitais, o Marketing Digital promove a interação direta com o seu público-alvo.",
+        "Flexibilidade e adaptabilidade: O Marketing Digital oferece flexibilidade para ajustar suas estratégias de acordo com as mudanças no mercado e no comportamento do consumidor, permitindo uma abordagem mais adaptável e ágil.",
+        "Acesso a insights e análises de mercado: Com ferramentas de análise e monitoramento disponíveis, o Marketing Digital fornece insights valiosos sobre o comportamento do consumidor, tendências de mercado e concorrência.",
+        "Personalização e experiência do cliente: Com o Marketing Digital, você pode criar campanhas personalizadas e oferecer uma experiência única para cada cliente, aumentando a satisfação e a fidelidade do público-alvo."
       ],
       commonQuestions: [
         {
           name: "pergunta-1",
-          question: "Quanto tempo leva para desenvolver uma página de venda?",
-          response: "O tempo necessário para desenvolver uma página de venda pode variar dependendo da complexidade do projeto. Uma página de venda simples pode levar de algumas semanas a um mês, enquanto uma página mais complexa pode levar de dois a seis meses ou mais.",
+          question: "Quanto tempo leva para desenvolver uma estratégia de marketing digital?",
+          response: "O tempo necessário para desenvolver uma estratégia de marketing digital varia de acordo com a complexidade e o escopo do projeto. Pode levar de algumas semanas a meses, dependendo das metas e dos recursos disponíveis.",
         },
         {
           name: "pergunta-2",
-          question: "Quais são os custos envolvidos no desenvolvimento de uma página de venda?",
-          response: "Os custos envolvidos no desenvolvimento de uma página de venda podem variar de acordo com o escopo do projeto, os recursos necessários e os requisitos específicos da sua empresa. É importante discutir suas necessidades e objetivos com a equipe da Tech Legion para obter um orçamento personalizado."
+          question: "Qual é a importância do marketing digital para as empresas?",
+          response: "O marketing digital é essencial para as empresas, pois permite alcançar um público mais amplo, aumentar a visibilidade da marca, gerar leads qualificados, melhorar a experiência do cliente e impulsionar as vendas.",
         },
         {
           name: "pergunta-3",
-          question: "Qual é a diferença entre uma página de venda estática e uma página de venda dinâmica?",
-          response: "Uma página de venda estática apresenta conteúdo fixo que não muda com frequência, enquanto uma página de venda dinâmica permite a atualização e personalização do conteúdo de forma mais fácil e interativa. Uma página de venda dinâmica oferece maior flexibilidade e interatividade para envolver seus visitantes."
+          question: "Quais são as principais estratégias de marketing digital?",
+          response: "Algumas das principais estratégias de marketing digital incluem SEO (otimização para motores de busca), marketing de conteúdo, mídias sociais, e-mail marketing, publicidade online e marketing de influência.",
         },
         {
           name: "pergunta-4",
-          question: "Quais são as etapas do processo de desenvolvimento de uma página de venda?",
-          response: `O processo de desenvolvimento de uma página de venda geralmente envolve as seguintes etapas:
-
-      Planejamento e definição de objetivos
-      Design e criação do layout da página
-      Desenvolvimento e implementação dos recursos e funcionalidades
-      Testes e ajustes para garantir o bom funcionamento da página
-      Lançamento e monitoramento contínuo do desempenho da página`
+          question: "Como escolher a melhor plataforma de e-commerce para o meu negócio?",
+          response: "Ao escolher uma plataforma de e-commerce, é importante considerar fatores como recursos disponíveis, escalabilidade, facilidade de uso, integrações com outros sistemas, suporte ao cliente e custo. Uma análise cuidadosa desses aspectos ajudará a encontrar a melhor opção para o seu negócio.",
         },
         {
           name: "pergunta-5",
-          question: "Posso atualizar a página de venda após o desenvolvimento?",
-          response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
+          question: "Qual é o papel do conteúdo de qualidade no marketing digital?",
+          response: "O conteúdo de qualidade desempenha um papel fundamental no marketing digital. Ele atrai, envolve e educa o público-alvo, estabelece a marca como uma autoridade em seu nicho, melhora a classificação nos motores de busca e fortalece o relacionamento com os clientes.",
         },
         {
           name: "pergunta-6",
-          question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
-          response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
-        },
+          question: "Como medir o sucesso das estratégias de marketing digital?",
+          response: "O sucesso das estratégias de marketing digital pode ser medido por meio de métricas como tráfego do site, taxa de conversão, engajamento nas redes sociais, retorno sobre o investimento (ROI) e aumento das vendas. O acompanhamento regular dessas métricas ajudará a avaliar o desempenho e fazer ajustes necessários.",
+        }
       ]
     }}
   />

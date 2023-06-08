@@ -1,4 +1,4 @@
-import imageService from "@/assets/images/services/programador-profissional-trabalhando-ate-tarde-no-escritorio-escuro-scaled.jpg"
+import imageService from "@/assets/images/services/analise-e-ciencia-de-dados.jpg"
 import ServiceTemplate from "@/templates/Service"
 
 const AnalyticsAndDataScience = (): JSX.Element => {
@@ -7,54 +7,48 @@ const AnalyticsAndDataScience = (): JSX.Element => {
     name: "Análise e Ciência de Dados",
     value: 497.97,
     image: imageService.src,
-    introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
+    introduction: "A análise e ciência de dados revelam insights preciosos para impulsionar o crescimento da sua empresa. Com técnicas avançadas de modelagem estatística e aprendizado de máquina, transformamos dados em estratégias acionáveis. Desvende o potencial oculto dos dados e tome decisões inteligentes que impulsionam o sucesso. Prepare-se para uma era de descobertas data-driven.",
     benefits: [
-      "Presença online: Um site permite que sua empresa esteja presente na internet, alcançando um público global.",
-      "Acessibilidade: Os clientes podem acessar informações sobre sua empresa, produtos e serviços a qualquer momento, de qualquer lugar.",
-      "Credibilidade: Ter um site profissional transmite confiança aos clientes e fortalece a credibilidade da sua marca.",
-      "Presença global: Um site expande sua marca além das fronteiras físicas, conectando com audiências internacionais e gerando visibilidade global.",
-      "Expansão dos negócios: Um site pode ajudar sua empresa a expandir seus negócios, atingindo um público maior e abrindo novas oportunidades de mercado.",
-      "Interação com os clientes: Um site permite que você se envolva com seus clientes por meio de formulários de contato, bate-papo online, comentários e redes sociais.",
-      "Exibição de portfólio: Se você é um freelancer ou uma empresa de serviços, um site é uma plataforma para exibir seu portfólio de trabalhos e atrair novos clientes.",
-      "Análise e métricas: Um site fornece dados sobre o comportamento dos visitantes, permitindo decisões informadas para melhorar a estratégia de negócios online."
+      "Tomada de decisões embasadas: Análise e Ciência de Dados fornecem informações confiáveis para tomar decisões estratégicas.",
+      "Identificação de padrões e tendências: Permite descobrir insights ocultos nos dados e identificar padrões para tomadas de ação assertivas.",
+      "Otimização de processos e redução de custos: Com base em análises preditivas, é possível otimizar processos e reduzir custos operacionais.",
+      "Identificação de oportunidades de crescimento: Através da análise de dados, é possível identificar oportunidades de crescimento e expansão de negócios.",
+      "Personalização da experiência do cliente: Utilizando dados, é possível personalizar a experiência do cliente e oferecer soluções mais adequadas.",
+      "Detecção de fraudes e mitigação de riscos: A análise de dados ajuda a identificar padrões suspeitos e mitigar riscos de fraudes.",
+      "Previsão de demandas futuras: Modelos preditivos permitem prever demandas futuras e tomar ações proativas para atender às necessidades.",
+      "Avaliação de desempenho de campanhas: A análise de dados permite avaliar o desempenho de campanhas de marketing e ajustar estratégias."
     ],
     commonQuestions: [
       {
         name: "pergunta-1",
-        question: "Quanto tempo leva para desenvolver uma página de venda?",
-        response: "O tempo necessário para desenvolver uma página de venda pode variar dependendo da complexidade do projeto. Uma página de venda simples pode levar de algumas semanas a um mês, enquanto uma página mais complexa pode levar de dois a seis meses ou mais.",
+        question: "Quais são os requisitos para implementar uma estratégia de Análise e Ciência de Dados?",
+        response: "Para implementar uma estratégia de Análise e Ciência de Dados, é necessário ter acesso a dados relevantes, ferramentas de análise adequadas e uma equipe especializada em análise de dados."
       },
       {
         name: "pergunta-2",
-        question: "Quais são os custos envolvidos no desenvolvimento de uma página de venda?",
-        response: "Os custos envolvidos no desenvolvimento de uma página de venda podem variar de acordo com o escopo do projeto, os recursos necessários e os requisitos específicos da sua empresa. É importante discutir suas necessidades e objetivos com a equipe da Tech Legion para obter um orçamento personalizado."
+        question: "Como a Análise e Ciência de Dados podem ajudar minha empresa a tomar decisões mais assertivas?",
+        response: "A Análise e Ciência de Dados fornecem insights baseados em dados, permitindo uma compreensão mais profunda do negócio, clientes e mercado, auxiliando na tomada de decisões mais embasadas e assertivas."
       },
       {
         name: "pergunta-3",
-        question: "Qual é a diferença entre uma página de venda estática e uma página de venda dinâmica?",
-        response: "Uma página de venda estática apresenta conteúdo fixo que não muda com frequência, enquanto uma página de venda dinâmica permite a atualização e personalização do conteúdo de forma mais fácil e interativa. Uma página de venda dinâmica oferece maior flexibilidade e interatividade para envolver seus visitantes."
+        question: "Quais são os benefícios de utilizar técnicas de machine learning na análise de dados?",
+        response: "O uso de técnicas de machine learning na análise de dados permite identificar padrões complexos, realizar previsões mais precisas e automatizar processos, proporcionando insights valiosos para impulsionar o crescimento do negócio."
       },
       {
         name: "pergunta-4",
-        question: "Quais são as etapas do processo de desenvolvimento de uma página de venda?",
-        response: `O processo de desenvolvimento de uma página de venda geralmente envolve as seguintes etapas:
-
-        Planejamento e definição de objetivos
-        Design e criação do layout da página
-        Desenvolvimento e implementação dos recursos e funcionalidades
-        Testes e ajustes para garantir o bom funcionamento da página
-        Lançamento e monitoramento contínuo do desempenho da página`
+        question: "Como a Análise e Ciência de Dados podem ajudar na identificação de oportunidades de mercado?",
+        response: "Através da análise de dados, é possível identificar padrões de comportamento dos clientes, entender suas preferências e necessidades, o que possibilita a identificação de oportunidades de mercado e desenvolvimento de estratégias para atendê-las."
       },
       {
         name: "pergunta-5",
-        question: "Posso atualizar a página de venda após o desenvolvimento?",
-        response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
+        question: "Qual é o papel de um cientista de dados na implementação de projetos de análise de dados?",
+        response: "Um cientista de dados é responsável por coletar, organizar e analisar dados, aplicando técnicas estatísticas e algoritmos de machine learning para extrair insights relevantes. Eles também desenvolvem modelos preditivos e colaboram na tomada de decisões estratégicas."
       },
       {
         name: "pergunta-6",
-        question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
-        response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
-      },
+        question: "Quais são as principais etapas de um projeto de Análise e Ciência de Dados?",
+        response: "As principais etapas de um projeto de Análise e Ciência de Dados incluem: definição dos objetivos, coleta e preparação dos dados, análise exploratória, modelagem de dados, validação dos resultados e implementação das soluções. É um processo iterativo e contínuo, com refinamento constante."
+      }
     ]
   }} />
 }

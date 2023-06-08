@@ -1,4 +1,4 @@
-import imageService from "@/assets/images/services/programador-profissional-trabalhando-ate-tarde-no-escritorio-escuro-scaled.jpg"
+import imageService from "@/assets/images/services/desenvolvimento-de-site.jpg"
 import PlansCloudez from "@/patterns/layout/sections/plans/PlansCloudez"
 import ServiceTemplate from "@/templates/Service"
 
@@ -10,53 +10,47 @@ const WebsiteDevelopment = (): JSX.Element => {
       name: "Desenvolvimento de Site",
       value: 497.97,
       image: imageService.src,
-      introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
+      introduction: "Desperte o potencial do seu negócio com o nosso serviço de desenvolvimento de sites. Combinando criatividade, tecnologia e estratégia, criamos uma presença online poderosa e envolvente. Através de um design personalizado, funcionalidades avançadas e uma experiência intuitiva, transformamos visitantes em clientes fiéis. Esteja pronto para conquistar o mundo digital e alcançar o sucesso que você merece. Vamos construir juntos o site dos seus sonhos!",
       benefits: [
-        "Presença online: Um site permite que sua empresa esteja presente na internet, alcançando um público global.",
-        "Acessibilidade: Os clientes podem acessar informações sobre sua empresa, produtos e serviços a qualquer momento, de qualquer lugar.",
-        "Credibilidade: Ter um site profissional transmite confiança aos clientes e fortalece a credibilidade da sua marca.",
-        "Presença global: Um site expande sua marca além das fronteiras físicas, conectando com audiências internacionais e gerando visibilidade global.",
-        "Expansão dos negócios: Um site pode ajudar sua empresa a expandir seus negócios, atingindo um público maior e abrindo novas oportunidades de mercado.",
-        "Interação com os clientes: Um site permite que você se envolva com seus clientes por meio de formulários de contato, bate-papo online, comentários e redes sociais.",
-        "Exibição de portfólio: Se você é um freelancer ou uma empresa de serviços, um site é uma plataforma para exibir seu portfólio de trabalhos e atrair novos clientes.",
-        "Análise e métricas: Um site fornece dados sobre o comportamento dos visitantes, permitindo decisões informadas para melhorar a estratégia de negócios online."
+        "Visibilidade online: Um site bem desenvolvido aumenta a visibilidade da sua marca na internet, permitindo que mais pessoas descubram seus produtos.",
+        "Credibilidade: Ter um site profissional transmite confiança aos clientes, mostrando que você é uma empresa estabelecida e comprometida.",
+        "Acesso global: Um site permite que você alcance um público global, expandindo o alcance do seu negócio além das limitações geográficas.",
+        "Informações 24/7: Seu site está disponível 24 horas por dia, 7 dias por semana, fornecendo informações relevantes sobre seus produtos, serviços e contato.",
+        "Geração de leads: Um site bem otimizado pode ajudar a capturar leads qualificados, permitindo que você entre em contato com potenciais clientes.",
+        "Vendas online: Se você vende produtos ou serviços, um site de comércio eletrônico permite que você venda diretamente online.",
+        "Marketing digital: Um site é uma plataforma central para suas estratégias de marketing digital, permitindo que você promova seus produtos.",
+        "Competitividade: Ter um site de qualidade coloca você à frente da concorrência, permitindo que você se destaque e ofereça uma experiência superior aos seus clientes."
       ],
       commonQuestions: [
         {
           name: "pergunta-1",
-          question: "Quanto tempo leva para desenvolver uma página de venda?",
-          response: "O tempo necessário para desenvolver uma página de venda pode variar dependendo da complexidade do projeto. Uma página de venda simples pode levar de algumas semanas a um mês, enquanto uma página mais complexa pode levar de dois a seis meses ou mais.",
+          question: "Quanto tempo leva para desenvolver um site?",
+          response: "O prazo de desenvolvimento varia dependendo da complexidade do projeto, mas em média leva de 4 a 8 semanas, considerando a criação do design, desenvolvimento das funcionalidades e revisões necessárias.",
         },
         {
           name: "pergunta-2",
-          question: "Quais são os custos envolvidos no desenvolvimento de uma página de venda?",
-          response: "Os custos envolvidos no desenvolvimento de uma página de venda podem variar de acordo com o escopo do projeto, os recursos necessários e os requisitos específicos da sua empresa. É importante discutir suas necessidades e objetivos com a equipe da Tech Legion para obter um orçamento personalizado."
+          question: "Meu site será responsivo, ou seja, adaptável a dispositivos móveis?",
+          response: "Sim, desenvolveremos seu site de forma responsiva para que seja visualizado corretamente em dispositivos móveis, como smartphones e tablets, garantindo uma experiência de navegação perfeita em qualquer dispositivo."
         },
         {
           name: "pergunta-3",
-          question: "Qual é a diferença entre uma página de venda estática e uma página de venda dinâmica?",
-          response: "Uma página de venda estática apresenta conteúdo fixo que não muda com frequência, enquanto uma página de venda dinâmica permite a atualização e personalização do conteúdo de forma mais fácil e interativa. Uma página de venda dinâmica oferece maior flexibilidade e interatividade para envolver seus visitantes."
+          question: "Posso atualizar o conteúdo do site por conta própria?",
+          response: "Sim, você terá acesso a um sistema de gerenciamento de conteúdo (CMS) intuitivo, que permitirá que você atualize facilmente o texto, imagens, vídeos e outros elementos do site, sem a necessidade de conhecimentos técnicos."
         },
         {
           name: "pergunta-4",
-          question: "Quais são as etapas do processo de desenvolvimento de uma página de venda?",
-          response: `O processo de desenvolvimento de uma página de venda geralmente envolve as seguintes etapas:
-
-          Planejamento e definição de objetivos
-          Design e criação do layout da página
-          Desenvolvimento e implementação dos recursos e funcionalidades
-          Testes e ajustes para garantir o bom funcionamento da página
-          Lançamento e monitoramento contínuo do desempenho da página`
+          question: "Meu site será otimizado para mecanismos de busca (SEO)?",
+          response: "Sim, implementaremos práticas de otimização para mecanismos de busca (SEO) durante o desenvolvimento do site, incluindo a otimização de palavras-chave, metadados e estrutura de URL, para ajudar seu site a ter uma melhor visibilidade nos resultados de pesquisa."
         },
         {
           name: "pergunta-5",
-          question: "Posso atualizar a página de venda após o desenvolvimento?",
-          response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
+          question: "Vocês oferecem suporte técnico após o lançamento do site?",
+          response: " Sim, após o lançamento do site, oferecemos suporte técnico contínuo para resolver quaisquer problemas técnicos, fazer ajustes necessários e fornecer orientação sobre o uso do site, garantindo o seu bom funcionamento."
         },
         {
           name: "pergunta-6",
-          question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
-          response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
+          question: "Quais são as formas de pagamento para o serviço de desenvolvimento de site?",
+          response: "Oferecemos diferentes opções de pagamento, incluindo pagamento único, parcelamento ou acordo personalizado, dependendo das necessidades e preferências do cliente. Entre em contato para discutir as opções de pagamento disponíveis."
         },
       ]
     }} />

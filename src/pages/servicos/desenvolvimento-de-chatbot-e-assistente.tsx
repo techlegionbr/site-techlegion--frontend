@@ -1,59 +1,53 @@
-import imageService from "@/assets/images/services/programador-profissional-trabalhando-ate-tarde-no-escritorio-escuro-scaled.jpg"
+import imageService from "@/assets/images/services/desenvolvimento-de-chatbot-e-assitente.jpg"
 import ServiceTemplate from "@/templates/Service"
 
 const ChatbotAndAssistantDevelopment = (): JSX.Element => {
   return <ServiceTemplate service={{
-    icon: <i className='bx bx-desktop'></i>,
+    icon: <i className='bx bxs-analyse'></i>,
     name: "Desenvolvimento de Chatbot e Assistente",
     value: 497.97,
     image: imageService.src,
-    introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
+    introduction: "Transforme a interação com seus clientes e otimize seus processos com nosso serviço de desenvolvimento de chatbot e assistente virtual. Através da inteligência artificial e da automação inteligente, oferecemos soluções inovadoras para atender às demandas do mundo digital. Proporcione uma experiência personalizada, eficiente e 24/7 para seus usuários. Simplifique, automatize e revolucione com nossas soluções de chatbot e assistente virtual. O futuro da interação está aqui, junte-se a nós e surpreenda seus clientes.",
     benefits: [
-      "Presença online: Um site permite que sua empresa esteja presente na internet, alcançando um público global.",
-      "Acessibilidade: Os clientes podem acessar informações sobre sua empresa, produtos e serviços a qualquer momento, de qualquer lugar.",
-      "Credibilidade: Ter um site profissional transmite confiança aos clientes e fortalece a credibilidade da sua marca.",
-      "Presença global: Um site expande sua marca além das fronteiras físicas, conectando com audiências internacionais e gerando visibilidade global.",
-      "Expansão dos negócios: Um site pode ajudar sua empresa a expandir seus negócios, atingindo um público maior e abrindo novas oportunidades de mercado.",
-      "Interação com os clientes: Um site permite que você se envolva com seus clientes por meio de formulários de contato, bate-papo online, comentários e redes sociais.",
-      "Exibição de portfólio: Se você é um freelancer ou uma empresa de serviços, um site é uma plataforma para exibir seu portfólio de trabalhos e atrair novos clientes.",
-      "Análise e métricas: Um site fornece dados sobre o comportamento dos visitantes, permitindo decisões informadas para melhorar a estratégia de negócios online."
+      "Atendimento 24/7: Os chatbots e assistentes virtuais estão disponíveis a qualquer momento, oferecendo suporte e atendimento aos clientes em tempo real.",
+      "Respostas rápidas: Fornecimento imediato de informações e redução do tempo de espera.",
+      "Redução de custos: Diminuição dos custos operacionais com automação do atendimento.",
+      "Personalização: Oferta de atendimento personalizado com base nas preferências dos clientes.",
+      "Satisfação do cliente: Melhoria da experiência do cliente, aumentando a satisfação e fidelidade.",
+      "Integração omnichannel: Interação em múltiplos canais para maior conveniência dos clientes.",
+      "Aumento da eficiência: Automação de tarefas repetitivas para liberar tempo da equipe.",
+      "Insights valiosos: Coleta de dados e análise para obter informações estratégicas sobre os clientes."
     ],
     commonQuestions: [
       {
         name: "pergunta-1",
-        question: "Quanto tempo leva para desenvolver uma página de venda?",
-        response: "O tempo necessário para desenvolver uma página de venda pode variar dependendo da complexidade do projeto. Uma página de venda simples pode levar de algumas semanas a um mês, enquanto uma página mais complexa pode levar de dois a seis meses ou mais.",
+        question: "O que é um chatbot?",
+        response: "Um chatbot é um programa de computador projetado para simular uma conversa humana e interagir com os usuários por meio de mensagens de texto ou voz. Ele utiliza técnicas de inteligência artificial para entender e responder às perguntas dos usuários de forma automatizada.",
       },
       {
         name: "pergunta-2",
-        question: "Quais são os custos envolvidos no desenvolvimento de uma página de venda?",
-        response: "Os custos envolvidos no desenvolvimento de uma página de venda podem variar de acordo com o escopo do projeto, os recursos necessários e os requisitos específicos da sua empresa. É importante discutir suas necessidades e objetivos com a equipe da Tech Legion para obter um orçamento personalizado."
+        question: "Quais são os benefícios de ter um chatbot em meu negócio?",
+        response: "Os benefícios incluem atendimento 24/7, respostas rápidas e precisas, redução de custos operacionais, personalização do atendimento, aumento da satisfação do cliente, integração com plataformas populares de mensagens, aumento da produtividade da equipe e a possibilidade de coletar dados valiosos sobre o comportamento e as preferências dos usuários."
       },
       {
         name: "pergunta-3",
-        question: "Qual é a diferença entre uma página de venda estática e uma página de venda dinâmica?",
-        response: "Uma página de venda estática apresenta conteúdo fixo que não muda com frequência, enquanto uma página de venda dinâmica permite a atualização e personalização do conteúdo de forma mais fácil e interativa. Uma página de venda dinâmica oferece maior flexibilidade e interatividade para envolver seus visitantes."
+        question: "Como um chatbot pode ajudar a melhorar a experiência do cliente?",
+        response: "Um chatbot pode fornecer atendimento instantâneo, responder perguntas frequentes de forma rápida e precisa, oferecer recomendações personalizadas com base no histórico de interações do cliente, resolver problemas e fornecer suporte técnico de forma eficiente, garantindo uma experiência do cliente mais conveniente e satisfatória."
       },
       {
         name: "pergunta-4",
-        question: "Quais são as etapas do processo de desenvolvimento de uma página de venda?",
-        response: `O processo de desenvolvimento de uma página de venda geralmente envolve as seguintes etapas:
-
-        Planejamento e definição de objetivos
-        Design e criação do layout da página
-        Desenvolvimento e implementação dos recursos e funcionalidades
-        Testes e ajustes para garantir o bom funcionamento da página
-        Lançamento e monitoramento contínuo do desempenho da página`
+        question: "É possível integrar um chatbot ao meu sistema existente?",
+        response: "Sim, é possível integrar um chatbot ao seu sistema existente, seja ele um site, um aplicativo ou uma plataforma de atendimento ao cliente. A integração pode ser feita por meio de APIs (interfaces de programação de aplicativos) ou por meio de plataformas de chatbot que oferecem recursos de integração simplificados."
       },
       {
         name: "pergunta-5",
-        question: "Posso atualizar a página de venda após o desenvolvimento?",
-        response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
+        question: "Quais tipos de tarefas um chatbot pode realizar?",
+        response: "Um chatbot pode realizar uma variedade de tarefas, como fornecer informações sobre produtos ou serviços, processar pagamentos, agendar compromissos, rastrear pedidos, fornecer suporte técnico, realizar pesquisas de satisfação, entre muitas outras possibilidades. A capacidade do chatbot depende da programação e configuração realizadas."
       },
       {
         name: "pergunta-6",
-        question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
-        response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
+        question: "Como funciona o treinamento de um chatbot?",
+        response: "O treinamento de um chatbot envolve alimentá-lo com uma base de dados de diálogos e respostas esperadas. Por meio de algoritmos de aprendizado de máquina, o chatbot é capaz de aprender a responder de forma mais precisa e contextualizada ao longo do tempo. O treinamento é um processo contínuo, pois o chatbot pode ser ajustado e melhorado com base no feedback dos usuários."
       },
     ]
   }} />

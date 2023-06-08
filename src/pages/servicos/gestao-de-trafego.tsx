@@ -1,61 +1,56 @@
-import imageService from "@/assets/images/services/programador-profissional-trabalhando-ate-tarde-no-escritorio-escuro-scaled.jpg"
+import imageService from "@/assets/images/services/gestão-de-trafego.jpg"
 import ServiceTemplate from "@/templates/Service"
 const TrafficManagement = (): JSX.Element => {
   return <ServiceTemplate
     service={{
-      icon: <i className='bx bx-desktop'></i>,
-      name: "Desenvolvimento de Site",
+      icon: <i className='bx bxs-traffic' ></i>,
+      name: "Gestão de Tráfego",
       value: 497.97,
       image: imageService.src,
-      introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
+      introduction: "Desbloqueie o potencial do seu negócio com o serviço de gestão de tráfego! Aumente sua visibilidade online, direcione o público certo para o seu site e conquiste resultados incríveis. Com estratégias avançadas e análise de dados precisos, otimize suas campanhas, aumente as conversões e alcance o sucesso digital. Deixe-nos cuidar do seu tráfego enquanto você se concentra no crescimento do seu negócio. Juntos, vamos levar sua presença online para novos patamares!",
       benefits: [
-        "Presença online: Um site permite que sua empresa esteja presente na internet, alcançando um público global.",
-        "Acessibilidade: Os clientes podem acessar informações sobre sua empresa, produtos e serviços a qualquer momento, de qualquer lugar.",
-        "Credibilidade: Ter um site profissional transmite confiança aos clientes e fortalece a credibilidade da sua marca.",
-        "Presença global: Um site expande sua marca além das fronteiras físicas, conectando com audiências internacionais e gerando visibilidade global.",
-        "Expansão dos negócios: Um site pode ajudar sua empresa a expandir seus negócios, atingindo um público maior e abrindo novas oportunidades de mercado.",
-        "Interação com os clientes: Um site permite que você se envolva com seus clientes por meio de formulários de contato, bate-papo online, comentários e redes sociais.",
-        "Exibição de portfólio: Se você é um freelancer ou uma empresa de serviços, um site é uma plataforma para exibir seu portfólio de trabalhos e atrair novos clientes.",
-        "Análise e métricas: Um site fornece dados sobre o comportamento dos visitantes, permitindo decisões informadas para melhorar a estratégia de negócios online."
+        "Aumento do tráfego: A gestão de tráfego visa aumentar o número de visitantes qualificados em seu site, gerando mais oportunidades de negócio.",
+        "Melhora da segmentação: Com estratégias de segmentação adequadas, você direciona suas campanhas de marketing para o público-alvo correto, aumentando a eficácia e o retorno.",
+        "Otimização de custos: A gestão de tráfego ajuda a otimizar o investimento em marketing, direcionando recursos para as estratégias mais eficientes e reduzindo desperdícios.",
+        "Aumento das conversões: Ao direcionar o tráfego qualificado para seu site, você aumenta as chances de conversão, transformando visitantes em clientes efetivos.",
+        "Melhora da experiência do usuário: Com uma gestão eficiente, você proporciona uma melhor experiência ao usuário, tornando a navegação mais fácil e agradável.",
+        "Acompanhamento de métricas: A gestão de tráfego permite o acompanhamento de métricas como taxa de cliques, taxa de conversão e tempo de permanência no site, facilitando a análise e a tomada de decisões.",
+        "Aumento da visibilidade: Ao otimizar a presença online, sua empresa ganha maior visibilidade nos motores de busca, aumentando a exposição da marca e atração de novos visitantes.",
+        "Maior competitividade: Com uma gestão eficiente de tráfego, você se destaca da concorrência, conquistando uma posição privilegiada no mercado e alcançando melhores resultados."
       ],
-      commonQuestions: [
-        {
-          name: "pergunta-1",
-          question: "Quanto tempo leva para desenvolver uma página de venda?",
-          response: "O tempo necessário para desenvolver uma página de venda pode variar dependendo da complexidade do projeto. Uma página de venda simples pode levar de algumas semanas a um mês, enquanto uma página mais complexa pode levar de dois a seis meses ou mais.",
-        },
-        {
-          name: "pergunta-2",
-          question: "Quais são os custos envolvidos no desenvolvimento de uma página de venda?",
-          response: "Os custos envolvidos no desenvolvimento de uma página de venda podem variar de acordo com o escopo do projeto, os recursos necessários e os requisitos específicos da sua empresa. É importante discutir suas necessidades e objetivos com a equipe da Tech Legion para obter um orçamento personalizado."
-        },
-        {
-          name: "pergunta-3",
-          question: "Qual é a diferença entre uma página de venda estática e uma página de venda dinâmica?",
-          response: "Uma página de venda estática apresenta conteúdo fixo que não muda com frequência, enquanto uma página de venda dinâmica permite a atualização e personalização do conteúdo de forma mais fácil e interativa. Uma página de venda dinâmica oferece maior flexibilidade e interatividade para envolver seus visitantes."
-        },
-        {
-          name: "pergunta-4",
-          question: "Quais são as etapas do processo de desenvolvimento de uma página de venda?",
-          response: `O processo de desenvolvimento de uma página de venda geralmente envolve as seguintes etapas:
-
-      Planejamento e definição de objetivos
-      Design e criação do layout da página
-      Desenvolvimento e implementação dos recursos e funcionalidades
-      Testes e ajustes para garantir o bom funcionamento da página
-      Lançamento e monitoramento contínuo do desempenho da página`
-        },
-        {
-          name: "pergunta-5",
-          question: "Posso atualizar a página de venda após o desenvolvimento?",
-          response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
-        },
-        {
-          name: "pergunta-6",
-          question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
-          response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
-        },
-      ]
+      commonQuestions:
+        [
+          {
+            name: "pergunta-1",
+            question: "Quais são os benefícios da gestão de tráfego?",
+            response: "A gestão de tráfego oferece benefícios como aumento do tráfego, melhora da segmentação, otimização de custos, aumento das conversões, melhora da experiência do usuário, acompanhamento de métricas, aumento da visibilidade e maior competitividade."
+          },
+          {
+            name: "pergunta-2",
+            question: "Quais estratégias são utilizadas na gestão de tráfego?",
+            response: "As estratégias utilizadas na gestão de tráfego incluem SEO, marketing de conteúdo, anúncios pagos, redes sociais, remarketing, parcerias estratégicas e análise de dados."
+          },
+          {
+            name: "pergunta-3",
+            question: "Qual a importância da segmentação de público na gestão de tráfego?",
+            response: "A segmentação de público é fundamental na gestão de tráfego, pois permite direcionar suas campanhas de marketing para o público-alvo correto, aumentando a eficácia e maximizando os resultados."
+          },
+          {
+            name: "pergunta-4",
+            question: "Quanto tempo leva para ver resultados na gestão de tráfego?",
+            response: "O tempo para ver resultados na gestão de tráfego pode variar, mas geralmente é possível observar melhorias em termos de tráfego, conversões e retorno sobre o investimento em algumas semanas ou meses, dependendo da estratégia adotada."
+          },
+          {
+            name: "pergunta-5",
+            question: "Quais métricas são importantes de acompanhar na gestão de tráfego?",
+            response: "Algumas métricas importantes de acompanhar na gestão de tráfego incluem taxa de cliques, taxa de conversão, tempo de permanência no site, taxa de rejeição, origem do tráfego e retorno sobre o investimento."
+          },
+          {
+            name: "pergunta-6",
+            question: "Qual o papel da análise de dados na gestão de tráfego?",
+            response: "A análise de dados desempenha um papel crucial na gestão de tráfego, pois fornece insights sobre o desempenho das estratégias, permite identificar tendências, ajustar as ações e tomar decisões informadas para otimizar os resultados."
+          }
+        ]
     }}
   />
 }

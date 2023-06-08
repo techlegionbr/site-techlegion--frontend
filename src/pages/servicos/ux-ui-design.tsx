@@ -1,59 +1,53 @@
-import imageService from "@/assets/images/services/programador-profissional-trabalhando-ate-tarde-no-escritorio-escuro-scaled.jpg"
+import imageService from "@/assets/images/services/ux-ui-design.jpg"
 import ServiceTemplate from "@/templates/Service"
 const UXUIDesign = (): JSX.Element => {
   return <ServiceTemplate
     service={{
-      icon: <i className='bx bx-desktop'></i>,
-      name: "Desenvolvimento de Site",
+      icon: <i className='bx bxs-layer' ></i>,
+      name: "UX/UI Design",
       value: 497.97,
       image: imageService.src,
-      introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
+      introduction: "Prepare-se para uma experiência excepcional! Nossos serviços de UI/UX Design vão além do simples visual. Criamos interfaces intuitivas, interativas e emocionantes, projetadas para encantar seus usuários. Combinamos estética sofisticada, usabilidade avançada e pesquisa de usuário meticulosa para entregar soluções digitais que cativam, engajam e impulsionam o sucesso do seu negócio. Transforme suas ideias em experiências surpreendentes com o poder do UI/UX Design.",
       benefits: [
-        "Presença online: Um site permite que sua empresa esteja presente na internet, alcançando um público global.",
-        "Acessibilidade: Os clientes podem acessar informações sobre sua empresa, produtos e serviços a qualquer momento, de qualquer lugar.",
-        "Credibilidade: Ter um site profissional transmite confiança aos clientes e fortalece a credibilidade da sua marca.",
-        "Presença global: Um site expande sua marca além das fronteiras físicas, conectando com audiências internacionais e gerando visibilidade global.",
-        "Expansão dos negócios: Um site pode ajudar sua empresa a expandir seus negócios, atingindo um público maior e abrindo novas oportunidades de mercado.",
-        "Interação com os clientes: Um site permite que você se envolva com seus clientes por meio de formulários de contato, bate-papo online, comentários e redes sociais.",
-        "Exibição de portfólio: Se você é um freelancer ou uma empresa de serviços, um site é uma plataforma para exibir seu portfólio de trabalhos e atrair novos clientes.",
-        "Análise e métricas: Um site fornece dados sobre o comportamento dos visitantes, permitindo decisões informadas para melhorar a estratégia de negócios online."
+        "Experiência do usuário aprimorada: O UI/UX Design foca na criação de interfaces intuitivas e agradáveis, proporcionando uma experiência do usuário memorável e satisfatória.",
+        "Maior engajamento dos usuários: Um design de interface atraente e funcional incentiva os usuários a interagirem mais com o seu produto ou serviço, aumentando o engajamento e a fidelidade.",
+        "Facilidade de uso: O UI/UX Design visa tornar a utilização do produto ou serviço mais fácil e intuitiva, reduzindo a curva de aprendizado e facilitando a navegação.",
+        "Redução de erros e retrabalho: Um bom design de interface minimiza erros do usuário, tornando as interações mais claras e evitando retrabalhos desnecessários.",
+        "Melhoria da imagem da marca: Interfaces bem projetadas e agradáveis agregam valor à sua marca, transmitindo profissionalismo, inovação e cuidado com a experiência do usuário.",
+        "Aumento da satisfação do cliente: Interfaces bem projetadas e amigáveis proporcionam uma experiência positiva aos usuários, o que resulta em maior satisfação e recomendação da sua marca.",
+        "Maior conversão e vendas: Um design de interface otimizado para conversão pode aumentar as taxas de conversão e vendas, direcionando os usuários para as ações desejadas.",
+        "Adaptabilidade a diferentes dispositivos: O UI/UX Design responsivo permite que a interface se ajuste automaticamente a diferentes dispositivos e tamanhos de tela, garantindo uma experiência consistente em smartphones, tablets e desktops."
       ],
       commonQuestions: [
         {
           name: "pergunta-1",
-          question: "Quanto tempo leva para desenvolver uma página de venda?",
-          response: "O tempo necessário para desenvolver uma página de venda pode variar dependendo da complexidade do projeto. Uma página de venda simples pode levar de algumas semanas a um mês, enquanto uma página mais complexa pode levar de dois a seis meses ou mais.",
+          question: " O que é UI/UX Design?",
+          response: "UI/UX Design refere-se à disciplina de projetar a interface do usuário (UI) e a experiência do usuário (UX) de um produto ou serviço digital. O UI Design se concentra na aparência e na interatividade da interface, enquanto o UX Design se preocupa com a usabilidade e a experiência geral do usuário.",
         },
         {
           name: "pergunta-2",
-          question: "Quais são os custos envolvidos no desenvolvimento de uma página de venda?",
-          response: "Os custos envolvidos no desenvolvimento de uma página de venda podem variar de acordo com o escopo do projeto, os recursos necessários e os requisitos específicos da sua empresa. É importante discutir suas necessidades e objetivos com a equipe da Tech Legion para obter um orçamento personalizado."
+          question: "Por que o UI/UX Design é importante para o sucesso de um produto digital?",
+          response: "O UI/UX Design desempenha um papel fundamental no sucesso de um produto digital, pois afeta diretamente a satisfação do usuário. Uma interface bem projetada e uma experiência do usuário positiva aumentam a usabilidade, o engajamento e a fidelidade do usuário, impactando diretamente nos resultados e no alcance dos objetivos do produto."
         },
         {
           name: "pergunta-3",
-          question: "Qual é a diferença entre uma página de venda estática e uma página de venda dinâmica?",
-          response: "Uma página de venda estática apresenta conteúdo fixo que não muda com frequência, enquanto uma página de venda dinâmica permite a atualização e personalização do conteúdo de forma mais fácil e interativa. Uma página de venda dinâmica oferece maior flexibilidade e interatividade para envolver seus visitantes."
+          question: "Qual é o processo de trabalho de um profissional de UI/UX Design?",
+          response: "O processo de trabalho de um profissional de UI/UX Design geralmente envolve pesquisa de usuário, criação de personas, desenvolvimento de wireframes e protótipos, testes de usabilidade e iterações. O objetivo é compreender as necessidades e expectativas dos usuários, projetar soluções eficazes e refinar continuamente o design com base nos feedbacks recebidos."
         },
         {
           name: "pergunta-4",
-          question: "Quais são as etapas do processo de desenvolvimento de uma página de venda?",
-          response: `O processo de desenvolvimento de uma página de venda geralmente envolve as seguintes etapas:
-
-      Planejamento e definição de objetivos
-      Design e criação do layout da página
-      Desenvolvimento e implementação dos recursos e funcionalidades
-      Testes e ajustes para garantir o bom funcionamento da página
-      Lançamento e monitoramento contínuo do desempenho da página`
+          question: "Como o UI/UX Design impacta a conversão e as vendas?",
+          response: "Um design de interface e experiência do usuário bem planejado pode influenciar positivamente a conversão e as vendas. Ao criar uma interface intuitiva, atraente e fácil de usar, os usuários são mais propensos a se envolver, entender os benefícios do produto e tomar ações desejadas, como fazer uma compra ou se inscrever em um serviço."
         },
         {
           name: "pergunta-5",
-          question: "Posso atualizar a página de venda após o desenvolvimento?",
-          response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
+          question: "O que é prototipação e por que é importante no processo de UI/UX Design?",
+          response: "A prototipação é a criação de versões simuladas do produto digital, permitindo que os designers e stakeholders experimentem a interação e a usabilidade antes do desenvolvimento final. Isso permite detectar problemas, validar soluções e realizar ajustes necessários antes do lançamento, economizando tempo e recursos."
         },
         {
           name: "pergunta-6",
-          question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
-          response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
+          question: "Como o UI/UX Design se adapta a diferentes dispositivos e tamanhos de tela?",
+          response: "O UI/UX Design responsivo é uma abordagem que permite que a interface se ajuste automaticamente a diferentes dispositivos e tamanhos de tela. Isso garante uma experiência consistente e agradável em smartphones, tablets e desktops, atendendo às necessidades dos usuários em qualquer dispositivo que eles utilizem."
         },
       ]
     }}
