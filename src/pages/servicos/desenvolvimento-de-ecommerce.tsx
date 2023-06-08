@@ -1,59 +1,53 @@
-import imageService from "@/assets/images/services/programador-profissional-trabalhando-ate-tarde-no-escritorio-escuro-scaled.jpg"
+import imageService from "@/assets/images/services/desenvolvimento-de-ecommerce.jpg"
 import ServiceTemplate from "@/templates/Service"
 
 const EcommerceDevelopment = (): JSX.Element => {
   return <ServiceTemplate service={{
-    icon: <i className='bx bx-desktop'></i>,
+    icon: <i className='bx bxs-store'></i>,
     name: "Desenvolvimento de Ecommerce",
     value: 497.97,
     image: imageService.src,
-    introduction: "Conquiste o mundo digital com um site único e impactante. Através do desenvolvimento cuidadoso, sua marca ganhará vida online, conquistando clientes, expandindo horizontes e abrindo portas para o sucesso. Seja notado, seja lembrado e transforme sua presença na web em uma poderosa ferramenta de crescimento. O futuro começa com o desenvolvimento do seu site. Vamos construí-lo juntos.",
+    introduction: "Construa um império online com o nosso serviço de desenvolvimento de ecommerce. Transforme sua visão em uma realidade virtual que cativa clientes, impulsiona vendas e desafia limites. Nossa equipe especializada e apaixonada criará uma plataforma personalizada, otimizada para o sucesso. Prepare-se para conquistar o mercado digital e abrir caminho para um novo patamar de crescimento. O futuro do seu negócio começa aqui.",
     benefits: [
-      "Presença online: Um site permite que sua empresa esteja presente na internet, alcançando um público global.",
-      "Acessibilidade: Os clientes podem acessar informações sobre sua empresa, produtos e serviços a qualquer momento, de qualquer lugar.",
-      "Credibilidade: Ter um site profissional transmite confiança aos clientes e fortalece a credibilidade da sua marca.",
-      "Presença global: Um site expande sua marca além das fronteiras físicas, conectando com audiências internacionais e gerando visibilidade global.",
-      "Expansão dos negócios: Um site pode ajudar sua empresa a expandir seus negócios, atingindo um público maior e abrindo novas oportunidades de mercado.",
-      "Interação com os clientes: Um site permite que você se envolva com seus clientes por meio de formulários de contato, bate-papo online, comentários e redes sociais.",
-      "Exibição de portfólio: Se você é um freelancer ou uma empresa de serviços, um site é uma plataforma para exibir seu portfólio de trabalhos e atrair novos clientes.",
-      "Análise e métricas: Um site fornece dados sobre o comportamento dos visitantes, permitindo decisões informadas para melhorar a estratégia de negócios online."
+      "Alcance global: Através do e-commerce, sua empresa pode atingir clientes em todo o mundo, expandindo seu mercado.",
+      "Aumento das vendas: Um site de e-commerce eficiente pode impulsionar suas vendas e gerar maior receita.",
+      "Maior visibilidade: Ter um site de e-commerce permite que sua empresa seja encontrada por um número maior de pessoas.",
+      "Flexibilidade de horário: Seu e-commerce funciona 24 horas por dia, 7 dias por semana, permitindo que os clientes comprem a qualquer momento.",
+      "Redução de custos: Com um e-commerce, você pode reduzir despesas como aluguel de loja física e custos operacionais.",
+      "Análise de dados: Um site de e-commerce oferece ferramentas para analisar o comportamento dos clientes e tomar decisões estratégicas.",
+      "Personalização da experiência: Você pode oferecer uma experiência de compra personalizada aos clientes, aumentando sua satisfação.",
+      "Expansão do mercado: O e-commerce permite que sua empresa explore novos segmentos de mercado e alcance diferentes públicos."
     ],
     commonQuestions: [
       {
         name: "pergunta-1",
-        question: "Quanto tempo leva para desenvolver uma página de venda?",
-        response: "O tempo necessário para desenvolver uma página de venda pode variar dependendo da complexidade do projeto. Uma página de venda simples pode levar de algumas semanas a um mês, enquanto uma página mais complexa pode levar de dois a seis meses ou mais.",
+        question: "Quais são os benefícios de ter um ecommerce para o meu negócio?",
+        response: "Ter um e-commerce oferece uma série de benefícios significativos, como alcance global, aumento das vendas, maior visibilidade da marca, flexibilidade de horário de funcionamento, redução de custos operacionais e a oportunidade de expandir para novos mercados e segmentos.",
       },
       {
         name: "pergunta-2",
-        question: "Quais são os custos envolvidos no desenvolvimento de uma página de venda?",
-        response: "Os custos envolvidos no desenvolvimento de uma página de venda podem variar de acordo com o escopo do projeto, os recursos necessários e os requisitos específicos da sua empresa. É importante discutir suas necessidades e objetivos com a equipe da Tech Legion para obter um orçamento personalizado."
+        question: "Quanto tempo leva para desenvolver um ecommerce?",
+        response: "O tempo necessário para desenvolver um e-commerce pode variar dependendo do escopo do projeto, complexidade das funcionalidades desejadas, recursos disponíveis e colaboração eficiente entre a equipe de desenvolvimento e o cliente. Geralmente, o processo de desenvolvimento pode levar de algumas semanas a alguns meses."
       },
       {
         name: "pergunta-3",
-        question: "Qual é a diferença entre uma página de venda estática e uma página de venda dinâmica?",
-        response: "Uma página de venda estática apresenta conteúdo fixo que não muda com frequência, enquanto uma página de venda dinâmica permite a atualização e personalização do conteúdo de forma mais fácil e interativa. Uma página de venda dinâmica oferece maior flexibilidade e interatividade para envolver seus visitantes."
+        question: "Como garantir a segurança dos dados dos clientes em um ecommerce?",
+        response: "A segurança dos dados dos clientes é uma preocupação fundamental em qualquer e-commerce. Para garantir a proteção adequada, é necessário implementar medidas de segurança robustas, como criptografia SSL, proteção contra ataques cibernéticos, uso de práticas de codificação seguras e conformidade com regulamentos de privacidade, como o GDPR (Regulamento Geral de Proteção de Dados) ou LGPD (Lei Geral de Proteção de Dados)."
       },
       {
         name: "pergunta-4",
-        question: "Quais são as etapas do processo de desenvolvimento de uma página de venda?",
-        response: `O processo de desenvolvimento de uma página de venda geralmente envolve as seguintes etapas:
-
-        Planejamento e definição de objetivos
-        Design e criação do layout da página
-        Desenvolvimento e implementação dos recursos e funcionalidades
-        Testes e ajustes para garantir o bom funcionamento da página
-        Lançamento e monitoramento contínuo do desempenho da página`
+        question: "É possível integrar um ecommerce com outros sistemas ou plataformas?",
+        response: "Sim, é possível integrar um e-commerce com vários sistemas e plataformas para melhorar a eficiência operacional. Por exemplo, é possível integrar com sistemas de gerenciamento de relacionamento com o cliente (CRM), sistemas de gerenciamento de estoque (ERP), sistemas de pagamento, sistemas de logística e muito mais. Essas integrações permitem automatizar processos, compartilhar informações relevantes e oferecer uma experiência mais integrada para os clientes."
       },
       {
         name: "pergunta-5",
-        question: "Posso atualizar a página de venda após o desenvolvimento?",
-        response: "Sim, é possível atualizar e adicionar conteúdo a página de venda após o desenvolvimento inicial. Para isso, você pode utilizar um sistema de gerenciamento de conteúdo (CMS) que permite fazer alterações de forma fácil e rápida, sem a necessidade de conhecimento em programação."
+        question: "Como gerenciar um ecommerce após o desenvolvimento?",
+        response: "Após o desenvolvimento, um e-commerce pode ser gerenciado através de um painel de administração intuitivo e amigável. Esse painel permite que você gerencie produtos, estoque, pedidos, clientes, promoções, conteúdo do site e outras funcionalidades essenciais. Também é possível acompanhar métricas de desempenho, como vendas, tráfego, taxas de conversão e análise do comportamento do usuário para tomar decisões informadas e otimizar o desempenho do seu e-commerce."
       },
       {
         name: "pergunta-6",
-        question: "A página de venda será otimizada para dispositivos móveis (responsiva)?",
-        response: "Sim, é altamente recomendado que a página de venda seja desenvolvida de forma responsiva, o que significa que ela se adapta automaticamente a diferentes tamanhos de tela, proporcionando uma experiência de usuário otimizada em dispositivos móveis, tablets e desktops."
+        question: "Quais são os custos envolvidos no desenvolvimento de um ecommerce?",
+        response: "Os custos do desenvolvimento de um e-commerce podem variar dependendo de diversos fatores, como o escopo do projeto, a complexidade das funcionalidades, o design personalizado, a integração com outros sistemas, a otimização para dispositivos móveis, a necessidade de serviços de marketing digital e muito mais. É importante discutir suas necessidades específicas com uma empresa de desenvolvimento de confiança para obter um orçamento detalhado e preciso."
       },
     ]
   }} />

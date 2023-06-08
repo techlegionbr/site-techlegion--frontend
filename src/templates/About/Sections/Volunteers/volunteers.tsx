@@ -1,5 +1,5 @@
 import imageTeste from "@/assets/images/persons-profile/Leonardo-Ferraz.jpg"
-import { type TypeVolunteer } from "@/patterns/CarouselVolunteers/types"
+import { type TypeVolunteer } from "@/components/CardVolunteer/types"
 const volunteers: TypeVolunteer[] = [
   {
     name: "Leonardo Ferraz",

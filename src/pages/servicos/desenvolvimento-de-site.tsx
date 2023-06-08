@@ -6,7 +6,7 @@ const WebsiteDevelopment = (): JSX.Element => {
   return <ServiceTemplate
     SectionPlans={PlansCloudez}
     service={{
-      icon: <i className='bx bx-desktop'></i>,
+      icon: <i className='bx bxs-window-alt'></i>,
       name: "Desenvolvimento de Site",
       value: 497.97,
       image: imageService.src,
