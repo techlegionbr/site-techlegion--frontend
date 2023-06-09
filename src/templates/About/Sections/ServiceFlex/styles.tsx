@@ -1,5 +1,5 @@
 
-import { breackScreens, color, layout } from "@/styles/root";
+import { screens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -15,7 +15,7 @@ export const ServiceFlex = styled.div`
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    @media (max-width: ${breackScreens.tablet}) {
+    @media (max-width: ${screens.md}) {
       gap: 4rem;
     }
     article{
@@ -24,17 +24,17 @@ export const ServiceFlex = styled.div`
       align-items: flex-start;
       justify-content: space-between;
       gap: 3rem;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         flex-direction: column;
         gap: 1rem;
       }
       .image-article{
-        width: 40%;
-        height: 250px;
+        width: 50%;
+        height: 300px;
         border-radius: .6rem;
         overflow: hidden;
         border: 1.5px solid #331df62c;
-        @media (max-width: ${breackScreens.tablet}) {
+        @media (max-width: ${screens.md}) {
           width: 100%;
           height: 200px;
         }
@@ -45,18 +45,12 @@ export const ServiceFlex = styled.div`
         }
       }
       .description{
-        width: 60%;
-        @media (max-width: ${breackScreens.tablet}) {
+        width: 50%;
+        @media (max-width: ${screens.md}) {
           width: 100%;
         }
-        h1{
-          font-size: 2rem;
-          line-height: 2.1rem;
+        h2{
           margin-bottom: 1.6rem;
-          @media (max-width: ${breackScreens.tablet}) {
-            font-size: 1.6rem;
-            line-height: 1.7rem;
-          }
           span{
             color: ${color.third}
           }

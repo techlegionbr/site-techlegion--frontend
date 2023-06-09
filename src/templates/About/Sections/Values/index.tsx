@@ -1,5 +1,5 @@
-import imageFrinds from "@/assets/images/about/friends-having-crowded-party-home-tech-legion-br.jpg"
-import imageMuitEthinics from "@/assets/images/about/multiethinics-technologie.png"
+import imageFrinds from "@/assets/images/about/friends-having-crowded-party-home-tech-legion-br.webp"
+import imageMuitEthinics from "@/assets/images/about/multiethinics-technologie.webp"
 import Button from "@/components/Button"
 import TitleSection from "@/components/TitleSection"
 
@@ -45,10 +45,10 @@ const Values = (): JSX.Element => {
             <div className="descriptio-article">
               <h2>Diversidade e Inclusão</h2>
               <p>
-                Na Tech Legion, acreditamos que a diversidade e a inclusão são essenciais para impulsionar a inovação e
-                o crescimento. Valorizamos e respeitamos as diferenças individuais, criando um ambiente acolhedor e
-                inclusivo para todos. Estamos comprometidos em promover a equidade de oportunidades e garantir que cada
-                voz seja ouvida. Juntos, estamos construindo um ambiente colaborativo.
+                Na Tech Legion, <b>acreditamos</b> que a diversidade e a inclusão são essenciais para impulsionar a inovação e
+                o crescimento. Valorizamos e respeitamos as <b>diferenças individuais</b>, criando um ambiente acolhedor e
+                inclusivo para todos. Estamos comprometidos em promover a <b>equidade de oportunidades</b> e garantir que cada
+                voz seja ouvida. Juntos, estamos construindo um <b>ambiente colaborativo</b>.
               </p>
               <Button className="button-know-more">SAIBA MAIS</Button>
             </div>

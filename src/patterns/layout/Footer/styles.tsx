@@ -1,4 +1,4 @@
-import { breackScreens, color, layout } from "@/styles/root";
+import { screens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -61,7 +61,7 @@ export const Footer = styled.footer`
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         flex-direction: column;
         justify-content: center;
       }

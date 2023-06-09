@@ -1,4 +1,4 @@
-import imageService from "@/assets/images/services/marketing-digital.jpg"
+import imageService from "@/assets/images/services/marketing-digital.webp"
 import ServiceTemplate from "@/templates/Service"
 const DigitalMarketing = (): JSX.Element => {
   return <ServiceTemplate

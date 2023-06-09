@@ -1,4 +1,4 @@
-import imageService from "@/assets/images/services/desenvolvimento-de-pagina-de-vendas.jpg"
+import imageService from "@/assets/images/services/desenvolvimento-de-pagina-de-vendas.webp"
 import PlansCloudez from "@/patterns/layout/sections/plans/PlansCloudez"
 import ServiceTemplate from "@/templates/Service"
 

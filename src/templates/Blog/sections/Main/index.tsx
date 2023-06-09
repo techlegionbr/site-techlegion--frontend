@@ -1,6 +1,8 @@
-import image1 from "@/assets/images/home/sorrindo-retrato-de-um-homem-jovem-apertar-mao-scaled.jpg"
+import image1 from "@/assets/images/home/sorrindo-retrato-de-um-homem-jovem-apertar-mao-scaled.webp"
 import TitleSection from "@/components/TitleSection"
 
+
+import Link from "next/link"
 
 import ArticlePost from "./components/ArticlePost"
 import { type ArticlePostType } from "./components/ArticlePost/types"
@@ -61,6 +63,7 @@ const articlesComplet: ArticlePostType[] = [
 const Main = (): JSX.Element => {
   return (
     <S.Main>
+
       <div className="content">
         <TitleSection
           subTitle="Tech Legion"
@@ -85,7 +88,13 @@ const Main = (): JSX.Element => {
             ))
           }
         </div>
-
+        <div className="call-for-writers">
+          <nav>
+            <Link href="/blog/auth">Você é um(a) redator(a) da Tech Legion?</Link>
+            <Link href={"/"}>Deseja se tornar um(a)?</Link>
+          </nav>
+          <i className='bx bxs-notepad'></i>
+        </div>
       </div>
     </S.Main >
   )

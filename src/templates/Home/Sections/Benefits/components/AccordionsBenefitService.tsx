@@ -21,6 +21,20 @@ const CardBenefitService = ({ benefit, showDescription, onClick }: PropsCardBene
   const handleShowDescription = (): void => {
     onClick([benefit.service, showDescription])
   }
+
+  const DescriptionTrated = (): JSX.Element => {
+    const textDivision = description.split(":")
+
+    const textBold = textDivision[1] ? textDivision[0] : null
+    const textNormal = textDivision[1] || description
+    return (
+      <p>
+        {textBold && (<b>{textBold}:</b>)}
+        {textNormal}
+      </p>
+    )
+  }
+
   return (
     <S.CardBenefitService
       showDescription={showDescription ? "true" : "false"}
@@ -37,9 +51,7 @@ const CardBenefitService = ({ benefit, showDescription, onClick }: PropsCardBene
           <span className="watch-more"></span>
         </div>
         <div className="description-benefit">
-          <p>
-            {description}
-          </p>
+          <DescriptionTrated />
         </div>
       </div>
     </S.CardBenefitService>

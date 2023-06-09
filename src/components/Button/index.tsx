@@ -1,53 +1,9 @@
 import { type MouseEventHandler } from "react"
 
-import { breackScreens, color } from "@/styles/root"
-import styled from "styled-components"
 
 import { useRouter } from "next/router"
 
-interface PropsButtonStyled {
-  colorTheme: "primary" | "secondary" | "third",
-  hover: "opacity" | "scale" | "transparent",
-  size: "small" | "medium" | "big"
-}
-
-const ButtonStyled = styled.button<PropsButtonStyled>`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  background-color: ${({ colorTheme }) => color[colorTheme]};
-  text-transform: uppercase;
-  padding: .5rem 1.3rem;
-  border-radius: .4rem;
-  font-weight: bold;
-  font-size: ${({ size }) => (
-    size === "small" ? ".8rem" :
-      size === "medium" ? ".9rem" :
-        size === "big" ? "1rem" : ""
-  )};
-  opacity: ${({ hover }) => hover === "opacity" || hover === "scale" ? ".8" : "1"} ;
-  transition: .2s;
-  border: 1.4px solid ${({ colorTheme }) => color[colorTheme]};
-  @media (max-width: ${breackScreens.smart}) {
-    font-size: ${({ size }) => (
-    size === "small" ? ".7rem" :
-      size === "medium" ? ".8rem" :
-        size === "big" ? ".9rem" : ""
-  )};
-  }
-  &:hover{
-    ${({ hover, colorTheme }) => (
-    hover === "opacity" ? "opacity: 1" :
-      hover === "scale" ? "transform: scale(1.1); opacity: 1;" :
-        hover === "transparent" ? `
-      background: transparent;
-      color: ${color[colorTheme]};
-      ` : ""
-  )}
-  }
-`
-
+import * as S from "./styles"
 interface PropsButton {
   children: string,
   color?: "primary" | "secondary" | "third",
@@ -73,6 +29,7 @@ const Button = ({
 }: PropsButton): JSX.Element => {
   const router = useRouter()
   const handleClickButton: MouseEventHandler<HTMLButtonElement> = (e) => {
+    e.preventDefault()
     if (typeof href === "string") {
       void router.push(href)
     }
@@ -81,7 +38,7 @@ const Button = ({
     }
   }
   return (
-    <ButtonStyled
+    <S.Button
       colorTheme={color}
       hover={hover}
       className={className}
@@ -89,7 +46,7 @@ const Button = ({
       onClick={handleClickButton}
     >
       {iconLeft}{children}{iconRight}
-    </ButtonStyled>
+    </S.Button>
   )
 }
 

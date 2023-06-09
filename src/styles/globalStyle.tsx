@@ -2,7 +2,7 @@
 
 import { createGlobalStyle } from "styled-components"
 
-import { breackScreens, color, font } from "./root"
+import { screens, color, font } from "./root"
 
 const GlobalStyle = createGlobalStyle`  
   *{
@@ -29,25 +29,25 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
   h3{
-      font-size: 1rem;
-      line-height: 1.1rem;
-      @media (max-width: ${breackScreens.smart}) {
-        font-size: .8rem;
-        line-height: .9rem;
+      font-size: ${font.size.sm};
+      line-height: ${font.line_height.sm};
+      @media (max-width: ${screens.sm}) {
+        font-size: ${font.size.xsm};
+        line-height: ${font.line_height.xsm};
       }
   }
   h2{
-    font-size: 1.4rem;
-    line-height: 1.5rem;
-    @media (max-width: ${breackScreens.smart}) {
+    font-size: ${font.size.md};
+    line-height: ${font.line_height.md};
+    @media (max-width: ${screens.sm}) {
       font-size: 1.3rem;
       line-height: 1.4rem;
     }
   }
   h1{
-    font-size: 2.8rem;
-    line-height: 2.9rem;
-    @media (max-width: ${breackScreens.smart}) {
+    font-size: ${font.size.lg};
+    line-height: ${font.line_height.lg};
+    @media (max-width: ${screens.sm}) {
       font-size: 2.5rem;
       line-height: 2.6rem;
     }
@@ -56,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
     line-height: 1.1rem;
     font-family: ${font.family.OpenSans};
-    @media (max-width: ${breackScreens.smart}) {
+    @media (max-width: ${screens.sm}) {
       font-size: .8rem;
       line-height: .9rem;
     }

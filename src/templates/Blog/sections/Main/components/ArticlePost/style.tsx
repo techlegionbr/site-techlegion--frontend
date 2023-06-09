@@ -1,4 +1,4 @@
-import { breackScreens, color } from "@/styles/root";
+import { color } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -18,9 +18,6 @@ export const ArticlePost = styled.article<ArticlePostProps>`
   }
   h4{
     min-height: 40px;
-    @media (max-width: ${breackScreens.tablet}) {
-      
-    }
   }
   small{
     display: flex;

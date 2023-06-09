@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-import imageTeste1 from "@/assets/images/about/team-young-cheerful-managers-sitting-couch-office-1024x1536.jpg"
-import imageTeste2 from "@/assets/images/about/woman-higher-education-teamwork-designer-folded-tech-legion-br.jpg"
-import imageTeste3 from "@/assets/images/about/young-african-american-female-entrepreneur-freelancer-working-using-laptop-coworking-space.jpg"
+import imageTeste1 from "@/assets/images/about/team-young-cheerful-managers-sitting-couch-office-1024x1536.webp"
+import imageTeste2 from "@/assets/images/about/woman-higher-education-teamwork-designer-folded-tech-legion-br.webp"
+import imageTeste3 from "@/assets/images/about/young-african-american-female-entrepreneur-freelancer-working-using-laptop-coworking-space.webp"
 import Button from "@/components/Button"
 
 
@@ -47,7 +47,7 @@ const Post = ({ post }: PropsPost): JSX.Element => {
       backgroundImg={post.image}
     >
       <div className={`popup-post translate-y`}>
-        <h2>{post.title}</h2>
+        <h3>{post.title}</h3>
         <p>{post.prevDescription}</p>
         <Button className="button-know-more" hover="transparent">Leia Mais</Button>
       </div>

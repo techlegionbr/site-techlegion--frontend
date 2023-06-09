@@ -1,4 +1,4 @@
-import { breackScreens, color, layout } from "@/styles/root";
+import { screens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -17,7 +17,7 @@ export const ContactForm = styled.div`
       grid-template-areas: "input-name input-email" "textarea textarea";
       gap: .5rem;
       margin-top: 4rem;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         grid-template-areas: "input-name" "input-email" "textarea";
       }
       #name{

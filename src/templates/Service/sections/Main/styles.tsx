@@ -19,6 +19,7 @@ export const Main = styled.div`
       height: 300px;
       border: 1.5px solid #82aaff53;
       position: relative;
+      background-color: #16164d;
       .icon-service{
         position: absolute;
         top: 1rem;

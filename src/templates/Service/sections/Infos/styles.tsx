@@ -1,4 +1,4 @@
-import { breackScreens, color, layout } from "@/styles/root";
+import { screens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -14,7 +14,7 @@ export const Infos = styled.div`
     display: flex;
     align-items: flex-start;
     gap: 2rem;
-    @media (max-width: ${breackScreens.tablet}) {
+    @media (max-width: ${screens.md}) {
       flex-direction: column;
     }
     .price-card{
@@ -23,7 +23,7 @@ export const Infos = styled.div`
       padding: 2rem 1.5rem;
       border: 1.3px solid #8566ff65;
       border-radius: .6rem;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         width: 100%;
       }
       article{
@@ -49,7 +49,7 @@ export const Infos = styled.div`
         }
         .button-contract{
           margin-top: 1rem;
-          @media (min-width: ${breackScreens.tablet}) {
+          @media (min-width: ${screens.md}) {
             width: 100%;
             padding-left: 0;
             padding-right: 0;
@@ -95,14 +95,14 @@ export const Infos = styled.div`
       display: flex;
       flex-direction: column;
       gap: 3rem;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         width: 100%;
       }
       article{
         h1{
           font-size: 2.4rem;
           margin-bottom: 1.4rem;
-          @media (max-width: ${breackScreens.smart}) {
+          @media (max-width: ${screens.sm}) {
             font-size: 2.1rem;
             line-height: 2rem;
           }

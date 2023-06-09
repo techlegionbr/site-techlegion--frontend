@@ -1,4 +1,4 @@
-import { breackScreens, color, layout } from "@/styles/root";
+import { screens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -44,27 +44,27 @@ export const Values = styled.div`
       width: 100%;
       display: flex;
       flex-direction: column;
-      margin-top: 3rem;
-      gap: 3rem;
-      @media (max-width: ${breackScreens.tablet}) {
-        gap: 4rem;
-      }
+      margin-top: 5rem;
+      gap: 5rem;
       article{
         width: 100%;
         display: flex;
         gap: 2rem;
-        @media (max-width: ${breackScreens.tablet}) {
+        @media (max-width: ${screens.md}) {
           flex-direction: column;
           gap: 1rem;
         }
         .image-article{
-          width: 40%;
-          height: 250px;
+          width: 45%;
+          height: 300px;
           overflow: hidden;
           border-radius: .4rem;
           border: 1.5px solid #331df62c;
-          @media (max-width: ${breackScreens.tablet}) {
+          @media (max-width: ${screens.md}) {
             width: 100%;
+          }
+          @media (max-width: ${screens.sm}) {
+            height: 200px;
           }
           img{
             width: 100%;
@@ -73,8 +73,8 @@ export const Values = styled.div`
           }
         }
         .descriptio-article{
-          width: 60%;
-          @media (max-width: ${breackScreens.tablet}) {
+          width: 55%;
+          @media (max-width: ${screens.md}) {
             width: 100%;
           }
           h2{

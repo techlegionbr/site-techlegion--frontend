@@ -1,6 +1,6 @@
 
-import backgroundImageMain from "@/assets/images/backgrounds/techlegion-fundo.png"
-import { breackScreens, color, layout } from "@/styles/root"
+import backgroundImageMain from "@/assets/images/backgrounds/techlegion-fundo.webp"
+import { screens, color, layout, font } from "@/styles/root"
 import styled from "styled-components"
 
 export const Main = styled.section`
@@ -21,7 +21,7 @@ export const Main = styled.section`
   background-size: cover;
   background-position: center;
 
-  @media (max-width: ${breackScreens.tv}) {
+  @media (max-width: ${screens.xlg}) {
     min-height: calc(100vh - (${layout.header.sub} + ${layout.header.sup}));
   }
   .content{
@@ -32,7 +32,7 @@ export const Main = styled.section`
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    @media (max-width: ${breackScreens.tablet}) {
+    @media (max-width: ${screens.md}) {
       flex-direction: column;
     }
     .description-apresentation{
@@ -42,22 +42,22 @@ export const Main = styled.section`
       border-radius: 1rem;
       width: 60%;
       border: 1.3px solid #768ff42a;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         width: 100%;
         padding: 2rem 1rem;
       }
       h4{
         margin-bottom: .5rem;
-        @media (max-width: ${breackScreens.smart}) {
+        @media (max-width: ${screens.sm}) {
           line-height: .6rem;
         }
       }
       h1{
-        font-size: 3.6rem;
-        line-height: 3.4rem;
-        @media (max-width: ${breackScreens.smart}) {
-          font-size: 2.8rem;
-          line-height: 2.6rem;
+        font-size: ${font.size.xxlg};
+        line-height: ${font.line_height.xxlg};
+        @media (max-width: ${screens.sm}) {
+          font-size: calc(${font.size.xxlg} - .3rem);
+          line-height: calc(${font.line_height.xxlg} - .3rem);
         }
         span{
           color: ${color.third}
@@ -76,14 +76,14 @@ export const Main = styled.section`
           background-color: ${color.primary};
           padding: .4rem .8rem;
           border-radius: .2rem;
-          font-size: .7rem;
+          font-size: ${font.size.xsm};
           font-weight: bold;
           border: 1px solid #7599f54f;
           cursor: default;
           color: ${color.third};
-          @media (max-width: ${breackScreens.smart}) {
+          @media (max-width: ${screens.sm}) {
             padding: .3rem .5rem;
-            font-size: .6rem;
+            font-size: calc(${font.size.xsm} - .2rem);
           }
           i{
             font-size: 1.1rem;
@@ -98,7 +98,7 @@ export const Main = styled.section`
       }
       .button-whatsapp{
         margin-top: 2rem;
-        @media (max-width: ${breackScreens.smart}) {
+        @media (max-width: ${screens.sm}) {
           width: 100%;
           padding-left: 0;
           padding-right: 0;
@@ -110,7 +110,7 @@ export const Main = styled.section`
       height: 400px;
       display: flex;
       justify-content: flex-end;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         width: 100%;
         justify-content: center;
       }

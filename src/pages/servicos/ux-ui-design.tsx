@@ -1,4 +1,4 @@
-import imageService from "@/assets/images/services/ux-ui-design.jpg"
+import imageService from "@/assets/images/services/ux-ui-design.webp"
 import ServiceTemplate from "@/templates/Service"
 const UXUIDesign = (): JSX.Element => {
   return <ServiceTemplate

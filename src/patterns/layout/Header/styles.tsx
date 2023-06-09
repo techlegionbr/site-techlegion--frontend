@@ -1,5 +1,5 @@
 
-import { breackScreens, color, layout } from "@/styles/root"
+import { screens, color, layout } from "@/styles/root"
 import styled from "styled-components"
 
 interface PropsHeader {
@@ -33,14 +33,14 @@ export const SubHeader = styled.header<PropsHeader>`
     align-items: center;
     .menu-hamburger{
       display: none;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         display: inline-block;
       }
     }
     .home_link-img img{
       object-fit: contain;
       width: 210px;
-      @media (max-width: ${breackScreens.smart}) {
+      @media (max-width: ${screens.sm}) {
         width: 180px;
       }
     }
@@ -108,7 +108,7 @@ export const SupHeader = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @media (max-width: ${breackScreens.tablet}) {
+    @media (max-width: ${screens.md}) {
       justify-content: center;
     }
     .contact-info{
@@ -116,7 +116,7 @@ export const SupHeader = styled.div`
       display: flex;
       gap: 1rem;
       font-weight: bold;
-      @media (max-width: ${breackScreens.smart}) {
+      @media (max-width: ${screens.sm}) {
         font-size: .6rem;
       }
       i{
@@ -127,7 +127,7 @@ export const SupHeader = styled.div`
     .social-medias{
       display: flex;
       gap: .3rem;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         display: none;
       }
       a:nth-last-child(1){

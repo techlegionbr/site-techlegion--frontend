@@ -1,4 +1,4 @@
-import { breackScreens, color } from "@/styles/root";
+import { screens, color } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -22,7 +22,12 @@ export const CarouselVolunteers = styled.div`
     justify-content: center;
     font-size: .9rem;
     border: 1.2px solid #ffffff1f;
-    color: ${color.third}
+    color: ${color.third};
+    @media (max-width: ${screens.sm}) {
+      width: 30px;
+      height: 30px;
+      font-size: .7rem;
+    }
     
   }
   .controller-left{
@@ -37,10 +42,10 @@ export const CarouselVolunteers = styled.div`
     gap: 2rem;
     overflow: hidden;
     scroll-behavior: smooth;
-    @media (max-width: ${breackScreens.tablet}) {
+    @media (max-width: ${screens.md}) {
       width: calc((200px * 2) + 2rem * (2 - 1));
     }
-    @media (max-width: ${breackScreens.smart}) {
+    @media (max-width: ${screens.sm}) {
       width: calc((200px * 1) + 2rem * (1 - 1));
     }
   }

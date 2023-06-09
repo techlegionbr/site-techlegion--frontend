@@ -1,4 +1,4 @@
-import backgroundRocket from "@/assets/images/backgrounds/rocket-fundo.png"
+import backgroundRocket from "@/assets/images/backgrounds/rocket-fundo.webp"
 import { color, layout } from "@/styles/root";
 import styled from "styled-components";
 

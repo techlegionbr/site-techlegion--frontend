@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import logoTechLegion from "@/assets/images/logos/Logo_Tech_Legion_H_02_Blue.png"
+import logoTechLegion from "@/assets/images/logos/Logo_Tech_Legion_H_02_Blue.webp"
 import { hostLinks, socialMediaLinks } from "@/settings/links"
 import { type TypeHostLinkMain } from "@/settings/links/types"
 
@@ -15,9 +15,6 @@ import * as S from "./styles"
 
 
 
-interface PropsHeader {
-  headerContact?: boolean
-}
 
 const SupHeader = (): JSX.Element => {
   return (
@@ -44,8 +41,12 @@ const SupHeader = (): JSX.Element => {
   )
 }
 
+interface PropsHeader {
+  supHeader?: boolean,
+  navigation?: boolean
+}
 
-const Header = ({ headerContact = true }: PropsHeader): JSX.Element => {
+const Header = ({ supHeader = true, navigation = true }: PropsHeader): JSX.Element => {
   const [isTransparent, setIsTransparent] = useState(true)
   const [showPopUpSearch, setShowPopUpSearch] = useState(false)
   const { pathname } = useRouter()
@@ -67,7 +68,7 @@ const Header = ({ headerContact = true }: PropsHeader): JSX.Element => {
   return (
     <>
       <S.Header>
-        {headerContact && <SupHeader />}
+        {supHeader && <SupHeader />}
         <S.SubHeader istransparent={isTransparent ? "true" : "false"}>
           <div className="content">
 
@@ -79,23 +80,29 @@ const Header = ({ headerContact = true }: PropsHeader): JSX.Element => {
               />
             </Link>
 
-            <div className="menu-nav">
-              <nav>
-                {
-                  hostLinksMainHeader.map(route => (
-                    <Link
-                      key={route.name} className={currentRoute() === route.name ? "marked" : ""}
-                      href={hostLinks.main[route.name]}
-                    >{route.label}</Link>
-                  ))
-                }
-              </nav>
-              <button
-                className="button-search"
-                onClick={() => { setShowPopUpSearch(true); }}
-              ><i className='bx bxs-search'></i></button>
-            </div>
-            <Hamburger className="menu-hamburger" />
+            {
+              navigation && (
+                <>
+                  <div className="menu-nav">
+                    <nav>
+                      {
+                        hostLinksMainHeader.map(route => (
+                          <Link
+                            key={route.name} className={currentRoute() === route.name ? "marked" : ""}
+                            href={hostLinks.main[route.name]}
+                          >{route.label}</Link>
+                        ))
+                      }
+                    </nav>
+                    <button
+                      className="button-search"
+                      onClick={() => { setShowPopUpSearch(true); }}
+                    ><i className='bx bxs-search'></i></button>
+                  </div>
+                  <Hamburger className="menu-hamburger" />
+                </>
+              )
+            }
           </div>
         </S.SubHeader>
       </S.Header>

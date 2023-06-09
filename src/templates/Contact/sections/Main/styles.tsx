@@ -1,4 +1,4 @@
-import { breackScreens, color, layout } from "@/styles/root";
+import { screens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -25,7 +25,7 @@ export const Main = styled.div`
           grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
           gap: 1rem;
           margin-bottom: .4rem;
-          @media (max-width: ${breackScreens.smart}) {
+          @media (max-width: ${screens.sm}) {
             gap: .5rem;
             grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
           }
@@ -37,7 +37,7 @@ export const Main = styled.div`
             overflow: hidden;
             border: 1.2px solid #7e9aff4f;
             transition: .2s;
-            @media (max-width: ${breackScreens.smart}) {
+            @media (max-width: ${screens.sm}) {
               height: 90px;
             }
             &:hover{

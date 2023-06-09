@@ -1,5 +1,6 @@
 
 import { presenceTranslateDown } from "@/animations/presence";
+import { screens } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -22,12 +23,20 @@ export const FeedCarousel = styled.div`
     transition: .2s;
   }
   .btn-direction-left{
-    left: .6rem;
+    left: .5rem;
     transform: translate(-100%);
+    @media (max-width: ${screens.md}) {
+      left: 0rem;
+      transform: translate(0);
+    }
   }
   .btn-direction-right{
-    right: .6rem;
+    right: .5rem;
     transform: translate(100%);
+    @media (max-width: ${screens.md}) {
+      right: 0rem;
+      transform: translate(0);
+    }
   }
 
   .current-feed{

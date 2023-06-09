@@ -1,5 +1,5 @@
-import imageApresentation from "@/assets/images/about/team-young-cheerful-managers-sitting-couch-office-1024x1536.jpg"
-import imageCEOProfile from "@/assets/images/persons-profile/Leonardo-Ferraz.jpg"
+import imageApresentation from "@/assets/images/about/team-young-cheerful-managers-sitting-couch-office-1024x1536.webp"
+import imageCEOProfile from "@/assets/images/persons-profile/Leonardo-Ferraz.webp"
 import Button from "@/components/Button"
 
 import Image from "next/image"

@@ -1,5 +1,5 @@
 
-import { breackScreens, color, layout } from "@/styles/root"
+import { screens, color, layout } from "@/styles/root"
 import styled from "styled-components"
 
 
@@ -26,7 +26,7 @@ export const Services = styled.section`
       gap: 2rem;
       display: grid;
       grid-template-areas: "card-head card-head" "card-body-1 card-body-2";
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         grid-template-areas: "card-head" "card-body-1" "card-body-2";
       }
       .card:nth-child(1){

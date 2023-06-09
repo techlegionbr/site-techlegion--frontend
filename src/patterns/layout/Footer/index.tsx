@@ -1,5 +1,5 @@
-import logoLionWhite from "@/assets/images/logos/lion_white.png"
-import logoTechLegion from "@/assets/images/logos/Logo_Tech_Legion_H_02_Blue.png"
+import logoLionWhite from "@/assets/images/logos/lion_white.webp"
+import logoTechLegion from "@/assets/images/logos/Logo_Tech_Legion_H_02_Blue.webp"
 import { hostLinks } from "@/settings/links"
 
 import Image from "next/image"

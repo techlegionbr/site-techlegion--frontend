@@ -1,4 +1,4 @@
-import imageTeste from "@/assets/images/persons-profile/Leonardo-Ferraz.jpg"
+import imageTeste from "@/assets/images/persons-profile/Leonardo-Ferraz.webp"
 import { type TypeVolunteer } from "@/components/CardVolunteer/types"
 const volunteers: TypeVolunteer[] = [
   {

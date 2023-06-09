@@ -1,4 +1,4 @@
-import { breackScreens, color, layout } from "@/styles/root";
+import { screens, color, layout, font } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -21,11 +21,11 @@ export const StrikingPhrase = styled.div`
     }
     p{
       margin-top: 1.6rem;
-      font-size: 2rem;
-      line-height: 2.1rem;
+      font-size: ${font.size.lg};
+      line-height: ${font.line_height.lg};
       font-weight: bold;
       text-align: center;
-      @media (max-width: ${breackScreens.smart}) {
+      @media (max-width: ${screens.sm}) {
         font-size: 1.7rem;
       }
     }

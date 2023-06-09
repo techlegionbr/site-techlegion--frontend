@@ -1,5 +1,5 @@
 
-import { breackScreens, color, layout } from "@/styles/root";
+import { screens, color, layout, font } from "@/styles/root";
 import styled from "styled-components";
 
 export const Main = styled.div`
@@ -9,11 +9,11 @@ export const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: ${breackScreens.tv}) {
+  @media (max-width: ${screens.xlg}) {
     min-height: calc(100vh - (${layout.header.sub} + ${layout.header.sup}));
     padding: 0 ${layout.containerPaddingX};
   }
-  @media (max-width: ${breackScreens.smart}) {
+  @media (max-width: ${screens.sm}) {
     padding: 50px ${layout.containerPaddingX};
   }
   .content{
@@ -22,27 +22,27 @@ export const Main = styled.div`
     align-items: flex-start;
     justify-content: space-between;
     gap: 3rem;
-    @media (max-width: ${breackScreens.tablet}) {
+    @media (max-width: ${screens.md}) {
       flex-direction: column;
     }
     .description-apresentation{
       width: 60%;
       padding: 2rem 0;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         width: 100%;
       }
       h4{
         margin-bottom: .5rem;
-        @media (max-width: ${breackScreens.smart}) {
+        @media (max-width: ${screens.sm}) {
           line-height: .6rem;
         }
       }
       h1{
-        font-size: 3.6rem;
-        line-height: 3.4rem;
-        @media (max-width: ${breackScreens.smart}) {
-          font-size: 2.8rem;
-          line-height: 2.6rem;
+        font-size: ${font.size.xxlg};
+        line-height: ${font.line_height.xxlg};
+        @media (max-width: ${screens.sm}) {
+          font-size: calc(${font.size.xxlg} - .2rem);
+        line-height: calc(${font.line_height.xxlg} - .2rem);
         }
         span{
           color: ${color.third}
@@ -61,14 +61,14 @@ export const Main = styled.div`
         border-radius: .4rem;
         padding: .5rem 1.5rem;
         background-color: #171748;
-        @media (max-width: ${breackScreens.smart}) {
+        @media (max-width: ${screens.sm}) {
           width: 100%;
         }
         .image-profile{
           width: 60px;
           height: 60px;
           overflow: hidden;
-          @media (max-width: ${breackScreens.smart}) {
+          @media (max-width: ${screens.sm}) {
             width: 50px;
             height: 50px;
           }
@@ -89,7 +89,7 @@ export const Main = styled.div`
       }
       .button-contact{
         margin-top: 3rem;
-        @media (max-width: ${breackScreens.smart}) {
+        @media (max-width: ${screens.sm}) {
           width: 100%;
           padding-left: 0;
           padding-right: 0;
@@ -102,10 +102,10 @@ export const Main = styled.div`
       overflow: hidden;
       border-radius: .5rem;
       border: 1.4px solid #9290fc4e;
-      @media (max-width: ${breackScreens.tablet}) {
+      @media (max-width: ${screens.md}) {
         display: none;
       }
-      @media (max-width: ${breackScreens.smart}) {
+      @media (max-width: ${screens.sm}) {
         display: inline-block;
         width: 100%;
         height: 500px;

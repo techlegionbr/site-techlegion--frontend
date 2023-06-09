@@ -21,7 +21,7 @@ export const AccordionsBenefitService = styled.div`
       margin-top: 4rem;
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       gap: 2rem;
 `
 
@@ -77,7 +77,6 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
             }
             h4{
               color: ${({ showDescription }) => showDescription === "false" ? "#ffffffb1" : "#fff"};
-              font-size: .9rem;
               line-height: 1rem;
               user-select: none;
               transition: .2s;
@@ -90,8 +89,9 @@ export const CardBenefitService = styled.div<PropsCardBenefitService>`
             transition: .2s;
             p{
               margin-top: .5rem;
-              font-size: .9rem;
-              line-height: 1.1rem;
+              b{
+                color: ${color.third}
+              }
             }
           }
         }

@@ -1,4 +1,4 @@
-import imageService from "@/assets/images/services/social-media.jpg"
+import imageService from "@/assets/images/services/social-media.webp"
 import ServiceTemplate from "@/templates/Service"
 const SocialMedia = (): JSX.Element => {
   return <ServiceTemplate

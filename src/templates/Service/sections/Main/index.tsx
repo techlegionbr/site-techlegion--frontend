@@ -21,7 +21,7 @@ const Main = ({ service }: PropsMain): JSX.Element => {
           title={service.name}
         />
         <div className="image-service">
-          <Image src={service.image} alt={`Imagem do serviço de ${service.name}`} width={600} height={400} />
+          <Image src={service.image} alt={`Imagem do serviço de ${service.name}`} width={600} height={400} priority />
           <span className="icon-service">
             {service.icon}
           </span>

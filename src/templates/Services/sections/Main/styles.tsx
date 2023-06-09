@@ -1,4 +1,4 @@
-import { color, layout } from "@/styles/root";
+import { color, font, layout } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -19,12 +19,12 @@ export const CardsService = styled.div`
   margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
+  gap: 2rem;
 `
 
 export const CardService = styled.div`
   width: 100%;
-  height: 500px;
+  height: 520px;
   background-color: #191956;
   padding: 2rem 1rem;
   position: relative;
@@ -59,6 +59,8 @@ export const CardService = styled.div`
   h3{
     width: 100%;
     margin-bottom: 1rem;
+    font-size: calc(${font.size.md} - .2rem);
+    line-height: calc(${font.line_height.md} - .2rem);
   }
   p{
     width: 100%;

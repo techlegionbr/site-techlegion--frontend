@@ -1,4 +1,4 @@
-import imageService from "@/assets/images/services/analise-e-ciencia-de-dados.jpg"
+import imageService from "@/assets/images/services/analise-e-ciencia-de-dados.webp"
 import ServiceTemplate from "@/templates/Service"
 
 const AnalyticsAndDataScience = (): JSX.Element => {

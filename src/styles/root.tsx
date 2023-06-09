@@ -1,8 +1,8 @@
-export const breackScreens = {
-  tv: "1400px",
-  desktop: "1024px",
-  tablet: "720px",
-  smart: "420px"
+export const screens = {
+  xlg: "1400px",
+  lg: "1024px",
+  md: "720px",
+  sm: "420px"
 }
 
 export const font = {
@@ -12,7 +12,20 @@ export const font = {
     OpenSans: "Open Sans', sans-serif"
   },
   size: {
-
+    xxlg: "3.3rem",
+    xlg: "2.5rem",
+    lg: "2rem",
+    md: "1.5rem",
+    sm: "1rem",
+    xsm: ".8rem"
+  },
+  line_height: {
+    xxlg: "3.5rem",
+    xlg: "2.7rem",
+    lg: "2.2rem",
+    md: "1.7rem",
+    sm: "1.2rem",
+    xsm: "1rem"
   }
 }
 
@@ -22,7 +35,8 @@ export const color = {
   third: "#00DBFF",
   light: "#fff",
   alert: "#e6e64d",
-  bluishGray: "#0A1929"
+  bluishGray: "#0A1929",
+  danger: "red"
 }
 
 export const layout = {

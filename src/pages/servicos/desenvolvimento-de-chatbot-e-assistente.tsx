@@ -1,4 +1,4 @@
-import imageService from "@/assets/images/services/desenvolvimento-de-chatbot-e-assitente.jpg"
+import imageService from "@/assets/images/services/desenvolvimento-de-chatbot-e-assitente.webp"
 import ServiceTemplate from "@/templates/Service"
 
 const ChatbotAndAssistantDevelopment = (): JSX.Element => {
