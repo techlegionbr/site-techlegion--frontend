@@ -1,7 +1,7 @@
 import TitleSection from "@/components/TitleSection"
 
-import benefits from "./benefits"
 import AccordionsBenefitService from "./components/AccordionsBenefitService"
+import benefits from "./settings/benefits"
 import * as S from "./styles"
 
 

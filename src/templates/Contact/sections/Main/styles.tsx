@@ -1,6 +1,6 @@
+import backgroundImageMain from "@/assets/images/backgrounds/homem-com-vr-apontando-primary.webp"
 import { screens, color, layout } from "@/styles/root";
 import styled from "styled-components";
-
 
 export const Main = styled.div`
   width: 100%;
@@ -8,6 +8,11 @@ export const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background-image: url(${backgroundImageMain.src});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   .content{
     width: ${layout.contentWidth};
     .contacts-cards{
@@ -24,18 +29,19 @@ export const Main = styled.div`
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
           gap: 1rem;
-          margin-bottom: .4rem;
+          margin-top: 3rem;
           @media (max-width: ${screens.sm}) {
             gap: .5rem;
             grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
           }
           li{
-            height: 100px;
-            background-color: #1f1f53;
+            height:40px;
+            background-color: #161c4e12;
+            backdrop-filter: blur(5px);
             border-radius: .6rem;
             cursor: pointer;
             overflow: hidden;
-            border: 1.2px solid #7e9aff4f;
+            border: 1.2px solid #6f8efd57;
             transition: .2s;
             @media (max-width: ${screens.sm}) {
               height: 90px;
@@ -43,19 +49,23 @@ export const Main = styled.div`
             &:hover{
               transform: scale(1.1);
             }
+            &:hover > a{
+              opacity: 1;
+            }
             a{
               width: 100%;
               height: 100%;
               display: flex;
               align-items: center;
               justify-content: center;
+              gap: .4rem;
+              opacity: .7;
               color: ${color.third};
-              flex-direction: column;
+              transition: .2s;
               i{
-                font-size: 1.7rem;
+                font-size: 1rem;
               }
               span{
-                margin-top: .3rem;
                 text-transform: uppercase;
                 font-weight: bold;
                 font-size: .8rem;
@@ -69,23 +79,37 @@ export const Main = styled.div`
         border-radius: .5rem;
         position: relative;
         h3{
+          margin-bottom: 2rem;
+          color: ${color.third};
           display: none;
         }
         form{
           width: 100%;
           display: flex;
           flex-direction: column;
-          gap: .5rem;
+          gap: .8rem;
           input, textarea{
             width: 100%;
-            resize: none;
+            resize: vertical;
             padding: .6rem 1rem;
             border-radius: .4rem;
-            border-width: 2px;
+            border: 1.2px solid #0062ff51;
+            background-color: #0c113719;
+            backdrop-filter: blur(7px);
+            color: #fff;
+            /* border-width: 2px;
             border-style: inset;
             border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-            border-image: initial;
+            border-image: initial; */
             font-size: .9rem;
+            outline: none;
+            transition: .2s;
+            &::placeholder{
+              color: #97b4fd73;
+            }
+            &:focus, &:valid{
+              border: 1.2px solid #d5e5ff4c;
+            }
             
           }
           textarea{

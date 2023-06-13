@@ -19,7 +19,9 @@ export const hostLinks: TypeHostLinks = {
       "sobre",
       "servicos",
       "blog",
-      "contato"
+      "contato",
+      "politica-de-privacidade",
+      "termos-de-uso"
     ]) as Omit<Record<TypeHostLinkMain, string>, "início">
   },
   services: {

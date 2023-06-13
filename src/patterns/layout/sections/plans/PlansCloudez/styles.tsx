@@ -57,8 +57,8 @@ export const Plans = styled.div`
             font-weight: bold;
           }
           .value-price{
-            line-height: 1.8rem;
-            font-size: 2.1rem;
+            line-height: 2.5rem;
+            font-size: 2.4rem;
             font-weight: bold;
           }
         }
@@ -103,11 +103,13 @@ export const Plans = styled.div`
       }
     }
     .benefits-cloud{
+      border-top: 1.4px solid #95b8ff33;
+      padding-top: 3rem;
       width: 100%;
       margin-top: 3rem;
       h2{
         text-align: center;
-        color: ${color.third}
+        
       }
       ul{
         margin-top: 1.2rem;

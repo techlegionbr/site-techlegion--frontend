@@ -16,8 +16,8 @@ const Main = (): JSX.Element => {
             <li><i className='bx bxs-checkbox-checked'></i>Oportunidade</li>
           </ul>
           <p>
-            Somos uma <strong>legião de profissionais de tecnologia</strong>, designers, gestores de marketing, analistas e cientistas de dados,
-            engenheiros de software e desenvolvedores apaixonados por criar <strong>soluções digitais</strong> sob medida para nossos clientes.
+            Somos uma <strong>legião</strong> de profissionais de tecnologia, designers, gestores de marketing, analistas e cientistas de dados,
+            engenheiros de software e desenvolvedores <strong>apaixonados</strong> por criar soluções digitais <strong>sob medida</strong> para nossos clientes.
           </p>
           <Button className="button-whatsapp">Conversar pelo Whatsapp</Button>
 

@@ -68,28 +68,26 @@ export const SubHeader = styled.header<PropsHeader>`
           opacity: 1;
         }
       }
-      nav{
-        display: flex;
-        gap: 1rem;
-        font-weight: bold;
+      nav{  
         a{
           color: ${color.light};
           text-decoration: none;
-          padding: .4rem 0;
+          padding: .4rem .8rem;
           font-size: .9rem;
           opacity: .8;
           transition: .2s;
+          font-weight: bold;
           &:hover{
             opacity: 1;
           }
         }
-      }
-      .marked{
-        background: ${color.secondary};
-        padding: .4rem 1rem;
-        border-radius: .4rem;
-        opacity: 1;
+        .marked{
+          background: ${color.secondary};
+          padding: .4rem .8rem;
+          border-radius: .4rem;
+          opacity: 1;
 
+        }
       }
     }
   }

@@ -29,7 +29,6 @@ const Button = ({
 }: PropsButton): JSX.Element => {
   const router = useRouter()
   const handleClickButton: MouseEventHandler<HTMLButtonElement> = (e) => {
-    e.preventDefault()
     if (typeof href === "string") {
       void router.push(href)
     }

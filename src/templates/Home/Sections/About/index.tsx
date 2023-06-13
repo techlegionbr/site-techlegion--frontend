@@ -13,8 +13,8 @@ const About = (): JSX.Element => {
           title="Tech Legion"
         />
         <p>
-          A <b>Tech Legion</b> é uma empresa de <b>prestação de serviços sob demanda na área da tecnologia</b> que oferece soluções para
-          ajudar pequenas e médias empresas e organizações a atingir seus objetivos de negócios.
+          A Tech Legion é uma empresa de prestação de serviços sob demanda na área da tecnologia que oferece soluções para
+          ajudar <strong>pequenas e médias empresas</strong> e <strong>organizações</strong> a atingir seus <strong>objetivos de negócios</strong>.
         </p>
         <Button
           href="/"

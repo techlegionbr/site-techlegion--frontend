@@ -6,7 +6,7 @@ export const Main = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 50px ${layout.containerPaddingX};
+  padding: 2rem ${layout.containerPaddingX} 200px ${layout.containerPaddingX};
   background-color: ${color.primary};
   .content{
     width: ${layout.contentWidth};
@@ -23,6 +23,7 @@ export const Main = styled.div`
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: .5rem;
         .input-form{
           width: 100%;

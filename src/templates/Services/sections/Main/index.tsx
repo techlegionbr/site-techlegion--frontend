@@ -1,7 +1,7 @@
 import TitleSection from "@/components/TitleSection"
 
 import CardsService from "./components/CardsService"
-import services from "./services"
+import services from "./settings/services"
 import * as S from "./styles"
 
 

@@ -1,36 +1,68 @@
 
-import { type MouseEventHandler, useState } from "react"
+import { type MouseEventHandler, useState, type ChangeEvent, useEffect, forwardRef, type ComponentProps, type FocusEvent } from "react"
+
 
 import * as S from "./styles"
 
-type InputType = "text" | "password" | "email"
 
-interface InputProps {
-  className?: string,
-  name: string,
-  type?: InputType,
+interface InputProps extends ComponentProps<"input"> {
   placeholder: string,
   error?: boolean,
-  helperText?: string
+  helperText?: string,
 }
 
-const Input = ({ className = "", name, placeholder, type = "text", error = false, helperText = "" }: InputProps): JSX.Element => {
+const Input = forwardRef<HTMLInputElement, InputProps>(({
+  placeholder,
+  error = false,
+  helperText = "",
+  type = "text",
+  value = "",
+  onChange,
+  onBlur,
+  className = "",
+  autoComplete,
+  ...restPropsInput
+}, ref): JSX.Element => {
+
   const [isFocus, setIsFocus] = useState(false)
-  const [typeInput, setTypeInput] = useState<InputType>(type)
+  const [typeInput, setTypeInput] = useState(type)
+  const [valueInput, setValueInput] = useState(value)
+
+  useEffect(() => {
+    setValueInput(value)
+  }, [value])
 
   const handleClickToggleType: MouseEventHandler<HTMLButtonElement> = (e): void => {
     e.preventDefault()
     setTypeInput(prevType => prevType === "text" ? "password" : "text");
+    setIsFocus(true)
   }
+
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>): void => {
+    if (onChange) { onChange(e) }
+    setValueInput(e.target.value)
+  }
+
+  const handleBlurInput = (e: FocusEvent<HTMLInputElement, Element>): void => {
+    if (onBlur) { onBlur(e) }
+    setIsFocus(false)
+  }
+
+
   return (
     <S.Input className={className} error={error} focus={isFocus}>
       <label>{placeholder}</label>
       <div className="input-container">
         <input
           type={typeInput}
-          name={name}
           onFocus={() => { setIsFocus(true); }}
-          onBlur={() => { setIsFocus(false); }}
+          onBlur={handleBlurInput}
+          value={valueInput}
+          onChange={handleChangeInput}
+          ref={ref}
+          autoComplete={type === "password" || error ? "off" : autoComplete}
+          spellCheck
+          {...restPropsInput}
         />
         {
           type === "password" && (
@@ -43,11 +75,12 @@ const Input = ({ className = "", name, placeholder, type = "text", error = false
           )
         }
       </div>
-      {
-        helperText && (<small className="helper-text">Esse input é obrigatório.</small>)
-      }
+      {helperText && (<p className="helper-text">{helperText}</p>)}
     </S.Input>
   )
-}
+})
+
+
+Input.displayName = "Input"
 
 export default Input

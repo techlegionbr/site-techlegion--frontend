@@ -58,6 +58,7 @@ a {
 button {
   all: unset;
   cursor: pointer;
+  box-sizing: border-box;
 }
 small {
   font-size: var(--font-size-xsm);
@@ -109,8 +110,8 @@ h1 {
     line-height: calc(var(--line-height-md) - 0.2rem);
   }
   h2 {
-    font-size: calc(var(--font-size-lg) - 0.2rem);
-    line-height: calc(var(--line-height-lg) - 0.2rem);
+    font-size: calc(var(--font-size-lg) - 0.4rem);
+    line-height: calc(var(--line-height-lg) - 0.4rem);
   }
   h1 {
     font-size: calc(var(--font-size-xlg) - 0.2rem);

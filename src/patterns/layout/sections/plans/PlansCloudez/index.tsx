@@ -90,9 +90,9 @@ const PlansCloudez = (): JSX.Element => {
         <div className="benefits-cloud">
           <h2>Benefícios do Cloud Server</h2>
           <ul>
-            <li><i className='bx bxs-hdd'></i>É escalável: você pode adicionar mais capacidade rapidamente;</li>
-            <li><i className='bx bxs-shield-alt-2'></i>É mais seguro : se um servidor falhar, os recursos são processados por outro servidor físico, sem sair do ar;</li>
-            <li><i className='bx bx-windows'></i>Cada cliente pode selecionar seu próprio sistema operacional, ao contrário da opção VPS;</li>
+            <li><i className='bx bxs-hdd'></i>É escalável: você pode adicionar mais capacidade rapidamente.</li>
+            <li><i className='bx bxs-shield-alt-2'></i>É mais seguro : se um servidor falhar, os recursos são processados por outro servidor físico, sem sair do ar.</li>
+            <li><i className='bx bx-windows'></i>Cada cliente pode selecionar seu próprio sistema operacional, ao contrário da opção VPS.</li>
             <li><i className='bx bxs-user'></i>Se outro cliente do sistema tiver um pico de acesso, a disponibilidade de recursos da hospedagem do seu site não é afetada.</li>
           </ul>
         </div>

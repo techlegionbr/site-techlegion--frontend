@@ -17,6 +17,9 @@ export const Values = styled.div`
       margin-top: 4rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      @media (max-width: ${screens.sm}) {
+        grid-template-columns: auto;
+      }
       li{
         height: 120px;
         padding: 0 .6rem;
@@ -25,7 +28,7 @@ export const Values = styled.div`
         align-items: center;
         justify-content: center;
         text-align: center;
-        background-color: #191967;
+        background-color: #141a4b;
         border-radius: .6rem;
         gap: .5rem;
         border: 1.3px solid #609aff6c;

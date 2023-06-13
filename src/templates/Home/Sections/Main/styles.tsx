@@ -100,8 +100,6 @@ export const Main = styled.section`
         margin-top: 2rem;
         @media (max-width: ${screens.sm}) {
           width: 100%;
-          padding-left: 0;
-          padding-right: 0;
         }
       }
     }

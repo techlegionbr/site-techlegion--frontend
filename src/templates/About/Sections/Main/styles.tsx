@@ -9,6 +9,7 @@ export const Main = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media (max-width: ${screens.xlg}) {
     min-height: calc(100vh - (${layout.header.sub} + ${layout.header.sup}));
     padding: 0 ${layout.containerPaddingX};
@@ -91,8 +92,6 @@ export const Main = styled.div`
         margin-top: 3rem;
         @media (max-width: ${screens.sm}) {
           width: 100%;
-          padding-left: 0;
-          padding-right: 0;
         }
       }
     }

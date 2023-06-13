@@ -1,5 +1,5 @@
-import backgroundRocket from "@/assets/images/backgrounds/rocket-fundo.webp"
-import { color, layout } from "@/styles/root";
+import backgroundRocket from "@/assets/images/backgrounds/foguetão-gray.webp"
+import { color, layout, screens } from "@/styles/root";
 import styled from "styled-components";
 
 export const About = styled.div`
@@ -11,8 +11,11 @@ export const About = styled.div`
   justify-content: center;
   background-image: url(${backgroundRocket.src});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  @media (max-width: ${screens.lg}) {
+    background-size: cover;
+  }
   .content{
     width: ${layout.contentWidth};
     display: flex;

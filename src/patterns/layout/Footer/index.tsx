@@ -9,7 +9,6 @@ import { hostLinksMainFooter, hostLinksServicesFooter, hostLinksSocialMediaFoote
 import * as S from "./styles"
 
 
-
 const Footer = (): JSX.Element => {
   return (
     <S.Footer>
@@ -17,14 +16,31 @@ const Footer = (): JSX.Element => {
         <div className="sup-footer">
           <ul>
             <li>Institucional</li>
-            <li className="image-logo"><Image src={logoTechLegion} alt="logo techlegion" width={200} /></li>
-            <li className="speack"><i>Nosso negócio é vender o seu.</i></li>
-            <li><Link href={hostLinks.ourValues["#diversidade-e-inclusao"]}>Impacto Social</Link></li>
-            <li><Link href={hostLinks.ourValues["#impacto-social"]}>Diversidade e Inclusão</Link></li>
+            <li className="image-logo">
+              <Image src={logoTechLegion} alt="logo techlegion" width={200} />
+            </li>
+            <li className="speack">
+              <i>Nosso negócio é vender o seu.</i>
+            </li>
+            <li>
+              <Link
+                href={hostLinks.ourValues["#diversidade-e-inclusao"]}
+                title="Diversidade e Inclusão"
+              >Impacto Social</Link>
+            </li>
+            <li>
+              <Link
+                href={hostLinks.ourValues["#impacto-social"]}
+                title="Impacto Social"
+              >Diversidade e Inclusão</Link>
+            </li>
             {
               hostLinksMainFooter.map(hostlink => (
                 <li key={hostlink.label}>
-                  <Link href={hostlink.href}>{hostlink.label}</Link>
+                  <Link
+                    href={hostlink.href}
+                    title={hostlink.label}
+                  >{hostlink.label}</Link>
                 </li>
               ))
             }
@@ -34,7 +50,10 @@ const Footer = (): JSX.Element => {
             {
               hostLinksServicesFooter.map(hostLink => (
                 <li key={hostLink.label}>
-                  <Link href={hostLink.href}>{hostLink.label}</Link>
+                  <Link
+                    href={hostLink.href}
+                    title={hostLink.label}
+                  >{hostLink.label}</Link>
                 </li>
               ))
             }
@@ -54,15 +73,25 @@ const Footer = (): JSX.Element => {
             <Image src={logoLionWhite} alt="logo techlegion" width={50} />
           </div>
           <nav className="terms-polity-nav">
-            <Link href="/">Política de Privacidade</Link>
-            <Link href="/">Termos de Uso</Link>
+            <Link
+              href={hostLinks.main["politica-de-privacidade"]}
+              title="Política de Privacidade"
+            >Política de Privacidade</Link>
+            <Link
+              href={hostLinks.main["termos-de-uso"]}
+              title="Termos de Uso"
+            >Termos de Uso</Link>
           </nav>
           <nav className="social-media-nav">
             {
               hostLinksSocialMediaFooter.map((sm, index) => (
-                <a key={index} href={sm.href} target="_blank" rel="noreferrer">
-                  {sm.icon}
-                </a>
+                <a
+                  key={index}
+                  href={sm.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={sm.name}
+                >{sm.icon}</a>
               ))
             }
           </nav>

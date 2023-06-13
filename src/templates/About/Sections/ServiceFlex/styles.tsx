@@ -2,7 +2,6 @@
 import { screens, color, layout } from "@/styles/root";
 import styled from "styled-components";
 
-
 export const ServiceFlex = styled.div`
   width: 100%;
   padding: 100px ${layout.containerPaddingX};
@@ -31,7 +30,7 @@ export const ServiceFlex = styled.div`
       .image-article{
         width: 50%;
         height: 300px;
-        border-radius: .6rem;
+        border-radius: .5rem;
         overflow: hidden;
         border: 1.5px solid #331df62c;
         @media (max-width: ${screens.md}) {

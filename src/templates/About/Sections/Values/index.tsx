@@ -40,15 +40,19 @@ const Values = (): JSX.Element => {
         <div className="social-articles">
           <article id="diversidade-e-inclusao">
             <div className="image-article">
-              <Image src={imageMuitEthinics} alt="Jovens de diversas etinias" />
+              <Image
+                src={imageMuitEthinics}
+                alt="Jovens de diversas etinias"
+                width={400}
+              />
             </div>
             <div className="descriptio-article">
               <h2>Diversidade e Inclusão</h2>
               <p>
-                Na Tech Legion, <b>acreditamos</b> que a diversidade e a inclusão são essenciais para impulsionar a inovação e
-                o crescimento. Valorizamos e respeitamos as <b>diferenças individuais</b>, criando um ambiente acolhedor e
-                inclusivo para todos. Estamos comprometidos em promover a <b>equidade de oportunidades</b> e garantir que cada
-                voz seja ouvida. Juntos, estamos construindo um <b>ambiente colaborativo</b>.
+                Na Tech Legion, acreditamos que a <strong>diversidade</strong> e a <strong>inclusão</strong> são essenciais para impulsionar a inovação e
+                o crescimento. Valorizamos e respeitamos as <strong>diferenças individuais</strong>, criando um ambiente acolhedor e
+                inclusivo para todos. Estamos comprometidos em promover a <strong>equidade de oportunidades</strong> e garantir que cada
+                voz seja ouvida. Juntos, estamos construindo um ambiente <strong>colaborativo</strong>.
               </p>
               <Button className="button-know-more">SAIBA MAIS</Button>
             </div>
@@ -57,17 +61,22 @@ const Values = (): JSX.Element => {
             <div className="descriptio-article">
               <h2>Impacto Social</h2>
               <p>
-                A Tech Legion não é apenas uma empresa de tecnologia, mas sim uma legião de profissionais apaixonados por
-                tecnologia que buscam um propósito maior: impactar a vida das pessoas através da tecnologia.
+                A Tech Legion não é apenas uma empresa de tecnologia, mas sim uma <strong>legião de profissionais apaixonados por
+                  tecnologia</strong> que buscam um propósito maior: <strong>impactar a vida das pessoas através da tecnologia</strong>
               </p>
               <p>
-                Ao contratar a Tech Legion, nossos clientes não estão apenas contratando serviços sob demanda na área da tecnologia,
-                mas também estão contribuindo para o impacto social e econômico positivo na vida de profissionais em início de carreira.
+                Ao contratar a Tech Legion, nossos clientes não estão apenas contratando <strong>serviços sob demanda na área da tecnologia</strong>,
+                mas também estão contribuindo para o <strong>impacto social e econômico positivo</strong> na vida de <strong>profissionais em
+                  início de carreira</strong>
               </p>
               <Button className="button-know-more">SAIBA MAIS</Button>
             </div>
             <div className="image-article">
-              <Image src={imageFrinds} alt="Jovens de diversas etinias" />
+              <Image
+                src={imageFrinds}
+                alt="Jovens de diversas etinias"
+                width={400}
+              />
             </div>
           </article>
         </div>

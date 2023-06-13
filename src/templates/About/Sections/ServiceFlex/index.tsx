@@ -10,23 +10,23 @@ const ServiceFlex = (): JSX.Element => {
   return (
     <S.ServiceFlex>
       <div className="content">
-        {/* <TitleSection
-          subTitle="Traga seus Projetos Incríveis à Vida com a Tech Legion"
-          title="Inovação Tecnológica e Personalizada"
-        /> */}
         <article>
           <div className="image-article">
-            <Image src={imageServiceDemand} alt="robo" />
+            <Image
+              src={imageServiceDemand}
+              alt="Imagem representativa para Serviços Sob Demanda"
+              width={400}
+            />
           </div>
           <div className="description">
             <h2>Serviços Sob Demanda</h2>
             <p>
-              Somos uma <strong>empresa de prestação de serviços sob demanda na área da tecnologia</strong>, que ajuda <strong>novos talentos</strong>,
-              gerando oportunidades de trabalhar em projetos incríveis.
+              Somos uma empresa de prestação de serviços sob demanda na área da <strong>tecnologia</strong>, que ajuda novos talentos,
+              gerando oportunidades de trabalhar em <strong>projetos incríveis</strong>.
             </p>
             <p>
-              A <strong>Tech Legion</strong> não é apenas uma empresa de tecnologia, mas sim uma <strong>legião de profissionais apaixonados pela
-                tecnologia</strong>. O nosso propósito é simples: <strong>impactar a vida das pessoas através da tecnologia</strong>.
+              A Tech Legion não é apenas uma empresa de tecnologia, mas sim uma <strong>legião de profissionais apaixonados</strong> pela
+              tecnologia. O nosso propósito é simples: <strong>impactar a vida das pessoas através da tecnologia</strong>.
             </p>
           </div>
         </article>
@@ -34,28 +34,36 @@ const ServiceFlex = (): JSX.Element => {
           <div className="description">
             <h2>Uma Legião Ao Seu Lado</h2>
             <p>
-              Nosso slogan é <strong>“Uma legião ao seu lado”</strong>, porque além de sermos uma legião de apaixonados por tecnologia,
-              acreditamos que o <strong>sucesso de nossos clientes é o nosso sucesso</strong>.
+              Nosso slogan é “Uma legião ao seu lado”, porque além de sermos uma <strong>legião de apaixonados por tecnologia</strong>,
+              acreditamos que o sucesso de nossos clientes é o nosso sucesso.
             </p>
           </div>
           <div className="image-article">
-            <Image src={imageLegionSide} alt="robo" />
+            <Image
+              src={imageLegionSide}
+              alt="Imagem representativa para apresentação da Tech Legion"
+              width={400}
+            />
           </div>
         </article>
         <article>
           <div className="image-article">
-            <Image src={imageTransformDigital} alt="robo" />
+            <Image
+              src={imageTransformDigital}
+              alt="Imagem representativa para Transformação Digital"
+              width={400}
+            />
           </div>
           <div className="description">
             <h2>Transformação Digital</h2>
             <p>
-              Estamos sempre animados para fazer parte da <strong>transformação digital</strong> de nossos futuros clientes.
-              Se você busca um parceiro de confiança para ajudá-lo a alcançar seus objetivos de negócio por meio da
+              Estamos sempre animados para fazer parte da transformação digital de nossos futuros clientes.
+              Se você busca um parceiro de confiança para ajudá-lo a alcançar seus <strong>objetivos de negócio</strong> por meio da
               tecnologia, conte conosco!
             </p>
             <p>
-              <strong>Oferecemos soluções personalizadas e inovadoras</strong> para as necessidades específicas de cada empresa.
-              Desde o desenvolvimento de software até a hospedagem de projetos, nossa missão é fornecer o melhor
+              Oferecemos soluções <strong>personalizadas</strong> e <strong>inovadoras</strong> para as necessidades específicas de cada empresa.
+              Desde o <strong>desenvolvimento de software</strong> até a <strong>hospedagem de projetos</strong>, nossa missão é fornecer o melhor
               serviço possível para nossos clientes.
             </p>
           </div>

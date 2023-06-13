@@ -33,9 +33,7 @@ export const Principles = styled.div`
       }
       h3{
         margin-top: 2rem;
-        span{
-          color: ${color.third}
-        }
+        font-weight: 500;
       }
       p{
         margin-top: 3rem;

@@ -47,11 +47,25 @@ const Main = (): JSX.Element => {
           title="Entre em Contato"
         />
         <div className="contacts-cards">
+          <div className="form-contact">
+            <h3>Faça o seu orçamento!</h3>
+            <form>
+              <input placeholder="Nome" required />
+              <input placeholder="Email" required />
+              <textarea placeholder="Mensagem" required />
+              <Button iconRight={<i className='bx bxs-message'></i>} className="button-form">Enviar</Button>
+            </form>
+          </div>
           <ul className="social-medias">
             {
               socialMedia.map(sm => (
                 <li key={sm.name}>
-                  <a target="_blank" href={socialMediaLinks[sm.name]} rel="noreferrer" title={sm.name}>
+                  <a
+                    target="_blank"
+                    href={socialMediaLinks[sm.name]}
+                    rel="noreferrer"
+                    title={sm.name}
+                  >
                     {sm.icon}
                     <span>{sm.name}</span>
                   </a>
@@ -59,16 +73,6 @@ const Main = (): JSX.Element => {
               ))
             }
           </ul>
-          <div className="form-contact">
-            <h3>Faça o seu orçamento agora mesmo</h3>
-            <form>
-              <input placeholder="Nome" />
-              <input placeholder="Email" />
-              <textarea placeholder="Mensagem" />
-              <Button iconRight={<i className='bx bxs-message'></i>} className="button-form">Enviar</Button>
-            </form>
-          </div>
-
         </div>
       </div>
     </S.Main>

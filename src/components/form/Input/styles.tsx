@@ -1,3 +1,4 @@
+import { presenceOpacity } from "@/animations/presence";
 import { color, font } from "@/styles/root";
 import styled from "styled-components";
 
@@ -26,6 +27,11 @@ export const Input = styled.div<InputProps>`
       top: 50%;
       transform: translateY(-50%);
       right: 1rem;
+      transition: .2s;
+      color: ${({ error, focus }) => (
+    error ? color.danger :
+      focus ? "#fff" : "#ffffffc3"
+  )}; 
     }
     input{
       margin-top: .3rem;
@@ -38,19 +44,25 @@ export const Input = styled.div<InputProps>`
     focus && !error ? "#ffffffc2" :
       error ? color.danger : "#ffffff6d"
   )};
-      color: ${({ error }) => (
-    error ? color.danger : "#fff"
+      color: ${({ error, focus }) => (
+    error ? color.danger :
+      focus ? "#fff" : "#ffffffc3"
   )}; 
       font-size: ${font.size.xsm};
       transition: .2s;
       outline: none;
+      &:-webkit-autofill{
+        background-color: red;
+      }
     }
   }
-  
+
   .helper-text{
+    margin-top: .4rem;
     font-size: .7rem;
     line-height: .8rem;
     color: ${color.danger};
     font-weight: bold;
+    ${presenceOpacity};
   }
 `

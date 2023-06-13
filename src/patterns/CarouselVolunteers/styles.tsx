@@ -23,6 +23,11 @@ export const CarouselVolunteers = styled.div`
     font-size: .9rem;
     border: 1.2px solid #ffffff1f;
     color: ${color.third};
+    opacity: .7;
+    transition: .2s;
+    &:hover{
+      opacity: 1;
+    }
     @media (max-width: ${screens.sm}) {
       width: 30px;
       height: 30px;

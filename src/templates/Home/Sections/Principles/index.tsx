@@ -12,12 +12,12 @@ const Principles = (): JSX.Element => {
         <div className="description-principles">
           <small>Nossa dedicação</small>
           <h3>
-            A <span>Tech Legion</span> é dedicada a atender empresas de todos os portes, incluindo pequenas, médias e grandes empresas,
-            bem como profissionais autônomos e empreendedores em geral. Nossa missão é <span>impulsionar os resultados dos negócios
-              digitais</span> de nossos clientes, independentemente do tamanho ou setor em que atuam.
+            A Tech Legion é dedicada a atender empresas de todos os portes, incluindo <strong>pequenas, médias e grandes empresas</strong>,
+            bem como <strong>profissionais autônomos</strong> e <strong>empreendedores em geral</strong>.<br /> Nossa missão é <strong>impulsionar os resultados</strong> dos negócios
+            digitais de nossos clientes, independentemente do <strong>tamanho ou setor</strong> em que atuam.
           </h3>
           <p>
-            Onde a criatividade e a tecnologia se unem para atender negócios de todo o Brasil dos mais diversos segmentos.
+            Onde a <strong>criatividade</strong> e a <strong>tecnologia</strong> se unem para atender <strong>negócios de todo o Brasil</strong> dos mais diversos segmentos.
             Sempre fazendo um trabalho pensando em que está do outro lado.
           </p>
         </div>

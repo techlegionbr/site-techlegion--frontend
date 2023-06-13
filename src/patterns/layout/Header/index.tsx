@@ -8,11 +8,10 @@ import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
 
-import Hamburger from "./components/Hamburger"
+import * as Menu from "./components/MenuVertical"
 import PopUpSearch from "./components/PopUpSearch"
 import { hostLinksMainHeader } from "./settings/links"
 import * as S from "./styles"
-
 
 
 
@@ -25,16 +24,35 @@ const SupHeader = (): JSX.Element => {
             <i className='bx bxs-phone'></i>
             (51) 98027-6708
           </span>
-          <a>
-            <i className='bx bxs-envelope'></i>
+          <a
+            href={socialMediaLinks.email}
+            target="_blank"
+            rel="noreferrer"
+            title="E-mail"
+          ><i className='bx bxs-envelope'></i>
             contato@techlegion.com.br
           </a>
         </div>
         <nav className="social-medias">
-          <a href={socialMediaLinks.facebook} target="_blank" rel="noreferrer"><i className='bx bxl-facebook'></i></a>
-          <a href={socialMediaLinks.twitter} target="_blank" rel="noreferrer"><i className='bx bxl-twitter' ></i></a>
-          <a href={socialMediaLinks.instagram} target="_blank" rel="noreferrer"><i className='bx bxl-instagram-alt' ></i></a>
-          <a><i className='bx bx-wifi' ></i></a>
+          <a
+            href={socialMediaLinks.facebook}
+            title="Facebook"
+            target="_blank"
+            rel="noreferrer"
+          ><i className='bx bxl-facebook'></i></a>
+          <a
+            href={socialMediaLinks.twitter}
+            target="_blank"
+            title="Twitter"
+            rel="noreferrer"
+          ><i className='bx bxl-twitter' ></i></a>
+          <a
+            href={socialMediaLinks.instagram}
+            target="_blank"
+            title="Instagram"
+            rel="noreferrer"
+          ><i className='bx bxl-instagram-alt' ></i></a>
+          {/* <a><i className='bx bx-wifi' ></i></a> */}
         </nav>
       </div>
     </S.SupHeader>
@@ -49,13 +67,14 @@ interface PropsHeader {
 const Header = ({ supHeader = true, navigation = true }: PropsHeader): JSX.Element => {
   const [isTransparent, setIsTransparent] = useState(true)
   const [showPopUpSearch, setShowPopUpSearch] = useState(false)
+  const [showVerticalMenu, setShowVerticalMenu] = useState(false)
   const { pathname } = useRouter()
 
-  const currentRoute = (): TypeHostLinkMain => {
-    const basePath = `/${pathname.split("/").filter(Boolean)[0]}`
+  const currentRoute = (): TypeHostLinkMain | "" => {
+    const basePath = pathname === "/" ? "/" : `/${pathname.split("/").filter(Boolean)[0]}`
     return hostLinksMainHeader.find(route => (
       route.href === basePath
-    ))?.name ?? "início"
+    ))?.name ?? ""
   }
 
   useEffect(() => {
@@ -76,7 +95,8 @@ const Header = ({ supHeader = true, navigation = true }: PropsHeader): JSX.Eleme
               <Image
                 src={logoTechLegion}
                 alt="Logo da Tech Legion"
-                width={210} priority
+                width={210}
+                priority
               />
             </Link>
 
@@ -96,10 +116,15 @@ const Header = ({ supHeader = true, navigation = true }: PropsHeader): JSX.Eleme
                     </nav>
                     <button
                       className="button-search"
+                      id="button-search"
+                      title="Botão de pesquisa"
                       onClick={() => { setShowPopUpSearch(true); }}
                     ><i className='bx bxs-search'></i></button>
                   </div>
-                  <Hamburger className="menu-hamburger" />
+                  <Menu.ButtonHamburger
+                    className="menu-hamburger"
+                    onOpen={() => { setShowVerticalMenu(true) }}
+                  />
                 </>
               )
             }
@@ -109,6 +134,10 @@ const Header = ({ supHeader = true, navigation = true }: PropsHeader): JSX.Eleme
       <PopUpSearch
         show={showPopUpSearch}
         onClose={() => { setShowPopUpSearch(false); }}
+      />
+      <Menu.PopUpMenuVertical
+        show={showVerticalMenu}
+        onClose={() => { setShowVerticalMenu(false); }}
       />
     </>
   )

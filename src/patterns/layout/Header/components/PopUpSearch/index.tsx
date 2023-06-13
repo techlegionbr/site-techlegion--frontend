@@ -67,7 +67,12 @@ const PopUpSearch = ({ show, onClose }: PropsPopUp): JSX.Element => {
             spellCheck={false}
             autoComplete="off"
           />
-          <button className="button-clear" onClick={clearValueSearched}><i className='bx bx-x'></i></button>
+          <button
+            className="button-clear"
+            id="button-clear-input-search"
+            title="Botão para apagar o campo de pesquisa"
+            onClick={clearValueSearched}
+          ><i className='bx bx-x'></i></button>
         </div>
         <ListSearched
           list={resultSearched}

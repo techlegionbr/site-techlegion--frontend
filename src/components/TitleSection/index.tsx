@@ -32,7 +32,7 @@ const TitleSectionStyled = styled.div`
     line-height: 2.5rem;
   }
   p{
-    max-width: 500px;
+    max-width: 600px;
     margin-top: 1.5rem;
     color: #ffffffc0;
   }

@@ -6,14 +6,14 @@ export const CardVolunteer = styled.div`
   flex: none;
   width: 200px;
   height: 270px;
-  background-color: #1f1f59;
+  background-color: #072545;
   border-radius: .6rem;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  border: 1.3px solid #7470f77e;
+  border: 1.3px solid #8cb8fe58;
   text-align: center;
   .profile-image{
     width: 90px;

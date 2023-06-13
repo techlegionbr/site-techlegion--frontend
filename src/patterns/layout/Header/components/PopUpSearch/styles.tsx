@@ -1,5 +1,5 @@
 import { presenceOpacity, presenceScale, presenceTranslateLeft } from "@/animations/presence"
-import { color, font } from "@/styles/root"
+import { color, font, screens } from "@/styles/root"
 import styled from "styled-components"
 
 export const PopUpSearch = styled.div`
@@ -15,6 +15,9 @@ export const PopUpSearch = styled.div`
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  @media (max-width: ${screens.sm}) {
+    padding: .5rem;
+  }
   .card-search{
     width: 700px;
     height: 100%;
@@ -23,6 +26,9 @@ export const PopUpSearch = styled.div`
     padding: 1rem 2rem;
     border: 1px solid #2758fb3e;
     ${presenceScale};
+    flex-direction: column;
+    display: flex;
+    gap: 2rem;
 
     .input-search{
       display: flex;
@@ -71,9 +77,9 @@ export const PopUpSearch = styled.div`
 `
 
 export const ListSearched = styled.ul`
-  margin-top: 2rem;
   overflow: auto;
-  max-height: 500px;
+  width: 100%;
+  height: calc(100% - 44px);
   padding-right: .5rem;
   &::-webkit-scrollbar-track {
     background-color: #0b123c;
@@ -134,6 +140,7 @@ export const ListSearched = styled.ul`
     padding: 2rem 0;
     font-weight: bold;
     font-size: 1.1rem;
+    line-height: 1.3rem;
     color: #ffffff9a;
     ${presenceOpacity};
     pointer-events: none;
@@ -166,6 +173,7 @@ export const ListSearched = styled.ul`
       margin-top: .6rem;
       font-weight: bold;
       font-size: 1.1rem;
+      line-height: 1.3rem;
       font-family: ${font.family.Poppins};
       color: #ffffffd0;
       span{

@@ -1,6 +1,6 @@
+import backgroundImage from "@/assets/images/backgrounds/homem-jaqueta-vr-primary.webp"
 import { color, layout } from "@/styles/root";
 import styled from "styled-components";
-
 
 export const YourMoment = styled.div`
   width: 100%;
@@ -9,6 +9,11 @@ export const YourMoment = styled.div`
   justify-content: center;
   padding: 100px ${layout.containerPaddingX};
   background-color: ${color.primary};
+
+  background-image: url(${backgroundImage.src});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   .content{
     width: ${layout.contentWidth};
     .description-contact{
@@ -19,15 +24,16 @@ export const YourMoment = styled.div`
       align-items: center;
       text-align: center;
       h4{
-        background-color: #1c1a54;
-        padding: .6rem 1rem;
-        border-radius: .4rem;
-        border: 1.3px solid #72b1ff72;
-        color: #ffffffce;
+        background-color: #1c1a5447;
+        backdrop-filter: blur(10px);
+        padding: .8rem 2rem;
+        border-radius: 2rem;
+        border: 1.3px solid #72b1ff42;
+        
       }
       p{
         margin-top: 1rem;
-        max-width: 500px;
+        max-width: 600px;
 
       }
     }

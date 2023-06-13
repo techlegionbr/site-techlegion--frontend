@@ -33,6 +33,20 @@ export const presenceTranslateLeft = `
   animation: translate_left_presence .4s ease;
 `;
 
+export const presenceTranslateRight = `
+  @keyframes translate_right_presence{
+    0%{ 
+      opacity: 0; 
+      transform: translate(100%);
+    }
+    100%{ 
+      opacity: 1; 
+      transform: translate(0);
+    }
+  }
+  animation: translate_right_presence .4s ease;
+`;
+
 export const presenceTranslateDown = `
   @keyframes translate_down_presence{
     0%{ 

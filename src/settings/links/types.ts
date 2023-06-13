@@ -16,7 +16,9 @@ export type TypeHostLinkMain =
   | 'sobre'
   | 'servicos'
   | 'blog'
-  | 'contato';
+  | 'contato'
+  | 'politica-de-privacidade'
+  | 'termos-de-uso';
 export type TypeHostLinkService =
   | 'analise-e-ciencia-de-dados'
   | 'criacao-de-filtros-de-realidade-virtual'

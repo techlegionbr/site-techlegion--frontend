@@ -14,8 +14,8 @@ const Main = (): JSX.Element => {
           <h4>Prezer, somos a</h4>
           <h1>Tech <span>Legion</span></h1>
           <p>
-            Uma <strong>legião apaixonada por tecnologia</strong>, designers, gestores de marketing, analistas e cientistas de dados,
-            engenheiros de software e desenvolvedores apaixonados por criar<strong> soluções digitais</strong> sob medida para nossos clientes.
+            Uma legião apaixonada por <strong>tecnologia</strong>, <strong>designers</strong>, <strong>gestores de marketing</strong>, <strong>analistas e cientistas de dados</strong>,
+            <strong>engenheiros de software</strong> e <strong>desenvolvedores</strong> apaixonados por criar soluções digitais sob medida para nossos clientes.
           </p>
           <div className="profile-card">
             <div className="image-profile">

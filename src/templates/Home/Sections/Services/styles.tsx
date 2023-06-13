@@ -41,15 +41,18 @@ export const Services = styled.section`
       .card{
         height: auto;
         background-color: #0c2137;
-        padding: 2rem;
+        padding: 2rem 2rem 7rem 2rem;
         border-radius: .3rem;
-        border: 2px solid #9292fa24;
+        border: 1.5px solid #9292fa24;
         position: relative;
+        @media (max-width: ${screens.sm}) {
+          padding: 2rem 1rem 7rem 1rem;
+        }
         .image-head{
           width: 100%;
           height: 250px;
           overflow: hidden;
-          border-radius: .6rem;
+          border-radius: .2rem;
           img{
             width: 100%;
             height: 100%;
@@ -66,6 +69,8 @@ export const Services = styled.section`
 
           .button-know-more{
             margin-top: 1.4rem;
+            position: absolute;
+            bottom: 2rem;
           }
         }
       }

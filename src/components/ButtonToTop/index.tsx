@@ -32,7 +32,7 @@ const ButtonToTop = (): JSX.Element => {
 
   }
   return (
-    <ButtonToTopStyled onClick={scrollToTop}>
+    <ButtonToTopStyled onClick={scrollToTop} id="button-to-top" title="Botão para levar ao topo">
       <i className='bx bxs-chevron-up'></i>
     </ButtonToTopStyled>
   )

@@ -1,26 +1,39 @@
 
+
+
 import Button from "@/components/Button"
 import Input from "@/components/form/Input"
+import useLogin from "@/hooks/auth/useLogin"
+import useRegister from "@/hooks/auth/useRegister"
 
 import * as S from "./styles"
 
 const Main = (): JSX.Element => {
+  const { registerFormControl, registerInputControl, registerFormErrors } = useRegister()
+  const { loginFormControl, loginFormErrors, loginInputControl } = useLogin()
+
   return (
     <S.Main>
       <div className="content">
         <div className="card-login">
           <h2>Login</h2>
-          <form>
+          <form {...loginFormControl}>
             <Input
               className="input-form"
               placeholder="Email"
-              name="email"
+              type="email"
+              error={!!loginFormErrors.email}
+              helperText={loginFormErrors?.email?.message}
+              autoComplete="off"
+              {...loginInputControl("email")}
             />
             <Input
               className="input-form"
               placeholder="Senha"
-              name="password"
               type="password"
+              error={!!loginFormErrors.password}
+              helperText={loginFormErrors?.password?.message}
+              {...loginInputControl("password")}
             />
             <Button className="btn-form">Faça seu login</Button>
           </form>
@@ -28,27 +41,31 @@ const Main = (): JSX.Element => {
         <div className="line-vertical" />
         <div className="card-register">
           <h2>Registro</h2>
-          <form>
+          <form {...registerFormControl}>
             <Input
               className="input-form"
               placeholder="Email"
-              name="email"
+              type="email"
+              error={!!registerFormErrors.email}
+              helperText={registerFormErrors?.email?.message}
+              autoComplete="off"
+              {...registerInputControl("email")}
             />
             <Input
               className="input-form"
               placeholder="Código"
-              name="code"
+              error={!!registerFormErrors.code}
+              helperText={registerFormErrors?.code?.message}
+              autoComplete="off"
+              {...registerInputControl("code")}
             />
             <Input
               className="input-form"
               placeholder="Senha"
               type="password"
-              name="password"
-            />
-            <Input
-              className="input-form"
-              placeholder="Confirmar senha"
-              name="password-confirm"
+              error={!!registerFormErrors.password}
+              helperText={registerFormErrors?.password?.message}
+              {...registerInputControl("password")}
             />
             <Button className="btn-form">Faça seu registro</Button>
           </form>
