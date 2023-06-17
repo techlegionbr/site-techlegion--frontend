@@ -12,7 +12,7 @@ const AnyQuestions = (): JSX.Element => {
           title="Ficou com alguma dúvida?"
           description="Se você tem alguma dúvida, qualquer que seja, pode falar direto no WhatsApp. É só chamar, que você terá sua resposta."
         />
-        <Button className="button-contact">Conversar pelo whatsapp</Button>
+        <Button className="button-contact" size="medium">Conversar pelo Whatsapp</Button>
       </div>
     </S.AnyQuestions>
   )

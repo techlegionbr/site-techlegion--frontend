@@ -1,7 +1,9 @@
-import Button from "@/components/Button"
+
 import TitleSection from "@/components/TitleSection"
 
+import CardPlan from "./components/CardPlan"
 import * as S from "./styles"
+
 
 
 const PlansCloudez = (): JSX.Element => {
@@ -11,89 +13,52 @@ const PlansCloudez = (): JSX.Element => {
         <TitleSection
           subTitle="Cloud Server"
           title="Serviço de Hospedagem"
-          description="Como o nome já diz, o Cloud Server utiliza uma hospedagem na nuvem, o que significa que você não contará com uma máquina física. Nessa estrutura na nuvem, diversas máquinas físicas dividem os recursos, fazendo com que uma máquina assuma a carga da outra caso haja necessidade."
+          description="O Cloud Server é uma hospedagem na nuvem em que várias máquinas físicas compartilham recursos, permitindo que uma máquina assuma a carga de outra, se necessário."
         />
         <div className="cards-plan">
-          <div className="card">
-            <span className="status-plan">Plano Básico</span>
-            <i className='bx bxl-soundcloud icon-cloud'></i>
-            <h4>Hospedagem Site</h4>
-            <div className="price">
-              <span className="sub-price">MÊS</span>
-              <span className="value-price">R$99</span>
-            </div>
-            <ul>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>Sites Ilimitados*</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>25DB SSD</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>1GB RAM</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>1 vCPU</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>CDN Premium</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Otimização</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>HTTPS Gratuito</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Suporte Técnico</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Backup Gratuito</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>Prevenção de Blocklist</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>3 caixas de E-mail de 5GB</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>100k mail gateway gratuito</span></li>
-            </ul>
-            <Button className="button-know-more">Saiba Mais</Button>
-          </div>
-          <div className="card">
-            <span className="status-plan">Plano mais escolhido</span>
-            <i className='bx bxl-soundcloud icon-cloud'></i>
-            <h4>Hospedagem Site e E-mail</h4>
-            <div className="price">
-              <span className="sub-price">MÊS</span>
-              <span className="value-price">R$137</span>
-            </div>
-            <ul>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>Sites Ilimitados*</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>25DB SSD</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>1GB RAM</span></li>
-              <li className="attr-exclude"><i className='bx bx-x'></i><span>1 vCPU</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>CDN Premium</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Otimização</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>HTTPS Gratuito</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Suporte Técnico</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Backup Gratuito</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Prevenção de Blocklist</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>3 caixas de E-mail de 5GB</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>100k mail gateway gratuito</span></li>
-            </ul>
-            <Button className="button-know-more">Saiba Mais</Button>
-          </div>
-          <div className="card">
-            <span className="status-plan">Plano Avançado</span>
-            <i className='bx bxl-soundcloud icon-cloud'></i>
-            <h4>Hospedagem Site e E-mail</h4>
-            <div className="price">
-              <span className="sub-price">MÊS</span>
-              <span className="value-price">R$197</span>
-            </div>
-            <ul>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Sites Ilimitados*</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>25DB SSD</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>1GB RAM</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>1 vCPU</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>CDN Premium</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Otimização</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>HTTPS Gratuito</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Suporte Técnico</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Backup Gratuito</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>Prevenção de Blocklist</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>3 caixas de E-mail de 5GB</span></li>
-              <li className="attr-include"><i className='bx bx-check'></i><span>100k mail gateway gratuito</span></li>
-            </ul>
-            <Button className="button-know-more">Saiba Mais</Button>
-          </div>
+          <CardPlan
+            attrsIncludes={["CDN Premium", "Otimização", "HTTPS Gratuito", "Suporte Técnico", "Backup Gratuito"]}
+            title="Hospedagem Site"
+            name="Plano Básico"
+            value={99}
+            link="#"
+          />
+          <CardPlan
+            attrsIncludes={["CDN Premium", "Otimização", "HTTPS Gratuito", "Suporte Técnico", "Backup Gratuito", "Prevenção de Blocklist", "3 caixas de E-mail de 5GB", "100k mail gateway gratuito"]}
+            title="Hospedagem Site e E-mail"
+            name="Plano mais escolhido"
+            value={137}
+            link="#"
+          />
+          <CardPlan
+            attrsIncludes={["CDN Premium", "Otimização", "HTTPS Gratuito", "Suporte Técnico", "Backup Gratuito", "Prevenção de Blocklist", "3 caixas de E-mail de 5GB", "100k mail gateway gratuito", "Sites Ilimitados*", "25DB SSD", "1GB RAM", "1 vCPU"]}
+            title="Hospedagem Site e E-mail"
+            name="Plano Avançado"
+            value={197}
+            link="#"
+          />
+
         </div>
         <div className="benefits-cloud">
           <h2>Benefícios do Cloud Server</h2>
+          <div className="line-sub-title" />
           <ul>
-            <li><i className='bx bxs-hdd'></i>É escalável: você pode adicionar mais capacidade rapidamente.</li>
-            <li><i className='bx bxs-shield-alt-2'></i>É mais seguro : se um servidor falhar, os recursos são processados por outro servidor físico, sem sair do ar.</li>
-            <li><i className='bx bx-windows'></i>Cada cliente pode selecionar seu próprio sistema operacional, ao contrário da opção VPS.</li>
-            <li><i className='bx bxs-user'></i>Se outro cliente do sistema tiver um pico de acesso, a disponibilidade de recursos da hospedagem do seu site não é afetada.</li>
+            <li>
+              <i className='bx bxs-hdd'></i>
+              <p><strong>Escalabilidade:</strong> Adicione facilmente mais capacidade para acompanhar o crescimento do seu negócio ou demanda, dimensionando verticalmente sua infraestrutura.</p>
+            </li>
+            <li>
+              <i className='bx bxs-shield-alt-2'></i>
+              <p><strong>Segurança:</strong> Garanta a continuidade do seu negócio com a transferência automática de recursos em caso de falha de um servidor físico, minimizando o tempo de inatividade.</p>
+            </li>
+            <li>
+              <i className='bx bx-windows'></i>
+              <p> <strong>Flexibilidade do sistema operacional:</strong> Escolha o sistema operacional mais adequado às suas necessidades e preferências, personalizando sua experiência na nuvem.</p>
+            </li>
+            <li>
+              <i className='bx bxs-user'></i>
+              <p><strong>Disponibilidade de recursos:</strong> A hospedagem do seu site permanece estável e disponível, mesmo durante picos de acesso de outros clientes, graças à distribuição dos recursos entre máquinas físicas na nuvem.</p>
+            </li>
           </ul>
         </div>
       </div>

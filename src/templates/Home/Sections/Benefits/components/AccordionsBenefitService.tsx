@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react"
 
+import { type TypeBenefit } from "../settings/types"
 import * as S from "../styles"
-import { type TypeBenefit } from "../types"
 
 type TypeBenefitParam = [
   service: string,

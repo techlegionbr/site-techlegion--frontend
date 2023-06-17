@@ -128,9 +128,9 @@ export const SupHeader = styled.div`
       @media (max-width: ${screens.md}) {
         display: none;
       }
-      a:nth-last-child(1){
+      /* a:nth-last-child(1){
         transform: rotate(40deg);
-      }
+      } */
     }
   }
 `

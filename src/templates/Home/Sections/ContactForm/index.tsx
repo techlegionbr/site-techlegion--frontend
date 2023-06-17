@@ -1,3 +1,4 @@
+import Button from "@/components/Button"
 import TitleSection from "@/components/TitleSection"
 
 import * as S from "./styles"
@@ -15,7 +16,7 @@ const ContactForm = (): JSX.Element => {
           <input id="name" placeholder="Nome" />
           <input id="email" placeholder="E-mail" />
           <textarea id="message" placeholder="Mensagem" />
-          <button className="button-submit">Enviar</button>
+          <Button className="button-submit">Enviar</Button>
         </form>
       </div>
     </S.ContactForm>

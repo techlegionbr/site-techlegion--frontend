@@ -1,4 +1,4 @@
-import { screens, color, layout } from "@/styles/root";
+import { screens, color, layout, font } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -41,9 +41,9 @@ export const Infos = styled.div`
           font-size: .8rem;
           font-weight: bold;
         }
-        .price-number{
-          line-height: 2.4rem;
-          font-size: 2rem;
+        .price-value{
+          line-height: ${font.line_height.xlg};
+          font-size: ${font.size.xlg};
           font-weight: bold;
           color: ${color.third};
         }

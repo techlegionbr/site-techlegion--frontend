@@ -8,20 +8,32 @@ import * as S from "./styles"
 
 interface PropsPopUp {
   show: boolean,
-  onClose: () => void
+  onClose: () => void,
+  lockScroll?: "on" | "off" | "auto"
 }
 
 
-const PopUpSearch = ({ show, onClose }: PropsPopUp): JSX.Element => {
+const PopUpSearch = ({ show, onClose, lockScroll = "auto" }: PropsPopUp): JSX.Element => {
   const refCardSearch = useRef<HTMLDivElement | null>(null)
   const refInputSearch = useRef<HTMLInputElement | null>(null)
   const [resultSearched, setResultSearched] = useState<TypeDivisionTopicsSarched[] | null>(null)
   const [valueSearched, setValueSearched] = useState("")
 
   useEffect(() => {
-    document.body.classList[show ? "add" : "remove"]("overflow-hidden")
-    refInputSearch.current?.focus()
-  }, [show])
+    if (lockScroll !== "auto") {
+      document.body.classList[lockScroll === "on" ? "add" : "remove"]("overflow-hidden")
+    }
+  }, [lockScroll])
+
+  useEffect(() => {
+    const { current: inputSearch } = refInputSearch
+    if (inputSearch) {
+      inputSearch.focus()
+    }
+    if (lockScroll === "auto") {
+      document.body.classList[show ? "add" : "remove"]("overflow-hidden")
+    }
+  }, [show, lockScroll])
 
   useEffect(() => {
     const checkConditionsToClose = (ev: MouseEvent): void => {

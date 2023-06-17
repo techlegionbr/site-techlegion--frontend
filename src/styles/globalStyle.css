@@ -110,8 +110,8 @@ h1 {
     line-height: calc(var(--line-height-md) - 0.2rem);
   }
   h2 {
-    font-size: calc(var(--font-size-lg) - 0.4rem);
-    line-height: calc(var(--line-height-lg) - 0.4rem);
+    font-size: calc(var(--font-size-lg) - 0.35rem);
+    line-height: calc(var(--line-height-lg) - 0.35rem);
   }
   h1 {
     font-size: calc(var(--font-size-xlg) - 0.2rem);

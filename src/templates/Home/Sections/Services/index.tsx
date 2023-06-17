@@ -36,7 +36,7 @@ const Services = (): JSX.Element => {
                 Potencialize seu negócio com um site único e impactante! Desenvolvimento profissional, design moderno,
                 responsivo e <strong>otimizado para buscadores</strong>. Atraia mais clientes e alcance o sucesso online!
               </p>
-              <Button className="button-know-more" href={hostLinks.services["desenvolvimento-de-site"]}>Saiba mais</Button>
+              <Button size="medium" className="button-know-more" href={hostLinks.services["desenvolvimento-de-site"]}>Saiba Mais</Button>
             </div>
           </div>
           <div className="card">
@@ -55,7 +55,7 @@ const Services = (): JSX.Element => {
                 Destaque-se visualmente e conquiste seu público-alvo. Transforme sua marca com nossos serviços de <strong>design
                   gráfico profissional</strong>!
               </p>
-              <Button className="button-know-more" href={hostLinks.services["design-grafico"]}>Saiba mais</Button>
+              <Button size="medium" className="button-know-more" href={hostLinks.services["design-grafico"]}>Saiba Mais</Button>
             </div>
           </div>
           <div className="card">
@@ -74,7 +74,7 @@ const Services = (): JSX.Element => {
                 Aumente sua visibilidade, fortaleça sua marca e atinja resultados incríveis.<strong> Maximize seu potencial</strong>
                 nas mídias sociais com nosso serviço de social media!
               </p>
-              <Button className="button-know-more" href={hostLinks.services["social-media"]}>Saiba mais</Button>
+              <Button size="medium" className="button-know-more" href={hostLinks.services["social-media"]}>Saiba Mais</Button>
             </div>
           </div>
         </div>

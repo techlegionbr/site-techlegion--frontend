@@ -53,7 +53,7 @@ const Main = (): JSX.Element => {
               <input placeholder="Nome" required />
               <input placeholder="Email" required />
               <textarea placeholder="Mensagem" required />
-              <Button iconRight={<i className='bx bxs-message'></i>} className="button-form">Enviar</Button>
+              <Button iconRight={<i className='bx bxs-message'></i>} className="button-form">ENVIAR</Button>
             </form>
           </div>
           <ul className="social-medias">

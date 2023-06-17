@@ -19,7 +19,6 @@ const About = (): JSX.Element => {
         <Button
           href="/"
           className="button-know-more"
-          hover="transparent"
           size="medium"
         >Saiba mais</Button>
       </div>

@@ -15,12 +15,11 @@ export const Button = styled.button<PropsButtonStyled>`
   justify-content: center;
   gap: .5rem;
   background-color: ${({ colorTheme }) => color[colorTheme]};
-  text-transform: uppercase;
   padding: .5rem 1.3rem;
   border-radius: .4rem;
   font-weight: bold;
   font-size: ${({ size }) => (
-    size === "small" ? ".8rem" :
+    size === "small" ? ".7rem" :
       size === "medium" ? ".9rem" :
         size === "big" ? "1rem" : ""
   )};

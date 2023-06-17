@@ -6,7 +6,6 @@ import styled from "styled-components";
 
 export const Hamburger = styled.button`
   font-size: 2rem;
-  color: ${color.third}
 
 `
 
@@ -29,26 +28,26 @@ export const PopUpMenuVertical = styled.div`
     height: 100%;
     background-color: #0d1235;
     ${presenceTranslateRight};
-    border-left: 1.4px solid #00ddff4c;
+    border-left: 2px solid #66a7f731;
     padding: 2rem 2rem;
     @media (max-width: ${screens.sm}) {
       width: calc(100% - 1.5rem);
     }
     .button-close{
         position: absolute;
-        left: -1.1rem;
+        left: -1.2rem;
         top: 50%;
         transform: translateY(-50%);
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        background-color: #0d1235;
+        background-color: #2b2964;
         display: flex;
         align-items: center;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         justify-content: center;
-        border: 1.4px solid #00ddff4c;
-        color: ${color.third}
+        color: ${color.third};
+        
       }
     .button-search{
       width: 100%;

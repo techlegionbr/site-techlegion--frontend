@@ -58,8 +58,8 @@ export const Values = styled.div`
           gap: 1rem;
         }
         .image-article{
-          width: 45%;
-          height: 300px;
+          width: 50%;
+          height: 330px;
           overflow: hidden;
           border-radius: .4rem;
           border: 1.5px solid #331df62c;
@@ -76,7 +76,7 @@ export const Values = styled.div`
           }
         }
         .descriptio-article{
-          width: 55%;
+          width: 50%;
           @media (max-width: ${screens.md}) {
             width: 100%;
           }

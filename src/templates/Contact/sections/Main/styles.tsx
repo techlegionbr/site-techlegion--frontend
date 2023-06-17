@@ -22,17 +22,17 @@ export const Main = styled.div`
       justify-content: center;
       margin-top: 3rem;
       flex-direction: column;
-      
       gap: 1rem;
       .social-medias{
           width: 90%;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
           gap: 1rem;
           margin-top: 3rem;
           @media (max-width: ${screens.sm}) {
             gap: .5rem;
-            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            
           }
           li{
             height:40px;
@@ -43,9 +43,9 @@ export const Main = styled.div`
             overflow: hidden;
             border: 1.2px solid #6f8efd57;
             transition: .2s;
-            @media (max-width: ${screens.sm}) {
+            /* @media (max-width: ${screens.sm}) {
               height: 90px;
-            }
+            } */
             &:hover{
               transform: scale(1.1);
             }
@@ -58,10 +58,14 @@ export const Main = styled.div`
               display: flex;
               align-items: center;
               justify-content: center;
+              padding: 0 1rem;
               gap: .4rem;
               opacity: .7;
               color: ${color.third};
               transition: .2s;
+              @media (max-width: ${screens.sm}) {
+                justify-content: flex-start;
+              }
               i{
                 font-size: 1rem;
               }
@@ -87,13 +91,15 @@ export const Main = styled.div`
           width: 100%;
           display: flex;
           flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
           gap: .8rem;
           input, textarea{
             width: 100%;
             resize: vertical;
             padding: .6rem 1rem;
             border-radius: .4rem;
-            border: 1.2px solid #0062ff51;
+            border: 1.5px solid #67a1fe31;
             background-color: #0c113719;
             backdrop-filter: blur(7px);
             color: #fff;
@@ -108,7 +114,7 @@ export const Main = styled.div`
               color: #97b4fd73;
             }
             &:focus, &:valid{
-              border: 1.2px solid #d5e5ff4c;
+              border: 1.5px solid #67a1fe93;
             }
             
           }
@@ -116,7 +122,7 @@ export const Main = styled.div`
             height: 140px;
           }
           .button-form{
-            width: 60px;
+            
           }
         }
       }

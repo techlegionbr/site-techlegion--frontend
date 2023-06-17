@@ -50,10 +50,8 @@ export const CardService = styled.div`
   }
   .button-know-more{
     position: absolute;
-    width: 100px;
+    
     bottom: 2rem;
-    left: 0;
-    right: 0;
     margin: auto;
   }
   h3{

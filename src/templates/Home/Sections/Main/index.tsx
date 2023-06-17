@@ -19,13 +19,13 @@ const Main = (): JSX.Element => {
             Somos uma <strong>legião</strong> de profissionais de tecnologia, designers, gestores de marketing, analistas e cientistas de dados,
             engenheiros de software e desenvolvedores <strong>apaixonados</strong> por criar soluções digitais <strong>sob medida</strong> para nossos clientes.
           </p>
-          <Button className="button-whatsapp">Conversar pelo Whatsapp</Button>
+          <Button size="medium" className="button-whatsapp">Conversar pelo Whatsapp</Button>
 
         </div>
         <div className="video-amoster-container">
           <div className="video-amoster">
             <video autoPlay loop muted>
-              <source src="/videos/video-techlegion.mp4" />
+              <source src="/videos/video-techlegion.webm" />
             </video>
           </div>
         </div>

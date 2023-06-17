@@ -37,11 +37,15 @@ export const PopUpMenuVertical = ({ show, onClose }: IMenuBarProps): JSX.Element
         <button
           className="button-close"
           onClick={onClose}
+          id="button-close"
+          title="Botão para fechar menu vertical"
         >
-          <i className='bx bx-chevron-right'></i>
+          <i className='bx bxs-chevron-right'></i>
         </button>
         <button
           className="button-search"
+          id="button-search"
+          title="Botão para abrir a tela de pesquisa"
           onClick={() => { setShowPopUpSearch(true); }}
         >
           <i className='bx bxs-search icon-search'></i>
@@ -60,6 +64,7 @@ export const PopUpMenuVertical = ({ show, onClose }: IMenuBarProps): JSX.Element
       </div>
       <PopUpSearch
         show={showPopUpSearch}
+        lockScroll="on"
         onClose={() => { setShowPopUpSearch(false); }}
       />
     </S.PopUpMenuVertical>

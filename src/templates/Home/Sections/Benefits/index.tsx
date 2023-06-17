@@ -12,7 +12,7 @@ const Benefits = (): JSX.Element => {
         <TitleSection
           subTitle="Veja os"
           title="Benefícios"
-          description="Clique no serviço escolhido para ver seu respectivo benefício."
+          description="Explore os benefícios exclusivos de cada serviço clicando na opção desejada."
         />
         <AccordionsBenefitService
           benefits={benefits}

@@ -1,7 +1,7 @@
 import Button from "@/components/Button"
 
+import { type TypeService } from "../settings/types"
 import * as S from "../styles"
-import { type TypeService } from "../types"
 
 
 interface PropsCardService {
@@ -17,7 +17,7 @@ const CardService = ({ service }: PropsCardService): JSX.Element => {
       </div>
       <h3>{title}</h3>
       <p>{description}</p>
-      <Button href={link} className="button-know-more">Saiba Mais</Button>
+      <Button href={link} size="medium" className="button-know-more">Saiba Mais</Button>
     </S.CardService>
   )
 }

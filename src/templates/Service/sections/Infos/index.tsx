@@ -66,8 +66,8 @@ const Infos = ({ service }: PropsInfos): JSX.Element => {
           </article>
           <div className="price">
             <span className="sub-price">A partir de</span>
-            <span className="price-number">R$ {String(service.value).replace(".", ",")}</span>
-            <Button className="button-contract">Contratar serviço</Button>
+            <span className="price-value">R$ {String(service.value).replace(".", ",")}</span>
+            <Button className="button-contract" size="medium">Contratar Serviço</Button>
           </div>
           <div className="included-service">
             <h4>Nossos serviços incluem:</h4>

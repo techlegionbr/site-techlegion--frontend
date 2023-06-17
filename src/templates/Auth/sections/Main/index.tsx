@@ -1,15 +1,17 @@
 
 
 
+import image from "@/assets/images/auth/conceito-de-colagem-de-reconhecimento-facial.jpg"
 import Button from "@/components/Button"
 import Input from "@/components/form/Input"
 import useLogin from "@/hooks/auth/useLogin"
-import useRegister from "@/hooks/auth/useRegister"
+
+
+import Image from "next/image"
 
 import * as S from "./styles"
 
 const Main = (): JSX.Element => {
-  const { registerFormControl, registerInputControl, registerFormErrors } = useRegister()
   const { loginFormControl, loginFormErrors, loginInputControl } = useLogin()
 
   return (
@@ -35,40 +37,11 @@ const Main = (): JSX.Element => {
               helperText={loginFormErrors?.password?.message}
               {...loginInputControl("password")}
             />
-            <Button className="btn-form">Faça seu login</Button>
+            <Button className="btn-form">FAÇA SEU LOGIN</Button>
           </form>
         </div>
-        <div className="line-vertical" />
-        <div className="card-register">
-          <h2>Registro</h2>
-          <form {...registerFormControl}>
-            <Input
-              className="input-form"
-              placeholder="Email"
-              type="email"
-              error={!!registerFormErrors.email}
-              helperText={registerFormErrors?.email?.message}
-              autoComplete="off"
-              {...registerInputControl("email")}
-            />
-            <Input
-              className="input-form"
-              placeholder="Código"
-              error={!!registerFormErrors.code}
-              helperText={registerFormErrors?.code?.message}
-              autoComplete="off"
-              {...registerInputControl("code")}
-            />
-            <Input
-              className="input-form"
-              placeholder="Senha"
-              type="password"
-              error={!!registerFormErrors.password}
-              helperText={registerFormErrors?.password?.message}
-              {...registerInputControl("password")}
-            />
-            <Button className="btn-form">Faça seu registro</Button>
-          </form>
+        <div className="image-form">
+          <Image src={image} alt="Imagem Reconhecimento Facial" width={400} />
         </div>
       </div>
     </S.Main>
