@@ -14,7 +14,6 @@ import {
 import { schemaLogin } from '@/schemas/auth/login';
 import { type IFormLogin } from '@/schemas/auth/types';
 import loginService from '@/services/auth/login';
-import { hostLinks } from '@/settings/links';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { useRouter } from 'next/router';
@@ -98,11 +97,7 @@ const useLogin = (): IStateRegister => {
         },
         onClose: () => {
           setAlertLogin(defaultAlertLogin);
-          void router.push(`
-          ${
-            entity === 'user' ? hostLinks.painels.user : hostLinks.painels.admin
-          }
-          `);
+          void router.replace(`/painels/${entity}`);
         }
       });
     } else {

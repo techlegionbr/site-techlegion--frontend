@@ -18,7 +18,7 @@ export const AccordionsBenefitService = styled.div`
   margin-top: 4rem;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 2rem;
 `;
 
