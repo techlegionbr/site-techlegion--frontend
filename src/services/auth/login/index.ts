@@ -10,7 +10,10 @@ const loginService = async (login: IFormLogin): Promise<IServiceLogin> => {
   try {
     const { data } = await service.post<IResponseFetchLogin>(
       apiRoutes.AUTH_LOGIN,
-      login
+      login,
+      {
+        withCredentials: true
+      }
     );
     return { data, error: false };
   } catch (error: unknown) {

@@ -1,3 +1,4 @@
+/* eslint-disable import-helpers/order-imports */
 
 
 import { site } from "@/settings"
@@ -5,6 +6,10 @@ import "@/styles/globalStyle.css"
 
 import type { AppProps } from 'next/app'
 import Head from "next/head"
+
+import { QueryClientProvider } from 'react-query';
+
+import { queryClient } from "@/services/queryClient";
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -20,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         <meta property="og:url" content={site.host} />
       </Head>
       {/* <GlobalStyle /> */}
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+      </QueryClientProvider>
     </>
   )
 }

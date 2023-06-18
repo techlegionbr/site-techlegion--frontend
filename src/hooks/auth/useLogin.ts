@@ -98,9 +98,11 @@ const useLogin = (): IStateRegister => {
         },
         onClose: () => {
           setAlertLogin(defaultAlertLogin);
-          void router.push(
+          void router.push(`
+          ${
             entity === 'user' ? hostLinks.painels.user : hostLinks.painels.admin
-          );
+          }
+          `);
         }
       });
     } else {
@@ -113,6 +115,7 @@ const useLogin = (): IStateRegister => {
           main: 'Ocorreu um erro no redirecionamento!'
         }
       }));
+      setBlockForm(false);
     }
     console.log(responseLogin, error);
   };
