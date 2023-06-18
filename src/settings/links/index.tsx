@@ -1,4 +1,4 @@
-import { type TypeHostOurValues, type TypeHostLinkMain, type TypeHostLinkService, type TypeHostLinks, type TypeLinks } from "./types";
+import { type TypeHostOurValues, type TypeHostLinkMain, type TypeHostLinkService, type TypeHostLinks, type TypeLinks, type TypeHostLinkPainels } from "./types";
 import generateRoutes from "./utils/generateRoutes";
 
 export const socialMediaLinks: TypeLinks = {
@@ -13,19 +13,25 @@ export const socialMediaLinks: TypeLinks = {
 
 
 export const hostLinks: TypeHostLinks = {
+  painels: {
+    ...generateRoutes<Record<TypeHostLinkPainels, string>>([
+      "admin",
+      "user"
+    ], "painels")
+  },
   main: {
     "início": "/",
-    ...generateRoutes([
+    ...generateRoutes<Omit<Record<TypeHostLinkMain, string>, "início">>([
       "sobre",
       "servicos",
       "blog",
       "contato",
       "politica-de-privacidade",
       "termos-de-uso"
-    ]) as Omit<Record<TypeHostLinkMain, string>, "início">
+    ])
   },
   services: {
-    ...generateRoutes([
+    ...generateRoutes<Record<TypeHostLinkService, string>>([
       "analise-e-ciencia-de-dados",
       "criacao-de-filtros-de-realidade-virtual",
       "desenvolvimento-de-aplicativo-mobile",
@@ -38,12 +44,12 @@ export const hostLinks: TypeHostLinks = {
       "marketing-digital",
       "social-media",
       "ux-ui-design"
-    ], "/servicos") as Record<TypeHostLinkService, string>
+    ], "/servicos")
   },
   ourValues: {
-    ...generateRoutes([
+    ...generateRoutes<Record<TypeHostOurValues, string>>([
       "#diversidade-e-inclusao",
       "#impacto-social"
-    ], "/sobre") as Record<TypeHostOurValues, string>
+    ], "/sobre")
   }
 }

@@ -1,4 +1,4 @@
-import { presenceOpacity, presenceScale, presenceTranslateLeft } from "@/animations/presence"
+import { presenceAnimation } from "@/animations/presence"
 import { color, font, screens } from "@/styles/root"
 import styled from "styled-components"
 
@@ -10,7 +10,10 @@ export const PopUpSearch = styled.div`
   left: 0;
   background-color: #090826c3;
   z-index: 15;
-  ${presenceOpacity};
+  ${presenceAnimation({
+  animation: "opacity",
+  duration: .5
+})};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +28,10 @@ export const PopUpSearch = styled.div`
     border-radius: 1rem;
     padding: 1rem 2rem;
     border: 1px solid #2758fb3e;
-    ${presenceScale};
+    ${presenceAnimation({
+  animation: "scale",
+  duration: .5
+})};
     flex-direction: column;
     display: flex;
     gap: 2rem;
@@ -103,7 +109,10 @@ export const ListSearched = styled.ul`
     font-weight: bold;
     color: ${color.third};
     text-transform: uppercase;
-    ${presenceTranslateLeft};
+    ${presenceAnimation({
+  animation: "translateLeft",
+  duration: .3
+})};
     background-color: #13163b;
     border-radius: .4rem;
     border: 1.3px solid #6a86f62d;
@@ -113,7 +122,10 @@ export const ListSearched = styled.ul`
   .resulted-searched{
     width: 100%;
     border-radius: .5rem;
-    ${presenceTranslateLeft};
+    ${presenceAnimation({
+  animation: "translateLeft",
+  duration: .3
+})};
     transition: .1s;
     display: flex;
     width: 100%;
@@ -142,7 +154,10 @@ export const ListSearched = styled.ul`
     font-size: 1.1rem;
     line-height: 1.3rem;
     color: #ffffff9a;
-    ${presenceOpacity};
+    ${presenceAnimation({
+  animation: "opacity",
+  duration: .3
+})};
     pointer-events: none;
   }
   .not-result{
@@ -151,7 +166,10 @@ export const ListSearched = styled.ul`
     justify-content: center;
     flex-direction: column;
     padding: 2rem 0;
-    ${presenceOpacity};
+    ${presenceAnimation({
+  animation: "opacity",
+  duration: .3
+})};
     text-align: center;
     .icon-search{
       font-size: 3rem;

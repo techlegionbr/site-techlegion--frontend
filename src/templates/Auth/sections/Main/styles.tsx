@@ -25,9 +25,13 @@ export const Main = styled.div`
         .input-form{
           width: 100%;
         }
-        .btn-form{
+        .btn-container-form{
           margin-top: 1rem;
+          display: flex;
+          gap: 3rem;
+          align-items: center;
         }
+        
       }
     }
     .image-form{
@@ -35,7 +39,21 @@ export const Main = styled.div`
       height: 500px;
       overflow: hidden;
       border-radius: 1rem;
-      border: 1.4px solid #7974f972;
+      position: relative;
+      /* border: 1.4px solid #7974f972; */
+      h2{
+        position: absolute;
+        background-color: #6c65fa69;
+        backdrop-filter: blur(5px);
+        width: 300px;
+        padding: .4rem 0;
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 3rem;
+        margin: auto;
+        border-radius: .4rem;
+      }
       img{
         object-fit: cover;
         width: 100%;

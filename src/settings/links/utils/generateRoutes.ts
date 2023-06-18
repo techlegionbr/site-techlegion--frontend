@@ -1,12 +1,9 @@
-const generateRoutes = (
-  routes: string[],
-  base?: string
-): Record<string, string> => {
-  const routesEntries = routes.map((route) => [
-    route,
-    `${base ? `${base}` : ''}/${route}`
-  ]);
-  return Object.fromEntries(routesEntries);
+const generateRoutes = <T>(routes: string[], base?: string): T => {
+  const routesEntries = Object.fromEntries(
+    routes.map((route) => [route, `${base ? `${base}` : ''}/${route}`])
+  ) as T;
+
+  return routesEntries;
 };
 
 export default generateRoutes;

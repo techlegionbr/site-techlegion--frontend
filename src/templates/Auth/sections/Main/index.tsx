@@ -1,19 +1,20 @@
 
 
 
-import image from "@/assets/images/auth/conceito-de-colagem-de-reconhecimento-facial.jpg"
+import image from "@/assets/images/auth/chocado-homem-em-vr-oculos-protecao.jpg"
+import Alert from "@/components/alerts/Alert"
 import Button from "@/components/Button"
 import Input from "@/components/form/Input"
+import LoaderDefault from "@/components/loaders/LoaderDefault"
 import useLogin from "@/hooks/auth/useLogin"
-
+import { color } from "@/styles/root"
 
 import Image from "next/image"
 
 import * as S from "./styles"
 
 const Main = (): JSX.Element => {
-  const { loginFormControl, loginFormErrors, loginInputControl } = useLogin()
-
+  const { loginFormControl, loginFormErrors, loginInputControl, blockForm, alertLogin } = useLogin()
   return (
     <S.Main>
       <div className="content">
@@ -23,9 +24,9 @@ const Main = (): JSX.Element => {
             <Input
               className="input-form"
               placeholder="Email"
-              type="email"
               error={!!loginFormErrors.email}
               helperText={loginFormErrors?.email?.message}
+              disabled={blockForm}
               autoComplete="off"
               {...loginInputControl("email")}
             />
@@ -34,16 +35,33 @@ const Main = (): JSX.Element => {
               placeholder="Senha"
               type="password"
               error={!!loginFormErrors.password}
+              disabled={blockForm}
               helperText={loginFormErrors?.password?.message}
               {...loginInputControl("password")}
             />
-            <Button className="btn-form">FAÇA SEU LOGIN</Button>
+            <div className="btn-container-form">
+              <Button disabled={blockForm}>{blockForm ? "FAZENDO LOGIN..." : "FAÇA SEU LOGIN"}</Button>
+              <LoaderDefault show={blockForm} />
+            </div>
           </form>
         </div>
         <div className="image-form">
+          <h2>Seja um Redator da Tech Legion</h2>
           <Image src={image} alt="Imagem Reconhecimento Facial" width={400} />
         </div>
       </div>
+      <Alert
+        helperText={{
+          main: alertLogin.helperText.main,
+          sup: alertLogin.helperText.sup
+        }}
+        iconLeft={(
+          alertLogin.status === "error" ? <i className='bx bxs-error' style={{ color: color.alert }}></i> :
+            <i className='bx bxs-error' style={{ color: color.alert }}></i>
+        )}
+        show={alertLogin.show}
+        onClose={alertLogin.onClose}
+      />
     </S.Main>
   )
 }

@@ -13,7 +13,8 @@ interface PropsButton {
   hover?: "opacity" | "scale" | "transparent",
   size?: "small" | "medium" | "big",
   href?: string,
-  onClick?: MouseEventHandler<HTMLButtonElement>
+  onClick?: MouseEventHandler<HTMLButtonElement>,
+  disabled?: boolean
 }
 
 const Button = ({
@@ -25,7 +26,8 @@ const Button = ({
   hover = "opacity",
   size = "small",
   href,
-  onClick
+  onClick,
+  disabled = false
 }: PropsButton): JSX.Element => {
   const router = useRouter()
   const handleClickButton: MouseEventHandler<HTMLButtonElement> = (e) => {
@@ -41,6 +43,7 @@ const Button = ({
       colorTheme={color}
       hover={hover}
       className={className}
+      isDisabled={disabled}
       size={size}
       onClick={handleClickButton}
     >

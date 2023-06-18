@@ -1,5 +1,5 @@
 
-import { presenceTranslateDown } from "@/animations/presence";
+import { presenceAnimation } from "@/animations/presence";
 import { screens } from "@/styles/root";
 import styled from "styled-components";
 
@@ -90,7 +90,12 @@ export const Post = styled.div<PostProps>`
     align-items: center;
     justify-content: flex-start;
     opacity: 0;
-    ${presenceTranslateDown};
+    ${presenceAnimation({
+  animation: "translateDown",
+  duration: .5,
+  delay: .4,
+  fillMode: "forwards"
+})};
     p{
       margin-top: 1rem;
       display: -webkit-box;

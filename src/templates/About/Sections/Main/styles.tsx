@@ -20,7 +20,7 @@ export const Main = styled.div`
   .content{
     width: ${layout.contentWidth};
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: 3rem;
     @media (max-width: ${screens.md}) {
@@ -28,7 +28,6 @@ export const Main = styled.div`
     }
     .description-apresentation{
       width: 60%;
-      padding: 2rem 0;
       @media (max-width: ${screens.md}) {
         width: 100%;
       }

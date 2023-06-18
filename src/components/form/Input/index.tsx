@@ -35,7 +35,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
   const handleClickToggleType: MouseEventHandler<HTMLButtonElement> = (e): void => {
     e.preventDefault()
     setTypeInput(prevType => prevType === "text" ? "password" : "text");
-    setIsFocus(true)
   }
 
   const handleChangeInput = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -47,7 +46,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
     if (onBlur) { onBlur(e) }
     setIsFocus(false)
   }
-
 
   return (
     <S.Input className={className} error={error} focus={isFocus}>
@@ -61,7 +59,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
           onChange={handleChangeInput}
           ref={ref}
           autoComplete={type === "password" || error ? "off" : autoComplete}
-          spellCheck
           {...restPropsInput}
         />
         {

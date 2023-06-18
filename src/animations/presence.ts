@@ -1,12 +1,41 @@
-export const presenceOpacity = `
-  @keyframes opacity_presence{
-    0%{ opacity: 0; }
-    100%{ opacity: 1; }
+type TNameAnimation =
+  | 'opacity'
+  | 'translateRight'
+  | 'translateLeft'
+  | 'translateDown'
+  | 'translateUp'
+  | 'scale';
+
+interface IPresenceAnimation {
+  animation: TNameAnimation;
+  delay?: number;
+  duration: number;
+  timingFunction?:
+    | 'ease'
+    | 'linear'
+    | 'ease-in'
+    | 'ease-out'
+    | 'ease-in-out'
+    | 'cubic-bezier';
+  iterationCount?: 'infinite' | number;
+  direction?: 'alternate' | 'alternate-reverse' | 'normal' | 'reverse';
+  fillMode?: 'backwards' | 'both' | 'forwards' | 'none';
+  playState?: 'paused' | 'running' | number;
+}
+
+const animations = {
+  opacity: (name: TNameAnimation) => `
+  @keyframes ${name}{
+    0%{ 
+      opacity: 0; 
+    }
+    100%{ 
+      opacity: 1; 
+    }
   }
-  animation: opacity_presence .4s ease;
-`;
-export const presenceScale = `
-  @keyframes scale_presence{
+`,
+  scale: (name: TNameAnimation) => `
+  @keyframes ${name}{
     0%{ 
       opacity: 0; 
       transform: scale(0);
@@ -16,25 +45,9 @@ export const presenceScale = `
       transform: scale(1);
     }
   }
-  animation: scale_presence .4s ease;
-`;
-
-export const presenceTranslateLeft = `
-  @keyframes translate_left_presence{
-    0%{ 
-      opacity: 0; 
-      transform: translate(-100%);
-    }
-    100%{ 
-      opacity: 1; 
-      transform: translate(0);
-    }
-  }
-  animation: translate_left_presence .4s ease;
-`;
-
-export const presenceTranslateRight = `
-  @keyframes translate_right_presence{
+  `,
+  translateRight: (name: TNameAnimation) => `
+  @keyframes ${name}{
     0%{ 
       opacity: 0; 
       transform: translate(100%);
@@ -44,11 +57,21 @@ export const presenceTranslateRight = `
       transform: translate(0);
     }
   }
-  animation: translate_right_presence .4s ease;
-`;
-
-export const presenceTranslateDown = `
-  @keyframes translate_down_presence{
+`,
+  translateLeft: (name: TNameAnimation) => `
+  @keyframes ${name}{
+    0%{ 
+      opacity: 0; 
+      transform: translate(-100%);
+    }
+    100%{ 
+      opacity: 1; 
+      transform: translate(0);
+    }
+  }
+`,
+  translateDown: (name: TNameAnimation) => `
+  @keyframes ${name}{
     0%{ 
       opacity: 0; 
       transform: translateY(100%);
@@ -58,5 +81,41 @@ export const presenceTranslateDown = `
       transform: translateY(0);
     }
   }
-  animation: 1s translate_down_presence .4s ease forwards;
-`;
+`,
+  translateUp: (name: TNameAnimation) => `
+  @keyframes ${name}{
+    0%{ 
+      opacity: 0; 
+      transform: translateY(-100%);
+    }
+    100%{ 
+      opacity: 1; 
+      transform: translateY(0);
+    }
+  }
+`
+};
+
+export const presenceAnimation = ({
+  animation,
+  duration,
+  delay = 0,
+  direction = 'normal',
+  fillMode = 'none',
+  iterationCount = 1,
+  playState = 0,
+  timingFunction = 'ease'
+}: IPresenceAnimation): string => {
+  const templateAnimation = `
+    ${animations[animation](animation)}
+    animation-name: ${animation};
+    animation-duration: ${duration}s;
+    animation-timing-function: ${timingFunction};
+    animation-delay: ${delay}s;
+    animation-iteraction-count: ${iterationCount};
+    animation-direction: ${direction};
+    animation-fill-mode: ${fillMode};
+    animation-play-state: ${playState};
+  `;
+  return templateAnimation;
+};
