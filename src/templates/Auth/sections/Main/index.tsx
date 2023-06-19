@@ -1,12 +1,12 @@
 
 
 
-import image from "@/assets/images/auth/chocado-homem-em-vr-oculos-protecao.jpg"
+import image from "@/assets/images/auth/chocado-homem-em-vr-oculos-protecao.webp"
 import Alert from "@/components/alerts/Alert"
 import Button from "@/components/Button"
 import Input from "@/components/form/Input"
 import LoaderDefault from "@/components/loaders/LoaderDefault"
-import useLogin from "@/hooks/auth/useLogin"
+import useLogin from "@/hooks/form/auth/useLogin"
 import { color } from "@/styles/root"
 
 import Image from "next/image"
@@ -23,7 +23,7 @@ const Main = (): JSX.Element => {
           <form {...loginFormControl}>
             <Input
               className="input-form"
-              placeholder="Email"
+              label="Email"
               error={!!loginFormErrors.email}
               helperText={loginFormErrors?.email?.message}
               disabled={blockForm}
@@ -32,7 +32,7 @@ const Main = (): JSX.Element => {
             />
             <Input
               className="input-form"
-              placeholder="Senha"
+              label="Senha"
               type="password"
               error={!!loginFormErrors.password}
               disabled={blockForm}
@@ -46,7 +46,6 @@ const Main = (): JSX.Element => {
           </form>
         </div>
         <div className="image-form">
-          <h2>Seja um Redator da Tech Legion</h2>
           <Image src={image} alt="Imagem Reconhecimento Facial" width={400} />
         </div>
       </div>

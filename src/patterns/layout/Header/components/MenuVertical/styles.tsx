@@ -1,4 +1,4 @@
-import { presenceOpacity, presenceTranslateRight } from "@/animations/presence";
+import { presenceAnimation } from "@/animations/presence";
 import { color, screens } from "@/styles/root";
 import styled from "styled-components";
 
@@ -17,7 +17,7 @@ export const PopUpMenuVertical = styled.div`
   min-height: 100vh;
   background-color: #0c113758;
   z-index: 15;
-  ${presenceOpacity};
+  ${presenceAnimation({ animation: "opacity", duration: .3 })};
   @media (min-width: ${screens.md}) {
     display: none;
   }
@@ -27,7 +27,7 @@ export const PopUpMenuVertical = styled.div`
     width: 400px;
     height: 100%;
     background-color: #0d1235;
-    ${presenceTranslateRight};
+    ${presenceAnimation({ animation: "translateRight", duration: .3 })};
     border-left: 2px solid #66a7f731;
     padding: 2rem 2rem;
     @media (max-width: ${screens.sm}) {
@@ -38,16 +38,23 @@ export const PopUpMenuVertical = styled.div`
         left: -1.2rem;
         top: 50%;
         transform: translateY(-50%);
-        width: 35px;
-        height: 35px;
+        width: calc(35px + 6px);
+        height: calc(35px + 6px);
         border-radius: 50%;
         background-color: #2b2964;
+        border: 6px solid ${color.primary};
         display: flex;
         align-items: center;
         font-size: 1.2rem;
         justify-content: center;
         color: ${color.third};
-        
+        i{
+          opacity: .7;
+          transition: .2s;
+        }
+        &:hover > i {
+          opacity: 1;
+        }
       }
     .button-search{
       width: 100%;

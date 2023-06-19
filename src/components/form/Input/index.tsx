@@ -6,21 +6,23 @@ import * as S from "./styles"
 
 
 interface InputProps extends ComponentProps<"input"> {
-  placeholder: string,
+  label?: string,
   error?: boolean,
   helperText?: string,
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(({
-  placeholder,
+  label,
   error = false,
   helperText = "",
   type = "text",
   value = "",
   onChange,
   onBlur,
+  onFocus,
   className = "",
   autoComplete,
+  id = "",
   ...restPropsInput
 }, ref): JSX.Element => {
 
@@ -42,18 +44,23 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
     setValueInput(e.target.value)
   }
 
-  const handleBlurInput = (e: FocusEvent<HTMLInputElement, Element>): void => {
+  const handleBlurInput = (e: FocusEvent<HTMLInputElement>): void => {
     if (onBlur) { onBlur(e) }
     setIsFocus(false)
   }
 
+  const handleFocusInput = (e: FocusEvent<HTMLInputElement>): void => {
+    if (onFocus) { onFocus(e) }
+    setIsFocus(true)
+  }
+
   return (
-    <S.Input className={className} error={error} focus={isFocus}>
-      <label>{placeholder}</label>
+    <S.Input className={className} id={id} error={error} focus={isFocus}>
+      {label && <label>{label}</label>}
       <div className="input-container">
         <input
           type={typeInput}
-          onFocus={() => { setIsFocus(true); }}
+          onFocus={handleFocusInput}
           onBlur={handleBlurInput}
           value={valueInput}
           onChange={handleChangeInput}

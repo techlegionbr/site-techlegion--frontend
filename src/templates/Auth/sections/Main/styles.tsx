@@ -1,4 +1,4 @@
-import { color, layout } from "@/styles/root";
+import { color, layout, screens } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -12,10 +12,17 @@ export const Main = styled.div`
     width: ${layout.contentWidth};
     display: flex;
     align-items: flex-start;
-    gap: 8rem;
+    gap: 10%;
+    @media (max-width: ${screens.md}) {
+      flex-direction: column;
+      gap: 3rem;
+    }
     .card-login{
       width: 50%;
       padding-top: 2rem;
+      @media (max-width: ${screens.md}) {
+        width: 100%;
+      }
       form{
         margin-top: 2rem;
         display: flex;
@@ -39,20 +46,8 @@ export const Main = styled.div`
       height: 500px;
       overflow: hidden;
       border-radius: 1rem;
-      position: relative;
-      /* border: 1.4px solid #7974f972; */
-      h2{
-        position: absolute;
-        background-color: #6c65fa69;
-        backdrop-filter: blur(5px);
-        width: 300px;
-        padding: .4rem 0;
-        text-align: center;
-        left: 0;
-        right: 0;
-        top: 3rem;
-        margin: auto;
-        border-radius: .4rem;
+      @media (max-width: ${screens.md}) {
+        width: 100%;
       }
       img{
         object-fit: cover;

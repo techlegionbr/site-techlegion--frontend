@@ -94,32 +94,8 @@ export const Main = styled.div`
           justify-content: flex-start;
           align-items: flex-start;
           gap: .8rem;
-          input, textarea{
+          .input-contact, .textarea-contact{
             width: 100%;
-            resize: vertical;
-            padding: .6rem 1rem;
-            border-radius: .4rem;
-            border: 1.5px solid #67a1fe31;
-            background-color: #0c113719;
-            backdrop-filter: blur(7px);
-            color: #fff;
-            /* border-width: 2px;
-            border-style: inset;
-            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-            border-image: initial; */
-            font-size: .9rem;
-            outline: none;
-            transition: .2s;
-            &::placeholder{
-              color: #97b4fd73;
-            }
-            &:focus, &:valid{
-              border: 1.5px solid #67a1fe93;
-            }
-            
-          }
-          textarea{
-            height: 140px;
           }
           .button-form{
             

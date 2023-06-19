@@ -33,9 +33,27 @@ export const PopUpSearch = styled.div`
   duration: .5
 })};
     flex-direction: column;
+    align-items: flex-start;
     display: flex;
     gap: 2rem;
-
+    .btn-close{
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .6rem;
+      text-transform: uppercase;
+      background-color: #131352;
+      padding: .3rem 1rem;
+      border-radius: .8rem;
+      border: 1px solid #9191f42c;
+      opacity: .7;
+      color: ${color.third};
+      font-weight: bold;
+      transition: .2s;
+      &:hover{
+        opacity: 1;
+      }
+    }
     .input-search{
       display: flex;
       align-items: center;

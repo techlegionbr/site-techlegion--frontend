@@ -1,47 +1,15 @@
-import {
-  useState,
-  type BaseSyntheticEvent,
-  type Dispatch,
-  type SetStateAction
-} from 'react';
-import {
-  useForm,
-  type UseFormRegister,
-  type SubmitHandler,
-  type FieldErrors
-} from 'react-hook-form';
+import { useState } from 'react';
+import { useForm, type SubmitHandler } from 'react-hook-form';
 
 import { schemaLogin } from '@/schemas/auth/login';
-import { type IFormLogin } from '@/schemas/auth/types';
+import { type IFormLogin } from '@/schemas/auth/login/types';
 import loginService from '@/services/auth/login';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { useRouter } from 'next/router';
 
-interface IStateRegister {
-  loginFormControl: IOnSubmit;
-  loginInputControl: UseFormRegister<IFormLogin>;
-  loginFormErrors: FieldErrors<IFormLogin>;
-  blockForm: boolean;
-  alertLogin: IAlertLogin;
-  setAlertLogin: Dispatch<SetStateAction<IAlertLogin>>;
-}
-
-interface IAlertLogin {
-  show: boolean;
-  status: 'error' | 'success' | null;
-  helperText: {
-    sup: string;
-    main: string;
-  };
-  onClose: () => void;
-}
-
-interface IOnSubmit {
-  onSubmit: (
-    e: BaseSyntheticEvent<object, any, any> | undefined
-  ) => Promise<void>;
-}
+import { type IOnSubmit } from '../../types';
+import { type IAlertLogin, type IStateRegister } from './types';
 
 const useLogin = (): IStateRegister => {
   const defaultAlertLogin: IAlertLogin = {

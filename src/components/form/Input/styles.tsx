@@ -1,4 +1,4 @@
-import { presenceOpacity } from "@/animations/presence";
+import { presenceAnimation } from "@/animations/presence";
 import { color, font } from "@/styles/root";
 import styled from "styled-components";
 
@@ -11,8 +11,10 @@ interface InputProps {
 export const Input = styled.div<InputProps>`
   width: 300px;
   label{
+    display: inline-block;
     font-weight: bold;
     font-size: ${font.size.xsm};
+    margin-bottom: .3rem;
     color: ${({ focus, error }) => (
     focus && !error ? "#fff" :
       error ? color.danger : "#ffffffc3"
@@ -21,6 +23,7 @@ export const Input = styled.div<InputProps>`
   }
   .input-container{
     width: 100%;
+    height: 43px;
     position: relative;
     .toggle-type{
       position: absolute;
@@ -34,9 +37,9 @@ export const Input = styled.div<InputProps>`
   )}; 
     }
     input{
-      margin-top: .3rem;
-      display: block;
+      position: absolute;
       width: 100%;
+      height: 100%;
       border-radius: .3rem;
       padding: .6rem 1rem;
       background-color: transparent;
@@ -51,8 +54,9 @@ export const Input = styled.div<InputProps>`
       font-size: ${font.size.xsm};
       transition: .2s;
       outline: none;
-      &:-webkit-autofill{
-        background-color: red;
+      &::placeholder{
+        color: ${({ error }) => error ? color.danger : "#ffffff8b"};
+        font-weight: bold;
       }
     }
   }
@@ -63,6 +67,9 @@ export const Input = styled.div<InputProps>`
     line-height: .8rem;
     color: ${color.danger};
     font-weight: bold;
-    ${presenceOpacity};
+    ${presenceAnimation({
+    animation: "opacity",
+    duration: .3
+  })};
   }
 `

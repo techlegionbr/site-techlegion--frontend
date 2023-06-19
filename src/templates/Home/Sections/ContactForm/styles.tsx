@@ -14,30 +14,26 @@ export const ContactForm = styled.div`
     form{
       width: 100%;
       display: grid;
-      grid-template-areas: "input-name input-email" "textarea textarea";
-      gap: .5rem;
+      grid-template-areas: "input-name input-email" "textarea-message textarea-message";
+      gap: 1rem;
       margin-top: 4rem;
       @media (max-width: ${screens.md}) {
-        grid-template-areas: "input-name" "input-email" "textarea";
+        grid-template-areas: "input-name" "input-email" "textarea-message";
       }
-      #name{
-        grid-area: input-name;
+        #input-name{
+          grid-area: input-name;
+        }
+        #input-email{
+          grid-area: input-email;
+        }
+        #textarea-message{
+
+          grid-area: textarea-message;
+        }
+      .input-contact{
+        width: 100%;
       }
-      #email{
-        grid-area: input-email;
-      }
-      #message{
-        grid-area: textarea;
-      }
-      input, textarea{
-        padding: .5rem 1rem;
-        outline: none;
-        resize: none;
-        border-radius: .4rem;
-      }
-      textarea{
-        height: 140px;
-      }
+      
       .button-submit{
         width: 100px;
         background-color: ${color.secondary};

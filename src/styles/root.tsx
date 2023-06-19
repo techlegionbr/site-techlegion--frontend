@@ -36,7 +36,8 @@ export const color = {
   light: "#fff",
   alert: "#e6e64d",
   bluishGray: "#0A1929",
-  danger: "red"
+  danger: "red",
+  dark: "#000"
 }
 
 export const layout = {

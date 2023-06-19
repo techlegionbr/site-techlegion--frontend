@@ -1,3 +1,5 @@
+import NoBr from "@/components/NoBr"
+
 import { type TypeBenefit } from "./types"
 
 const benefits: TypeBenefit[] = [
@@ -43,12 +45,12 @@ const benefits: TypeBenefit[] = [
   },
   {
     icon: <i className='bx bxs-megaphone'></i>,
-    description: <span>O <strong>marketing digital</strong> oferece uma variedade de vantagens cruciais, tais como: <strong>alcance amplo e direcionado</strong>, <strong>mensuração eficaz de resultados</strong>, <strong>maior interatividade com o público-alvo</strong> e <strong>capacidade de segmentação precisa</strong> para impulsionar o crescimento do negócio.</span>,
+    description: <span>O <strong>marketing digital</strong> oferece uma variedade de vantagens cruciais, tais como: <strong>alcance amplo e direcionado</strong>, <strong>mensuração eficaz de resultados</strong>, <strong>maior interatividade com o <NoBr>público-alvo</NoBr></strong> e <strong>capacidade de segmentação precisa</strong> para impulsionar o crescimento do negócio.</span>,
     service: "Marketing Digital"
   },
   {
     icon: <i className='bx bxs-traffic'></i>,
-    description: <span>A <strong>gestão de tráfego</strong> proporciona vantagens estratégicas, tais como: <strong>direcionar o público-alvo certo</strong> para o seu negócio, <strong>maximizar o retorno sobre o investimento em publicidade</strong>, <strong>otimizar a eficiência dos canais de tráfego</strong> e <strong>impulsionar o crescimento do seu negócio</strong>.</span>,
+    description: <span>A <strong>gestão de tráfego</strong> proporciona vantagens estratégicas, tais como: <strong>direcionar o <NoBr>público-alvo</NoBr> certo</strong> para o seu negócio, <strong>maximizar o retorno sobre o investimento em publicidade</strong>, <strong>otimizar a eficiência dos canais de tráfego</strong> e <strong>impulsionar o crescimento do seu negócio</strong>.</span>,
     service: "Gestão de Tráfego"
   },
   {

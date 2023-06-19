@@ -91,6 +91,7 @@ const PopUpSearch = ({ show, onClose, lockScroll = "auto" }: PropsPopUp): JSX.El
           searchedCharacter={valueSearched}
           onClose={onClose}
         />
+        <button onClick={onClose} className="btn-close">Fechar</button>
       </div>
     </S.PopUpSearch>
   ) : <></>

@@ -3,7 +3,7 @@ import * as zod from 'zod';
 export const schemaLogin = zod.object({
   email: zod
     .string()
-    .nonempty('O e-mail é obrigatório')
+    .nonempty('O e-mail é obrigatório!')
     .email('Formato de e-mail inválido!')
     .min(17, 'O e-mail deve conter no minímo 17 caracteres.')
     .max(100, 'O e-mail deve conter no maximo 100 caracteres.')
