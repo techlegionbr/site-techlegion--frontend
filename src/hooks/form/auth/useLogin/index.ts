@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { useForm, type SubmitHandler } from 'react-hook-form';
+import { useQueryClient } from 'react-query';
 
+import queryKeys from '@/queries/constants/queryKeys';
 import { schemaLogin } from '@/schemas/auth/login';
 import { type IFormLogin } from '@/schemas/auth/login/types';
 import loginService from '@/services/auth/login';
+import { hostLinks } from '@/settings/links';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { useRouter } from 'next/router';
@@ -37,6 +40,8 @@ const useLogin = (): IStateRegister => {
   const [blockForm, setBlockForm] = useState(false);
   const [alertLogin, setAlertLogin] = useState<IAlertLogin>(defaultAlertLogin);
 
+  const queryClient = useQueryClient();
+
   const handleLogin: SubmitHandler<IFormLogin> = async (
     data
   ): Promise<void> => {
@@ -63,9 +68,14 @@ const useLogin = (): IStateRegister => {
           sup: 'Sucesso!',
           main: message
         },
-        onClose: () => {
+        onClose: async () => {
+          await queryClient.invalidateQueries(
+            queryKeys.KEY_TOKEN_VERIFICATION_FOR_AUTH_ROUTER
+          );
           setAlertLogin(defaultAlertLogin);
-          void router.replace(`/painels/${entity}`);
+          await router.replace(
+            entity === 'user' ? hostLinks.painel.user : hostLinks.painel.admin
+          );
         }
       });
     } else {
@@ -80,7 +90,6 @@ const useLogin = (): IStateRegister => {
       }));
       setBlockForm(false);
     }
-    console.log(responseLogin, error);
   };
 
   const loginFormControl: IOnSubmit = {

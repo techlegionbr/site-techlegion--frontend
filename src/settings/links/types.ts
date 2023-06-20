@@ -11,7 +11,7 @@ export type TypeLinks = Record<TypeSocialMedia, string>;
 
 export type TypeHostOurValues = '#diversidade-e-inclusao' | '#impacto-social';
 
-export type TypeHostLinkPainels = 'admin' | 'user';
+export type TypeHostLinkPainel = 'admin' | 'user';
 
 export type TypeHostLinkMain =
   | 'início'
@@ -39,5 +39,5 @@ export interface TypeHostLinks {
   main: Record<TypeHostLinkMain, string>;
   services: Record<TypeHostLinkService, string>;
   ourValues: Record<TypeHostOurValues, string>;
-  painels: Record<TypeHostLinkPainels, string>;
+  painel: Record<TypeHostLinkPainel, string>;
 }

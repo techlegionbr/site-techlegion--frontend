@@ -21,5 +21,5 @@ export interface IAlertLogin {
     sup: string;
     main: string;
   };
-  onClose: () => void;
+  onClose: (() => Promise<void>) | (() => void);
 }

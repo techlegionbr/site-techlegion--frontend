@@ -56,7 +56,7 @@ const Main = (): JSX.Element => {
         }}
         iconLeft={(
           alertLogin.status === "error" ? <i className='bx bxs-error' style={{ color: color.alert }}></i> :
-            <i className='bx bxs-error' style={{ color: color.alert }}></i>
+            <i className='bx bxs-check-circle' style={{ color: color.third }}></i>
         )}
         show={alertLogin.show}
         onClose={alertLogin.onClose}

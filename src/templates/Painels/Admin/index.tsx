@@ -1,8 +1,15 @@
+import HeaderSettings from "../patterns/HeaderSettings"
+import NavBarVertical from "../patterns/NavBarVertical"
 
 
 const PainelAdmin = (): JSX.Element => {
   return (
-    <h1>Painel Admin</h1>
+    <>
+      <HeaderSettings />
+      <NavBarVertical>
+        <h1>Ola</h1>
+      </NavBarVertical>
+    </>
   )
 }
 

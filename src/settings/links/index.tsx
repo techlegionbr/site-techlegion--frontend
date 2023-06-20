@@ -1,4 +1,4 @@
-import { type TypeHostOurValues, type TypeHostLinkMain, type TypeHostLinkService, type TypeHostLinks, type TypeLinks, type TypeHostLinkPainels } from "./types";
+import { type TypeHostOurValues, type TypeHostLinkMain, type TypeHostLinkService, type TypeHostLinks, type TypeLinks, type TypeHostLinkPainel } from "./types";
 import generateRoutes from "./utils/generateRoutes";
 
 export const socialMediaLinks: TypeLinks = {
@@ -13,11 +13,11 @@ export const socialMediaLinks: TypeLinks = {
 
 
 export const hostLinks: TypeHostLinks = {
-  painels: {
-    ...generateRoutes<Record<TypeHostLinkPainels, string>>([
+  painel: {
+    ...generateRoutes<Record<TypeHostLinkPainel, string>>([
       "admin",
       "user"
-    ], "painels")
+    ], "painel")
   },
   main: {
     "início": "/",

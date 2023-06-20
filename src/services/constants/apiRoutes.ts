@@ -1,6 +1,6 @@
 const apiRoutes = {
   AUTH_LOGIN: '/auth/login',
-  AUTH_HANDLER_ROUTE: '/auth/handler-route'
+  AUTH_ROUTE: '/auth/auth-route'
 };
 
 export default apiRoutes;

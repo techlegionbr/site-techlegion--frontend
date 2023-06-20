@@ -1,4 +1,4 @@
-import { color } from "@/styles/root";
+import { color, font } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -15,10 +15,16 @@ export const NotPermission = styled.div`
     text-transform: uppercase;
     color: ${color.third}
   }
+  h1{
+    font-size: ${font.size.lg};
+    line-height: ${font.line_height.lg};
+    margin-top: .1rem;
+  }
   h1, p{
     text-align: center;
   }
   p{
+    margin-top: 1rem;
     max-width: 600px;
   }
   .btn-back-home{
