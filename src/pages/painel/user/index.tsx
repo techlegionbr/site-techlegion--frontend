@@ -1,5 +1,5 @@
 import PrivateRouter from "@/components/auth/PrivateRouter"
-import PainelUserTemplate from "@/templates/Painels/User"
+import PainelUserTemplate from "@/templates/Painel/User"
 
 const PainelUser = (): JSX.Element => {
   return (

@@ -1,8 +1,8 @@
 
 import PrivateRouter from "@/components/auth/PrivateRouter";
-import PostsPainelTemplate from "@/templates/Painel/Posts";
+import PostsPainelTemplate from "@/templates/Painel/Settings";
 
-const Posts = (): JSX.Element => {
+const Settings = (): JSX.Element => {
   return (
     <PrivateRouter permission="admin">
       <PostsPainelTemplate />
@@ -10,4 +10,4 @@ const Posts = (): JSX.Element => {
   )
 }
 
-export default Posts
+export default Settings

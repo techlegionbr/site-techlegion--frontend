@@ -72,6 +72,7 @@ const Header = ({ supHeader = true, navigation = true }: PropsHeader): JSX.Eleme
 
   const currentRoute = (): TypeHostLinkMain | "" => {
     const basePath = pathname === "/" ? "/" : `/${pathname.split("/").filter(Boolean)[0]}`
+
     return hostLinksMainHeader.find(route => (
       route.href === basePath
     ))?.name ?? ""

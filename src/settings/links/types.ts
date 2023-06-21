@@ -11,7 +11,21 @@ export type TypeLinks = Record<TypeSocialMedia, string>;
 
 export type TypeHostOurValues = '#diversidade-e-inclusao' | '#impacto-social';
 
-export type TypeHostLinkPainel = 'admin' | 'user';
+export type TypeHostLinkPainel =
+  | 'admin'
+  | 'user'
+  | 'user/posts'
+  | 'user/comments'
+  | 'user/editors'
+  | 'user/managers'
+  | 'admin/posts'
+  | 'admin/comments'
+  | 'admin/editors'
+  | 'admin/managers'
+  | 'admin/settings'
+  | 'admin/profile'
+  | 'user/settings'
+  | 'user/profile';
 
 export type TypeHostLinkMain =
   | 'início'

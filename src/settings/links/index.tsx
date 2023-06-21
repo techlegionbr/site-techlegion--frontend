@@ -14,24 +14,37 @@ export const socialMediaLinks: TypeLinks = {
 
 export const hostLinks: TypeHostLinks = {
   painel: {
-    ...generateRoutes<Record<TypeHostLinkPainel, string>>([
+    ...generateRoutes<TypeHostLinkPainel>([
       "admin",
-      "user"
-    ], "painel")
+      "user",
+      "admin/posts",
+      "admin/comments",
+      "admin/editors",
+      "admin/managers",
+      "user/posts",
+      "user/comments",
+      "user/editors",
+      "user/managers",
+      "user/posts",
+      "admin/settings",
+      "admin/profile",
+      "user/settings",
+      "user/profile"
+    ], "/painel")
   },
   main: {
-    "início": "/",
-    ...generateRoutes<Omit<Record<TypeHostLinkMain, string>, "início">>([
+    ...generateRoutes<TypeHostLinkMain>([
       "sobre",
       "servicos",
       "blog",
       "contato",
       "politica-de-privacidade",
       "termos-de-uso"
-    ])
+    ]),
+    "início": "/",
   },
   services: {
-    ...generateRoutes<Record<TypeHostLinkService, string>>([
+    ...generateRoutes<TypeHostLinkService>([
       "analise-e-ciencia-de-dados",
       "criacao-de-filtros-de-realidade-virtual",
       "desenvolvimento-de-aplicativo-mobile",
@@ -47,7 +60,7 @@ export const hostLinks: TypeHostLinks = {
     ], "/servicos")
   },
   ourValues: {
-    ...generateRoutes<Record<TypeHostOurValues, string>>([
+    ...generateRoutes<TypeHostOurValues>([
       "#diversidade-e-inclusao",
       "#impacto-social"
     ], "/sobre")

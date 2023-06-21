@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 import LoaderPage from "@/components/loaders/LoaderPage"
 import Redirect from "@/components/navigation/Redirect"
+import AuthRouterProvider from "@/contexts/authRouter"
 import NotPermission from "@/patterns/helperScreens/NotPermission"
 import useFetchAuthRouter from "@/queries/auth/router"
 import { hostLinks } from "@/settings/links"
@@ -28,13 +29,20 @@ const PrivateRouter = ({ children, permission, redirect, autoEntityVerification 
   if (fetchPermission === null) {
     return <LoaderPage />
   }
-  if (fetchPermission === permission) {
-    return <>{children}</>
+
+  if (responseVerificationAuth && fetchPermission === permission) {
+    return (
+      <AuthRouterProvider response={responseVerificationAuth}>
+        {children}
+      </AuthRouterProvider>
+    )
   }
-  if (redirect) {
+
+  if (responseVerificationAuth && redirect) {
     return <Redirect href={redirect} />
   }
-  if (autoEntityVerification && responseVerificationAuth) {
+
+  if (responseVerificationAuth && autoEntityVerification) {
     return <Redirect href={(
       responseVerificationAuth.entity === "admin" ? hostLinks.painel.admin :
         responseVerificationAuth.entity === "user" ? hostLinks.painel.user : ""

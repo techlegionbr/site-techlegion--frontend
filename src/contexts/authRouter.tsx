@@ -1,22 +1,26 @@
-import { createContext } from 'react';
+import React, { createContext } from 'react';
 
-import { type IResponseFetchVerificationTokenAuth } from '@/queries/auth/router/types';
+import { type IResponseFetchAuthRouter } from '@/queries/auth/router/types';
 
 
 
-const defaultVerify
 
-const AuthRouterContext = createContext<IResponseFetchVerificationTokenAuth>({
+export const AuthRouterContext = createContext<IResponseFetchAuthRouter>({
   entity: null,
   message: "",
   permissions: []
 });
 
 
-const AuthRouterProvider = ({ children }: { children: React.ReactNode }): JSX.Element => {
+interface IAuthRouterProviderProps {
+  children: React.ReactNode,
+  response: IResponseFetchAuthRouter
+}
 
+
+const AuthRouterProvider = ({ children, response }: IAuthRouterProviderProps): JSX.Element => {
   return (
-    <AuthRouterContext.Provider value={{}}>
+    <AuthRouterContext.Provider value={response}>
       {children}
     </AuthRouterContext.Provider>
   )

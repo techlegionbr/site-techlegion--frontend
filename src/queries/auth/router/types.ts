@@ -21,7 +21,9 @@ export type TPermissionsUser = Omit<
   | 'manageAllUsers'
 >;
 
-export interface IResponseFetchVerificationTokenAuth {
+export type TPermission = TPermissionsAdmin | TPermissionsUser;
+
+export interface IResponseFetchAuthRouter {
   message: string;
   entity: 'admin' | 'user' | null;
   permissions: TPermissionsAdmin[] | TPermissionsUser[] | null;
