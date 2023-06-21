@@ -21,10 +21,12 @@ export type TPermissionsUser = Omit<
   | 'manageAllUsers'
 >;
 
+export type TLevelAccess = 'user' | 'admin';
+
 export type TPermission = TPermissionsAdmin | TPermissionsUser;
 
 export interface IResponseFetchAuthRouter {
   message: string;
-  entity: 'admin' | 'user' | null;
+  levelAccess: TLevelAccess | null;
   permissions: TPermissionsAdmin[] | TPermissionsUser[] | null;
 }

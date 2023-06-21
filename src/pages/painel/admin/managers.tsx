@@ -4,7 +4,7 @@ import ManagersPainelTemplate from "@/templates/Painel/Managers";
 
 const Managers = (): JSX.Element => {
   return (
-    <PrivateRouter permission="admin">
+    <PrivateRouter levelAccess="admin">
       <ManagersPainelTemplate />
     </PrivateRouter>
   )

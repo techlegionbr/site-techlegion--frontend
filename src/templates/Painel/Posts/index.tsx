@@ -1,23 +1,24 @@
 import { useContext } from "react"
 
+import HeadTemplate from "@/components/SEO/Head"
 import { AuthRouterContext } from "@/contexts/authRouter"
 
-import HeaderSettings from "../patterns/HeaderSettings"
-import NavBarVertical from "../patterns/NavBarVertical"
+import { HeaderSettings, NavBarVertical, MyPosts } from "../patterns"
 import handlePermissionRoutes from "../utils/handlePermissionRoutes"
 
 const Posts = (): JSX.Element => {
-  const { permissions } = useContext(AuthRouterContext)
+  const { permissions, levelAccess } = useContext(AuthRouterContext)
 
   return (
     <>
+      <HeadTemplate title="Posts - Tech Legion" />
       <HeaderSettings />
       {
-        permissions && (
-          <NavBarVertical nameRoutes={handlePermissionRoutes(permissions)}>
-            <h1>Posts</h1>
+        permissions && levelAccess ? (
+          <NavBarVertical nameRoutes={handlePermissionRoutes(permissions)} levelAccess={levelAccess}>
+            <MyPosts />
           </NavBarVertical>
-        )
+        ) : <></>
       }
     </>
   )

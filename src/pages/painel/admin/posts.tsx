@@ -4,7 +4,7 @@ import PostsPainelTemplate from "@/templates/Painel/Posts";
 
 const Posts = (): JSX.Element => {
   return (
-    <PrivateRouter permission="admin">
+    <PrivateRouter levelAccess="admin">
       <PostsPainelTemplate />
     </PrivateRouter>
   )

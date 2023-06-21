@@ -1,5 +1,7 @@
 
 
+import { type TLevelAccess } from "@/queries/auth/router/types"
+
 import Link from "next/link"
 import { useRouter } from "next/router"
 
@@ -10,15 +12,15 @@ import { type TSectionRouteName } from "./types"
 
 interface INavBarVerticalProps {
   children: React.ReactNode,
-  nameRoutes: TSectionRouteName[]
+  nameRoutes: TSectionRouteName[],
+  levelAccess: TLevelAccess
 }
 
 
 
-
-const NavBarVertical = ({ children, nameRoutes }: INavBarVerticalProps): JSX.Element => {
-  const routesSelected = routesSections.map(routes => routes.filter(route => nameRoutes.includes(route.name)))
-  console.log(nameRoutes)
+const NavBarVertical = ({ children, nameRoutes, levelAccess }: INavBarVerticalProps): JSX.Element => {
+  const routesSelected = routesSections(levelAccess).map(routes => routes.filter(route => nameRoutes.includes(route.name)))
+  console.log(levelAccess)
   const { pathname } = useRouter()
   return (
     <S.NavBarVertical>

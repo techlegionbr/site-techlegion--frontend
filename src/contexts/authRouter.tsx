@@ -6,7 +6,7 @@ import { type IResponseFetchAuthRouter } from '@/queries/auth/router/types';
 
 
 export const AuthRouterContext = createContext<IResponseFetchAuthRouter>({
-  entity: null,
+  levelAccess: null,
   message: "",
   permissions: []
 });

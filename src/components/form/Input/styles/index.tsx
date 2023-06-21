@@ -2,23 +2,19 @@ import { presenceAnimation } from "@/animations/presence";
 import { color, font } from "@/styles/root";
 import styled from "styled-components";
 
+import { type InputStyledProps } from "./types";
+import { handlersConditionInput } from "./utils";
 
-interface InputProps {
-  error: boolean,
-  focus: boolean
-}
 
-export const Input = styled.div<InputProps>`
+
+export const Input = styled.div<InputStyledProps>`
   width: 300px;
   label{
     display: inline-block;
     font-weight: bold;
     font-size: ${font.size.xsm};
     margin-bottom: .3rem;
-    color: ${({ focus, error }) => (
-    focus && !error ? "#fff" :
-      error ? color.danger : "#ffffffc3"
-  )};
+    color: ${({ focus, error }) => handlersConditionInput.label(focus, error)};
     transition: .2s;
   }
   .input-container{
@@ -31,10 +27,7 @@ export const Input = styled.div<InputProps>`
       transform: translateY(-50%);
       right: 1rem;
       transition: .2s;
-      color: ${({ error, focus }) => (
-    error ? color.danger :
-      focus ? "#fff" : "#ffffffc3"
-  )}; 
+      color: ${({ focus, error }) => handlersConditionInput.bthToggleType(focus, error)}; 
     }
     input{
       position: absolute;
@@ -43,19 +36,13 @@ export const Input = styled.div<InputProps>`
       border-radius: .3rem;
       padding: .6rem 1rem;
       background-color: transparent;
-      border: 1.4px solid ${({ focus, error }) => (
-    focus && !error ? "#ffffffc2" :
-      error ? color.danger : "#ffffff6d"
-  )};
-      color: ${({ error, focus }) => (
-    error ? color.danger :
-      focus ? "#fff" : "#ffffffc3"
-  )}; 
+      border: 1.4px solid ${({ focus, error }) => handlersConditionInput.borderColor(focus, error)};
+      color: ${({ focus, error }) => handlersConditionInput.color(focus, error)}; 
       font-size: ${font.size.xsm};
       transition: .2s;
       outline: none;
       &::placeholder{
-        color: ${({ error }) => error ? color.danger : "#ffffff8b"};
+        color: ${({ focus, error }) => handlersConditionInput.placeholderColor(focus, error)};
         font-weight: bold;
       }
     }
@@ -68,8 +55,8 @@ export const Input = styled.div<InputProps>`
     color: ${color.danger};
     font-weight: bold;
     ${presenceAnimation({
-    animation: "opacity",
-    duration: .3
-  })};
+  animation: "opacity",
+  duration: .3
+})};
   }
 `

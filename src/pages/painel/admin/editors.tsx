@@ -3,7 +3,7 @@ import EditorsPainelTemplate from "@/templates/Painel/Editors";
 
 const Editors = (): JSX.Element => {
   return (
-    <PrivateRouter permission="admin">
+    <PrivateRouter levelAccess="admin">
       <EditorsPainelTemplate />
     </PrivateRouter>
   )

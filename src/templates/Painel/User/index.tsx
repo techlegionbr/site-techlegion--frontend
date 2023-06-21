@@ -2,22 +2,21 @@ import { useContext } from "react"
 
 import { AuthRouterContext } from "@/contexts/authRouter"
 
-import HeaderSettings from "../patterns/HeaderSettings"
-import NavBarVertical from "../patterns/NavBarVertical"
+import { HeaderSettings, NavBarVertical } from "../patterns"
 import handlePermissionRoutes from "../utils/handlePermissionRoutes"
 
 const PainelUser = (): JSX.Element => {
-  const { permissions } = useContext(AuthRouterContext)
+  const { permissions, levelAccess } = useContext(AuthRouterContext)
 
   return (
     <>
       <HeaderSettings />
       {
-        permissions && (
-          <NavBarVertical nameRoutes={handlePermissionRoutes(permissions)}>
+        permissions && levelAccess ? (
+          <NavBarVertical nameRoutes={handlePermissionRoutes(permissions)} levelAccess={levelAccess}>
             <h1>Painel User</h1>
           </NavBarVertical>
-        )
+        ) : <></>
       }
     </>
   )

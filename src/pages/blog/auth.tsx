@@ -3,7 +3,7 @@ import AuthTemplate from "@/templates/Auth"
 
 const Auth = (): JSX.Element => {
   return (
-    <PrivateRouter permission="public" autoEntityVerification>
+    <PrivateRouter levelAccess="public" autoLevelAccessVerification>
       <AuthTemplate />
     </PrivateRouter>
   )

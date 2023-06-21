@@ -47,7 +47,7 @@ const useLogin = (): IStateRegister => {
   ): Promise<void> => {
     setBlockForm(true);
     const { data: responseLogin, error } = await loginService(data);
-    const { entity, message } = responseLogin;
+    const { levelAccess, message } = responseLogin;
 
     if (error) {
       setAlertLogin((prevAlert) => ({
@@ -60,7 +60,7 @@ const useLogin = (): IStateRegister => {
         }
       }));
       setBlockForm(false);
-    } else if (entity) {
+    } else if (levelAccess) {
       setAlertLogin({
         show: true,
         status: 'success',
@@ -74,7 +74,9 @@ const useLogin = (): IStateRegister => {
           );
           setAlertLogin(defaultAlertLogin);
           await router.replace(
-            entity === 'user' ? hostLinks.painel.user : hostLinks.painel.admin
+            levelAccess === 'user'
+              ? hostLinks.painel.user
+              : hostLinks.painel.admin
           );
         }
       });

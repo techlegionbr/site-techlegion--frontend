@@ -1,4 +1,4 @@
-import { type IFormLogin } from '@/schemas/auth/types';
+import { type IFormLogin } from '@/schemas/auth/login/types';
 import apiRoutes from '@/services/constants/apiRoutes';
 import { service } from '@/services/settings';
 import { AxiosError } from 'axios';
@@ -19,14 +19,14 @@ const loginService = async (login: IFormLogin): Promise<IServiceLogin> => {
   } catch (error: unknown) {
     if (error instanceof AxiosError) {
       const data: IResponseFetchLogin = error.response?.data || {
-        entity: null,
+        levelAccess: null,
         message: constants.GENERIC_ERROR_AUTH_LOGIN
       };
       return { data, error: true };
     } else {
       return {
         data: {
-          entity: null,
+          levelAccess: null,
           message: constants.GENERIC_ERROR_AUTH_LOGIN
         },
         error: true

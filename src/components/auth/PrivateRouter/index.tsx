@@ -5,32 +5,33 @@ import Redirect from "@/components/navigation/Redirect"
 import AuthRouterProvider from "@/contexts/authRouter"
 import NotPermission from "@/patterns/helperScreens/NotPermission"
 import useFetchAuthRouter from "@/queries/auth/router"
+import { type TLevelAccess } from "@/queries/auth/router/types"
 import { hostLinks } from "@/settings/links"
 
-type Tpermission = "user" | "admin" | "public"
+type TLevelAccesPrivateRouter = TLevelAccess | "public"
 
 interface IPrivateRouter {
   children: React.ReactNode,
-  permission: Tpermission,
+  levelAccess: TLevelAccesPrivateRouter,
   redirect?: string,
-  autoEntityVerification?: boolean
+  autoLevelAccessVerification?: boolean
 }
 
-const PrivateRouter = ({ children, permission, redirect, autoEntityVerification = false }: IPrivateRouter): JSX.Element => {
-  const [fetchPermission, setIsFetchPermission] = useState<Tpermission | null>(null)
+const PrivateRouter = ({ children, levelAccess, redirect, autoLevelAccessVerification = false }: IPrivateRouter): JSX.Element => {
+  const [fetchLevelAccess, setIsFetchLevelAccess] = useState<TLevelAccesPrivateRouter | null>(null)
   const { data: responseVerificationAuth } = useFetchAuthRouter()
 
   useEffect(() => {
     if (responseVerificationAuth) {
-      setIsFetchPermission(responseVerificationAuth.entity ?? "public")
+      setIsFetchLevelAccess(responseVerificationAuth.levelAccess ?? "public")
     }
   }, [responseVerificationAuth])
 
-  if (fetchPermission === null) {
+  if (fetchLevelAccess === null) {
     return <LoaderPage />
   }
 
-  if (responseVerificationAuth && fetchPermission === permission) {
+  if (responseVerificationAuth && fetchLevelAccess === levelAccess) {
     return (
       <AuthRouterProvider response={responseVerificationAuth}>
         {children}
@@ -42,10 +43,10 @@ const PrivateRouter = ({ children, permission, redirect, autoEntityVerification 
     return <Redirect href={redirect} />
   }
 
-  if (responseVerificationAuth && autoEntityVerification) {
+  if (responseVerificationAuth && autoLevelAccessVerification) {
     return <Redirect href={(
-      responseVerificationAuth.entity === "admin" ? hostLinks.painel.admin :
-        responseVerificationAuth.entity === "user" ? hostLinks.painel.user : ""
+      responseVerificationAuth.levelAccess === "admin" ? hostLinks.painel.admin :
+        responseVerificationAuth.levelAccess === "user" ? hostLinks.painel.user : ""
     )} />
   }
   return <NotPermission />

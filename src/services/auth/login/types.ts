@@ -5,5 +5,5 @@ export interface IServiceLogin {
 
 export interface IResponseFetchLogin {
   message: string;
-  entity: 'admin' | 'user' | null;
+  levelAccess: 'admin' | 'user' | null;
 }

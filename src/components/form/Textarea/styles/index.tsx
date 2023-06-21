@@ -3,30 +3,9 @@ import { color, font } from "@/styles/root";
 import styled from "styled-components";
 
 import { type ITextareaStyledProps } from "./types";
+import { handlersConditionTextarea } from "./utils";
 
 
-
-
-const handlersCondition = {
-  label: (focus: boolean, error: boolean) => (
-    focus && !error ? color.light :
-      error ? color.danger :
-        "#ffffffc3"
-  ),
-  colorBorderTextarea: (focus: boolean, error: boolean) => (
-    focus && !error ? "#ffffffc2" :
-      error ? color.danger : "#ffffff6d"
-  ),
-  colorTextarea: (focus: boolean, error: boolean) => (
-    error ? color.danger :
-      focus ? color.light :
-        "#ffffffc3"
-  ),
-  colorPlaceholderTextarea: (error: boolean) => (
-    error ? color.danger :
-      "#ffffff8b"
-  )
-}
 
 export const Textarea = styled.div<ITextareaStyledProps>`
   width: 300px;
@@ -34,7 +13,7 @@ export const Textarea = styled.div<ITextareaStyledProps>`
     display: inline-block;
     font-weight: bold;
     font-size: ${font.size.xsm};
-    color: ${({ focus, error }) => handlersCondition.label(focus, error)};
+    color: ${({ focus, error }) => handlersConditionTextarea.label(focus, error)};
     transition: .2s;
     margin-bottom: .3rem;
   }
@@ -50,14 +29,15 @@ export const Textarea = styled.div<ITextareaStyledProps>`
       border-radius: .3rem;
       padding: .6rem 1rem;
       background-color: transparent;
-      border: 1.4px solid ${({ focus, error }) => handlersCondition.colorBorderTextarea(focus, error)};
-      color: ${({ focus, error }) => handlersCondition.colorTextarea(focus, error)}; 
+      border: 1.4px solid ${({ focus, error }) => handlersConditionTextarea.borderColor(focus, error)};
+      color: ${({ focus, error }) => handlersConditionTextarea.color(focus, error)}; 
       font-size: ${font.size.xsm};
       transition: .2s;
       outline: none;
       &::placeholder{
-        color: ${({ error }) => handlersCondition.colorPlaceholderTextarea(error)};
+        color: ${({ focus, error }) => handlersConditionTextarea.placeholderColor(focus, error)};
         font-weight: bold;
+        transition: .2s;
       }
     }
   }

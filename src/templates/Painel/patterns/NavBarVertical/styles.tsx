@@ -53,7 +53,7 @@ export const NavBarVertical = styled.div`
     }
     .section-nav{
       width: calc(100% - 200px);
-      padding: 2rem 3rem;
+      padding: 1rem 0 1rem 1rem;
     }
   }
 `
