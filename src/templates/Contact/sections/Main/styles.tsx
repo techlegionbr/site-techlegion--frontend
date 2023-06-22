@@ -89,16 +89,25 @@ export const Main = styled.div`
         }
         form{
           width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: .8rem;
-          .input-contact, .textarea-contact{
+          display: grid;
+          grid-template-areas: "input-name input-email" "textarea-message textarea-message";
+          gap: .5rem;
+          grid-template-columns: .5fr .5fr;
+          #input-name, #input-email, #textarea-message{
             width: 100%;
           }
+          #input-name{
+            grid-area: input-name;
+          }
+          #input-email{
+            grid-area: input-email;
+          }
+          #textarea-message{
+            grid-area: textarea-message;
+          }
           .button-form{
-            
+            width: 100px;
+            margin-top: 1rem;
           }
         }
       }

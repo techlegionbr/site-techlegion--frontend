@@ -1,5 +1,5 @@
 import PrivateRouter from "@/components/auth/PrivateRouter";
-import EditorsPainelTemplate from "@/templates/Painel/Editors";
+import EditorsPainelTemplate from "@/templates/Painel/routes/Editors";
 
 const Editors = (): JSX.Element => {
   return (

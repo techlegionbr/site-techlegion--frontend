@@ -17,6 +17,7 @@ export const ContactForm = styled.div`
       grid-template-areas: "input-name input-email" "textarea-message textarea-message";
       gap: 1rem;
       margin-top: 4rem;
+      grid-template-columns: .5fr .5fr;
       @media (max-width: ${screens.md}) {
         grid-template-areas: "input-name" "input-email" "textarea-message";
       }

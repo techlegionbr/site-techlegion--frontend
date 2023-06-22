@@ -28,9 +28,9 @@ const useLogin = (): IStateRegister => {
   };
 
   const {
-    register: loginInputControl,
+    register,
     handleSubmit,
-    formState: { errors: loginFormErrors }
+    formState: { errors }
   } = useForm<IFormLogin>({
     resolver: zodResolver(schemaLogin)
   });
@@ -94,14 +94,14 @@ const useLogin = (): IStateRegister => {
     }
   };
 
-  const loginFormControl: IOnSubmit = {
+  const formControl: IOnSubmit = {
     onSubmit: handleSubmit(handleLogin)
   };
 
   return {
-    loginInputControl,
-    loginFormControl,
-    loginFormErrors,
+    register,
+    formControl,
+    errors,
     blockForm,
     alertLogin,
     setAlertLogin

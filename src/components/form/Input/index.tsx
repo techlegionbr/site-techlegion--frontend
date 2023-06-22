@@ -14,22 +14,21 @@ interface InputProps extends ComponentProps<"input"> {
 const Input = forwardRef<HTMLInputElement, InputProps>(({
   label,
   error = false,
-  helperText = "",
+  helperText,
   type = "text",
   value = "",
   onChange,
   onBlur,
   onFocus,
-  className = "",
+  className,
   autoComplete,
-  id = "",
+  id,
   ...restPropsInput
 }, ref): JSX.Element => {
 
   const [isFocus, setIsFocus] = useState(false)
   const [typeInput, setTypeInput] = useState(type)
   const [valueInput, setValueInput] = useState(value)
-
   useEffect(() => {
     setValueInput(value)
   }, [value])
@@ -59,7 +58,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
       {label && <label>{label}</label>}
       <div className="input-container">
         <input
-          type={typeInput}
+          type={type === "password" ? typeInput : type}
           onFocus={handleFocusInput}
           onBlur={handleBlurInput}
           value={valueInput}

@@ -1,5 +1,5 @@
 import PrivateRouter from "@/components/auth/PrivateRouter";
-import CommentsPainelTemplate from "@/templates/Painel/Comments";
+import CommentsPainelTemplate from "@/templates/Painel/routes/Comments";
 
 const Comments = (): JSX.Element => {
   return (

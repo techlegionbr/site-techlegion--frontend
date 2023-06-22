@@ -6,6 +6,7 @@ import HorizontalLine from "@/components/HorizontalLine"
 import HeadTemplate from "@/components/SEO/Head"
 import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
+import SectionDivider from "@/patterns/layout/sections/Divider"
 
 import { AnyQuestionsSection, InfosSection, MainSection } from "./sections"
 import { type TypeService } from "./types"
@@ -45,8 +46,16 @@ const Service = ({ service, SectionPlans }: PropsService): JSX.Element => {
           <HorizontalLine />
         </>
       )}
-      <AnyQuestionsSection />
+      <AnyQuestionsSection bgColor={SectionPlans ? "bluishGray" : "primary"} />
       <HorizontalLine />
+      {
+        SectionPlans && (
+          <>
+            <SectionDivider bgColor="primary" />
+            <HorizontalLine />
+          </>
+        )
+      }
       <Footer />
     </>
   )

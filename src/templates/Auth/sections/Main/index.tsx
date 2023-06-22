@@ -14,30 +14,30 @@ import Image from "next/image"
 import * as S from "./styles"
 
 const Main = (): JSX.Element => {
-  const { loginFormControl, loginFormErrors, loginInputControl, blockForm, alertLogin } = useLogin()
+  const { errors, formControl, register, blockForm, alertLogin } = useLogin()
   return (
     <S.Main>
       <div className="content">
         <div className="card-login">
           <h2>Login</h2>
-          <form {...loginFormControl}>
+          <form {...formControl}>
             <Input
               className="input-form"
               label="Email"
-              error={!!loginFormErrors.email}
-              helperText={loginFormErrors?.email?.message}
+              error={!!errors.email}
+              helperText={errors?.email?.message}
               disabled={blockForm}
               autoComplete="off"
-              {...loginInputControl("email")}
+              {...register("email")}
             />
             <Input
               className="input-form"
               label="Senha"
               type="password"
-              error={!!loginFormErrors.password}
+              error={!!errors.password}
               disabled={blockForm}
-              helperText={loginFormErrors?.password?.message}
-              {...loginInputControl("password")}
+              helperText={errors?.password?.message}
+              {...register("password")}
             />
             <div className="btn-container-form">
               <Button disabled={blockForm}>{blockForm ? "FAZENDO LOGIN..." : "FAÇA SEU LOGIN"}</Button>
@@ -59,7 +59,7 @@ const Main = (): JSX.Element => {
             <i className='bx bxs-check-circle' style={{ color: color.third }}></i>
         )}
         show={alertLogin.show}
-        onClose={alertLogin.onClose}
+        onClose={async () => { await alertLogin.onClose(); }}
       />
     </S.Main>
   )

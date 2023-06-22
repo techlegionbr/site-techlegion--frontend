@@ -3,6 +3,7 @@ import HorizontalLine from "@/components/HorizontalLine"
 import HeadTemplate from "@/components/SEO/Head"
 import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
+import SectionDivider from "@/patterns/layout/sections/Divider"
 
 import { MainSection } from "./sections"
 import Faq from "./sections/Faq"
@@ -21,6 +22,8 @@ const Contact = (): JSX.Element => {
       <MainSection />
       <HorizontalLine />
       <Faq />
+      <HorizontalLine />
+      <SectionDivider bgColor="primary" />
       <HorizontalLine />
       <Footer />
     </>

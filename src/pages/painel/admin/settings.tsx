@@ -1,6 +1,6 @@
 
 import PrivateRouter from "@/components/auth/PrivateRouter";
-import PostsPainelTemplate from "@/templates/Painel/Settings";
+import PostsPainelTemplate from "@/templates/Painel/routes/Settings";
 
 const Settings = (): JSX.Element => {
   return (

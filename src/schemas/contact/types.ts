@@ -1,5 +1,5 @@
-export interface IFormContact {
-  name: string;
-  email: string;
-  message: string;
-}
+import { type z } from 'zod';
+
+import { type schemaContact } from './index';
+
+export type IFormContact = z.infer<typeof schemaContact>;

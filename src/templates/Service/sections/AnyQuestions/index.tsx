@@ -3,9 +3,14 @@ import TitleSection from "@/components/TitleSection"
 
 import * as S from "./styles"
 
-const AnyQuestions = (): JSX.Element => {
+interface IAnyQuestionsProps {
+  bgColor: "primary" | "bluishGray"
+}
+
+
+const AnyQuestions = ({ bgColor }: IAnyQuestionsProps): JSX.Element => {
   return (
-    <S.AnyQuestions>
+    <S.AnyQuestions bgColor={bgColor}>
       <div className="content">
         <TitleSection
           subTitle="Entre em contato"

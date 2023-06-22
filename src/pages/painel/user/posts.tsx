@@ -1,5 +1,5 @@
 import PrivateRouter from "@/components/auth/PrivateRouter"
-import PainelPostsTemplate from "@/templates/Painel/Posts"
+import PainelPostsTemplate from "@/templates/Painel/routes/Posts"
 
 const PostslUser = (): JSX.Element => {
   return (

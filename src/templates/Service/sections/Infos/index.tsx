@@ -1,7 +1,7 @@
 
 
+import AccordionsQuest from "@/components/accordions/AccordionsQuest"
 import Button from "@/components/Button"
-import Accordions from "@/patterns/Accordions"
 
 import { type TypeService } from "../../types"
 import * as S from "./styles"
@@ -53,7 +53,7 @@ const Infos = ({ service }: PropsInfos): JSX.Element => {
           </article>
           <article>
             <h1>Perguntas Frequentes</h1>
-            <Accordions accordions={service.commonQuestions} />
+            <AccordionsQuest items={service.commonQuestions} />
           </article>
         </div>
         <div className="price-card">

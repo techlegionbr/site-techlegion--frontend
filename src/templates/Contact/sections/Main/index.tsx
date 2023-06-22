@@ -2,7 +2,7 @@ import Button from "@/components/Button"
 import Input from "@/components/form/Input"
 import Textarea from "@/components/form/Textarea"
 import TitleSection from "@/components/TitleSection"
-import useContact from "@/hooks/form/auth/useContact"
+import useContact from "@/hooks/form/useContact"
 import { socialMediaLinks } from "@/settings/links"
 import { type TypeSocialMedia } from "@/settings/links/types"
 
@@ -42,7 +42,7 @@ const socialMedia: TypeSocialMediaIcons[] = [
 ]
 
 const Main = (): JSX.Element => {
-  const { contactFormControl, contactFormErrors, contactInputControl } = useContact()
+  const { errors, formControl, register } = useContact()
   return (
     <S.Main>
       <div className="content">
@@ -53,27 +53,27 @@ const Main = (): JSX.Element => {
         <div className="contacts-cards">
           <div className="form-contact">
             <h3>Faça o seu orçamento!</h3>
-            <form {...contactFormControl}>
+            <form {...formControl}>
               <Input
-                className="input-contact"
-                label="Nome"
-                {...contactInputControl("name")}
-                error={!!contactFormErrors.name}
-                helperText={contactFormErrors.name?.message}
+                id="input-name"
+                placeholder="Nome"
+                {...register("name")}
+                error={!!errors.name}
+                helperText={errors.name?.message}
               />
               <Input
-                className="input-contact"
-                label="Email"
-                {...contactInputControl("email")}
-                error={!!contactFormErrors.email}
-                helperText={contactFormErrors.email?.message}
+                id="input-email"
+                placeholder="Email"
+                {...register("email")}
+                error={!!errors.email}
+                helperText={errors.email?.message}
               />
               <Textarea
-                className="textarea-contact"
-                label="Mensagem"
-                {...contactInputControl("message")}
-                error={!!contactFormErrors.message}
-                helperText={contactFormErrors.message?.message}
+                id="textarea-message"
+                placeholder="Mensagem"
+                {...register("message")}
+                error={!!errors.message}
+                helperText={errors.message?.message}
               />
               <Button iconRight={<i className='bx bxs-message'></i>} className="button-form">ENVIAR</Button>
             </form>

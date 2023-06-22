@@ -1,6 +1,6 @@
+import AccordionsCircle from "@/components/accordions/AccordionsCircle"
 import TitleSection from "@/components/TitleSection"
 
-import AccordionsBenefitService from "./components/AccordionsBenefitService"
 import benefits from "./settings/benefits"
 import * as S from "./styles"
 
@@ -14,8 +14,8 @@ const Benefits = (): JSX.Element => {
           title="Benefícios"
           description="Explore os benefícios exclusivos de cada serviço clicando na opção desejada."
         />
-        <AccordionsBenefitService
-          benefits={benefits}
+        <AccordionsCircle
+          items={benefits}
         />
       </div>
     </S.Benefits>

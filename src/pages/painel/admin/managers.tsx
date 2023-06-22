@@ -1,6 +1,6 @@
 
 import PrivateRouter from "@/components/auth/PrivateRouter";
-import ManagersPainelTemplate from "@/templates/Painel/Managers";
+import ManagersPainelTemplate from "@/templates/Painel/routes/Managers";
 
 const Managers = (): JSX.Element => {
   return (

@@ -1,11 +1,11 @@
-import { type TypeAccoridion } from '@/patterns/Accordions/types';
+import { type IAccordionQuestItem } from '@/components/accordions/AccordionsQuest/types';
 
 export interface TypeService {
   name: string;
   image: string;
   introduction: string;
   benefits: string[];
-  commonQuestions: TypeAccoridion[];
+  commonQuestions: IAccordionQuestItem[];
   value: number;
   icon: React.ReactNode;
 }

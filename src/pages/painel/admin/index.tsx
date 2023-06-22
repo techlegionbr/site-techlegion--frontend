@@ -1,5 +1,5 @@
 import PrivateRouter from "@/components/auth/PrivateRouter"
-import PainelAdminTemplate from "@/templates/Painel/Admin"
+import PainelAdminTemplate from "@/templates/Painel/routes/Admin"
 
 const PainelAdmin = (): JSX.Element => {
   return (

@@ -9,7 +9,7 @@ interface IAlertProps {
     sup: string
   }
   iconLeft: React.ReactNode,
-  onClose: () => void
+  onClose: (() => Promise<void>) | (() => void);
 }
 
 const Alert = ({ show, helperText, iconLeft, onClose }: IAlertProps): JSX.Element => {
@@ -26,7 +26,7 @@ const Alert = ({ show, helperText, iconLeft, onClose }: IAlertProps): JSX.Elemen
           <small>{helperText.sup}</small>
           <p>{helperText.main}</p>
         </div>
-        <button onClick={onClose} className="btn-close-alert"><i className='bx bx-x' ></i></button>
+        <button onClick={() => { void onClose(); }} className="btn-close-alert"><i className='bx bx-x' ></i></button>
       </div>
     </S.Alert>
   ) : <></>

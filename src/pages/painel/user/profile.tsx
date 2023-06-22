@@ -1,5 +1,5 @@
 import PrivateRouter from "@/components/auth/PrivateRouter"
-import PainelProfileTemplate from "@/templates/Painel/Profile"
+import PainelProfileTemplate from "@/templates/Painel/routes/Profile"
 
 const ProfilelUser = (): JSX.Element => {
   return (

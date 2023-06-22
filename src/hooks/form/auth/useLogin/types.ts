@@ -6,9 +6,9 @@ import { type IFormLogin } from '@/schemas/auth/login/types';
 import { type IOnSubmit } from '../../types';
 
 export interface IStateRegister {
-  loginFormControl: IOnSubmit;
-  loginInputControl: UseFormRegister<IFormLogin>;
-  loginFormErrors: FieldErrors<IFormLogin>;
+  formControl: IOnSubmit;
+  register: UseFormRegister<IFormLogin>;
+  errors: FieldErrors<IFormLogin>;
   blockForm: boolean;
   alertLogin: IAlertLogin;
   setAlertLogin: Dispatch<SetStateAction<IAlertLogin>>;
