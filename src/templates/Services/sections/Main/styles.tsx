@@ -1,4 +1,4 @@
-import { color, font, layout } from "@/styles/root";
+import { color, font, layout, screens } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -20,6 +20,9 @@ export const CardsService = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  @media (max-width: ${screens.md}) {
+    gap: 1rem;
+  }
 `
 
 export const CardService = styled.div`
@@ -35,6 +38,9 @@ export const CardService = styled.div`
   align-items: center;
   justify-content: flex-start;
   text-align: start;
+  @media (max-width: ${screens.sm}) {
+    height: 480px;
+  }
   .circle-icon{
     width: 80px;
     height: 80px;

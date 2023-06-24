@@ -42,8 +42,8 @@ const CardPlan = ({ attrsIncludes, link, name, title, value }: ICardPlanProps): 
       </div>
       <ul>
         {
-          allAttrs.map(attr => (
-            <li key={name} className={attrsIncludes.includes(attr) ? "attr-include" : "attr-exclude"}>
+          allAttrs.map((attr, index) => (
+            <li key={`attr-plan-${index}`} className={attrsIncludes.includes(attr) ? "attr-include" : "attr-exclude"}>
               {attrsIncludes.includes(attr) ? <i className='bx bx-check'></i> : <i className='bx bx-x'></i>}
               <span>{attr}</span>
             </li>

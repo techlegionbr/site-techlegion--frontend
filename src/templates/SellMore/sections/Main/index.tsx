@@ -15,7 +15,7 @@ const Main = (): JSX.Element => {
           <Button className="btn-sell-more" size="medium" iconRight={<i className='bx bxs-dollar-circle'></i>}>Quero Vender Mais</Button>
         </div>
         <div className="image-apresentation">
-          <Image src={imageMainKommo} alt="image-kommo" width={400} />
+          <Image src={imageMainKommo} alt="image-kommo" width={400} priority />
         </div>
       </div>
     </S.Main>

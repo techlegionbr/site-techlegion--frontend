@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link href={googleFontsConfig.import} rel="stylesheet" />
+          <link href={googleFontsConfig.import} rel="stylesheet" as="font" />
           <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
         </Head>
         <body>

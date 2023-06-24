@@ -97,6 +97,7 @@ const Header = ({ supHeader = true, navigation = true }: PropsHeader): JSX.Eleme
                 src={logoTechLegion}
                 alt="Logo da Tech Legion"
                 width={210}
+                height={45}
                 priority
               />
             </Link>

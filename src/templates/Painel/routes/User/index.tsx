@@ -2,7 +2,7 @@ import { useContext } from "react"
 
 import { AuthRouterContext } from "@/contexts/authRouter"
 
-import { HeaderSettings, NavBarVertical } from "../../patterns"
+import { HeaderSettings, NavBarVertical } from "../../patterns/layout"
 import handlePermissionRoutes from "../../utils/handlePermissionRoutes"
 
 const PainelUser = (): JSX.Element => {

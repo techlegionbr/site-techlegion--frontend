@@ -1,6 +1,6 @@
 import { type TPermission } from '@/queries/auth/router/types';
 
-import { type TSectionRouteName } from '../patterns/NavBarVertical/types';
+import { type TSectionRouteName } from '../patterns/layout/NavBarVertical/types';
 
 const handlePermissionRoutes = (
   permissions: TPermission[]

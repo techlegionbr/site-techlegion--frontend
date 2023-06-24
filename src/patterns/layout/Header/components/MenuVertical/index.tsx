@@ -81,6 +81,7 @@ export const ButtonHamburger = ({ onOpen, className }: PropsHamburger): JSX.Elem
     <>
       <S.Hamburger
         onClick={onOpen}
+        title="Menu vertical"
         className={className}>
         <i className='bx bx-menu'></i>
       </S.Hamburger>

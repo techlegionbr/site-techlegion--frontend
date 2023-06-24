@@ -28,6 +28,7 @@ const Services = (): JSX.Element => {
                 src={imageDevelopementWebSite}
                 alt="imagem do serviço de Desenvolvimento de Site"
                 width={400}
+                height={267}
               />
             </div>
             <div className="description">
@@ -46,6 +47,7 @@ const Services = (): JSX.Element => {
                 src={imageDesignerGraphic}
                 alt="imagem do serviço de Designer Gráfico"
                 width={400}
+                height={267}
               />
             </div>
             <div className="description">
@@ -65,6 +67,7 @@ const Services = (): JSX.Element => {
                 src={imageSocialMedia}
                 alt="imagem do serviço de Social Media"
                 width={400}
+                height={267}
               />
             </div>
             <div className="description">

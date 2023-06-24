@@ -1,8 +1,8 @@
 
 import { useRef, useState } from "react"
 
-import CardVolunteer from "@/components/CardVolunteer"
-import { type TypeVolunteer } from "@/components/CardVolunteer/types"
+import CardVolunteer from "@/patterns/CarouselVolunteers/components/CardVolunteer"
+import { type TypeVolunteer } from "@/patterns/CarouselVolunteers/components/CardVolunteer/types"
 
 import * as S from "./styles"
 
@@ -22,7 +22,7 @@ const CarouselVolunteers = ({ volunteers }: PropsCarousel): JSX.Element => {
     left: false,
     right: false
   })
-  const gapCarousel = 16 * 2
+  const gapCarousel = (16 * 2)
 
   const scrollerCarousel = (direction: "left" | "right"): void => {
     const { current: carouselElement } = carouselRef;

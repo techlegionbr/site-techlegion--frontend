@@ -30,7 +30,7 @@ const Values = (): JSX.Element => {
           </li>
           <li>
             <i className='bx bxs-heart'></i>
-            <h4>Atendimento <br />Empáticos</h4>
+            <h4>Atendimento <br />Empático</h4>
           </li>
           <li>
             <i className='bx bx-male-female'></i>

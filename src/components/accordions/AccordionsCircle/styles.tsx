@@ -1,4 +1,4 @@
-import { color, font } from "@/styles/root";
+import { color, font, screens } from "@/styles/root";
 import { type TModeTheme } from "@/styles/types";
 import styled from "styled-components";
 
@@ -76,8 +76,12 @@ export const Accordion = styled.div<IAccordionProps>`
       overflow: hidden;
       padding: 0 1rem;
       height: ${({ showDescription }) =>
-    !showDescription ? '0px' : '180px'};
+    !showDescription ? '0px' : '200px'};
       transition: 0.2s;
+      @media (max-width: ${screens.sm}) {
+        height: ${({ showDescription }) =>
+    !showDescription ? '0px' : '240px'};
+      }
       p {
         margin-top: 0.5rem;
         font-size: calc(${font.size.sm} - .1rem);

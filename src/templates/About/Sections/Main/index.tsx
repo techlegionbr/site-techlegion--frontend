@@ -19,7 +19,7 @@ const Main = (): JSX.Element => {
           </p>
           <div className="profile-card">
             <div className="image-profile">
-              <Image src={imageCEOProfile} alt="Leonardo Ferraz" width={60} />
+              <Image src={imageCEOProfile} alt="Leonardo Ferraz" width={60} height={60} priority />
             </div>
             <article>
               <h4>Leonardo Ferraz</h4>
@@ -29,7 +29,7 @@ const Main = (): JSX.Element => {
           <Button size="medium" className="button-contact">Entre em Contato</Button>
         </div>
         <div className="image-apresentation">
-          <Image src={imageApresentation} alt="grupo de jovens alegres" width={300} />
+          <Image src={imageApresentation} alt="grupo de jovens alegres" width={300} priority />
         </div>
       </div>
     </S.Main>

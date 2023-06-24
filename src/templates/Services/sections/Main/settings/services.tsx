@@ -1,6 +1,6 @@
 import { hostLinks } from "@/settings/links";
 
-import { type TypeService } from "./types";
+import { type TypeService } from "../types";
 
 const services: TypeService[] = [
   {

@@ -37,8 +37,8 @@ export const SectionDivider = styled.div<ISectionDividerProps>`
           color: ${color.alert};
           @media (max-width: ${screens.sm}) {
             font-size: .8rem;
-            right: -.75rem;
-            top: -.1rem;
+            right: -.8rem;
+            top: .1rem;
             transform: rotate(40deg);
           }
         }

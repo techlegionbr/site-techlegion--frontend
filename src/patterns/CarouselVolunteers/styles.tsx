@@ -42,16 +42,16 @@ export const CarouselVolunteers = styled.div`
     right: 0;
   }
   .content-carousel{
-    width: calc((200px * 3) + 2rem * (3 - 1));
+    width: calc((240px * 3) + 2rem * (3 - 1));
     display: flex;
     gap: 2rem;
     overflow: hidden;
     scroll-behavior: smooth;
     @media (max-width: ${screens.md}) {
-      width: calc((200px * 2) + 2rem * (2 - 1));
+      width: calc((240px * 2) + 2rem * (2 - 1));
     }
     @media (max-width: ${screens.sm}) {
-      width: calc((200px * 1) + 2rem * (1 - 1));
+      width: calc((240px * 1) + 2rem * (1 - 1));
     }
   }
 `

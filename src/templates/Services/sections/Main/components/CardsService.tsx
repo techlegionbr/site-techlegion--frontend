@@ -1,7 +1,7 @@
 import Button from "@/components/Button"
 
-import { type TypeService } from "../settings/types"
 import * as S from "../styles"
+import { type TypeService } from "../types"
 
 
 interface PropsCardService {
