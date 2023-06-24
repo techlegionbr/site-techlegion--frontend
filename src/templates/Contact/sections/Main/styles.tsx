@@ -20,7 +20,7 @@ export const Main = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 3rem;
+      margin-top: 4rem;
       flex-direction: column;
       gap: 1rem;
       .social-medias{
@@ -82,34 +82,6 @@ export const Main = styled.div`
         min-width: 300px;
         border-radius: .5rem;
         position: relative;
-        h3{
-          margin-bottom: 2rem;
-          color: ${color.third};
-          display: none;
-        }
-        form{
-          width: 100%;
-          display: grid;
-          grid-template-areas: "input-name input-email" "textarea-message textarea-message";
-          gap: .5rem;
-          grid-template-columns: .5fr .5fr;
-          #input-name, #input-email, #textarea-message{
-            width: 100%;
-          }
-          #input-name{
-            grid-area: input-name;
-          }
-          #input-email{
-            grid-area: input-email;
-          }
-          #textarea-message{
-            grid-area: textarea-message;
-          }
-          .button-form{
-            width: 100px;
-            margin-top: 1rem;
-          }
-        }
       }
     }
   }

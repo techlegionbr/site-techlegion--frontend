@@ -32,6 +32,7 @@ export type TypeHostLinkMain =
   | 'sobre'
   | 'servicos'
   | 'blog'
+  | 'vender-mais'
   | 'contato'
   | 'politica-de-privacidade'
   | 'termos-de-uso';

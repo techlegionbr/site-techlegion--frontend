@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const LoaderDefaultStyled = styled.div`
+const LoaderStyled = styled.div`
   position: relative;
   transform: scale(.6);
 
@@ -74,14 +74,14 @@ const LoaderDefaultStyled = styled.div`
   }
 `;
 
-const LoaderDefault = ({ show }: { show: boolean }): JSX.Element => {
+const Loader = ({ show }: { show: boolean }): JSX.Element => {
   return show ? (
-    <LoaderDefaultStyled>
+    <LoaderStyled>
       <div className="justify-content-center jimu-primary-loading"></div>
-    </LoaderDefaultStyled>
+    </LoaderStyled>
   ) : (
     <></>
   );
 };
 
-export default LoaderDefault;
+export default Loader;

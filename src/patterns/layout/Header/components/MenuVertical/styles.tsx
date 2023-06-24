@@ -18,7 +18,7 @@ export const PopUpMenuVertical = styled.div`
   background-color: #0c113758;
   z-index: 15;
   ${presenceAnimation({ animation: "opacity", duration: .3 })};
-  @media (min-width: ${screens.md}) {
+  @media (min-width: 823px) {
     display: none;
   }
   .vertical-menu{

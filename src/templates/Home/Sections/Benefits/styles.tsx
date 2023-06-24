@@ -11,6 +11,9 @@ export const Benefits = styled.div`
 
   .content {
     width: ${layout.contentWidth};
+    .benefits-accordions{
+      margin-top: 4rem;
+    }
   }
 `;
 

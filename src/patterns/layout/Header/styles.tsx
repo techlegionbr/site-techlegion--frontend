@@ -33,7 +33,7 @@ export const SubHeader = styled.header<PropsHeader>`
     align-items: center;
     .menu-hamburger{
       display: none;
-      @media (max-width: ${screens.md}) {
+      @media (max-width: 823px) {
         display: inline-block;
       }
     }
@@ -48,7 +48,7 @@ export const SubHeader = styled.header<PropsHeader>`
       display: flex;
       align-items: center;
       gap: 1.4rem;
-      @media (max-width: 720px) {
+      @media (max-width: 823px) {
           display: none;
       }
       .button-search{
@@ -70,6 +70,7 @@ export const SubHeader = styled.header<PropsHeader>`
       }
       nav{  
         a{
+          display: inline-block;
           color: ${color.light};
           text-decoration: none;
           padding: .4rem .8rem;

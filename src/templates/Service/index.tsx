@@ -6,7 +6,7 @@ import HorizontalLine from "@/components/HorizontalLine"
 import HeadTemplate from "@/components/SEO/Head"
 import Footer from "@/patterns/layout/Footer"
 import Header from "@/patterns/layout/Header"
-import SectionDivider from "@/patterns/layout/sections/Divider"
+import SectionDivider from "@/patterns/sections/Divider"
 
 import { AnyQuestionsSection, InfosSection, MainSection } from "./sections"
 import { type TypeService } from "./types"

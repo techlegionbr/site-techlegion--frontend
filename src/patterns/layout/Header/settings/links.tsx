@@ -20,6 +20,10 @@ const hostLinksMain: TypeRouteInternal[] = [
     label: "Serviços"
   },
   {
+    name: "vender-mais",
+    label: "Vender Mais"
+  },
+  {
     name: "blog",
     label: "Blog"
   },

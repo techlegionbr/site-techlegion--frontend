@@ -1,4 +1,5 @@
 import { color } from "@/styles/root";
+import { type TModeTheme } from "@/styles/types";
 import styled from "styled-components";
 
 
@@ -10,15 +11,16 @@ export const Accordions = styled.ul`
 `
 
 interface PropsAccordion {
-  show: boolean
+  show: boolean,
+  modeTheme: TModeTheme
 }
 
 export const Accordion = styled.li<PropsAccordion>`
   width: 100%;
-  background-color: #111a37;
+  background-color: ${({ modeTheme }) => modeTheme === "bluishGray" ? "#111a37" : "#171757"};
   cursor: pointer;
   border-radius: .5rem;
-  border: 1.3px solid #7285ff60;
+  border: 1.2px solid #8594f547;
   .question{
     width: 100%;
     height: 80px;

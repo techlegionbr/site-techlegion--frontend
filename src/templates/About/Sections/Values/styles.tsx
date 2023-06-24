@@ -1,4 +1,4 @@
-import { screens, color, layout } from "@/styles/root";
+import { screens, color, layout, font } from "@/styles/root";
 import styled from "styled-components";
 
 
@@ -16,13 +16,13 @@ export const Values = styled.div`
       gap: .8rem;
       margin-top: 4rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       @media (max-width: ${screens.sm}) {
-        grid-template-columns: auto;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       }
       li{
         height: 120px;
-        padding: 0 .6rem;
+        padding: 0 .4rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -32,12 +32,13 @@ export const Values = styled.div`
         border-radius: .6rem;
         gap: .5rem;
         border: 1.3px solid #609aff6c;
-        
         i{
-          font-size: 2rem;
-          color: ${color.third}
+          font-size: 1.5rem;
+          color: ${color.third};
         }
         h4{
+          margin-top: .2rem;
+          font-size: calc(${font.size.xsm} + .02rem);
           text-transform: uppercase;
           line-height: 1rem;
         }

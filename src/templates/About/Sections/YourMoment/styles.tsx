@@ -28,7 +28,7 @@ export const YourMoment = styled.div`
         backdrop-filter: blur(10px);
         padding: .8rem 2rem;
         border-radius: 2rem;
-        border: 1.3px solid #72b1ff42;
+        border: 1px solid #7d95ff1c;
         
       }
       p{

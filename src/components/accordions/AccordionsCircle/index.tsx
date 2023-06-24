@@ -4,7 +4,7 @@ import { useState } from "react"
 import * as S from "./styles"
 import { type IAccordionCircleProps, type TAccordionParam, type IAccordionsCircleProps } from "./types"
 
-const Accordion = ({ item, showDescription, onClick }: IAccordionCircleProps): JSX.Element => {
+const Accordion = ({ item, showDescription, onClick, modeTheme }: IAccordionCircleProps): JSX.Element => {
   const { description, icon, title } = item
 
   const handleShowDescription = (): void => {
@@ -13,8 +13,9 @@ const Accordion = ({ item, showDescription, onClick }: IAccordionCircleProps): J
 
   return (
     <S.Accordion
-      showDescription={showDescription ? "true" : "false"}
+      showDescription={showDescription}
       onClick={handleShowDescription}
+      modeTheme={modeTheme}
     >
       <div className="column-icon">
         <div className="square-icon">
@@ -36,7 +37,7 @@ const Accordion = ({ item, showDescription, onClick }: IAccordionCircleProps): J
   )
 }
 
-const AccordionsCircle = ({ items }: IAccordionsCircleProps): JSX.Element => {
+const AccordionsCircle = ({ items, modeTheme = "primary" }: IAccordionsCircleProps): JSX.Element => {
   const benefitsStatus = Object.fromEntries(
     items.map((Iitem) => [Iitem.title, false])
   )
@@ -55,6 +56,7 @@ const AccordionsCircle = ({ items }: IAccordionsCircleProps): JSX.Element => {
       {
         items.map(({ description, icon, title }) => (
           <Accordion
+            modeTheme={modeTheme}
             showDescription={accordionsStatus[title]}
             key={title}
             onClick={handleClickAccordions}

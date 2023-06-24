@@ -1,5 +1,5 @@
 import imageService from "@/assets/images/services/desenvolvimento-de-ecommerce.webp"
-import PlansCloudez from "@/patterns/layout/sections/plans/PlansCloudez"
+import PlansCloudez from "@/patterns/sections/plans/PlansCloudez"
 import ServiceTemplate from "@/templates/Service"
 
 const EcommerceDevelopment = (): JSX.Element => {

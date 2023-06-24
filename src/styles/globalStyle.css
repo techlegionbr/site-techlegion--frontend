@@ -15,14 +15,14 @@
   --screen-sm: 420px;
 
   --font-size-xxlg: 3rem;
-  --font-size-xlg: 2.5rem;
+  --font-size-xlg: 2.4rem;
   --font-size-lg: 2rem;
   --font-size-md: 1.5rem;
   --font-size-sm: 1rem;
   --font-size-xsm: 0.8rem;
 
   --line-height-xxlg: 3.2rem;
-  --line-height-xlg: 2.2rem;
+  --line-height-xlg: 2.6rem;
   --line-height-lg: 2.2rem;
   --line-height-md: 1.7rem;
   --line-height-sm: 1.2rem;
@@ -87,7 +87,7 @@ h2 {
 }
 h1 {
   font-size: var(--font-size-xlg);
-  line-height: var(--line-height-xxlg);
+  line-height: var(--line-height-xlg);
 }
 
 @media (max-width: 420px) {
@@ -115,6 +115,6 @@ h1 {
   }
   h1 {
     font-size: calc(var(--font-size-xlg) - 0.2rem);
-    line-height: calc(var(--line-height-xxlg) - 0.2rem);
+    line-height: calc(var(--line-height-xlg) - 0.2rem);
   }
 }

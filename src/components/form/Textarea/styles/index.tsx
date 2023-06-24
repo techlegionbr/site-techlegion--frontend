@@ -42,7 +42,7 @@ export const Textarea = styled.div<ITextareaStyledProps>`
     }
   }
   .helper-text{
-    margin-top: calc(.4rem - 4px);
+    margin-top: .4rem;
     font-size: .7rem;
     line-height: .8rem;
     color: ${color.danger};

@@ -10,13 +10,15 @@ const Benefits = (): JSX.Element => {
     <S.Benefits>
       <div className="content">
         <TitleSection
-          subTitle="Veja os"
+          subTitle="Os melhores"
           title="Benefícios"
           description="Explore os benefícios exclusivos de cada serviço clicando na opção desejada."
         />
-        <AccordionsCircle
-          items={benefits}
-        />
+        <div className="benefits-accordions">
+          <AccordionsCircle
+            items={benefits}
+          />
+        </div>
       </div>
     </S.Benefits>
   )

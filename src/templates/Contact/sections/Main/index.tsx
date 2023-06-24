@@ -1,8 +1,6 @@
-import Button from "@/components/Button"
-import Input from "@/components/form/Input"
-import Textarea from "@/components/form/Textarea"
+
 import TitleSection from "@/components/TitleSection"
-import useContact from "@/hooks/form/useContact"
+import FormContact from "@/patterns/forms/FormContact"
 import { socialMediaLinks } from "@/settings/links"
 import { type TypeSocialMedia } from "@/settings/links/types"
 
@@ -42,7 +40,6 @@ const socialMedia: TypeSocialMediaIcons[] = [
 ]
 
 const Main = (): JSX.Element => {
-  const { errors, formControl, register } = useContact()
   return (
     <S.Main>
       <div className="content">
@@ -51,33 +48,7 @@ const Main = (): JSX.Element => {
           title="Entre em Contato"
         />
         <div className="contacts-cards">
-          <div className="form-contact">
-            <h3>Faça o seu orçamento!</h3>
-            <form {...formControl}>
-              <Input
-                id="input-name"
-                placeholder="Nome"
-                {...register("name")}
-                error={!!errors.name}
-                helperText={errors.name?.message}
-              />
-              <Input
-                id="input-email"
-                placeholder="Email"
-                {...register("email")}
-                error={!!errors.email}
-                helperText={errors.email?.message}
-              />
-              <Textarea
-                id="textarea-message"
-                placeholder="Mensagem"
-                {...register("message")}
-                error={!!errors.message}
-                helperText={errors.message?.message}
-              />
-              <Button iconRight={<i className='bx bxs-message'></i>} className="button-form">ENVIAR</Button>
-            </form>
-          </div>
+          <FormContact className="form-contact" />
           <ul className="social-medias">
             {
               socialMedia.map(sm => (

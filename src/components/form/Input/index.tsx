@@ -3,12 +3,14 @@ import { type MouseEventHandler, useState, type ChangeEvent, useEffect, forwardR
 
 
 import * as S from "./styles"
+import maskInput from "./utils/maskInput"
 
 
 interface InputProps extends ComponentProps<"input"> {
   label?: string,
   error?: boolean,
   helperText?: string,
+  mask?: string
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(({
@@ -23,6 +25,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
   className,
   autoComplete,
   id,
+  mask,
   ...restPropsInput
 }, ref): JSX.Element => {
 
@@ -39,6 +42,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(({
   }
 
   const handleChangeInput = (e: ChangeEvent<HTMLInputElement>): void => {
+    if (mask) { maskInput(e, mask) }
     if (onChange) { onChange(e) }
     setValueInput(e.target.value)
   }

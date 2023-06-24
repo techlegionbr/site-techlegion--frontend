@@ -17,24 +17,28 @@ const Values = (): JSX.Element => {
         />
         <ul className="list-values-card">
           <li>
-            <i className='bx bxs-user-check'></i>
-            <h4>Pessoas em<br />Primeiro lugar</h4>
+            <i className='bx bxs-user'></i>
+            <h4>Valorizando<br /> as Pessoas</h4>
           </li>
           <li>
             <i className='bx bxs-star'></i>
-            <h4>Sonhar<br />grande</h4>
+            <h4>Sonhar e<br /> Crescer</h4>
           </li>
           <li>
-            <i className='bx bxs-group'></i>
-            <h4>Prosperar<br />Juntos</h4>
+            <i className='bx bxs-cog'></i>
+            <h4>Unidos <br /> para Prosperar</h4>
+          </li>
+          <li>
+            <i className='bx bxs-heart'></i>
+            <h4>Atendimento <br />Empáticos</h4>
           </li>
           <li>
             <i className='bx bx-male-female'></i>
-            <h4>Atendimento<br />Humanizado</h4>
+            <h4>Inovação <br /> com Propósito</h4>
           </li>
           <li>
-            <i className='bx bxs-trophy'></i>
-            <h4>Ter ambição e<br />humildade</h4>
+            <i className='bx bxs-medal'></i>
+            <h4>Ambição <br /> e Humildade</h4>
           </li>
         </ul>
         <div className="social-articles">
