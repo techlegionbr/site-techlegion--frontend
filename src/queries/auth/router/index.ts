@@ -8,10 +8,7 @@ import { type IResponseFetchAuthRouter } from './types';
 
 const getAuthRouter = async (): Promise<IResponseFetchAuthRouter> => {
   const { data } = await service.get<IResponseFetchAuthRouter>(
-    apiRoutes.AUTH_ROUTE,
-    {
-      withCredentials: true
-    }
+    apiRoutes.auth.ROUTE
   );
   return data;
 };

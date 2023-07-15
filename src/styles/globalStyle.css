@@ -21,12 +21,12 @@
   --font-size-sm: 1rem;
   --font-size-xsm: 0.8rem;
 
-  --line-height-xxlg: 3.2rem;
-  --line-height-xlg: 2.6rem;
-  --line-height-lg: 2.2rem;
-  --line-height-md: 1.7rem;
-  --line-height-sm: 1.2rem;
-  --line-height-xsm: 1rem;
+  --line-height-xxlg: 3.6rem;
+  --line-height-xlg: 2.8rem;
+  --line-height-lg: 2.3rem;
+  --line-height-md: 1.8rem;
+  --line-height-sm: 1.3rem;
+  --line-height-xsm: 1.1rem;
 }
 
 html {

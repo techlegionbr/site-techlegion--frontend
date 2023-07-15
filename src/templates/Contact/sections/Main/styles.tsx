@@ -4,15 +4,20 @@ import styled from "styled-components";
 
 export const Main = styled.div`
   width: 100%;
-  padding: 50px ${layout.containerPaddingX};
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-image: url(${backgroundImageMain.src});
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  padding: 100px ${layout.containerPaddingX};
+  @media (max-width: ${screens.xlg}) {
+    min-height: calc(100vh - (${layout.header.sub} + ${layout.header.sup}));
+    padding: 50px ${layout.containerPaddingX};
+    background-size: cover ;
+  }
   .content{
     width: ${layout.contentWidth};
     .contacts-cards{

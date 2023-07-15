@@ -1,5 +1,6 @@
 import BenefitsSection from "./Benefits";
 import ContactFormSection from "./ContactForm";
+import KommoStampSection from "./KommoStamp";
 import MainSection from "./Main";
 import ManageTeamSection from "./ManageTeam"
 import SelectKommoSection from "./SelectKommo";
@@ -9,5 +10,6 @@ export {
   BenefitsSection,
   SelectKommoSection,
   ManageTeamSection,
-  ContactFormSection
+  ContactFormSection,
+  KommoStampSection
 }

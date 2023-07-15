@@ -7,7 +7,7 @@ export const socialMediaLinks: TypeLinks = {
   instagram: 'https://www.instagram.com/techlegionbr/',
   facebook: 'https://www.facebook.com/techlegionbr',
   tiktok: 'https://www.tiktok.com/@techlegionbr',
-  whatsapp: "https://api.whatsapp.com/send?phone=555180276708",
+  whatsapp: "https://api.whatsapp.com/send?phone=555180276708&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Tech%20Legion%20e%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es.",
   email: "mailto:contato@techlegion.com.br"
 };
 

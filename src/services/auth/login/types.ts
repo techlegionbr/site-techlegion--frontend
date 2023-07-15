@@ -1,4 +1,4 @@
-export interface IServiceLogin {
+export interface ILoginService {
   data: IResponseFetchLogin;
   error: boolean | null;
 }

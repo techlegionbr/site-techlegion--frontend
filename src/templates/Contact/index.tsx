@@ -1,9 +1,7 @@
-import ButtonToTop from "@/components/ButtonToTop"
 import HorizontalLine from "@/components/HorizontalLine"
 import HeadTemplate from "@/components/SEO/Head"
-import Footer from "@/patterns/layout/Footer"
-import Header from "@/patterns/layout/Header"
-import SectionDivider from "@/patterns/sections/Divider"
+import { Layout } from "@/patterns/Layout"
+import { Section } from "@/patterns/Section"
 
 import { MainSection } from "./sections"
 import Faq from "./sections/Faq"
@@ -17,15 +15,14 @@ const Contact = (): JSX.Element => {
         description="A Tech Legion é uma empresa de prestação de serviços, desenvolvimento de site, lading page, ecommerce, aplicativo, design gráfico e muito mais."
         robots={["index", "follow", "max-image-preview:large", "max-snippet:-1", "max-video-preview:-1"]}
       />
-      <ButtonToTop />
-      <Header />
+      <Layout.Header />
       <MainSection />
       <HorizontalLine />
       <Faq />
       <HorizontalLine />
-      <SectionDivider bgColor="primary" />
+      <Section.Divider bgColor="primary" />
       <HorizontalLine />
-      <Footer />
+      <Layout.Footer />
     </>
   )
 }

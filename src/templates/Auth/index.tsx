@@ -1,6 +1,5 @@
 import HorizontalLine from "@/components/HorizontalLine"
-import Footer from "@/patterns/layout/Footer"
-import Header from "@/patterns/layout/Header"
+import { Layout } from "@/patterns/Layout"
 
 import { MainSection } from "./sections"
 
@@ -8,13 +7,13 @@ import { MainSection } from "./sections"
 const Auth = (): JSX.Element => {
   return (
     <>
-      <Header
+      <Layout.Header
         navigation={false}
         supHeader={false}
       />
       <MainSection />
       <HorizontalLine />
-      <Footer />
+      <Layout.Footer />
     </>
   )
 }

@@ -18,7 +18,7 @@ export const CardsService = styled.div`
   width: 100%;
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 2rem;
   @media (max-width: ${screens.md}) {
     gap: 1rem;
@@ -39,7 +39,7 @@ export const CardService = styled.div`
   justify-content: flex-start;
   text-align: start;
   @media (max-width: ${screens.sm}) {
-    height: 480px;
+    height: 460px;
   }
   .circle-icon{
     width: 80px;

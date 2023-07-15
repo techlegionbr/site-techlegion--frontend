@@ -6,7 +6,7 @@ export const Main = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 1rem ${layout.containerPaddingX} 1rem ${layout.containerPaddingX};
+  padding: 3rem ${layout.containerPaddingX};
   background-color: ${color.primary};
   .content{
     width: ${layout.contentWidth};

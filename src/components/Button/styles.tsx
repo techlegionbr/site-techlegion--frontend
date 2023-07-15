@@ -25,6 +25,7 @@ export const Button = styled.button<PropsButtonStyled>`
       size === "medium" ? ".9rem" :
         size === "big" ? "1rem" : ""
   )};
+  text-transform: uppercase;
   opacity: ${({ hover, isDisabled }) => isDisabled ? ".5" : hover === "opacity" || hover === "scale" ? ".8" : "1"} ;
   transition: .2s;
   border: 1.4px solid ${({ colorTheme }) => color[colorTheme]};

@@ -10,7 +10,7 @@ export const Main = styled.div`
   padding: 100px ${layout.containerPaddingX};
   @media (max-width: ${screens.xlg}) {
     min-height: calc(100vh - (${layout.header.sub} + ${layout.header.sup}));
-    padding: ${layout.containerPaddingX};
+    padding: 50px ${layout.containerPaddingX};
   }
   .content{
     width: ${layout.contentWidth};
@@ -34,14 +34,28 @@ export const Main = styled.div`
     }
     .image-apresentation{
       width: 40%;
+      border-radius: .7rem;
       height: 350px;
+      background-color: #1b204d;
+      border: 1px solid #8389fe16;
+      position: relative;
+      overflow: hidden;
       @media (max-width: ${screens.md}) {
         width: 100%;
       }
       img{
-        width: 100%;
+        position: absolute;
+        width: auto;
+        left: 2rem;
         height: 100%;
-        object-fit: contain;
+        @media (max-width: ${screens.md}) {
+          left: auto;
+          right: -4rem;
+        }
+        @media (max-width: ${screens.sm}) {
+          left: 2rem;
+          right: auto;
+        }
       }
     }
   }

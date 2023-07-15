@@ -1,10 +1,8 @@
 import imageService from "@/assets/images/services/desenvolvimento-de-aplicativo-mobile.webp"
-import PlansCloudez from "@/patterns/sections/plans/PlansCloudez"
 import ServiceTemplate from "@/templates/Service"
 
 const MobileApplicationDevelopment = (): JSX.Element => {
   return <ServiceTemplate
-    SectionPlans={PlansCloudez}
     service={{
       icon: <i className='bx bxs-mobile'></i>,
       name: "Desenvolvimento de Aplicativo Mobile",

@@ -2,10 +2,10 @@
 
 
 import image from "@/assets/images/auth/chocado-homem-em-vr-oculos-protecao.webp"
-import Alert from "@/components/alerts/Alert"
+import { Alert } from "@/components/Alert"
 import Button from "@/components/Button"
-import Input from "@/components/form/Input"
-import LoaderDefault from "@/components/loaders/LoaderDefault"
+import { Form } from "@/components/Form"
+import LoaderDefault from "@/components/Loader/LoaderDefault"
 import useLogin from "@/hooks/form/auth/useLogin"
 import { color } from "@/styles/root"
 
@@ -21,7 +21,7 @@ const Main = (): JSX.Element => {
         <div className="card-login">
           <h2>Login</h2>
           <form {...formControl}>
-            <Input
+            <Form.Input
               className="input-form"
               label="Email"
               error={!!errors.email}
@@ -30,7 +30,7 @@ const Main = (): JSX.Element => {
               autoComplete="off"
               {...register("email")}
             />
-            <Input
+            <Form.Input
               className="input-form"
               label="Senha"
               type="password"
@@ -49,7 +49,7 @@ const Main = (): JSX.Element => {
           <Image src={image} alt="Imagem Reconhecimento Facial" width={400} />
         </div>
       </div>
-      <Alert
+      <Alert.Default
         helperText={{
           main: alertLogin.helperText.main,
           sup: alertLogin.helperText.sup

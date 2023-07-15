@@ -23,13 +23,10 @@ export const schemaCreateManager = zod.object({
         const isValid = permissions.every((permission) =>
           permissionsAdmin.includes(permission as TPermissionsAdmin)
         );
-        if (!isValid) {
-          return false;
-        }
-        if (Array.from(new Set(permissions)).length !== permissions.length) {
-          return false;
-        }
-        return true;
+        return (
+          isValid &&
+          Array.from(new Set(permissions)).length === permissions.length
+        );
       },
       { message: 'Permissões inválidas!' }
     ),

@@ -2,6 +2,7 @@ import { type SubmitHandler, useForm } from 'react-hook-form';
 
 import { schemaCreateEditor } from '@/schemas/creation/Editor';
 import { type IFormCreateEditor } from '@/schemas/creation/Editor/types';
+import createEditorService from '@/services/creation/Editor';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { type IOnSubmit } from '../../types';
@@ -18,9 +19,9 @@ const useCreateEditor = (): IStateCreateEditor => {
   });
 
   const handleCreateEditor: SubmitHandler<IFormCreateEditor> = async (
-    data
+    editor
   ): Promise<void> => {
-    console.log(data);
+    const { data, error } = await createEditorService(editor);
   };
 
   const formControl: IOnSubmit = {

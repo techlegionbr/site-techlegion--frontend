@@ -2,6 +2,7 @@
 
 import AccordionsQuest from "@/components/accordions/AccordionsQuest"
 import Button from "@/components/Button"
+import { socialMediaLinks } from "@/settings/links"
 
 import { type TypeService } from "../../types"
 import * as S from "./styles"
@@ -67,7 +68,7 @@ const Infos = ({ service }: PropsInfos): JSX.Element => {
           <div className="price">
             <span className="sub-price">A partir de</span>
             <span className="price-value">R$ {String(service.value).replace(".", ",")}</span>
-            <Button className="button-contract" size="medium">Contratar Serviço</Button>
+            <Button target="_blank" href={socialMediaLinks.whatsapp} className="button-contract" size="medium">Contratar Serviço</Button>
           </div>
           <div className="included-service">
             <h4>Nossos serviços incluem:</h4>

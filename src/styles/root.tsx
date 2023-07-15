@@ -20,12 +20,12 @@ export const font = {
     xsm: ".8rem"
   },
   line_height: {
-    xxlg: "3.5rem",
-    xlg: "2.7rem",
-    lg: "2.2rem",
-    md: "1.7rem",
-    sm: "1.2rem",
-    xsm: "1rem"
+    xxlg: "3.6rem",
+    xlg: "2.8rem",
+    lg: "2.3rem",
+    md: "1.8rem",
+    sm: "1.3rem",
+    xsm: "1.1rem"
   }
 }
 
@@ -41,7 +41,7 @@ export const color = {
 }
 
 export const layout = {
-  contentWidth: "900px",
+  contentWidth: "1000px",
   containerPaddingX: "1rem",
   header: {
     sup: `${(110 * 30) / 100}px`,

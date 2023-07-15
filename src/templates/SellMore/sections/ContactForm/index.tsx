@@ -1,5 +1,5 @@
 import TitleSection from "@/components/TitleSection"
-import FormContact from "@/patterns/forms/FormContact"
+import FormContact from "@/patterns/Form/FormContact"
 
 import * as S from "./styles"
 

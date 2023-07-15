@@ -4,16 +4,13 @@ import { service } from '@/services/settings';
 import { AxiosError } from 'axios';
 
 import constants from './constants';
-import { type IResponseFetchLogin, type IServiceLogin } from './types';
+import { type IResponseFetchLogin, type ILoginService } from './types';
 
-const loginService = async (login: IFormLogin): Promise<IServiceLogin> => {
+const loginService = async (login: IFormLogin): Promise<ILoginService> => {
   try {
     const { data } = await service.post<IResponseFetchLogin>(
-      apiRoutes.AUTH_LOGIN,
-      login,
-      {
-        withCredentials: true
-      }
+      apiRoutes.auth.LOGIN,
+      login
     );
     return { data, error: false };
   } catch (error: unknown) {

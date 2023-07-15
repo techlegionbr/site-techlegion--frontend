@@ -1,12 +1,12 @@
 
-import PrivateRouter from "@/components/auth/PrivateRouter";
+import { Auth } from "@/components/Auth"
 import ManagersPainelTemplate from "@/templates/Painel/routes/Managers";
 
 const Managers = (): JSX.Element => {
   return (
-    <PrivateRouter levelAccess="admin">
+    <Auth.PrivateRouter levelAccess="admin">
       <ManagersPainelTemplate />
-    </PrivateRouter>
+    </Auth.PrivateRouter>
   )
 }
 

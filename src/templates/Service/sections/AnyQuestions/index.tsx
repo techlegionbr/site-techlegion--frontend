@@ -1,5 +1,6 @@
 import Button from "@/components/Button"
 import TitleSection from "@/components/TitleSection"
+import { socialMediaLinks } from "@/settings/links"
 
 import * as S from "./styles"
 
@@ -17,7 +18,7 @@ const AnyQuestions = ({ bgColor }: IAnyQuestionsProps): JSX.Element => {
           title="Ficou com alguma dúvida?"
           description="Se você tem alguma dúvida, qualquer que seja, pode falar direto no WhatsApp. É só chamar, que você terá sua resposta."
         />
-        <Button className="button-contact" size="medium">Conversar pelo Whatsapp</Button>
+        <Button target="_blank" href={socialMediaLinks.whatsapp} className="button-contact" size="medium">Conversar pelo Whatsapp</Button>
       </div>
     </S.AnyQuestions>
   )

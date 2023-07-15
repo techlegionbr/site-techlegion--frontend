@@ -49,7 +49,7 @@ const Post = ({ post }: PropsPost): JSX.Element => {
       <div className={`popup-post translate-y`}>
         <h3>{post.title}</h3>
         <p>{post.prevDescription}</p>
-        <Button className="button-know-more" hover="transparent">Leia Mais</Button>
+        <Button className="button-know-more">Leia Mais</Button>
       </div>
     </S.Post>
   )

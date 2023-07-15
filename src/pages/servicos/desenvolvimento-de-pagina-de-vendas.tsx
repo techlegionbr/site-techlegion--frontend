@@ -1,10 +1,8 @@
 import imageService from "@/assets/images/services/desenvolvimento-de-pagina-de-vendas.webp"
-import PlansCloudez from "@/patterns/sections/plans/PlansCloudez"
 import ServiceTemplate from "@/templates/Service"
 
 const SalesPageDevelopment = (): JSX.Element => {
   return <ServiceTemplate
-    SectionPlans={PlansCloudez}
     service={{
       icon: <i className='bx bx-windows'></i>,
       name: "Desenvolvimento de Página de Vendas",

@@ -11,15 +11,22 @@ export type TPermissionsAdmin =
   | 'manageAllUsers'
   | 'editProfile';
 
-export type TPermissionsUser = Omit<
-  TPermissionsAdmin,
-  | 'createAdmin'
-  | 'manageAdmin'
-  | 'manageAllAdmins'
-  | 'createUser'
-  | 'manageUser'
-  | 'manageAllUsers'
->;
+// export type TPermissionsUser = Omit<
+//   TPermissionsAdmin,
+//   | 'createAdmin'
+//   | 'manageAdmin'
+//   | 'manageAllAdmins'
+//   | 'createUser'
+//   | 'manageUser'
+//   | 'manageAllUsers'
+// >;
+
+export type TPermissionsUser =
+  | 'seePanel'
+  | 'createPost'
+  | 'managePost'
+  | 'manageAllPosts'
+  | 'editProfile';
 
 export type TLevelAccess = 'user' | 'admin';
 

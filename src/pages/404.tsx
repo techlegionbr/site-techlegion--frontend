@@ -1,7 +1,8 @@
-import NotFoundTemplate from "@/patterns/helperScreens/NotFound"
+import { Page } from "@/patterns/Page"
+
 
 const NotFound = (): JSX.Element => {
-  return <NotFoundTemplate />
+  return <Page.NotFound />
 }
 
 export default NotFound

@@ -1,12 +1,12 @@
-import PrivateRouter from "@/components/auth/PrivateRouter"
+import { Auth } from "@/components/Auth"
 import AuthTemplate from "@/templates/Auth"
 
-const Auth = (): JSX.Element => {
+const AuthPage = (): JSX.Element => {
   return (
-    <PrivateRouter levelAccess="public" autoLevelAccessVerification>
+    <Auth.PrivateRouter levelAccess="public" autoLevelAccessVerification>
       <AuthTemplate />
-    </PrivateRouter>
+    </Auth.PrivateRouter>
   )
 }
 
-export default Auth
+export default AuthPage

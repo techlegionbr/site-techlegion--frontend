@@ -14,7 +14,9 @@ interface PropsButton {
   size?: "small" | "medium" | "big",
   href?: string,
   onClick?: MouseEventHandler<HTMLButtonElement>,
-  disabled?: boolean
+  disabled?: boolean,
+  target?: "_blank",
+  preventDefault?: boolean
 }
 
 const Button = ({
@@ -26,13 +28,23 @@ const Button = ({
   hover = "opacity",
   size = "small",
   href,
+  target,
   onClick,
+  preventDefault = false,
   disabled = false
 }: PropsButton): JSX.Element => {
   const router = useRouter()
   const handleClickButton: MouseEventHandler<HTMLButtonElement> = (e) => {
-    if (typeof href === "string") {
+    if (preventDefault) {
+      e.preventDefault()
+    }
+    if (typeof href === "string" && target !== "_blank") {
       void router.push(href)
+      return
+    }
+    if (typeof href === "string" && target === "_blank" && typeof window !== "undefined") {
+      window.open(href, "_blank")
+      return
     }
     if (typeof onClick === "function") {
       onClick(e)

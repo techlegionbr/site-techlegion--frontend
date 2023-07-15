@@ -7,7 +7,7 @@ export const ManageTeam = styled.div`
   display: flex;
   justify-content: center;
   padding: 100px ${layout.containerPaddingX};
-  background-color: ${color.bluishGray};
+  background-color: ${color.primary};
   .content{
     width: ${layout.contentWidth};
     .cards-benefits{
@@ -18,9 +18,9 @@ export const ManageTeam = styled.div`
       gap: 1.4rem;
       li{
         height: 200px;
-        background-color: #111a37;
+        background-color: #0e1b47;
         border-radius: .5rem;
-        border: 1.2px solid #8594f547;
+        border: 2px solid #5a6de523;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -30,7 +30,7 @@ export const ManageTeam = styled.div`
         cursor: default;
         &:hover{
           transform: scale(1.05);
-          border: 1.2px solid #8594f5c4;
+          border-color: #8594f5c4;
           i, span{
             opacity: 1;
           }

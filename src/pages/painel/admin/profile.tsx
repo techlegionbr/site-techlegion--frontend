@@ -1,11 +1,11 @@
-import PrivateRouter from "@/components/auth/PrivateRouter";
+import { Auth } from "@/components/Auth"
 import ProfilePainelTemplate from "@/templates/Painel/routes/Profile";
 
 const Profile = (): JSX.Element => {
   return (
-    <PrivateRouter levelAccess="admin">
+    <Auth.PrivateRouter levelAccess="admin">
       <ProfilePainelTemplate />
-    </PrivateRouter>
+    </Auth.PrivateRouter>
   )
 }
 

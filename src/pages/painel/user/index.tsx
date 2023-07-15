@@ -1,11 +1,11 @@
-import PrivateRouter from "@/components/auth/PrivateRouter"
+import { Auth } from "@/components/Auth"
 import PainelUserTemplate from "@/templates/Painel/routes/User"
 
 const PainelUser = (): JSX.Element => {
   return (
-    <PrivateRouter levelAccess="user">
+    <Auth.PrivateRouter levelAccess="user">
       <PainelUserTemplate />
-    </PrivateRouter>
+    </Auth.PrivateRouter>
   )
 }
 

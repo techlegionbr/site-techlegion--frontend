@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-optional-chain */
 /* eslint-disable import-helpers/order-imports */
 
 
@@ -10,6 +11,7 @@ import Head from "next/head"
 import { QueryClientProvider } from 'react-query';
 
 import { queryClient } from "@/services/queryClient";
+import { Navigation } from "@/components/Navigation";
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -23,11 +25,16 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
         <meta property="og:site_name" content="Tech Legion" />
         <link rel="canonical" href={site.host} />
         <meta property="og:url" content={site.host} />
+
+
       </Head>
       {/* <GlobalStyle /> */}
       <QueryClientProvider client={queryClient}>
         <Component {...pageProps} />
+        <Navigation.ButtonToTop />
       </QueryClientProvider>
+
+
     </>
   )
 }

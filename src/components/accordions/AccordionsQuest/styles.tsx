@@ -28,7 +28,7 @@ export const Accordion = styled.li<PropsAccordion>`
     display: flex;
     align-items: center;
     position: relative;
-    padding-right: 2.5rem;
+    padding-right: 3rem;
     opacity: ${({ show }) => show ? "1" : ".8"};
     transition: .2s;
     .arrow-icon{

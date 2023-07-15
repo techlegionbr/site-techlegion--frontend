@@ -1,6 +1,5 @@
-import { color, layout } from "@/styles/root";
-import styled from "styled-components";
-
+import { color, layout } from '@/styles/root';
+import styled from 'styled-components';
 
 export const Faq = styled.div`
   width: 100%;
@@ -9,26 +8,26 @@ export const Faq = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${color.bluishGray};
-  .content{
+  .content {
     width: ${layout.contentWidth};
-    .comon-questions{
+    .comon-questions {
       width: 100%;
       display: grid;
       margin-top: 3rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
       gap: 1rem;
-      .question{
+      .question {
         background-color: #161630;
         padding: 1.4rem 1.5rem;
-        border-radius: .6rem;
+        border-radius: 0.6rem;
         border: 1.2px solid #516d9329;
-        h4{
-          color: ${color.third}
+        h4 {
+          color: ${color.third};
         }
-        p{
-          margin-top: .5rem;
+        p {
+          margin-top: 0.5rem;
         }
       }
     }
   }
-`
+`;

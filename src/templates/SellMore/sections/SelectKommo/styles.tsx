@@ -19,7 +19,7 @@ export const SelectKommo = styled.div`
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 4rem;
+        gap: 3rem;
         @media (max-width: ${screens.md}) {
           flex-direction: column;
           gap: 1rem;
@@ -39,17 +39,29 @@ export const SelectKommo = styled.div`
         .reason-image{
           width: 40%;
           height: 300px;
+          background-color: #1b204d;
+          border: 1px solid #8389fe16;
+          position: relative;
+          overflow: hidden;
+          border-radius: .7rem;
           @media (max-width: ${screens.md}) {
             width: 100%;
             height: 250px;
           }
           img{
-            width: 100%;
-            object-fit: contain;
+            position: absolute;
+            top: 0;
             height: 100%;
-            object-position: 0 0;
+            width: auto;
+            left: 2rem;
+            right: auto;
             @media (max-width: ${screens.md}) {
-              object-position: center;
+              left: auto;
+              right: -2.5rem;
+            }
+            @media (max-width: ${screens.sm}) {
+              right: auto;
+              left: 2rem;
             }
           }
         }

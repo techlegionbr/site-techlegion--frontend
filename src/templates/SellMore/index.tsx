@@ -1,10 +1,9 @@
-import ButtonToTop from "@/components/ButtonToTop"
 import HorizontalLine from "@/components/HorizontalLine"
 import HeadTemplate from "@/components/SEO/Head"
-import Footer from "@/patterns/layout/Footer"
-import Header from "@/patterns/layout/Header"
+import { Layout } from "@/patterns/Layout"
+import { Section } from "@/patterns/Section"
 
-import { BenefitsSection, ContactFormSection, MainSection, ManageTeamSection, SelectKommoSection } from "./sections"
+import { BenefitsSection, ContactFormSection, KommoStampSection, MainSection, ManageTeamSection, SelectKommoSection } from "./sections"
 
 
 
@@ -15,19 +14,22 @@ const SellMore = (): JSX.Element => {
         title="Venda Mais - Tech Legion"
         robots={["index", "follow", "max-image-preview:large", "max-snippet:-1", "max-video-preview:-1"]}
       />
-      <ButtonToTop />
-      <Header />
+      <Layout.Header />
       <MainSection />
       <HorizontalLine />
       <BenefitsSection />
       <HorizontalLine />
       <SelectKommoSection />
       <HorizontalLine />
+      <KommoStampSection />
+      <HorizontalLine />
       <ManageTeamSection />
       <HorizontalLine />
       <ContactFormSection />
       <HorizontalLine />
-      <Footer />
+      <Section.Divider bgColor="primary" />
+      <HorizontalLine />
+      <Layout.Footer />
     </>
   )
 }

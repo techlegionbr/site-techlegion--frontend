@@ -1,6 +1,6 @@
 
 import TitleSection from "@/components/TitleSection"
-import FormContact from "@/patterns/forms/FormContact"
+import FormContact from "@/patterns/Form/FormContact"
 import { socialMediaLinks } from "@/settings/links"
 import { type TypeSocialMedia } from "@/settings/links/types"
 

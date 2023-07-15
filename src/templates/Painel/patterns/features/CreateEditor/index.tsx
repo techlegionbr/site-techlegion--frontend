@@ -1,11 +1,11 @@
 import { Controller } from "react-hook-form";
 
 import Button from "@/components/Button";
-import Checkboxes from "@/components/form/Checkboxes";
-import Input from "@/components/form/Input";
+import { Form } from "@/components/Form";
 import useCreateEditor from "@/hooks/form/creation/useCreateEditor";
 
 import CardFeatureStyled from "../../styles/CardFeature";
+import { optionPermissionsEditor } from "./settings";
 import * as S from "./styles"
 
 
@@ -18,14 +18,14 @@ const CreateEditor = ({ order = 0 }: { order?: number }): JSX.Element => {
         <h4>Adicionar novo redator</h4>
         <form {...formControl}>
           <div className="form-top">
-            <Input
+            <Form.Input
               label="Nome"
               id="input-name"
               error={!!errors.name}
               helperText={errors.name?.message}
               {...register("name")}
             />
-            <Input
+            <Form.Input
               label="Email"
               id="input-email"
               error={!!errors.email}
@@ -36,21 +36,12 @@ const CreateEditor = ({ order = 0 }: { order?: number }): JSX.Element => {
               control={control}
               name="permissions"
               render={({ field }) => (
-                <Checkboxes
-                  id="permissions"
+                <Form.Checkboxes
+                  id="checkboxes-permissions"
                   label="Permissões"
                   onChange={field.onChange}
-                  defaultValues={["seePainel"]}
-                  options={[
-                    {
-                      label: "Visualizar painel",
-                      value: "seePainel"
-                    },
-                    {
-                      label: "Adicionar redatores",
-                      value: "createUser"
-                    },
-                  ]}
+                  defaultValues={[optionPermissionsEditor[0].value]}
+                  options={optionPermissionsEditor}
                   error={!!errors.permissions}
                   helperText={errors.permissions?.message}
                 />
@@ -59,8 +50,8 @@ const CreateEditor = ({ order = 0 }: { order?: number }): JSX.Element => {
             />
           </div>
           <div className="form-footer">
-            <Input
-              type="number"
+            <Form.Input
+              mask="99"
               label="Criação de posts *Limite Semanal"
               className="input-form-footer"
               error={!!errors.weeklyPostCreationLimit}

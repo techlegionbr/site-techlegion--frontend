@@ -2,6 +2,7 @@ import { type SubmitHandler, useForm } from 'react-hook-form';
 
 import { schemaCreateManager } from '@/schemas/creation/Manager';
 import { type IFormCreateManager } from '@/schemas/creation/Manager/types';
+import createManagerService from '@/services/creation/Manager';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { type IOnSubmit } from '../../types';
@@ -18,9 +19,10 @@ const useCreateManager = (): IStateCreateManager => {
   });
 
   const handleCreateManager: SubmitHandler<IFormCreateManager> = async (
-    data
+    manager
   ): Promise<void> => {
-    console.log(data);
+    const { data, error } = await createManagerService(manager);
+    console.log(data, error);
   };
 
   const formControl: IOnSubmit = {

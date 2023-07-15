@@ -1,10 +1,8 @@
 import imageService from "@/assets/images/services/desenvolvimento-de-ecommerce.webp"
-import PlansCloudez from "@/patterns/sections/plans/PlansCloudez"
 import ServiceTemplate from "@/templates/Service"
 
 const EcommerceDevelopment = (): JSX.Element => {
   return <ServiceTemplate
-    SectionPlans={PlansCloudez}
     service={{
       icon: <i className='bx bxs-store'></i>,
       name: "Desenvolvimento de Ecommerce",

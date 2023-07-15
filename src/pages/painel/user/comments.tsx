@@ -1,11 +1,11 @@
-import PrivateRouter from "@/components/auth/PrivateRouter"
+import { Auth } from "@/components/Auth"
 import PainelCommentsTemplate from "@/templates/Painel/routes/Comments"
 
 const CommentslUser = (): JSX.Element => {
   return (
-    <PrivateRouter levelAccess="user">
+    <Auth.PrivateRouter levelAccess="user">
       <PainelCommentsTemplate />
-    </PrivateRouter>
+    </Auth.PrivateRouter>
   )
 }
 

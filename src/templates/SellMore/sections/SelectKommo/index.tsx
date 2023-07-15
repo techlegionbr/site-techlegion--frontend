@@ -1,8 +1,8 @@
-import imageKommo01 from "@/assets/images/seellMore/kommo-caixa-de-entrada-conversa-medio.webp"
-import imageKommo02 from "@/assets/images/seellMore/kommo-funil-de-vendas-lead.fw_.webp"
+import imageKommo from "@/assets/images/seellMore/kommo-caixa-de-entrada-conversa-medio.webp"
+import imageKommoFunil from "@/assets/images/seellMore/kommo-crm-funil-de-vendas-lead.png"
 import Button from "@/components/Button"
 import TitleSection from "@/components/TitleSection"
-
+import { socialMediaLinks } from "@/settings/links"
 
 import Image from "next/image"
 
@@ -28,12 +28,12 @@ const SelectKommo = (): JSX.Element => {
               </p>
             </div>
             <div className="reason-image">
-              <Image src={imageKommo01} alt="kommo-caixa-de-entrada-conversa-medio" width={300} />
+              <Image src={imageKommo} alt="kommo-caixa-de-entrada-conversa-medio" width={300} />
             </div>
           </div>
           <div className="reason-article">
             <div className="reason-image">
-              <Image src={imageKommo02} alt="kommo-caixa-de-entrada-conversa-medio" width={300} />
+              <Image src={imageKommoFunil} alt="kommo-caixa-de-entrada-conversa-medio" width={300} />
             </div>
             <div className="reason-description">
               <h3>Gestão de vendas com uma experiência fácil e intuitiva</h3>
@@ -44,7 +44,7 @@ const SelectKommo = (): JSX.Element => {
                 Tenha controle total e uma visão completa do seu processo de vendas para alcançar suas metas com
                 confiança.
               </p>
-              <Button className="btn-sell-more" size="medium">Quero Vender Mais</Button>
+              <Button target="_blank" href={socialMediaLinks.whatsapp} className="btn-sell-more" size="medium">Quero Vender Mais</Button>
             </div>
           </div>
         </div>
