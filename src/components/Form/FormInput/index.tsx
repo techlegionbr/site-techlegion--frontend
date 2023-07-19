@@ -1,5 +1,5 @@
 
-import { type MouseEventHandler, useState, type ChangeEvent, useEffect, forwardRef, type ComponentProps, type FocusEvent } from "react"
+import { type MouseEventHandler, useState, useEffect, forwardRef, type ComponentProps, type FocusEvent, type ChangeEventHandler } from "react"
 
 
 import * as S from "./styles"
@@ -32,6 +32,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
   const [isFocus, setIsFocus] = useState(false)
   const [typeInput, setTypeInput] = useState(type)
   const [valueInput, setValueInput] = useState(value)
+
   useEffect(() => {
     setValueInput(value)
   }, [value])
@@ -41,7 +42,7 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
     setTypeInput(prevType => prevType === "text" ? "password" : "text");
   }
 
-  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>): void => {
+  const handleChangeInput: ChangeEventHandler<HTMLInputElement> = (e): void => {
     if (mask) { maskInput(e, mask) }
     if (onChange) { onChange(e) }
     setValueInput(e.target.value)
@@ -62,12 +63,12 @@ const FormInput = forwardRef<HTMLInputElement, FormInputProps>(({
       {label && <label>{label}</label>}
       <div className="input-container">
         <input
+          ref={ref}
           type={type === "password" ? typeInput : type}
           onFocus={handleFocusInput}
           onBlur={handleBlurInput}
           value={valueInput}
           onChange={handleChangeInput}
-          ref={ref}
           autoComplete={type === "password" || error ? "off" : autoComplete}
           {...restPropsInput}
         />

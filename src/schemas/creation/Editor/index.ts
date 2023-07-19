@@ -36,8 +36,8 @@ export const schemaCreateEditor = zod.object({
     .refine((value) => !isNaN(Number(value)), {
       message: 'É necessário inserir um número neste campo.'
     })
-    .refine((value) => value.length <= 9, {
+    .refine((value) => Number(value) <= 20, {
       message:
-        'O valor inserido é muito grande! O limite máximo esperado é de 9 dígitos.'
+        'O valor inserido é muito grande! O limite máximo esperado é de 20.'
     })
 });

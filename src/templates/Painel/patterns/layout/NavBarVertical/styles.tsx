@@ -8,7 +8,7 @@ export const NavBarVertical = styled.div`
   justify-content: center;
   padding-right: ${layout.containerPaddingX};
   .content{
-    width: 1500px;
+    width: 1900px;
     display: flex;
     .nav{
       width: 200px;

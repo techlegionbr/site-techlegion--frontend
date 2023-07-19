@@ -11,7 +11,7 @@ const createEditorService = async (
 ): Promise<ICreateEditor> => {
   try {
     const { data } = await service.post<IResponseCreateEditor>(
-      apiRoutes.admin.CREATE_USER,
+      apiRoutes.user.CREATE_USER,
       editor
     );
     return {

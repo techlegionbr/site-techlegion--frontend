@@ -1,4 +1,4 @@
-import { type TRoutesAdmin, type TRoutesAuth } from './types';
+import { type TRoutesUser, type TRoutesAdmin, type TRoutesAuth } from './types';
 import assignRoutes from './utils';
 
 const apiRoutes = {
@@ -9,8 +9,12 @@ const apiRoutes = {
     })
   },
   admin: {
-    ...assignRoutes<TRoutesAdmin>('/entity/admin', {
-      CREATE_ADMIN: '/create-admin',
+    ...assignRoutes<TRoutesAdmin>('/admin', {
+      CREATE_ADMIN: '/create-admin'
+    })
+  },
+  user: {
+    ...assignRoutes<TRoutesUser>('/user', {
       CREATE_USER: '/create-user'
     })
   }

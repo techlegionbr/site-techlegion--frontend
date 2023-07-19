@@ -5,7 +5,7 @@ import { useQueryClient } from 'react-query';
 import queryKeys from '@/queries/constants/queryKeys';
 import { schemaLogin } from '@/schemas/auth/login';
 import { type IFormLogin } from '@/schemas/auth/login/types';
-import loginService from '@/services/auth/login';
+import { authenticationService } from '@/services/api/authenticationService';
 import { hostLinks } from '@/settings/links';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -46,7 +46,9 @@ const useLogin = (): IStateRegister => {
     data
   ): Promise<void> => {
     setBlockForm(true);
-    const { data: responseLogin, error } = await loginService(data);
+    const { data: responseLogin, error } = await authenticationService.login(
+      data
+    );
     const { levelAccess, message } = responseLogin;
 
     if (error) {

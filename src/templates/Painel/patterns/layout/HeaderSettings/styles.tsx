@@ -15,7 +15,7 @@ export const HeaderSettings = styled.div`
   z-index: 15;
   border-bottom: 1.4px solid #7dc0ff1c;
   .content{
-    width: ${layout.contentWidth};
+    width: 1900px;
     display: flex;
     align-items: center;
     justify-content: space-between;

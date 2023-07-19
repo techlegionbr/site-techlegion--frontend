@@ -19,7 +19,7 @@ const PainelAdmin = (): JSX.Element => {
       {
         permissions && levelAccess ? (
           <NavBarVertical nameRoutes={handlePermissionRoutes(permissions)} levelAccess={levelAccess}>
-            <h1>Painel Admin</h1>
+            <h1>Painel do Gestor</h1>
           </NavBarVertical>
         ) : <></>
       }

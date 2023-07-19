@@ -3,6 +3,7 @@
 import HorizontalLine from "@/components/HorizontalLine"
 import HeadTemplate from "@/components/SEO/Head"
 import { Layout } from "@/patterns/Layout"
+import { Section } from "@/patterns/Section"
 
 import {
   MainSection,
@@ -11,7 +12,8 @@ import {
   AboutSection,
   StrikingPhraseSection,
   PrinciplesSection,
-  ContactFormSection
+  ContactFormSection,
+  ClientsSection
 } from "./sections"
 
 
@@ -36,6 +38,10 @@ const Home = (): JSX.Element => {
       <StrikingPhraseSection />
       <HorizontalLine />
       <PrinciplesSection />
+      <HorizontalLine />
+      <Section.Divider bgColor="primary" />
+      <HorizontalLine />
+      <ClientsSection />
       <HorizontalLine />
       <ContactFormSection />
       <HorizontalLine />

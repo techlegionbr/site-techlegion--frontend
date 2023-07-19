@@ -14,7 +14,7 @@ const PainelUser = (): JSX.Element => {
       {
         permissions && levelAccess ? (
           <NavBarVertical nameRoutes={handlePermissionRoutes(permissions)} levelAccess={levelAccess}>
-            <h1>Painel User</h1>
+            <h1>Painel do Redator</h1>
           </NavBarVertical>
         ) : <></>
       }

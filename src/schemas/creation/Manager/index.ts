@@ -13,7 +13,7 @@ export const schemaCreateManager = zod.object({
     .string()
     .nonempty('O e-mail é obrigatório!')
     .email('Formato de e-mail inválido!')
-    .min(5, 'O e-mail deve conter no minímo 5 caracteres.')
+    .min(17, 'O e-mail deve conter no minímo 17 caracteres.')
     .max(100, 'O e-mail deve conter no maximo 100 caracteres.'),
   permissions: zod
     .array(zod.string().nonempty())
@@ -36,9 +36,8 @@ export const schemaCreateManager = zod.object({
     .refine((value) => !isNaN(Number(value)), {
       message: 'É necessário inserir um número neste campo.'
     })
-    .refine((value) => value.length <= 9, {
-      message:
-        'O valor inserido é muito grande! O limite máximo esperado é de 9 dígitos.'
+    .refine((value) => Number(value) <= 20, {
+      message: 'O valor inserido é muito grande! O limite máximo esperado é 20.'
     }),
   weeklyManagerCreationLimit: zod
     .string()
@@ -46,9 +45,8 @@ export const schemaCreateManager = zod.object({
     .refine((value) => !isNaN(Number(value)), {
       message: 'É necessário inserir um número neste campo.'
     })
-    .refine((value) => value.length <= 9, {
-      message:
-        'O valor inserido é muito grande! O limite máximo esperado é de 9 dígitos.'
+    .refine((value) => Number(value) <= 20, {
+      message: 'O valor inserido é muito grande! O limite máximo esperado é 20.'
     }),
   weeklyEditorCreationLimit: zod
     .string()
@@ -56,8 +54,7 @@ export const schemaCreateManager = zod.object({
     .refine((value) => !isNaN(Number(value)), {
       message: 'É necessário inserir um número neste campo.'
     })
-    .refine((value) => value.length <= 9, {
-      message:
-        'O valor inserido é muito grande! O limite máximo esperado é de 9 dígitos.'
+    .refine((value) => Number(value) <= 20, {
+      message: 'O valor inserido é muito grande! O limite máximo esperado é 20.'
     })
 });
