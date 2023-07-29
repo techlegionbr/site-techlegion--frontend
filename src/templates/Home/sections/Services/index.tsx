@@ -37,7 +37,12 @@ const Services = (): JSX.Element => {
                 Potencialize seu negócio com um site único e impactante! Desenvolvimento profissional, design moderno,
                 responsivo e <strong>otimizado para buscadores</strong>. Atraia mais clientes e alcance o sucesso online!
               </p>
-              <Button size="medium" className="button-know-more" href={hostLinks.services["desenvolvimento-de-site"]}>Saiba Mais</Button>
+              <Button
+                size="medium"
+                className="button-know-more"
+                href={hostLinks.services["desenvolvimento-de-site"]}
+                iconRight={<i className='bx bx-plus-circle' ></i>}
+              >Saiba Mais</Button>
             </div>
           </div>
           <div className="card">
@@ -57,7 +62,12 @@ const Services = (): JSX.Element => {
                 Destaque-se visualmente e conquiste seu público-alvo. Transforme sua marca com nossos serviços de <strong>design
                   gráfico profissional</strong>!
               </p>
-              <Button size="medium" className="button-know-more" href={hostLinks.services["design-grafico"]}>Saiba Mais</Button>
+              <Button
+                size="medium"
+                className="button-know-more"
+                href={hostLinks.services["design-grafico"]}
+                iconRight={<i className='bx bx-plus-circle' ></i>}
+              >Saiba Mais</Button>
             </div>
           </div>
           <div className="card">
@@ -77,14 +87,19 @@ const Services = (): JSX.Element => {
                 Aumente sua visibilidade, fortaleça sua marca e atinja resultados incríveis.<strong> Maximize seu potencial</strong>
                 nas mídias sociais com nosso serviço de social media!
               </p>
-              <Button size="medium" className="button-know-more" href={hostLinks.services["social-media"]}>Saiba Mais</Button>
+              <Button
+                size="medium"
+                className="button-know-more"
+                href={hostLinks.services["social-media"]}
+                iconRight={<i className='bx bx-plus-circle' ></i>}
+              >Saiba Mais</Button>
             </div>
           </div>
         </div>
         <Button
           className="button-more-services"
           href={hostLinks.main.servicos}
-          iconRight={<i className='bx bxs-plus-circle'></i>}
+          iconRight={<i className='bx bxs-layer-plus' ></i>}
           size="medium"
           hover="scale"
         >Ver mais serviços</Button>

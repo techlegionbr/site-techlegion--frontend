@@ -1,5 +1,7 @@
 import createEditorService from './createEditorService';
+import getAllEditorsService from './getAllEditorsService';
 
 export const editorService = {
-  create: createEditorService
+  create: createEditorService,
+  getAll: getAllEditorsService
 };

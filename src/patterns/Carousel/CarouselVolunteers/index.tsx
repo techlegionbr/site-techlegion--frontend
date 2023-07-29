@@ -24,15 +24,13 @@ const CarouselVolunteers = ({ volunteers }: PropsCarousel): JSX.Element => {
     right: false
   })
   const gapCarousel = (16 * 2)
-
-
+  // const widthCard = 240
 
   const scrollerCarousel = (direction: "left" | "right"): void => {
     const { current: carouselElement } = carouselRef;
     if (!carouselElement) return;
     const offsetWidth = carouselElement.offsetWidth + gapCarousel;
     const { left: leftBlock, right: rightBlock } = blockButtons;
-
 
     const setBlockButtonsState = (left: boolean, right: boolean): void => {
       setBlockButtons(prevBlock => ({
@@ -41,6 +39,7 @@ const CarouselVolunteers = ({ volunteers }: PropsCarousel): JSX.Element => {
         right
       }));
     };
+
 
     if (direction === "left" && !leftBlock) {
       carouselElement.scrollLeft -= offsetWidth;
@@ -52,14 +51,19 @@ const CarouselVolunteers = ({ volunteers }: PropsCarousel): JSX.Element => {
       setTimeout(() => { setBlockButtonsState(false, false); }, 1000);
     }
   }
+
+  const handleClickController = (direction: "left" | "right"): void => {
+    scrollerCarousel(direction)
+  }
+
   return (
     <S.CarouselVolunteers>
-      <button className={`controller  controller-left`} onClick={() => { scrollerCarousel("left"); }}><i className='bx bxs-left-arrow' ></i></button>
-      <button className={`controller  controller-right`} onClick={() => { scrollerCarousel("right"); }}><i className='bx bxs-right-arrow' ></i></button>
+      <button className={`controller controller-left`} onClick={() => { handleClickController("left") }}><i className='bx bxs-left-arrow' ></i></button>
+      <button className={`controller  controller-right`} onClick={() => { handleClickController("right"); }}><i className='bx bxs-right-arrow' ></i></button>
       <div className="content-carousel" ref={carouselRef}>
         {
           volunteers.map((volunt, index) => (
-            <CardVolunteer key={index} volunteer={volunt} />
+            <CardVolunteer key={`card-volunteer-${index}`} volunteer={volunt} />
           ))
         }
       </div>

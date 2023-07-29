@@ -46,4 +46,7 @@ export const Button = styled.button<PropsButtonStyled>`
       ` : ""
   )}
   }
+  i{
+    font-size: 1.1rem;
+  }
 `

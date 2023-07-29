@@ -1,3 +1,5 @@
+import { type IManagerPrivate } from '@/types/IManager';
+
 export interface ICreateManager {
   data: IResponseCreateManager;
   error: boolean;
@@ -5,10 +7,9 @@ export interface ICreateManager {
 
 export interface IResponseCreateManager {
   message: string;
-  admin: {
-    email: string;
-    password: string;
-    profile: string;
-    name: string;
-  } | null;
+  admin:
+    | (IManagerPrivate & {
+        password: string;
+      })
+    | null;
 }

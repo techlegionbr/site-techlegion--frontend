@@ -1,3 +1,5 @@
+import { type IEditorPrivate } from '@/types/IEditor';
+
 export interface ICreateEditor {
   data: IResponseCreateEditor;
   error: boolean;
@@ -5,10 +7,9 @@ export interface ICreateEditor {
 
 export interface IResponseCreateEditor {
   message: string;
-  user: {
-    email: string;
-    password: string;
-    profile: string;
-    name: string;
-  } | null;
+  user:
+    | (IEditorPrivate & {
+        password: string;
+      })
+    | null;
 }

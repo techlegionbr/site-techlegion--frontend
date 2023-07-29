@@ -1,4 +1,9 @@
-import { type TRoutesUser, type TRoutesAdmin, type TRoutesAuth } from './types';
+import {
+  type TRoutesUser,
+  type TRoutesAdmin,
+  type TRoutesAuth,
+  type TRoutesPost
+} from './types';
 import assignRoutes from './utils';
 
 const apiRoutes = {
@@ -15,7 +20,15 @@ const apiRoutes = {
   },
   user: {
     ...assignRoutes<TRoutesUser>('/user', {
+      GET_ALL_USERS: '/get-all-users',
       CREATE_USER: '/create-user'
+    })
+  },
+  post: {
+    ...assignRoutes<TRoutesPost>('/post', {
+      CREATE_POST: '/create-post',
+      GET_ALL_POSTS_PRIVATE: '/get-all-posts-private',
+      GET_ALL_POSTS_PUBLIC: '/get-all-posts-public'
     })
   }
 };

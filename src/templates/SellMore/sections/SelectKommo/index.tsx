@@ -44,7 +44,13 @@ const SelectKommo = (): JSX.Element => {
                 Tenha controle total e uma visão completa do seu processo de vendas para alcançar suas metas com
                 confiança.
               </p>
-              <Button target="_blank" href={socialMediaLinks.whatsapp} className="btn-sell-more" size="medium">Quero Vender Mais</Button>
+              <Button
+                target="_blank"
+                href={socialMediaLinks.whatsapp}
+                className="btn-sell-more"
+                size="medium"
+                iconRight={<i className='bx bx-money-withdraw' ></i>}
+              >Quero Vender Mais</Button>
             </div>
           </div>
         </div>

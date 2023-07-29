@@ -20,7 +20,13 @@ const Main = (): JSX.Element => {
             Somos uma <strong>legião</strong> de profissionais de tecnologia, designers, gestores de marketing, analistas e cientistas de dados,
             engenheiros de software e desenvolvedores <strong>apaixonados</strong> por criar soluções digitais <strong>sob medida</strong> para nossos clientes.
           </p>
-          <Button size="medium" className="button-whatsapp" target="_blank" href={socialMediaLinks.whatsapp}>Conversar pelo Whatsapp</Button>
+          <Button
+            size="medium"
+            className="button-whatsapp"
+            target="_blank"
+            href={socialMediaLinks.whatsapp}
+            iconRight={<i className='bx bxl-whatsapp' ></i>}
+          >Conversar pelo Whatsapp</Button>
 
         </div>
         <div className="video-amoster-container">

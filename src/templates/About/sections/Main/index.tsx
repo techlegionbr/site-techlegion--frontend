@@ -1,5 +1,4 @@
 import imageApresentation from "@/assets/images/about/team-young-cheerful-managers-sitting-couch-office-1024x1536.webp"
-import imageCarlosProfile from "@/assets/images/persons-profile/Carlos.webp"
 import imageLeonardoProfile from "@/assets/images/persons-profile/Leonardo-Ferraz.webp"
 import Button from "@/components/Button"
 import { ProfileCard } from "@/patterns/ProfileCard"
@@ -25,14 +24,15 @@ const Main = (): JSX.Element => {
               <ProfileCard.Image src={imageLeonardoProfile} alt="Leonardo Ferraz" />
               <ProfileCard.Content name="Leonardo Ferraz" charge="CEO Tech Legion" />
             </ProfileCard.Root>
-
-            <ProfileCard.Root className="profile-card">
-              <ProfileCard.Image src={imageCarlosProfile} alt="Carlos Goulart" />
-              <ProfileCard.Content name="Carlos Goulart" charge="CEO Tech Legion" />
-            </ProfileCard.Root>
           </div>
 
-          <Button size="medium" href={socialMediaLinks.whatsapp} target="_blank" className="button-contact">Entre em Contato</Button>
+          <Button
+            iconRight={<i className='bx bxs-phone-call'></i>}
+            size="medium"
+            href={socialMediaLinks.whatsapp}
+            target="_blank"
+            className="button-contact"
+          >Entre em Contato</Button>
         </div>
         <div className="image-apresentation">
           <Image src={imageApresentation} alt="grupo de jovens alegres" width={300} priority />

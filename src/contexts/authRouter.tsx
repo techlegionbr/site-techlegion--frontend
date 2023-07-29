@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 
-import { type IResponseFetchAuthRouter } from '@/queries/auth/router/types';
+import { type IResponseFetchAuthRouter } from '@/queries/auth/useAuthRouterQuery/types';
 
 
 

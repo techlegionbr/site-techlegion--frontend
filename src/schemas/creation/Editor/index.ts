@@ -1,5 +1,6 @@
-import { permissionsUser } from '@/queries/auth/router/groupsPermissions';
-import { type TPermissionsUser } from '@/queries/auth/router/types';
+import { permissionsUser } from '@/queries/auth/useAuthRouterQuery/groupsPermissions';
+import { type TPermissionsUser } from '@/queries/auth/useAuthRouterQuery/types';
+import capitalizeString from '@/utils/capitalizeString';
 import * as zod from 'zod';
 
 export const schemaCreateEditor = zod.object({
@@ -8,13 +9,20 @@ export const schemaCreateEditor = zod.object({
     .nonempty('O nome é obrigatório!')
     .min(5, 'O nome deve conter no minímo 5 caracteres.')
     .max(100, 'O nome deve conter no maximo 100 caracteres.')
-    .toLowerCase(),
+    .transform(capitalizeString),
   email: zod
     .string()
     .nonempty('O e-mail é obrigatório!')
     .email('Formato de e-mail inválido!')
     .min(5, 'O e-mail deve conter no minímo 5 caracteres.')
     .max(100, 'O e-mail deve conter no maximo 100 caracteres.'),
+  whatsapp: zod
+    .string()
+    .nonempty('O whatsapp é obrigatório!')
+    .refine(
+      (value) => value.replace(/[\s-()]+/g, '').length === 11,
+      'Número de whatsapp inválido!'
+    ),
   permissions: zod
     .array(zod.string().nonempty())
     .min(2, 'É necessário ter selecionado no minimo 2 permissões.')

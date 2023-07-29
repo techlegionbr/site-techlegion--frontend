@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const ContactForm = styled.div`
   width: 100%;
   padding: 100px ${layout.containerPaddingX};
-  background: ${color.primary};
+  background: ${color.bluishGray};
   display: flex;
   align-items: center;
   justify-content: center;

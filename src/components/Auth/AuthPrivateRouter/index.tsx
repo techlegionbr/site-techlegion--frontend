@@ -4,9 +4,9 @@ import LoaderPage from "@/components/Loader/LoaderPage"
 import { Navigation } from "@/components/Navigation"
 import AuthRouterProvider from "@/contexts/authRouter"
 import { Page } from "@/patterns/Page"
-import useFetchAuthRouter from "@/queries/auth/router"
-import { type TLevelAccess } from "@/queries/auth/router/types"
+import useAuthRouterQuery from "@/queries/auth/useAuthRouterQuery"
 import { hostLinks } from "@/settings/links"
+import { type TLevelAccess } from "@/types/IPermission"
 
 type TLevelAccesAuthPrivateRouter = TLevelAccess | "public"
 
@@ -18,20 +18,21 @@ interface IAuthPrivateRouter {
 }
 
 const AuthPrivateRouter = ({ children, levelAccess, redirect, autoLevelAccessVerification = false }: IAuthPrivateRouter): JSX.Element => {
-  const [fetchLevelAccess, setIsFetchLevelAccess] = useState<TLevelAccesAuthPrivateRouter | null>(null)
-  const { data: responseVerificationAuth } = useFetchAuthRouter()
+  const { data: responseVerificationAuth } = useAuthRouterQuery()
 
+  const [fetchLevelAccess, setIsFetchLevelAccess] = useState<TLevelAccesAuthPrivateRouter | null>(responseVerificationAuth?.levelAccess ?? null)
 
   useEffect(() => {
     if (responseVerificationAuth) {
       setIsFetchLevelAccess(responseVerificationAuth.levelAccess ?? "public")
     }
-  }, [responseVerificationAuth])
+  }, [responseVerificationAuth, fetchLevelAccess])
+
+
 
   if (fetchLevelAccess === null) {
     return <LoaderPage />
   }
-
   if (responseVerificationAuth && fetchLevelAccess === levelAccess) {
     return (
       <AuthRouterProvider response={responseVerificationAuth}>
@@ -39,17 +40,16 @@ const AuthPrivateRouter = ({ children, levelAccess, redirect, autoLevelAccessVer
       </AuthRouterProvider>
     )
   }
-
   if (responseVerificationAuth && redirect) {
     return <Navigation.Redirect href={redirect} />
   }
-
   if (responseVerificationAuth && autoLevelAccessVerification) {
     return <Navigation.Redirect href={(
       responseVerificationAuth.levelAccess === "admin" ? hostLinks.painel.admin :
         responseVerificationAuth.levelAccess === "user" ? hostLinks.painel.user : ""
     )} />
   }
+
   return <Page.NotFound />
 }
 

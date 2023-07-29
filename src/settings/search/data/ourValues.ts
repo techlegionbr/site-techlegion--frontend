@@ -19,8 +19,8 @@ const ourValues: Array<Omit<TypeSearchedTopic, 'type'>> = [
   }
 ];
 
-const ourValuesFinal: TypeSearchedTopic[] = ourValues.map((service) => ({
-  ...service,
+const ourValuesFinal: TypeSearchedTopic[] = ourValues.map((section) => ({
+  ...section,
   type: 'Nossos Valores'
 }));
 

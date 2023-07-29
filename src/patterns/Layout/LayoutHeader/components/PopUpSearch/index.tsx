@@ -1,4 +1,4 @@
-import { useEffect, useRef, type ChangeEvent, useState, Fragment } from "react"
+import { useEffect, useRef, type ChangeEvent, useState, Fragment, useCallback } from "react"
 
 import { type TypeDivisionTopicsSarched } from "@/settings/search/types"
 import searchTopicsGeral from "@/utils/search/searchTopicsGeral"
@@ -26,32 +26,32 @@ const PopUpSearch = ({ show, onClose, lockScroll = "auto" }: PropsPopUp): JSX.El
   }, [lockScroll])
 
   useEffect(() => {
-    const { current: inputSearch } = refInputSearch
-    if (inputSearch) {
-      inputSearch.focus()
-    }
     if (lockScroll === "auto") {
       document.body.classList[show ? "add" : "remove"]("overflow-hidden")
     }
+    if (show) {
+      focusInput()
+    }
   }, [show, lockScroll])
 
-  useEffect(() => {
-    const checkConditionsToClose = (ev: MouseEvent): void => {
-      const { current: cardSearch } = refCardSearch
-      if (cardSearch && !cardSearch.contains(ev.target as Node)) {
-        onClose()
-        setValueSearched("")
-      }
-    }
-
-    setTimeout(() => {
-      document.addEventListener("click", checkConditionsToClose)
-    }, 200)
-
-    return () => {
-      document.removeEventListener("click", checkConditionsToClose);
+  const checkConditionsToClose = useCallback((ev: MouseEvent): void => {
+    const { current: cardSearch } = refCardSearch
+    if (cardSearch && !cardSearch.contains(ev.target as Node)) {
+      onClose()
     }
   }, [onClose])
+
+  useEffect(() => {
+    if (show) {
+      setValueSearched("")
+      setTimeout(() => {
+        document.addEventListener("click", checkConditionsToClose)
+      }, 200)
+      return () => {
+        document.removeEventListener("click", checkConditionsToClose);
+      }
+    }
+  }, [onClose, show, checkConditionsToClose])
 
   useEffect(() => {
     setResultSearched(valueSearched ? searchTopicsGeral(valueSearched) : null)
@@ -61,8 +61,16 @@ const PopUpSearch = ({ show, onClose, lockScroll = "auto" }: PropsPopUp): JSX.El
     setValueSearched(ev.target.value)
   }
 
+  const focusInput = (): void => {
+    const { current: inputSearch } = refInputSearch
+    if (inputSearch) {
+      inputSearch.focus()
+    }
+  }
+
   const clearValueSearched = (): void => {
     setValueSearched("")
+    focusInput()
   }
 
   return show ? (

@@ -24,8 +24,12 @@ export const FormContact = styled.form`
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    @media (max-width: ${screens.sm}) {
+      padding: 0;
+    }
     .card{
-      padding: 3rem;
+      padding: 3rem 1rem;
+      width: 600px;
       border: 1.4px solid #ffffff1a;
       border-radius: .8rem;
       text-align: center;
@@ -40,6 +44,10 @@ export const FormContact = styled.form`
         font-size: ${font.size.md};
         line-height: ${font.line_height.md};
         text-transform: uppercase;
+        @media (max-width: ${screens.sm}) {
+          font-size: calc(${font.size.md} - .2rem);
+          line-height: calc(${font.line_height.md} - .2rem);
+        }
         del{
           text-decoration: none;
           position: relative;

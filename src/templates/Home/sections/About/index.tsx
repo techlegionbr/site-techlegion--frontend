@@ -22,6 +22,7 @@ const About = (): JSX.Element => {
           target="_blank"
           className="button-know-more"
           size="medium"
+          iconRight={<i className='bx bx-plus-circle' ></i>}
         >Saiba mais</Button>
       </div>
     </S.About>

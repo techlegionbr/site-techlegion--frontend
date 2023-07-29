@@ -18,7 +18,14 @@ const FormContact = ({ className }: IFormContactProps): JSX.Element => {
       <div className="pop-up-troll">
         <div className="card">
           <span className="title">Esqueça <del>formulários</del> cansativos.<br /> Automatize tudo e transforme sua vida!</span>
-          <Button preventDefault target="_blank" className="btn-contact" size="medium" href={socialMediaLinks.whatsapp}>Vamos conversar pelo whatsapp</Button>
+          <Button
+            preventDefault
+            target="_blank"
+            className="btn-contact"
+            size="medium"
+            href={socialMediaLinks.whatsapp}
+            iconRight={<i className='bx bxl-whatsapp' ></i>}
+          >Vamos conversar pelo whatsapp</Button>
         </div>
       </div>
       <Form.Input

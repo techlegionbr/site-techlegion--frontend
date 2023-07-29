@@ -24,7 +24,8 @@ const useCreateEditor = (): IStateCreateEditor => {
     defaultValues: {
       name: '',
       email: '',
-      weeklyPostCreationLimit: ''
+      weeklyPostCreationLimit: '',
+      whatsapp: ''
     }
   });
 

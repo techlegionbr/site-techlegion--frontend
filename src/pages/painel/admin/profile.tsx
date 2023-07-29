@@ -1,5 +1,5 @@
 import { Auth } from "@/components/Auth"
-import ProfilePainelTemplate from "@/templates/Painel/routes/Profile";
+import ProfilePainelTemplate from "@/templates/Panel/routes/Profile";
 
 const Profile = (): JSX.Element => {
   return (

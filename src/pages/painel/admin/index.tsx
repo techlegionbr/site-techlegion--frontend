@@ -1,10 +1,10 @@
 import { Auth } from "@/components/Auth"
-import PainelAdminTemplate from "@/templates/Painel/routes/Admin"
+import PanelAdminTemplate from "@/templates/Panel/routes/Panel"
 
 const PainelAdmin = (): JSX.Element => {
   return (
     <Auth.PrivateRouter levelAccess="admin">
-      <PainelAdminTemplate />
+      <PanelAdminTemplate />
     </Auth.PrivateRouter>
   )
 }

@@ -36,32 +36,50 @@ export const StrikingPhrase = styled.div`
     }
     .profile-author{
       margin-top: 4rem;
-      background: #0b134c;
-      padding: 1rem 1.3rem;
-      border: 1px solid #909bfa5b;
-      border-radius: .5rem;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      .image-author{
-        width: 70px;
-        height: 70px;
-        overflow: hidden;
-        border-radius: 50%;
+      gap: 1rem;
+      .image-author-01{
+        width: 150px;
+        height: 150px;
         border: 1.4px solid #8999ff41;
-        img{
-          width: 100%;
+        position: relative;
+        border-radius: 50%;
+        flex: none;
+        
+        .image-author-02{
+          width: 85%;
           height: 100%;
-          object-fit: cover;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%) scale(1.28);
+          top: -1.3rem;
+          border-radius: 0 0 50% 50%;
+          overflow: hidden;
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
         }
       }
-      small{
-        margin-top: 1rem;
-        font-weight: bold;
-        font-size: 1rem;
-        color: #ffffffd6;
-        
+      article{
+        .name, .known-for{
+          display: block;
+        }
+        .name{
+          margin-top: 1rem;
+          font-weight: bold;
+          font-size: ${font.size.sm};
+          line-height: ${font.line_height.sm};
+          color: #ffffffd6;
+        }
+        .known-for{
+          font-size: ${font.size.xsm};
+          line-height: ${font.line_height.xsm};
+          color: ${color.third};
+        }
       }
     }
   }

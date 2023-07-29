@@ -1,5 +1,5 @@
 import { Auth } from "@/components/Auth"
-import PainelCommentsTemplate from "@/templates/Painel/routes/Comments"
+import PainelCommentsTemplate from "@/templates/Panel/routes/Comments"
 
 const CommentslUser = (): JSX.Element => {
   return (

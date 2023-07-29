@@ -26,7 +26,8 @@ const useCreateManager = (): IStateCreateManager => {
       name: '',
       weeklyEditorCreationLimit: '',
       weeklyManagerCreationLimit: '',
-      weeklyPostCreationLimit: ''
+      weeklyPostCreationLimit: '',
+      whatsapp: ''
     }
   });
 
@@ -62,6 +63,7 @@ const useCreateManager = (): IStateCreateManager => {
       data: { admin, message },
       error
     } = await managerService.create(manager);
+
     if (!error) {
       setIsResetting(true);
     }

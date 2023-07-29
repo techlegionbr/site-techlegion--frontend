@@ -13,7 +13,7 @@ import {
   StrikingPhraseSection,
   PrinciplesSection,
   ContactFormSection,
-  ClientsSection
+  ClientsSection,
 } from "./sections"
 
 
@@ -39,11 +39,11 @@ const Home = (): JSX.Element => {
       <HorizontalLine />
       <PrinciplesSection />
       <HorizontalLine />
-      <Section.Divider bgColor="primary" />
-      <HorizontalLine />
       <ClientsSection />
       <HorizontalLine />
       <ContactFormSection />
+      <HorizontalLine />
+      <Section.Divider bgColor="primary" />
       <HorizontalLine />
       <Layout.Footer />
 

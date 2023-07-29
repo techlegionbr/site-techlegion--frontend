@@ -58,7 +58,13 @@ const Values = (): JSX.Element => {
                 inclusivo para todos. Estamos comprometidos em promover a <strong>equidade de oportunidades</strong> e garantir que cada
                 voz seja ouvida. Juntos, estamos construindo um ambiente <strong>colaborativo</strong>.
               </p>
-              <Button href={socialMediaLinks.whatsapp} target="_blank" className="button-know-more" size="medium">Saiba Mais</Button>
+              <Button
+                href={socialMediaLinks.whatsapp}
+                target="_blank"
+                className="button-know-more"
+                size="medium"
+                iconRight={<i className='bx bxs-plus-circle' ></i>}
+              >Saiba Mais</Button>
             </div>
           </article>
           <article id="impacto-social">
@@ -73,7 +79,13 @@ const Values = (): JSX.Element => {
                 mas também estão contribuindo para o <strong>impacto social e econômico positivo</strong> na vida de <strong>profissionais em
                   início de carreira</strong>
               </p>
-              <Button href={socialMediaLinks.whatsapp} target="_blank" className="button-know-more" size="medium">Saiba Mais</Button>
+              <Button
+                href={socialMediaLinks.whatsapp}
+                target="_blank"
+                className="button-know-more"
+                size="medium"
+                iconRight={<i className='bx bxs-plus-circle' ></i>}
+              >Saiba Mais</Button>
             </div>
             <div className="image-article">
               <Image

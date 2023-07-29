@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-optional-chain */
 /* eslint-disable import-helpers/order-imports */
 
-
 import { site } from "@/settings"
 import "@/styles/globalStyle.css"
 
