@@ -1,6 +1,6 @@
 
 import { Auth } from "@/components/Auth"
-import PainelProfileTemplate from "@/templates/Panel/routes/Profile"
+import PainelProfileTemplate from "@/templates/PanelTemplate/routes/Profile"
 
 const ProfilelUser = (): JSX.Element => {
   return (

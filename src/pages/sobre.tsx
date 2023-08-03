@@ -1,4 +1,4 @@
-import AboutTemplate from "@/templates/About"
+import AboutTemplate from "@/templates/AboutTemplate"
 
 const About = (): JSX.Element => {
   return <AboutTemplate />

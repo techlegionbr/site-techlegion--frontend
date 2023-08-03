@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/desenvolvimento-de-aplicativo-mobile.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 
 const MobileApplicationDevelopment = (): JSX.Element => {
   return <ServiceTemplate

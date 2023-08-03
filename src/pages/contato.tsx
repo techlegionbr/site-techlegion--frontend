@@ -1,4 +1,5 @@
-import ContactTemplate from "@/templates/Contact"
+import ContactTemplate from "@/templates/ContactTemplate"
+
 
 const Contact = (): JSX.Element => {
   return <ContactTemplate />

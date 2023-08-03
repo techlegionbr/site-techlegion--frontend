@@ -1,5 +1,5 @@
 import { Auth } from "@/components/Auth"
-import PanelAdminTemplate from "@/templates/Panel/routes/Panel"
+import PanelAdminTemplate from "@/templates/PanelTemplate/routes/Panel"
 
 const PainelAdmin = (): JSX.Element => {
   return (

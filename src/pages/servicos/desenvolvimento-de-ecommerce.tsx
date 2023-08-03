@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/desenvolvimento-de-ecommerce.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 
 const EcommerceDevelopment = (): JSX.Element => {
   return <ServiceTemplate

@@ -1,4 +1,5 @@
-import ServicesTemplate from "@/templates/Services"
+import ServicesTemplate from "@/templates/ServicesTemplate"
+
 
 const Services = (): JSX.Element => {
   return <ServicesTemplate />

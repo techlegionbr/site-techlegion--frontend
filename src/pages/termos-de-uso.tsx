@@ -1,4 +1,5 @@
-import TermsOfUseTemplate from "@/templates/TermsOfUse"
+import TermsOfUseTemplate from "@/templates/TermsOfUseTemplate"
+
 
 const TermsOfUse = (): JSX.Element => {
   return <TermsOfUseTemplate />

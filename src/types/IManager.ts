@@ -13,9 +13,10 @@ export interface IManagerPrivate {
   managerId: string;
   name: string;
   profile: string;
+  whatsapp: string;
   email: string;
-  createAt: Date;
-  updateAt: Date;
+  createAt: string;
+  updateAt: string;
   permissions: TPermissionManager[];
   weeklyEditorCreationLimit: number;
   weeklyManagerCreationLimit: number;

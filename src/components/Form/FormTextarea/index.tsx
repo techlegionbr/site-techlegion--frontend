@@ -1,4 +1,4 @@
-import React, { type ComponentProps, forwardRef, useState, type ChangeEvent, type FocusEvent } from "react"
+import React, { type ComponentProps, forwardRef, useState, type ChangeEvent, type FocusEvent, useEffect } from "react"
 
 import * as S from "./styles"
 
@@ -11,6 +11,10 @@ interface IFormTextareaProps extends ComponentProps<"textarea"> {
 const FormTextarea = forwardRef<HTMLTextAreaElement, IFormTextareaProps>(({ className = "", id = "", onFocus, onBlur, onChange, value = "", label, error = false, helperText, ...restPropsTextarea }, ref) => {
   const [valueTextarea, setValueTextarea] = useState(value)
   const [isFocus, setIsFocus] = useState(false)
+
+  useEffect(() => {
+    setValueTextarea(value)
+  }, [value])
 
   const handleChangeTextarea = (e: ChangeEvent<HTMLTextAreaElement>): void => {
     if (onChange) {
@@ -33,7 +37,7 @@ const FormTextarea = forwardRef<HTMLTextAreaElement, IFormTextareaProps>(({ clas
     <S.FormTextarea className={className} id={id} error={error} focus={isFocus}>
       {label && (<label>{label}</label>)}
       <div className="textarea-container">
-        <textarea {...restPropsTextarea} ref={ref} value={valueTextarea} onChange={handleChangeTextarea} onFocus={handleFocusTextarea} onBlur={handleBlurTextarea} />
+        <textarea ref={ref} value={valueTextarea} onChange={handleChangeTextarea} onFocus={handleFocusTextarea} onBlur={handleBlurTextarea} {...restPropsTextarea} />
       </div>
       {helperText && (<p className="helper-text">{helperText}</p>)}
     </S.FormTextarea>

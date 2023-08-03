@@ -1,5 +1,5 @@
 import { Auth } from "@/components/Auth"
-import PainelPostsTemplate from "@/templates/Panel/routes/Posts"
+import PainelPostsTemplate from "@/templates/PanelTemplate/routes/Posts"
 
 const PostslUser = (): JSX.Element => {
   return (

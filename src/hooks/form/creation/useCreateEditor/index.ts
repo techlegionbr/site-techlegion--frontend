@@ -4,6 +4,7 @@ import { type SubmitHandler, useForm } from 'react-hook-form';
 import { schemaCreateEditor } from '@/schemas/creation/Editor';
 import { type IFormCreateEditor } from '@/schemas/creation/Editor/types';
 import { editorService } from '@/services/api/editorService';
+import usePanelStore from '@/stores/usePanelStore';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { type IOnSubmit } from '../../types';
@@ -28,7 +29,7 @@ const useCreateEditor = (): IStateCreateEditor => {
       whatsapp: ''
     }
   });
-
+  const setAllEditors = usePanelStore((state) => state.setAllEditors);
   const [isResetting, setIsResetting] = useState(false);
 
   const [alertNewEntitie, setAlertNewEntitie] = useState<IAlertNewEntitie>({
@@ -62,8 +63,13 @@ const useCreateEditor = (): IStateCreateEditor => {
       error
     } = await editorService.create(editor);
 
-    if (!error) {
+    if (!error && user) {
+      const { _id, email, name, profile, whatsapp } = user;
       setIsResetting(true);
+      setAllEditors((prevEditors) => [
+        ...prevEditors,
+        { _id, email, name, profile, whatsapp }
+      ]);
     }
     setAlertDefault({
       status: error ? 'error' : 'success',

@@ -15,23 +15,48 @@ const usePanelStore = create<IUsePainelStoreStates & IUsePainelStoreActions>(
     postsCreated: null,
     comments: null,
 
-    setAllEditors: (editors) => {
-      set({ allEditors: editors });
+    setAllEditors: (setCb) => {
+      set((state) => ({
+        allEditors:
+          typeof setCb === 'function' ? setCb(state.allEditors ?? []) : setCb
+      }));
     },
-    setAllManagers: (managers) => {
-      set({ allManagers: managers });
+    setAllManagers: (setCb) => {
+      set((state) => ({
+        allManagers:
+          typeof setCb === 'function' ? setCb(state.allManagers ?? []) : setCb
+      }));
     },
-    setAllPosts: (posts) => {
-      set({ allPosts: posts });
+    setAllPosts: (setCb) => {
+      set((state) => {
+        const allPosts =
+          typeof setCb === 'function' ? setCb(state.allPosts ?? []) : setCb;
+        return {
+          allPosts
+        };
+      });
     },
-    setEditorsCreated: (editors) => {
-      set({ editorsCreated: editors });
+    setEditorsCreated: (setCb) => {
+      set((state) => ({
+        editorsCreated:
+          typeof setCb === 'function'
+            ? setCb(state.editorsCreated ?? [])
+            : setCb
+      }));
     },
-    setManagersCreated: (managers) => {
-      set({ managersCreated: managers });
+    setManagersCreated: (setCb) => {
+      set((state) => ({
+        managersCreated:
+          typeof setCb === 'function'
+            ? setCb(state.managersCreated ?? [])
+            : setCb
+      }));
     },
-    setPostsCreated: (posts) => {
-      set({ postsCreated: posts });
+    setPostsCreated: (setCb) => {
+      set((state) => ({
+        postsCreated:
+          typeof setCb === 'function' ? setCb(state.postsCreated ?? []) : setCb
+      }));
     },
     setComments: (comments) => {
       set({ comments });

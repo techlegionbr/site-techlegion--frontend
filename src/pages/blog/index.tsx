@@ -1,7 +1,8 @@
-import BlogTemplates from "@/templates/Blog"
+import BlogTemplate from "@/templates/BlogTemplate"
+
 
 const Blog = (): JSX.Element => {
-  return <BlogTemplates />
+  return <BlogTemplate />
 }
 
 export default Blog

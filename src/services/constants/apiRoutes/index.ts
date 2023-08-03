@@ -28,7 +28,9 @@ const apiRoutes = {
     ...assignRoutes<TRoutesPost>('/post', {
       CREATE_POST: '/create-post',
       GET_ALL_POSTS_PRIVATE: '/get-all-posts-private',
-      GET_ALL_POSTS_PUBLIC: '/get-all-posts-public'
+      GET_ALL_POSTS_PUBLIC: '/get-all-posts-public',
+      GET_POST_PUBLIC: '/get-post-public',
+      GET_POST_PRIVATE: '/get-post-private'
     })
   }
 };

@@ -1,4 +1,5 @@
-import PrivacyPolicyTemplate from "@/templates/PrivacyPolicy"
+import PrivacyPolicyTemplate from "@/templates/PrivacyPolicyTemplate"
+
 
 const PrivacyPolicy = (): JSX.Element => {
   return <PrivacyPolicyTemplate />

@@ -1,4 +1,5 @@
-import HomeTemplate from "@/templates/Home"
+import HomeTemplate from "@/templates/HomeTempalte";
+
 
 export default function Home(): JSX.Element {
   return <HomeTemplate />

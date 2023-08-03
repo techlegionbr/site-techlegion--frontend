@@ -1,6 +1,6 @@
 
 import { Auth } from "@/components/Auth"
-import PainelSettingsTemplate from "@/templates/Panel/routes/Settings"
+import PainelSettingsTemplate from "@/templates/PanelTemplate/routes/Settings"
 
 const SettingslUser = (): JSX.Element => {
   return (

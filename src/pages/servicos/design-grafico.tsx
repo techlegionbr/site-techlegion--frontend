@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/design-grafico.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 
 const GraphicDesign = (): JSX.Element => {
   return <ServiceTemplate

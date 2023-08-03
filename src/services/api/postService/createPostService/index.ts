@@ -19,19 +19,14 @@ const createPostService = async (
       error: false
     };
   } catch (error) {
-    if (error instanceof AxiosError) {
-      return {
-        data: error.response?.data ?? {
-          user: null,
-          message: constants.GENERIC_ERROR_WHEN_TRYING_TO_CREATE_POST
-        },
-        error: true
-      };
-    }
     return {
       data: {
         post: null,
-        message: constants.GENERIC_ERROR_WHEN_TRYING_TO_CREATE_POST
+        message:
+          error instanceof AxiosError
+            ? error.response?.data.message ??
+              constants.GENERIC_ERROR_WHEN_TRYING_TO_CREATE_POST
+            : constants.GENERIC_ERROR_WHEN_TRYING_TO_CREATE_POST
       },
       error: true
     };

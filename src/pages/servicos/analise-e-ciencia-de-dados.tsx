@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/analise-e-ciencia-de-dados.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 
 const AnalyticsAndDataScience = (): JSX.Element => {
   return <ServiceTemplate service={{

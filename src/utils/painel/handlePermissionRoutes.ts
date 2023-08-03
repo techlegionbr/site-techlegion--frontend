@@ -1,4 +1,4 @@
-import { type TSectionRouteName } from '@/templates/Panel/patterns/layout/NavBarVertical/types';
+import { type TSectionRouteName } from '@/templates/PanelTemplate/patterns/layout/NavBarVertical/types';
 import { type TPermission } from '@/types/IPermission';
 
 const handlePermissionRoutes = (

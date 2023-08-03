@@ -4,6 +4,7 @@ import { type SubmitHandler, useForm } from 'react-hook-form';
 import { schemaCreateManager } from '@/schemas/creation/Manager';
 import { type IFormCreateManager } from '@/schemas/creation/Manager/types';
 import { managerService } from '@/services/api/managerService';
+import usePanelStore from '@/stores/usePanelStore';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { type IOnSubmit } from '../../types';
@@ -30,6 +31,8 @@ const useCreateManager = (): IStateCreateManager => {
       whatsapp: ''
     }
   });
+
+  const setAllManagers = usePanelStore((state) => state.setAllManagers);
 
   const [isResetting, setIsResetting] = useState(false);
 
@@ -64,8 +67,13 @@ const useCreateManager = (): IStateCreateManager => {
       error
     } = await managerService.create(manager);
 
-    if (!error) {
+    if (!error && admin) {
+      const { _id, email, name, profile, whatsapp } = admin;
       setIsResetting(true);
+      setAllManagers((prevManagers) => [
+        ...prevManagers,
+        { _id, email, name, profile, whatsapp }
+      ]);
     }
     setAlertDefault({
       status: error ? 'error' : 'success',

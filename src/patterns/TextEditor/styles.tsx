@@ -5,13 +5,36 @@ import styled from "styled-components";
 
 export const TextEditor = styled.div`
   width: 100%;
+
+
+
+  .pejurative-size-of-p-toolbar-text-editor {
+    font-size: .9rem;
+  }
+  .pejurative-size-of-h1-toolbar-text-editor {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .pejurative-size-of-h2-toolbar-text-editor{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .pejurative-size-of-h3-toolbar-text-editor{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+
+
   .text-editor{
-    min-height: 400px;
+    width: 100%;
+    height: 500px;
     resize: vertical;
     background: #fff;
     color: #000;
     padding: 1rem;
     border-radius: .5rem;
+    overflow: auto;
   }
   .helper-text{
     margin-top: .4rem;
@@ -23,16 +46,5 @@ export const TextEditor = styled.div`
   animation: "opacity",
   duration: .3
 })};
-  }
-  .rdw-dropdown-selectedtext{
-    color: #000;
-  }
-  .rdw-link-decorator-wrapper a{
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  .rdw-dropdown-optionwrapper{
-    z-index: 2;
   }
 `

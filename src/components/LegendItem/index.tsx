@@ -6,10 +6,11 @@ interface ILegendItemProps {
   children: ReactNode,
   legend?: string,
   className?: string,
-  widthLegend?: number
+  widthLegend?: number,
+  sizeLegend?: "sm" | "md" | "lg"
 }
 
-const LegendItem = ({ children, legend, className, widthLegend }: ILegendItemProps): JSX.Element => {
+const LegendItem = ({ children, legend, className, widthLegend, sizeLegend = "md" }: ILegendItemProps): JSX.Element => {
   const itemRef = useRef<HTMLDivElement | null>(null)
   const legendRef = useRef<HTMLSpanElement | null>(null)
   const [showLegend, setShowLegend] = useState(false)
@@ -34,13 +35,21 @@ const LegendItem = ({ children, legend, className, widthLegend }: ILegendItemPro
   return (
     <S.LegendItem
       widthLegend={widthLegend}
+      sizeLegend={sizeLegend}
       className={className}
       ref={itemRef}
       onMouseEnter={() => { setShowLegend(true); }}
       onMouseLeave={() => { setShowLegend(false); }}
     >
       {children}
-      {showLegend && legend ? <span ref={legendRef} className="legend-text" >{legend}</span> : <></>}
+      {
+        showLegend && legend ? (
+          <span
+            ref={legendRef}
+            className="legend-text"
+          >{legend}</span>
+        ) : <></>
+      }
 
     </S.LegendItem>
   )

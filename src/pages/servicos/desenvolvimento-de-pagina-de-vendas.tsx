@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/desenvolvimento-de-pagina-de-vendas.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 
 const SalesPageDevelopment = (): JSX.Element => {
   return <ServiceTemplate

@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/desenvolvimento-de-filtros-de-realidade-virtual.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 
 const CreationOfVirtualRealityFilters = (): JSX.Element => {
   return <ServiceTemplate service={{

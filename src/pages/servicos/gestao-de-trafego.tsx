@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/gestão-de-trafego.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 const TrafficManagement = (): JSX.Element => {
   return <ServiceTemplate
     service={{

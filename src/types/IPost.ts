@@ -7,6 +7,11 @@ export type ICommentPostRegister = IActionPostRegister & {
   comment: string;
 };
 
+export interface IProfileEditor {
+  image: string;
+  name: string;
+}
+
 export interface IPost {
   _id: string;
   comments: ICommentPostRegister[];
@@ -23,10 +28,11 @@ export interface IPost {
     name: string;
   };
   shares: IActionPostRegister[];
-  createdAt: Date;
+  createdAt: string;
   dislikes: IActionPostRegister[];
-  updatedAt: Date;
+  updatedAt: string;
+  profileEditor: IProfileEditor;
 }
 
-export interface IPostPublic extends Omit<IPost, 'updateAt'> {}
+export interface IPostPublic extends Omit<IPost, 'updatedAt'> {}
 export interface IPostPrivate extends IPost {}

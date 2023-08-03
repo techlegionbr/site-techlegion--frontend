@@ -6,7 +6,7 @@ import {
   type IGetAllPostsPrivate
 } from './types';
 
-const getAllEditorsService = async (): Promise<IGetAllPostsPrivate> => {
+const getAllPostsPrivateService = async (): Promise<IGetAllPostsPrivate> => {
   try {
     const {
       data: { posts }
@@ -26,4 +26,4 @@ const getAllEditorsService = async (): Promise<IGetAllPostsPrivate> => {
   }
 };
 
-export default getAllEditorsService;
+export default getAllPostsPrivateService;

@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/ux-ui-design.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 const UXUIDesign = (): JSX.Element => {
   return <ServiceTemplate
     service={{

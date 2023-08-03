@@ -1,4 +1,5 @@
-import SellMoreTemplate from "@/templates/SellMore"
+import SellMoreTemplate from "@/templates/SellMoreTemplate"
+
 
 const SellMore = (): JSX.Element => {
   return <SellMoreTemplate />

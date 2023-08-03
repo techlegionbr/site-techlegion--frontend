@@ -1,5 +1,6 @@
 import imageService from "@/assets/images/services/marketing-digital.webp"
-import ServiceTemplate from "@/templates/Service"
+import ServiceTemplate from "@/templates/ServiceTemplate"
+
 const DigitalMarketing = (): JSX.Element => {
   return <ServiceTemplate
     service={{

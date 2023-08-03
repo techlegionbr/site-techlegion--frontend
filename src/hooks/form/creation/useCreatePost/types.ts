@@ -1,3 +1,4 @@
+import { type Dispatch, type SetStateAction } from 'react';
 import {
   type FieldErrors,
   type Control,
@@ -14,4 +15,25 @@ export interface IStateCreatePost {
   isResetting: boolean;
   errors: FieldErrors<IFormCreatePost>;
   watch: UseFormWatch<IFormCreatePost>;
+  alertNewEntitie: IAlertNewEntitie;
+  setAlertNewEntitie: Dispatch<SetStateAction<IAlertNewEntitie>>;
+  alertDefault: IAlertDefault;
+}
+
+export interface IAlertNewEntitie {
+  show: boolean;
+  entitie: {
+    title: string;
+    nameRoute: string;
+  } | null;
+}
+
+export interface IAlertDefault {
+  show: boolean;
+  onClose?: () => void;
+  helperText: {
+    main: string;
+    sup: string;
+  };
+  status: 'error' | 'success' | null;
 }

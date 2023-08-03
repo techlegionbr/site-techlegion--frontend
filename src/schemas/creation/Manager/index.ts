@@ -1,5 +1,5 @@
-import { permissionsAdmin } from '@/queries/auth/useAuthRouterQuery/groupsPermissions';
-import { type TPermissionsAdmin } from '@/queries/auth/useAuthRouterQuery/types';
+import { permissionsManager } from '@/queries/auth/useAuthRouterQuery/groupsPermissions';
+import { type TPermissionManager } from '@/types/IPermission';
 import capitalizeString from '@/utils/capitalizeString';
 import * as zod from 'zod';
 
@@ -29,7 +29,7 @@ export const schemaCreateManager = zod.object({
     .refine(
       (permissions) => {
         const isValid = permissions.every((permission) =>
-          permissionsAdmin.includes(permission as TPermissionsAdmin)
+          permissionsManager.includes(permission as TPermissionManager)
         );
         return (
           isValid &&

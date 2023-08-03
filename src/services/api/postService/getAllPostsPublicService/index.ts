@@ -6,7 +6,7 @@ import {
   type IResponseGetAllPostsPublic
 } from './types';
 
-const getAllEditorsService = async (): Promise<IGetAllPostsPublic> => {
+const getAllPostsPublicService = async (): Promise<IGetAllPostsPublic> => {
   try {
     const {
       data: { posts }
@@ -26,4 +26,4 @@ const getAllEditorsService = async (): Promise<IGetAllPostsPublic> => {
   }
 };
 
-export default getAllEditorsService;
+export default getAllPostsPublicService;

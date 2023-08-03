@@ -13,8 +13,8 @@ export interface IEditorPrivate {
   name: string;
   profile: string;
   email: string;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;
+  updatedAt: string;
   permissions: TPermissionEditor[];
   weeklyPostCreationLimit: number;
   managerId: string;

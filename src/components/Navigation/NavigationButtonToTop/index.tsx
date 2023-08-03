@@ -1,3 +1,4 @@
+import scrollToTop from "@/utils/layout/scrollToTop"
 import styled from "styled-components"
 
 
@@ -24,13 +25,6 @@ const NavigationButtonToTopStyled = styled.button`
 
 
 const NavigationButtonToTop = (): JSX.Element => {
-  const scrollToTop = (): void => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    })
-
-  }
   return (
     <NavigationButtonToTopStyled onClick={scrollToTop} id="button-to-top" title="Botão para levar ao topo">
       <i className='bx bxs-chevron-up'></i>
