@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 
-export const ContentHTMLPost = styled.div`
+export const ContentPost = styled.div`
   width: 100%;
-  padding: 4rem 0;
+  padding-top: 4rem;
   .header-post{
     .createdAt{
       .name{

@@ -1,5 +1,5 @@
+import { textEditorUtil } from '@/patterns/TextEditor/utils';
 import convertInKebabCase from '@/utils/convertInKebabCase';
-import extractStringFromHTML from '@/utils/extractStringFromHTML';
 import * as zod from 'zod';
 
 export const schemaCreatePost = zod.object({
@@ -25,14 +25,15 @@ export const schemaCreatePost = zod.object({
     .required(),
   content: zod
     .object({
-      html: zod
+      rawString: zod
         .string()
         .refine(
-          (value) => !!extractStringFromHTML(value),
+          (value) => !!textEditorUtil.extractTextFromContentRawString(value),
           'É necessário que escreva o conteudo do post!'
         )
         .refine(
-          (value) => extractStringFromHTML(value).length > 150,
+          (value) =>
+            textEditorUtil.extractTextFromContentRawString(value).length > 150,
           'É necessário que o post tenha no minimo 150 caracteres!'
         )
     })

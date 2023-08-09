@@ -60,11 +60,11 @@ export const FeedCarousel = styled.div`
   }
 `
 
-interface PostProps {
-  backgroundImg: string
+interface IArticleProps {
+  backgroundImg: string | undefined
 }
 
-export const Post = styled.div<PostProps>`
+export const Article = styled.div<IArticleProps>`
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -78,7 +78,7 @@ export const Post = styled.div<PostProps>`
   flex-direction: column;
   padding: 8%;
   transition: .2s;
-  .popup-post{
+  .popup-article{
     background-color: #121247eb;
     padding: 2rem;
     border-radius: 1rem;

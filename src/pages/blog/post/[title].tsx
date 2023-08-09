@@ -21,7 +21,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     params: { title: post.route.name }
   })) ?? []
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 };
 
 export const getStaticProps: GetStaticProps<IPostProps, { title: string }> = async ({ params }) => {
@@ -32,7 +32,6 @@ export const getStaticProps: GetStaticProps<IPostProps, { title: string }> = asy
 
   }
   const { post } = await postService.getPost.public(params.title)
-
   if (!post) {
     return {
       notFound: true

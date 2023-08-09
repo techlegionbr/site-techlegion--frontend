@@ -88,14 +88,14 @@ export const AlertNewEntitieField = styled.div`
     .message-copy{
       position: absolute;
       color: ${color.light};
+      white-space: nowrap;
       background-color: ${color.dark};
-      width: 80px;
       text-align: center;
       font-weight: bold;
       text-transform: uppercase;
       font-size: .5rem;
       border-radius: .2rem;
-      padding: .1rem 0;
+      padding: .1rem .5rem;
       top: -1.3rem;
       ${presenceAnimation({
   animation: "scale",

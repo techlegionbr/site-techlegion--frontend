@@ -5,7 +5,6 @@ import { useEffect } from "react"
 import useAllPostsPublicQuery from "@/queries/post/useAllPostsPublicQuery"
 import usePanelStore from "@/stores/usePanelStore"
 
-import InputSearch from "../../components/InputSearch"
 import PostPreview from "../../components/PostPreview"
 import CardFeatureStyled from "../../styles/CardFeature"
 import * as S from "./styles"
@@ -18,7 +17,6 @@ const AllPosts = ({ order = 0 }: { order?: number }): JSX.Element => {
     <CardFeatureStyled order={order}>
       <S.AllPosts>
         <h4>Todos os posts</h4>
-        <InputSearch />
         <ul className="posts-list">
           {
             allPosts?.map(post => (

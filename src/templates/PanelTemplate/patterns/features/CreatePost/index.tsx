@@ -58,6 +58,7 @@ const CreatePost = ({ order = 0 }: { order?: number }): JSX.Element => {
                   label="Título"
                   error={!!errors.head?.title}
                   helperText={errors.head?.title?.message}
+                  autoComplete="off"
                   {...field}
                 />
               )}
@@ -71,6 +72,7 @@ const CreatePost = ({ order = 0 }: { order?: number }): JSX.Element => {
                   label="Nome da rota"
                   error={!!errors.route?.name}
                   helperText={errors.route?.name?.message}
+                  autoComplete="off"
                   {...field}
                 />
               )}
@@ -90,11 +92,14 @@ const CreatePost = ({ order = 0 }: { order?: number }): JSX.Element => {
             />
             <Controller
               control={control}
-              name="content.html"
+              name="content.rawString"
               render={({ field: { onChange } }) => (
                 <TextEditor
+                  onChangeContentRawString={onChange}
+                  reset={isResetting}
                   className="text-editor-conteiner"
-                  />
+                  helperText={errors.content?.rawString?.message}
+                />
               )}
             />
             <Button size="medium" className="btn-create-post">Fazer Post</Button>

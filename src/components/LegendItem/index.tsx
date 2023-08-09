@@ -1,8 +1,8 @@
-import { useRef, type ReactNode, useState, useEffect } from "react"
+import { useRef, type ReactNode, useState, useEffect, type ComponentProps } from "react"
 
 import * as S from "./styles"
 
-interface ILegendItemProps {
+interface ILegendItemProps extends ComponentProps<"div"> {
   children: ReactNode,
   legend?: string,
   className?: string,
@@ -10,7 +10,7 @@ interface ILegendItemProps {
   sizeLegend?: "sm" | "md" | "lg"
 }
 
-const LegendItem = ({ children, legend, className, widthLegend, sizeLegend = "md" }: ILegendItemProps): JSX.Element => {
+const LegendItem = ({ children, legend, className, widthLegend, sizeLegend = "md", ...restProps }: ILegendItemProps): JSX.Element => {
   const itemRef = useRef<HTMLDivElement | null>(null)
   const legendRef = useRef<HTMLSpanElement | null>(null)
   const [showLegend, setShowLegend] = useState(false)
@@ -34,6 +34,7 @@ const LegendItem = ({ children, legend, className, widthLegend, sizeLegend = "md
 
   return (
     <S.LegendItem
+      {...restProps}
       widthLegend={widthLegend}
       sizeLegend={sizeLegend}
       className={className}

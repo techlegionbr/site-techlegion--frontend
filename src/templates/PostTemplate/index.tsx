@@ -2,7 +2,8 @@ import CustomHead from "@/components/CustomHead"
 import { Layout } from "@/patterns/Layout"
 import { type IPostPublic } from "@/types/IPost"
 
-import ContentHTMLPost from "./patterns/ContentHTMLPost"
+import ContentPost from "./patterns/ContentPost"
+import ControllerActions from "./patterns/ControllerActions"
 import ProfileEditor from "./patterns/ProfileEditor"
 import * as S from "./styles"
 interface IPostTemplateProps {
@@ -11,6 +12,7 @@ interface IPostTemplateProps {
 
 
 const PostTemplate = ({ post }: IPostTemplateProps): JSX.Element => {
+
   return (
     <>
       <CustomHead
@@ -24,12 +26,20 @@ const PostTemplate = ({ post }: IPostTemplateProps): JSX.Element => {
             name={post.profileEditor.name}
             image={post.profileEditor.image}
           />
-          <ContentHTMLPost
+          <ContentPost
             post={{
               content: post.content,
               createdAt: post.createdAt,
               head: post.head,
               profileEditor: post.profileEditor
+            }}
+          />
+          <ControllerActions
+            quantity={{
+              likes: post.likes.length,
+              deslikes: post.dislikes.length,
+              shares: post.shares.length,
+              views: post.views.length
             }}
           />
         </div>

@@ -27,7 +27,7 @@ const useCreatePost = (): IStateCreatePost => {
     resolver: zodResolver(schemaCreatePost),
     defaultValues: {
       content: {
-        html: ''
+        rawString: ''
       },
       head: {
         description: '',

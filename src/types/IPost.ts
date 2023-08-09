@@ -16,7 +16,7 @@ export interface IPost {
   _id: string;
   comments: ICommentPostRegister[];
   content: {
-    html: string;
+    rawString: string;
   };
   editorId: string;
   head: {
@@ -27,6 +27,7 @@ export interface IPost {
   route: {
     name: string;
   };
+  views: IActionPostRegister[];
   shares: IActionPostRegister[];
   createdAt: string;
   dislikes: IActionPostRegister[];

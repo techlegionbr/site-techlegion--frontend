@@ -1,66 +1,57 @@
-import image1 from "@/assets/images/home/sorrindo-retrato-de-um-homem-jovem-apertar-mao-scaled.webp"
-import TitleSection from "@/components/TitleSection"
+import { useEffect, useMemo } from "react"
 
+import TitleSection from "@/components/TitleSection"
+import { textEditorUtil } from "@/patterns/TextEditor/utils"
+import useAllPostsPublicQuery from "@/queries/post/useAllPostsPublicQuery"
+import { genericImagesBlog } from "@/settings/blog/genericImages"
+import useHomeStore from "@/stores/useHomeStore"
 
 import Link from "next/link"
 
 import ArticlePost from "./components/ArticlePost"
-import { type ArticlePostType } from "./components/ArticlePost/types"
 import FeedCarousel from "./components/FeedCarousel"
+import { SkeletonComponentBlog } from "./components/Skeleton"
 import * as S from "./style"
+import { type IArticlePostType } from "./types"
 
-const articles: ArticlePostType[] = [
-  {
-    title: "Estratégias de social media para impulsionar marcas",
-    date: new Date(),
-    prevDescription: "Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir",
-    redirect: "/",
-    subject: "ESTRATÉGIAS DE SOCIAL MEDIA"
-  },
-  {
-    title: "Estratégias de social media para impulsionar marcas",
-    date: new Date(),
-    prevDescription: "Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir",
-    redirect: "/",
-    subject: "ESTRATÉGIAS DE SOCIAL MEDIA"
-  },
-  {
-    title: "Estratégias de social media para impulsionar marcas",
-    date: new Date(),
-    prevDescription: "Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir",
-    redirect: "/",
-    subject: "ESTRATÉGIAS DE SOCIAL MEDIA"
-  },
-]
 
-const articlesComplet: ArticlePostType[] = [
-  {
-    title: "Estratégias de social media para impulsionar marcas",
-    date: new Date(),
-    prevDescription: "Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir, Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir, Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir,  Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir",
-    redirect: "/",
-    subject: "ESTRATÉGIAS DE SOCIAL MEDIA",
-    cover: image1.src
-  },
-  {
-    title: "Estratégias de social media para impulsionar marcas",
-    date: new Date(),
-    prevDescription: "Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir, Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir, Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir,  Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir",
-    redirect: "/",
-    subject: "ESTRATÉGIAS DE SOCIAL MEDIA",
-    cover: image1.src
-  },
-  {
-    title: "Estratégias de social",
-    date: new Date(),
-    prevDescription: "Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir, Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir, Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir,  Com o crescente fortalecimento das tecnologias, imediatismo do consumidor e facilidade de consumir",
-    redirect: "/",
-    subject: "ESTRATÉGIAS DE SOCIAL MEDIA",
-    cover: image1.src
-  },
-]
+
 
 const Main = (): JSX.Element => {
+  const { data: postsData, isLoading: isLoadingPosts } = useAllPostsPublicQuery()
+  const [allPosts, setAllPosts] = useHomeStore(state => [state.allPosts, state.setAllPosts])
+
+  const [allArticles, mainArticles, mainArticlesSecondary] = useMemo<Array<IArticlePostType[] | null>>(() => {
+    const allArticles = allPosts?.map(post => ({
+      date: new Date(post.createdAt),
+      prevDescription: post.head.description,
+      redirect: `/blog/post/${post.route.name}`,
+      subject: "fadsf",
+      title: post.head.title,
+      id: post._id,
+      cover: textEditorUtil.extractImagesFromContentRawString(post.content.rawString)[0]?.src ?? genericImagesBlog.cover
+    }))
+    if (!allArticles) return [null, null]
+    const mainArticles: IArticlePostType[] = []
+    for (let i = 0; i <= 2; i++) {
+      mainArticles.push(allArticles[i])
+    }
+
+    const mainArticlesSecondary: IArticlePostType[] = []
+    for (let i = 0; i <= 2; i++) {
+      mainArticlesSecondary.push({ ...allArticles[i], cover: undefined })
+    }
+
+
+    return [allArticles, mainArticles, mainArticlesSecondary]
+
+  }, [allPosts])
+
+  useEffect(() => {
+    if (postsData) {
+      setAllPosts(postsData)
+    }
+  }, [postsData, setAllPosts])
   return (
     <S.Main>
 
@@ -70,21 +61,43 @@ const Main = (): JSX.Element => {
           title="Blog"
         />
         <div className="posts-main-blog">
-          <div className="feed-posts">
-            <FeedCarousel />
-          </div>
+          {
+            mainArticles && (
+              <div className="feed-posts">
+                <FeedCarousel articles={mainArticles} />
+              </div>
+            )
+          }
           <div className="list-articles">
             {
-              articles.map((article, index) => (
-                <ArticlePost article={article} key={index} />
+              isLoadingPosts && !mainArticlesSecondary ? (
+                <>
+                  <SkeletonComponentBlog.ArticlePost />
+                  <SkeletonComponentBlog.ArticlePost />
+                  <SkeletonComponentBlog.ArticlePost />
+                </>
+              ) : <></>
+            }
+            {
+              mainArticlesSecondary?.map(article => (
+                <ArticlePost article={article} key={`article-post-${article.id}`} />
               ))
             }
           </div>
         </div>
         <div className="list-all-articles">
           {
-            articlesComplet.map((article, index) => (
-              <ArticlePost article={article} key={index} limitLineDescription={10} />
+            isLoadingPosts && !allArticles ? (
+              <>
+                <SkeletonComponentBlog.ArticlePost cover />
+                <SkeletonComponentBlog.ArticlePost cover />
+                <SkeletonComponentBlog.ArticlePost cover />
+              </>
+            ) : <></>
+          }
+          {
+            allArticles?.map(article => (
+              <ArticlePost article={article} key={`article-post-${article.id}`} limitLineDescription={10} />
             ))
           }
         </div>

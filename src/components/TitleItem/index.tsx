@@ -1,14 +1,14 @@
-import { useState, type ReactNode, useRef, useEffect } from "react"
+import { useState, type ReactNode, useRef, useEffect, type ComponentProps } from "react"
 
 import * as S from "./styles"
 
-interface ITitleItemProps {
+interface ITitleItemProps extends ComponentProps<"div"> {
   children: ReactNode,
   title?: string,
   show?: boolean
 }
 
-const TitleItem = ({ children, title, show = true }: ITitleItemProps): JSX.Element => {
+const TitleItem = ({ children, title, show = true, ...restProps }: ITitleItemProps): JSX.Element => {
   const [showSubTitle, setShowSubTitle] = useState(false)
   const titleItemRef = useRef<HTMLDivElement | null>(null)
 
@@ -37,7 +37,7 @@ const TitleItem = ({ children, title, show = true }: ITitleItemProps): JSX.Eleme
   }
 
   return (
-    <S.TitleItem ref={titleItemRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
+    <S.TitleItem {...restProps} ref={titleItemRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
       {children}
       {title && showSubTitle && show ? <S.SubTitle>{title}</S.SubTitle> : <></>}
     </S.TitleItem>

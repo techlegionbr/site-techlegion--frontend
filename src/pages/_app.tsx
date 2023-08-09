@@ -12,6 +12,7 @@ import { QueryClientProvider } from 'react-query';
 import { queryClient } from "@/services/queryClient";
 import { Navigation } from "@/components/Navigation";
 
+
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
